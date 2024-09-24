@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAppleLogin" destination="CjW-sJ-haa" id="dpu-k4-rHo"/>
+                <outlet property="btnFacebookLogin" destination="Nku-kJ-vRk" id="FT6-AQ-rQQ"/>
+                <outlet property="btnForgetPassword" destination="7pB-kl-XL0" id="yM6-d7-DiJ"/>
+                <outlet property="btnGoogleLogin" destination="RM2-mY-d2x" id="oyr-OO-GSa"/>
+                <outlet property="btnLogin" destination="yCr-A9-4ab" id="BIR-XO-2T5"/>
+                <outlet property="btnRegister" destination="9tK-pO-F21" id="aQs-C2-Kra"/>
+                <outlet property="txfPassword" destination="HoD-eU-415" id="eW3-cr-Chp"/>
+                <outlet property="txfUserName" destination="igu-G9-M7m" id="URg-Te-XyT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background5_Nav1" translatesAutoresizingMaskIntoConstraints="NO" id="Hlf-UD-2HN">
+                    <rect key="frame" x="-366.66666666666669" y="39" width="1126.3333333333333" height="799"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCr-A9-4ab">
+                    <rect key="frame" x="71.666666666666686" y="490" width="250" height="45"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="fac"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="登入">
+                                <attributes>
+                                    <font key="NSFont" size="20" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjW-sJ-haa">
+                    <rect key="frame" x="71.666666666666686" y="599" width="250" height="45"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="fac"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Apple登入">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pB-kl-XL0">
+                    <rect key="frame" x="69.666666666666686" y="724" width="120" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="忘記密碼">
+                        <color key="titleColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="3">
+                            <color key="strokeColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="忘記密碼">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pushToForgetPassword:" destination="-1" eventType="touchUpInside" id="sEw-lL-2el"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hTv-2T-D2r">
+                    <rect key="frame" x="31.666666666666657" y="336" width="330" height="161"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoD-eU-415">
+                    <rect key="frame" x="38.666666666666657" y="414.66666666666669" width="316" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igu-G9-M7m">
+                    <rect key="frame" x="38.666666666666657" y="362.66666666666669" width="316" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seknova" translatesAutoresizingMaskIntoConstraints="NO" id="JuJ-sF-DT7">
+                    <rect key="frame" x="215.33333333333337" y="321.33333333333331" width="139" height="32"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-kJ-vRk">
+                    <rect key="frame" x="71.666666666666686" y="546" width="250" height="45"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="fac"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Facebook登入">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseBackgroundColor" red="0.27027420062034424" green="0.44337269281295122" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM2-mY-d2x">
+                    <rect key="frame" x="71.666666666666686" y="652" width="250" height="45"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="fac"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background">
+                            <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Google登入">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tK-pO-F21">
+                    <rect key="frame" x="205.33333333333337" y="724" width="120" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="註冊">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="3">
+                            <color key="strokeColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="註冊">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" red="0.69979590179999995" green="0.16146799919999999" blue="0.17252069710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pushToRegisterVC:" destination="-1" eventType="touchUpInside" id="Ipd-wn-M9w"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JuJ-sF-DT7" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.198758" id="0bg-dN-cwC"/>
+                <constraint firstItem="hTv-2T-D2r" firstAttribute="centerX" secondItem="Hlf-UD-2HN" secondAttribute="centerX" id="0r4-nK-YfD"/>
+                <constraint firstItem="yCr-A9-4ab" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.757576" id="1Oa-Yc-c4G"/>
+                <constraint firstItem="9tK-pO-F21" firstAttribute="width" secondItem="RM2-mY-d2x" secondAttribute="width" multiplier="0.48" id="1Sw-PN-XPu"/>
+                <constraint firstItem="yCr-A9-4ab" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="32v-t2-UIN"/>
+                <constraint firstItem="RM2-mY-d2x" firstAttribute="width" secondItem="CjW-sJ-haa" secondAttribute="width" id="36r-ea-8HQ"/>
+                <constraint firstItem="9tK-pO-F21" firstAttribute="height" secondItem="RM2-mY-d2x" secondAttribute="height" id="5qK-sz-fqj"/>
+                <constraint firstItem="HoD-eU-415" firstAttribute="leading" secondItem="hTv-2T-D2r" secondAttribute="trailing" constant="-323" id="7pI-Ix-0lx"/>
+                <constraint firstItem="7pB-kl-XL0" firstAttribute="centerX" secondItem="RM2-mY-d2x" secondAttribute="centerX" multiplier="0.66" id="8PC-Ah-3yu"/>
+                <constraint firstItem="CjW-sJ-haa" firstAttribute="height" secondItem="Nku-kJ-vRk" secondAttribute="height" id="AB6-92-yy2"/>
+                <constraint firstItem="9tK-pO-F21" firstAttribute="top" secondItem="RM2-mY-d2x" secondAttribute="bottom" constant="27" id="BdN-Fd-T7v"/>
+                <constraint firstItem="CjW-sJ-haa" firstAttribute="top" secondItem="Nku-kJ-vRk" secondAttribute="bottom" constant="8" symbolic="YES" id="DXQ-7n-nl7"/>
+                <constraint firstItem="hTv-2T-D2r" firstAttribute="centerY" secondItem="Hlf-UD-2HN" secondAttribute="centerY" multiplier="0.95" id="DsU-w2-zUp"/>
+                <constraint firstItem="CjW-sJ-haa" firstAttribute="centerX" secondItem="Nku-kJ-vRk" secondAttribute="centerX" id="EH5-gO-TnL"/>
+                <constraint firstItem="yCr-A9-4ab" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="1.23" id="Fbj-Pl-vsj"/>
+                <constraint firstItem="yCr-A9-4ab" firstAttribute="leading" secondItem="hTv-2T-D2r" secondAttribute="trailing" constant="-289.99999999999994" id="G8j-cL-l9f"/>
+                <constraint firstItem="igu-G9-M7m" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="Ixh-gV-DAX"/>
+                <constraint firstItem="Hlf-UD-2HN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.937793" id="J6A-W2-lEM"/>
+                <constraint firstItem="JuJ-sF-DT7" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="0.81" id="LeX-ct-vbj"/>
+                <constraint firstItem="HoD-eU-415" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="QJ2-Ew-V5Z"/>
+                <constraint firstItem="9tK-pO-F21" firstAttribute="centerX" secondItem="RM2-mY-d2x" secondAttribute="centerX" multiplier="1.35" id="QjC-8b-9IK"/>
+                <constraint firstItem="HoD-eU-415" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.360248" id="Rnk-7V-e1K"/>
+                <constraint firstItem="7pB-kl-XL0" firstAttribute="top" secondItem="RM2-mY-d2x" secondAttribute="bottom" constant="27" id="SQl-dQ-vdK"/>
+                <constraint firstItem="hTv-2T-D2r" firstAttribute="height" secondItem="Hlf-UD-2HN" secondAttribute="height" multiplier="0.201502" id="Sja-a0-PH0"/>
+                <constraint firstItem="JuJ-sF-DT7" firstAttribute="trailing" secondItem="hTv-2T-D2r" secondAttribute="trailing" multiplier="0.98" id="U1k-1l-TPd"/>
+                <constraint firstItem="RM2-mY-d2x" firstAttribute="top" secondItem="CjW-sJ-haa" secondAttribute="bottom" constant="8" symbolic="YES" id="VJK-88-la8"/>
+                <constraint firstItem="CjW-sJ-haa" firstAttribute="width" secondItem="Nku-kJ-vRk" secondAttribute="width" id="aNE-eX-VQ8"/>
+                <constraint firstItem="Hlf-UD-2HN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bZH-lW-4Ig"/>
+                <constraint firstItem="yCr-A9-4ab" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.279503" id="cv4-GC-u5Z"/>
+                <constraint firstItem="HoD-eU-415" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.957576" id="dIF-o7-fcf"/>
+                <constraint firstItem="7pB-kl-XL0" firstAttribute="height" secondItem="RM2-mY-d2x" secondAttribute="height" id="dyV-Ec-c37"/>
+                <constraint firstItem="HoD-eU-415" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="1.065" id="efF-CZ-1jm"/>
+                <constraint firstItem="igu-G9-M7m" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="0.94" id="foX-C4-Uw0"/>
+                <constraint firstItem="Nku-kJ-vRk" firstAttribute="centerX" secondItem="yCr-A9-4ab" secondAttribute="centerX" id="hSB-pZ-hmw"/>
+                <constraint firstItem="Nku-kJ-vRk" firstAttribute="width" secondItem="yCr-A9-4ab" secondAttribute="width" id="kst-fM-Hhz"/>
+                <constraint firstItem="igu-G9-M7m" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.360248" id="olb-Bm-22x"/>
+                <constraint firstItem="RM2-mY-d2x" firstAttribute="height" secondItem="CjW-sJ-haa" secondAttribute="height" id="pB9-SQ-3bt"/>
+                <constraint firstItem="JuJ-sF-DT7" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.421212" id="qMx-BP-2xs"/>
+                <constraint firstItem="Nku-kJ-vRk" firstAttribute="top" secondItem="yCr-A9-4ab" secondAttribute="bottom" constant="11" id="rbD-11-k4M"/>
+                <constraint firstItem="Nku-kJ-vRk" firstAttribute="height" secondItem="yCr-A9-4ab" secondAttribute="height" id="s83-Jn-x1b"/>
+                <constraint firstItem="igu-G9-M7m" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.957576" id="vDw-Dk-8KR"/>
+                <constraint firstItem="Hlf-UD-2HN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="vJF-ZI-6cn"/>
+                <constraint firstItem="7pB-kl-XL0" firstAttribute="width" secondItem="RM2-mY-d2x" secondAttribute="width" multiplier="0.48" id="yHJ-oC-RYw"/>
+                <constraint firstItem="RM2-mY-d2x" firstAttribute="centerX" secondItem="CjW-sJ-haa" secondAttribute="centerX" id="ywb-kb-uL2"/>
+            </constraints>
+            <point key="canvasLocation" x="122.90076335877862" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background5_Nav1" width="1126" height="2437"/>
+        <image name="Seknova" width="467" height="72"/>
+        <image name="TextFieldBackground" width="945" height="351"/>
+        <image name="fac" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
