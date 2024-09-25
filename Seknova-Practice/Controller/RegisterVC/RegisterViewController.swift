@@ -45,6 +45,7 @@ class RegisterViewController: UIViewController {
     func setupLeftView(for textField: UITextField, imageName: String) {
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: textField.frame.height))
         
+        // 根據textField來設定圖片
         switch textField {
             case txfMail:
                 let imageView = UIImageView(frame: CGRect(x: 8, y: 5, width: 25, height: 20))
@@ -72,6 +73,12 @@ class RegisterViewController: UIViewController {
     // MARK: - IBAction
     
     // MARK: - Function
+    
+    // 跳轉頁面
+    @IBAction func pushToRCTVC(_ sender: Any) {
+        let RCTVC = RecertificationViewController()
+        self.navigationController?.pushViewController(RCTVC, animated: true)
+    }
     
 }
 

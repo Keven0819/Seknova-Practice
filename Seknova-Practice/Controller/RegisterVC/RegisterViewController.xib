@@ -105,6 +105,9 @@
                     <rect key="frame" x="75.666666666666686" y="733" width="242" height="58"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="registerBtn"/>
+                    <connections>
+                        <action selector="pushToRCTVC:" destination="-1" eventType="touchUpInside" id="7kO-Nz-3hC"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf5-xo-IxM">
                     <rect key="frame" x="308" y="517" width="8" height="18"/>
