@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
     func setupUI() {
         setupNavigationBar()
         setupTextFields()
-        setupButtons()
     }
     
     // 設定我的navigationBar為黑底白字
@@ -88,16 +87,16 @@ class LoginViewController: UIViewController {
         setupLeftView(for: txfPassword, imageName: "password")
     }
     
-    // button按鈕前顯示圖片
+    // textfield前顯示圖片
     func setupLeftView(for textField: UITextField, imageName: String) {
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: textField.frame.height))
         if imageName == "mail" {
-            let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 20, height: 15))
+            let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 25, height: 20))
             imageView.image = UIImage(named: imageName)
             imageView.tintColor = .gray
             leftView.addSubview(imageView)
         } else {
-            let imageView = UIImageView(frame: CGRect(x: 22, y: 20, width: 15, height: 18))
+            let imageView = UIImageView(frame: CGRect(x: 22, y: 15, width: 20, height: 24))
             imageView.image = UIImage(named: imageName)
             imageView.tintColor = .gray
             leftView.addSubview(imageView)
@@ -105,56 +104,6 @@ class LoginViewController: UIViewController {
         
         textField.leftView = leftView
         textField.leftViewMode = .always
-    }
-    
-    
-    // 呼叫設定button圖片的funciton
-    func setupButtons() {
-        setupButtonView(myButton: btnFacebookLogin, imageName: "facebook")
-        setupButtonView(myButton: btnAppleLogin, imageName: "apple")
-        setupButtonView(myButton: btnGoogleLogin, imageName: "google")
-    }
-    
-    // 設定圖片
-    func setupButtonView(myButton: UIButton, imageName: String) {
-        // 設定圖片size
-        let image = UIImage(named: imageName)
-        let imageSize = CGSize(width: 30, height: 30)
-        let resizedImage = image?.resized(to: imageSize)
-
-        // 配置按钮
-        var configuration = UIButton.Configuration.filled()
-        configuration.image = resizedImage
-        
-        // 設定button顏色
-        if imageName == "facebook" {
-            configuration.title = "Facebook 登入"
-            configuration.baseBackgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1.0)
-            configuration.imagePadding = 20
-        } else if imageName == "apple" {
-            configuration.title = "使用 Apple 登入"
-            configuration.baseBackgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
-            configuration.imagePadding = 10
-        } else {
-            configuration.title = "Google 登入"
-            configuration.baseBackgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-            configuration.baseForegroundColor = .black
-            configuration.background.strokeColor = .black
-            configuration.imagePadding = 10
-        }
-        
-        // 設定buuton邊框樣式
-        configuration.cornerStyle = .capsule
-
-        // 設定圖片和文字的位置
-        configuration.imagePlacement = .leading // 圖片放在文字的前面
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20)
-        
-        // 置中
-        myButton.contentHorizontalAlignment = .center
-        
-        // 將設定套用至button
-        myButton.configuration = configuration
     }
 
     // MARK: - IBAction
@@ -176,13 +125,3 @@ class LoginViewController: UIViewController {
 }
 
 // MARK: - Extensions
-// 重新設定圖片大小擴充功能
-extension UIImage {
-    func resized(to size: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        draw(in: CGRect(origin: .zero, size: size))
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return resizedImage
-    }
-}

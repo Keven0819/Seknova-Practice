@@ -58,16 +58,9 @@
                     <rect key="frame" x="71.666666666666686" y="599" width="250" height="45"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="fac"/>
-                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                    <buttonConfiguration key="configuration" style="filled" title="Apple登入" cornerStyle="capsule">
                         <backgroundConfiguration key="background"/>
-                        <attributedString key="attributedTitle">
-                            <fragment content="Apple登入">
-                                <attributes>
-                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                        <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                         <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -118,22 +111,15 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seknova" translatesAutoresizingMaskIntoConstraints="NO" id="JuJ-sF-DT7">
                     <rect key="frame" x="215.33333333333337" y="321.33333333333331" width="139" height="32"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-kJ-vRk">
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-kJ-vRk">
                     <rect key="frame" x="71.666666666666686" y="546" width="250" height="45"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="fac"/>
-                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                    <buttonConfiguration key="configuration" style="filled" title="Facebook登入" cornerStyle="capsule">
                         <backgroundConfiguration key="background"/>
-                        <attributedString key="attributedTitle">
-                            <fragment content="Facebook登入">
-                                <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <color key="baseBackgroundColor" red="0.27027420062034424" green="0.44337269281295122" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -145,18 +131,11 @@
                     <rect key="frame" x="71.666666666666686" y="652" width="250" height="45"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button" image="fac"/>
-                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                    <buttonConfiguration key="configuration" style="filled" title="Google登入" cornerStyle="capsule">
                         <backgroundConfiguration key="background">
                             <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </backgroundConfiguration>
-                        <attributedString key="attributedTitle">
-                            <fragment content="Google登入">
-                                <attributes>
-                                    <font key="NSFont" size="17" name="PingFangTC-Regular"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                        <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
@@ -192,6 +171,15 @@
                         <action selector="pushToRegisterVC:" destination="-1" eventType="touchUpInside" id="Ipd-wn-M9w"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="ojm-qp-MVW">
+                    <rect key="frame" x="97" y="553.33333333333337" width="30" height="30"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="y7O-NW-1k7">
+                    <rect key="frame" x="97" y="606.33333333333337" width="30" height="30"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="1q4-Dt-Uh7">
+                    <rect key="frame" x="97" y="659.33333333333337" width="30" height="30"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,21 +188,27 @@
                 <constraint firstItem="hTv-2T-D2r" firstAttribute="centerX" secondItem="Hlf-UD-2HN" secondAttribute="centerX" id="0r4-nK-YfD"/>
                 <constraint firstItem="yCr-A9-4ab" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.757576" id="1Oa-Yc-c4G"/>
                 <constraint firstItem="9tK-pO-F21" firstAttribute="width" secondItem="RM2-mY-d2x" secondAttribute="width" multiplier="0.48" id="1Sw-PN-XPu"/>
+                <constraint firstItem="CjW-sJ-haa" firstAttribute="leading" secondItem="y7O-NW-1k7" secondAttribute="trailing" constant="-55.333333333333314" id="2aL-ud-b0m"/>
                 <constraint firstItem="yCr-A9-4ab" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="32v-t2-UIN"/>
                 <constraint firstItem="RM2-mY-d2x" firstAttribute="width" secondItem="CjW-sJ-haa" secondAttribute="width" id="36r-ea-8HQ"/>
                 <constraint firstItem="9tK-pO-F21" firstAttribute="height" secondItem="RM2-mY-d2x" secondAttribute="height" id="5qK-sz-fqj"/>
                 <constraint firstItem="HoD-eU-415" firstAttribute="leading" secondItem="hTv-2T-D2r" secondAttribute="trailing" constant="-323" id="7pI-Ix-0lx"/>
                 <constraint firstItem="7pB-kl-XL0" firstAttribute="centerX" secondItem="RM2-mY-d2x" secondAttribute="centerX" multiplier="0.66" id="8PC-Ah-3yu"/>
+                <constraint firstItem="1q4-Dt-Uh7" firstAttribute="centerY" secondItem="RM2-mY-d2x" secondAttribute="centerY" id="9Fn-cg-HxN"/>
                 <constraint firstItem="CjW-sJ-haa" firstAttribute="height" secondItem="Nku-kJ-vRk" secondAttribute="height" id="AB6-92-yy2"/>
+                <constraint firstItem="RM2-mY-d2x" firstAttribute="leading" secondItem="1q4-Dt-Uh7" secondAttribute="trailing" constant="-55.333333333333314" id="AjG-uh-Aro"/>
                 <constraint firstItem="9tK-pO-F21" firstAttribute="top" secondItem="RM2-mY-d2x" secondAttribute="bottom" constant="27" id="BdN-Fd-T7v"/>
                 <constraint firstItem="CjW-sJ-haa" firstAttribute="top" secondItem="Nku-kJ-vRk" secondAttribute="bottom" constant="8" symbolic="YES" id="DXQ-7n-nl7"/>
                 <constraint firstItem="hTv-2T-D2r" firstAttribute="centerY" secondItem="Hlf-UD-2HN" secondAttribute="centerY" multiplier="0.95" id="DsU-w2-zUp"/>
                 <constraint firstItem="CjW-sJ-haa" firstAttribute="centerX" secondItem="Nku-kJ-vRk" secondAttribute="centerX" id="EH5-gO-TnL"/>
                 <constraint firstItem="yCr-A9-4ab" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="1.23" id="Fbj-Pl-vsj"/>
+                <constraint firstItem="ojm-qp-MVW" firstAttribute="centerY" secondItem="Nku-kJ-vRk" secondAttribute="centerY" id="FrL-jj-sfc"/>
                 <constraint firstItem="yCr-A9-4ab" firstAttribute="leading" secondItem="hTv-2T-D2r" secondAttribute="trailing" constant="-289.99999999999994" id="G8j-cL-l9f"/>
+                <constraint firstItem="1q4-Dt-Uh7" firstAttribute="width" secondItem="RM2-mY-d2x" secondAttribute="width" multiplier="0.12" id="Ggz-2i-3kI"/>
                 <constraint firstItem="igu-G9-M7m" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="Ixh-gV-DAX"/>
                 <constraint firstItem="Hlf-UD-2HN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.937793" id="J6A-W2-lEM"/>
                 <constraint firstItem="JuJ-sF-DT7" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="0.81" id="LeX-ct-vbj"/>
+                <constraint firstItem="y7O-NW-1k7" firstAttribute="centerY" secondItem="CjW-sJ-haa" secondAttribute="centerY" id="Nq9-It-weI"/>
                 <constraint firstItem="HoD-eU-415" firstAttribute="centerX" secondItem="hTv-2T-D2r" secondAttribute="centerX" id="QJ2-Ew-V5Z"/>
                 <constraint firstItem="9tK-pO-F21" firstAttribute="centerX" secondItem="RM2-mY-d2x" secondAttribute="centerX" multiplier="1.35" id="QjC-8b-9IK"/>
                 <constraint firstItem="HoD-eU-415" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.360248" id="Rnk-7V-e1K"/>
@@ -222,22 +216,28 @@
                 <constraint firstItem="hTv-2T-D2r" firstAttribute="height" secondItem="Hlf-UD-2HN" secondAttribute="height" multiplier="0.201502" id="Sja-a0-PH0"/>
                 <constraint firstItem="JuJ-sF-DT7" firstAttribute="trailing" secondItem="hTv-2T-D2r" secondAttribute="trailing" multiplier="0.98" id="U1k-1l-TPd"/>
                 <constraint firstItem="RM2-mY-d2x" firstAttribute="top" secondItem="CjW-sJ-haa" secondAttribute="bottom" constant="8" symbolic="YES" id="VJK-88-la8"/>
+                <constraint firstItem="ojm-qp-MVW" firstAttribute="height" secondItem="Nku-kJ-vRk" secondAttribute="height" multiplier="0.666667" id="ZeG-JY-V1M"/>
                 <constraint firstItem="CjW-sJ-haa" firstAttribute="width" secondItem="Nku-kJ-vRk" secondAttribute="width" id="aNE-eX-VQ8"/>
                 <constraint firstItem="Hlf-UD-2HN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bZH-lW-4Ig"/>
                 <constraint firstItem="yCr-A9-4ab" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.279503" id="cv4-GC-u5Z"/>
                 <constraint firstItem="HoD-eU-415" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.957576" id="dIF-o7-fcf"/>
+                <constraint firstItem="y7O-NW-1k7" firstAttribute="height" secondItem="CjW-sJ-haa" secondAttribute="height" multiplier="0.666667" id="dqQ-JY-jjm"/>
                 <constraint firstItem="7pB-kl-XL0" firstAttribute="height" secondItem="RM2-mY-d2x" secondAttribute="height" id="dyV-Ec-c37"/>
                 <constraint firstItem="HoD-eU-415" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="1.065" id="efF-CZ-1jm"/>
                 <constraint firstItem="igu-G9-M7m" firstAttribute="centerY" secondItem="hTv-2T-D2r" secondAttribute="centerY" multiplier="0.94" id="foX-C4-Uw0"/>
                 <constraint firstItem="Nku-kJ-vRk" firstAttribute="centerX" secondItem="yCr-A9-4ab" secondAttribute="centerX" id="hSB-pZ-hmw"/>
+                <constraint firstItem="y7O-NW-1k7" firstAttribute="width" secondItem="CjW-sJ-haa" secondAttribute="width" multiplier="0.12" id="ivL-eX-Aag"/>
                 <constraint firstItem="Nku-kJ-vRk" firstAttribute="width" secondItem="yCr-A9-4ab" secondAttribute="width" id="kst-fM-Hhz"/>
+                <constraint firstItem="ojm-qp-MVW" firstAttribute="width" secondItem="Nku-kJ-vRk" secondAttribute="width" multiplier="0.12" id="kw9-1r-MHF"/>
                 <constraint firstItem="igu-G9-M7m" firstAttribute="height" secondItem="hTv-2T-D2r" secondAttribute="height" multiplier="0.360248" id="olb-Bm-22x"/>
                 <constraint firstItem="RM2-mY-d2x" firstAttribute="height" secondItem="CjW-sJ-haa" secondAttribute="height" id="pB9-SQ-3bt"/>
+                <constraint firstItem="1q4-Dt-Uh7" firstAttribute="height" secondItem="RM2-mY-d2x" secondAttribute="height" multiplier="0.666667" id="pw8-VQ-YbF"/>
                 <constraint firstItem="JuJ-sF-DT7" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.421212" id="qMx-BP-2xs"/>
                 <constraint firstItem="Nku-kJ-vRk" firstAttribute="top" secondItem="yCr-A9-4ab" secondAttribute="bottom" constant="11" id="rbD-11-k4M"/>
                 <constraint firstItem="Nku-kJ-vRk" firstAttribute="height" secondItem="yCr-A9-4ab" secondAttribute="height" id="s83-Jn-x1b"/>
                 <constraint firstItem="igu-G9-M7m" firstAttribute="width" secondItem="hTv-2T-D2r" secondAttribute="width" multiplier="0.957576" id="vDw-Dk-8KR"/>
                 <constraint firstItem="Hlf-UD-2HN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="vJF-ZI-6cn"/>
+                <constraint firstItem="Nku-kJ-vRk" firstAttribute="leading" secondItem="ojm-qp-MVW" secondAttribute="trailing" constant="-55.333333333333314" id="wyO-00-z6c"/>
                 <constraint firstItem="7pB-kl-XL0" firstAttribute="width" secondItem="RM2-mY-d2x" secondAttribute="width" multiplier="0.48" id="yHJ-oC-RYw"/>
                 <constraint firstItem="RM2-mY-d2x" firstAttribute="centerX" secondItem="CjW-sJ-haa" secondAttribute="centerX" id="ywb-kb-uL2"/>
             </constraints>
@@ -248,12 +248,15 @@
         <image name="Background5_Nav1" width="1126" height="2437"/>
         <image name="Seknova" width="467" height="72"/>
         <image name="TextFieldBackground" width="945" height="351"/>
+        <image name="apple" width="256" height="256"/>
         <image name="fac" width="128" height="128"/>
+        <image name="facebook" width="512" height="512"/>
+        <image name="google" width="1335" height="1335"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
