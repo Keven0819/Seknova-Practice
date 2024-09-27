@@ -20,6 +20,9 @@
 		7B78368A2CA13AA9006EE7D8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836892CA13AA9006EE7D8 /* Base */; };
 		7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7836912CA13E14006EE7D8 /* LoginViewController.swift */; };
 		7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836922CA13E14006EE7D8 /* LoginViewController.xib */; };
+		7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8199232CA55F87002767D3 /* Color+Extensions.swift */; };
+		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
+		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		7B78368B2CA13AA9006EE7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B7836912CA13E14006EE7D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B7836922CA13E14006EE7D8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7B8199232CA55F87002767D3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,7 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BD875BD2CA6AF04008BB100 /* TermsVC */,
 				7B20708D2CA45283000A46A4 /* RecertificationVC */,
 				7B6F7D0C2CA2A3B700E9A1DC /* ForgetPasswordVC */,
 				7B6F7D072CA2A0FE00E9A1DC /* RegisterVC */,
@@ -153,8 +160,18 @@
 		7B7836972CA1419A006EE7D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B8199232CA55F87002767D3 /* Color+Extensions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7BD875BD2CA6AF04008BB100 /* TermsVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */,
+				7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */,
+			);
+			path = TermsVC;
 			sourceTree = "<group>";
 		};
 		FB1D1B6AE6661EAA1163B5F0 /* Frameworks */ = {
@@ -231,6 +248,7 @@
 				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
 				7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */,
 				7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */,
+				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +305,9 @@
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
 				7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */,
 				7B6F7D0F2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift in Sources */,
+				7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */,
 				7B7836802CA13AA7006EE7D8 /* SceneDelegate.swift in Sources */,
+				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

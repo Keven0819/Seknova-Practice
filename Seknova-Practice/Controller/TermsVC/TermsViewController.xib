@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="btnConfirm" destination="Pdi-0l-VGY" id="cBP-Qh-wlL"/>
+                <outlet property="textView" destination="JRQ-Ej-WYI" id="mbz-7s-pjR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-0l-VGY">
+                    <rect key="frame" x="16" y="770" width="361" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="確認" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="3">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" red="0.69588714839999999" green="0.1614560783" blue="0.1725210845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.69588714839999999" green="0.1614560783" blue="0.1725210845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="btnConfirmTapped:" destination="-1" eventType="touchUpInside" id="1aP-KZ-3Y8"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-Ej-WYI">
+                    <rect key="frame" x="0.0" y="77" width="393" height="679"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.95" id="4eX-2h-GNf"/>
+                <constraint firstItem="Pdi-0l-VGY" firstAttribute="top" secondItem="JRQ-Ej-WYI" secondAttribute="bottom" constant="14" id="A84-7m-blW"/>
+                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HWI-SC-7oj"/>
+                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.894598" id="Vmy-w9-UAe"/>
+                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="ZLd-6I-EKZ"/>
+                <constraint firstItem="Pdi-0l-VGY" firstAttribute="width" secondItem="JRQ-Ej-WYI" secondAttribute="width" multiplier="0.918575" id="hP7-uq-NCK"/>
+                <constraint firstItem="Pdi-0l-VGY" firstAttribute="centerX" secondItem="JRQ-Ej-WYI" secondAttribute="centerX" id="iKt-99-NgE"/>
+                <constraint firstItem="Pdi-0l-VGY" firstAttribute="height" secondItem="JRQ-Ej-WYI" secondAttribute="height" multiplier="0.0515464" id="rxr-EP-VBh"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
