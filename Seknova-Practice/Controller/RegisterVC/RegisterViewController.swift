@@ -22,6 +22,8 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     // MARK: - Property
     
     let countries = [("Taiwan(台灣)"), ("America(美國)")]
+    var isButtonTapped = false
+    let userDefault = UserDefaults() // 實例化UserDefaults
     
     // MARK: - LifeCycle
     
@@ -35,6 +37,7 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         setupNavigationBar()
         setupTextFields()
         setupPickerView()
+        useUserDefaults()
     }
     
     // 設定選擇國家的pickerView
@@ -85,10 +88,20 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     }
     
     // MARK: - IBAction
-    
+    @IBAction func btnArgeeTapped(_ sender: Any) {
+        isButtonTapped.toggle() // 切換狀態
+        if isButtonTapped {
+            let buttonImage = UIImage(systemName: "checkmark.circle.fill")
+            btnConfirm.setImage(buttonImage, for: .normal)
+        } else {
+            let buttonImage = UIImage()
+            btnConfirm.setImage(buttonImage, for: .normal)
+        }
+    }
     // 跳轉頁面
     @IBAction func btnRegisterTapped(_ sender: Any) {
         let RCTVC = RecertificationViewController()
+        saveUserDefaults()
         self.navigationController?.pushViewController(RCTVC, animated: true)
    }
     
@@ -120,10 +133,26 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     
     // MARK: - Function
     func didConfirmTerms() {
+        isButtonTapped = true
         // 當使用者確認條款時，執行的動作
         let checkmarkImage = UIImage(systemName: "checkmark.circle.fill") // 使用SFSymbols的打勾圖示
         btnConfirm.setImage(checkmarkImage, for: .normal)
         btnConfirm.tintColor = .systemGreen  // 改變顏色
+    }
+    
+    // saveUserDefaults
+    func saveUserDefaults() {
+        userDefault.setValue(txfMail.text, forKey: "Mail")
+        userDefault.setValue(txfPassword.text, forKey: "Password")
+        userDefault.setValue(txfConfirmPassword.text, forKey: "ConfirmPassword")
+        userDefault.setValue(btnCountry.currentTitle, forKey: "Country")
+    }
+    
+    func useUserDefaults() {
+        txfMail.text = userDefault.string(forKey: "Mail")
+        txfPassword.text = userDefault.string(forKey: "Password")
+        txfConfirmPassword.text = userDefault.string(forKey: "ConfirmPassword")
+        btnCountry.setTitle(userDefault.string(forKey: "Country"), for: .normal)
     }
 }
 
