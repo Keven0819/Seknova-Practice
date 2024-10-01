@@ -93,16 +93,26 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         if isButtonTapped {
             let buttonImage = UIImage(systemName: "checkmark.circle.fill")
             btnConfirm.setImage(buttonImage, for: .normal)
+            btnConfirm.tintColor = .systemGreen
         } else {
             let buttonImage = UIImage()
             btnConfirm.setImage(buttonImage, for: .normal)
+            btnConfirm.tintColor = .systemGreen
         }
     }
     // 跳轉頁面
     @IBAction func btnRegisterTapped(_ sender: Any) {
         let RCTVC = RecertificationViewController()
         saveUserDefaults()
-        self.navigationController?.pushViewController(RCTVC, animated: true)
+        if txfMail.text == "" || txfPassword.text == "" || txfConfirmPassword.text == "" {
+            showAlert(message: "請輸入完整資料")
+        } else if txfPassword.text != txfConfirmPassword.text {
+            showAlert(message: "密碼不一致")
+        } else if !isButtonTapped {
+            showAlert(message: "請同意條款")
+        } else {
+            self.navigationController?.pushViewController(RCTVC, animated: true)
+        }
    }
     
     @IBAction func btnTermsTapped(_ sender: Any) {
@@ -153,6 +163,12 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         txfPassword.text = userDefault.string(forKey: "Password")
         txfConfirmPassword.text = userDefault.string(forKey: "ConfirmPassword")
         btnCountry.setTitle(userDefault.string(forKey: "Country"), for: .normal)
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
