@@ -103,16 +103,29 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     // 跳轉頁面
     @IBAction func btnRegisterTapped(_ sender: Any) {
         let RCTVC = RecertificationViewController()
-        saveUserDefaults()
+        
+        // 確認資料都有填
         if txfMail.text == "" || txfPassword.text == "" || txfConfirmPassword.text == "" {
-            showAlert(message: "請輸入完整資料")
+            showAlert(message: "請填寫完整資料")
         } else if txfPassword.text != txfConfirmPassword.text {
             showAlert(message: "密碼不一致")
+        // 密碼(8~16字元，需含大小寫字母與數字)
+        } else if txfPassword.text!.count < 8 || txfPassword.text!.count > 16 {
+            showAlert(message: "密碼需為8~16字元")
+        } else if !txfPassword.text!.containsNumber {
+            showAlert(message: "密碼需含數字")
+        } else if !txfPassword.text!.containsLowercase {
+            showAlert(message: "密碼需含小寫字母")
+        } else if !txfPassword.text!.containsUppercase {
+            showAlert(message: "密碼需含大寫字母")
         } else if !isButtonTapped {
             showAlert(message: "請同意條款")
         } else {
-            self.navigationController?.pushViewController(RCTVC, animated: true)
+            // 都有填寫完畢才存進UserDefaults
+            saveUserDefaults()
+            navigationController?.pushViewController(RCTVC, animated: true)
         }
+        
    }
     
     @IBAction func btnTermsTapped(_ sender: Any) {
@@ -137,7 +150,13 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     }
     
     @IBAction func btnCountryTapped(_ sender: Any) {
+        // pickerView顯示時有動畫效果
+        UIView.transition(with: pkvCountry, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
         pkvCountry.isHidden.toggle() // 切換顯示狀態
+        
+        // btnRegister顯示時有動畫效果
+        UIView.transition(with: btnRegister, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
+        btnRegister.isHidden = !pkvCountry.isHidden // 依照pickerView的狀態來決定是否啟用註冊按鈕
     }
     
     
@@ -202,5 +221,23 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         btnCountry.setTitle(countries[row], for: .normal)
         pkvCountry.isHidden.toggle() // 隱藏pickerView
+    }
+}
+
+extension String {
+    
+    // 檢查是否有小寫字母
+    var containsLowercase: Bool {
+        return rangeOfCharacter(from: .lowercaseLetters) != nil
+    }
+    
+    // 檢查是否有大寫字母
+    var containsUppercase: Bool {
+        return rangeOfCharacter(from: .uppercaseLetters) != nil
+    }
+    
+    // 檢查是否有數字
+    var containsNumber: Bool {
+        return rangeOfCharacter(from: .decimalDigits) != nil
     }
 }

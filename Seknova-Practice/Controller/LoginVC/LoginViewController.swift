@@ -119,6 +119,16 @@ class LoginViewController: UIViewController {
         let forgetVC = ForgetPasswordViewController()
         self.navigationController?.pushViewController(forgetVC, animated: true)
     }
+    @IBAction func btnLoginTapped(_ sender: Any) {
+        
+        // 第一次登入的話顯示TermsViewController，否則顯示HomeViewController
+        if UserDefaults.standard.bool(forKey: "FirstLogin") {
+            print("跳至主畫面")
+        } else {
+            let termsVC = TermsViewController()
+            self.navigationController?.pushViewController(termsVC, animated: true)
+        }
+    }
     
     // MARK: - Function
     

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol TermsViewControllerDelegate: AnyObject {
-    func didConfirmTerms()
-}
-
 class TermsViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -25,7 +21,7 @@ class TermsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "條件與條款"
+        self.title = "隱私權政策"
         setupTermsText()
     }
     
@@ -42,6 +38,11 @@ class TermsViewController: UIViewController {
         // 點擊確認按鈕後關閉視圖控制器
         delegate?.didConfirmTerms()
         self.dismiss(animated: true, completion: nil)
+        
+        // 如果是從LoginViewController來的，則直接跳回LoginViewController
+        if let loginVC = presentingViewController as? LoginViewController {
+            loginVC.dismiss(animated: true, completion: nil)
+        }
     }
     
     // MARK: - Function
@@ -49,3 +50,8 @@ class TermsViewController: UIViewController {
 }
 
 // MARK: - Extensions
+
+// MARK: - Protocol
+protocol TermsViewControllerDelegate: AnyObject {
+    func didConfirmTerms()
+}

@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
-                <outlet property="btnConfirm" destination="Pdi-0l-VGY" id="cBP-Qh-wlL"/>
-                <outlet property="textView" destination="JRQ-Ej-WYI" id="mbz-7s-pjR"/>
+                <outlet property="btnConfirm" destination="2e3-kA-skU" id="mJE-T5-06G"/>
+                <outlet property="textView" destination="GhT-SY-UMU" id="Is4-Ix-CtY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,40 +20,66 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-0l-VGY">
-                    <rect key="frame" x="16" y="770" width="361" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="確認" cornerStyle="capsule">
-                        <backgroundConfiguration key="background" strokeWidth="3">
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="strokeColor" red="0.69588714839999999" green="0.1614560783" blue="0.1725210845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </backgroundConfiguration>
-                        <color key="baseForegroundColor" red="0.69588714839999999" green="0.1614560783" blue="0.1725210845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="btnConfirmTapped:" destination="-1" eventType="touchUpInside" id="1aP-KZ-3Y8"/>
-                    </connections>
-                </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-Ej-WYI">
-                    <rect key="frame" x="0.0" y="77" width="393" height="679"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hc-ed-xHq">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-bo-O3e">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-SY-UMU">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="933"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-kA-skU">
+                                    <rect key="frame" x="40.666666666666657" y="950" width="312" height="50"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="確認" cornerStyle="capsule">
+                                        <backgroundConfiguration key="background" strokeWidth="4">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </backgroundConfiguration>
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="btnConfirmTapped:" destination="-1" eventType="touchUpInside" id="yzk-cj-zUV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="GhT-SY-UMU" firstAttribute="top" secondItem="wb5-bo-O3e" secondAttribute="top" id="3kF-S7-0jM"/>
+                                <constraint firstItem="2e3-kA-skU" firstAttribute="centerX" secondItem="wb5-bo-O3e" secondAttribute="centerX" id="7X2-5Q-fC6"/>
+                                <constraint firstItem="GhT-SY-UMU" firstAttribute="centerX" secondItem="wb5-bo-O3e" secondAttribute="centerX" id="FZF-Nf-xSt"/>
+                                <constraint firstItem="2e3-kA-skU" firstAttribute="width" secondItem="wb5-bo-O3e" secondAttribute="width" multiplier="0.793893" id="TP8-P8-8a5"/>
+                                <constraint firstAttribute="bottom" secondItem="2e3-kA-skU" secondAttribute="bottom" multiplier="0.95" constant="150" id="UL0-oo-CLH"/>
+                                <constraint firstItem="GhT-SY-UMU" firstAttribute="width" secondItem="wb5-bo-O3e" secondAttribute="width" id="Zzb-r9-EZT"/>
+                                <constraint firstItem="GhT-SY-UMU" firstAttribute="height" secondItem="wb5-bo-O3e" secondAttribute="height" multiplier="0.848182" id="a1S-JZ-agn"/>
+                                <constraint firstItem="2e3-kA-skU" firstAttribute="height" secondItem="wb5-bo-O3e" secondAttribute="height" multiplier="0.0454545" id="lws-CO-obH"/>
+                                <constraint firstAttribute="height" constant="1100" id="y61-Rc-Bev"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="wb5-bo-O3e" firstAttribute="leading" secondItem="1Hc-ed-xHq" secondAttribute="leading" id="2Vy-Ka-sCe"/>
+                        <constraint firstAttribute="trailing" secondItem="wb5-bo-O3e" secondAttribute="trailing" id="BcX-Ov-2ul"/>
+                        <constraint firstAttribute="bottom" secondItem="wb5-bo-O3e" secondAttribute="bottom" id="lbh-7K-v3C"/>
+                        <constraint firstItem="wb5-bo-O3e" firstAttribute="top" secondItem="1Hc-ed-xHq" secondAttribute="top" id="wuI-li-EVU"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.95" id="4eX-2h-GNf"/>
-                <constraint firstItem="Pdi-0l-VGY" firstAttribute="top" secondItem="JRQ-Ej-WYI" secondAttribute="bottom" constant="14" id="A84-7m-blW"/>
-                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HWI-SC-7oj"/>
-                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.894598" id="Vmy-w9-UAe"/>
-                <constraint firstItem="JRQ-Ej-WYI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="ZLd-6I-EKZ"/>
-                <constraint firstItem="Pdi-0l-VGY" firstAttribute="width" secondItem="JRQ-Ej-WYI" secondAttribute="width" multiplier="0.918575" id="hP7-uq-NCK"/>
-                <constraint firstItem="Pdi-0l-VGY" firstAttribute="centerX" secondItem="JRQ-Ej-WYI" secondAttribute="centerX" id="iKt-99-NgE"/>
-                <constraint firstItem="Pdi-0l-VGY" firstAttribute="height" secondItem="JRQ-Ej-WYI" secondAttribute="height" multiplier="0.0515464" id="rxr-EP-VBh"/>
+                <constraint firstItem="1Hc-ed-xHq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JlR-Kk-kOL"/>
+                <constraint firstItem="wb5-bo-O3e" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="f7D-ac-RaB"/>
+                <constraint firstItem="1Hc-ed-xHq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jgI-6k-r7h"/>
+                <constraint firstAttribute="bottom" secondItem="1Hc-ed-xHq" secondAttribute="bottom" id="umy-cg-VhM"/>
+                <constraint firstItem="1Hc-ed-xHq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vGz-ga-HiJ"/>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
         </view>
