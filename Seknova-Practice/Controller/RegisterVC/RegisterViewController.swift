@@ -109,6 +109,9 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
             showAlert(message: "請填寫完整資料")
         } else if txfPassword.text != txfConfirmPassword.text {
             showAlert(message: "密碼不一致")
+        // 驗證信箱格式
+        } else if isValidEmail(email: txfMail.text!) == false {
+            showAlert(message: "信箱格式錯誤")
         // 密碼(8~16字元，需含大小寫字母與數字)
         } else if txfPassword.text!.count < 8 || txfPassword.text!.count > 16 {
             showAlert(message: "密碼需為8~16字元")
@@ -153,10 +156,8 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         // pickerView顯示時有動畫效果
         UIView.transition(with: pkvCountry, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
         pkvCountry.isHidden.toggle() // 切換顯示狀態
-        
-        // btnRegister顯示時有動畫效果
         UIView.transition(with: btnRegister, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
-        btnRegister.isHidden = !pkvCountry.isHidden // 依照pickerView的狀態來決定是否啟用註冊按鈕
+        btnRegister.isHidden.toggle() // 切換顯示狀態
     }
     
     
@@ -188,6 +189,13 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    // 驗證信箱格式
+    func isValidEmail(email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }
 
@@ -221,6 +229,9 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         btnCountry.setTitle(countries[row], for: .normal)
         pkvCountry.isHidden.toggle() // 隱藏pickerView
+        // btnRegister顯示時有動畫效果
+        UIView.transition(with: btnRegister, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
+        btnRegister.isHidden.toggle() // 切換顯示狀態
     }
 }
 

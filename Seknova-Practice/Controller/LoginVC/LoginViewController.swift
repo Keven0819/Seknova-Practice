@@ -16,9 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnFacebookLogin: UIButton!
     @IBOutlet weak var btnAppleLogin: UIButton!
     @IBOutlet weak var btnGoogleLogin: UIButton!
-    
     @IBOutlet weak var btnRegister: UIButton!
-    
     @IBOutlet weak var btnForgetPassword: UIButton!
     // MARK: - Property
     

@@ -29,7 +29,7 @@ class RecertificationViewController: UIViewController {
         // 回到 "登入頁面"
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
         
-        // 註冊畫面的帳號密碼儲存進userdefault
+        // 取得UserDefaults中的帳號密碼
         let user = userDefault.string(forKey: "Mail")
         let password = userDefault.string(forKey: "Password")
         
