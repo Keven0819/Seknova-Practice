@@ -27,7 +27,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-SY-UMU">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="933"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="990"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <color key="textColor" systemColor="labelColor"/>
@@ -35,7 +35,7 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-kA-skU">
-                                    <rect key="frame" x="40.666666666666657" y="950" width="312" height="50"/>
+                                    <rect key="frame" x="40.666666666666657" y="1000" width="312" height="50"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="確認" cornerStyle="capsule">
                                         <backgroundConfiguration key="background" strokeWidth="4">
@@ -56,9 +56,9 @@
                                 <constraint firstItem="2e3-kA-skU" firstAttribute="centerX" secondItem="wb5-bo-O3e" secondAttribute="centerX" id="7X2-5Q-fC6"/>
                                 <constraint firstItem="GhT-SY-UMU" firstAttribute="centerX" secondItem="wb5-bo-O3e" secondAttribute="centerX" id="FZF-Nf-xSt"/>
                                 <constraint firstItem="2e3-kA-skU" firstAttribute="width" secondItem="wb5-bo-O3e" secondAttribute="width" multiplier="0.793893" id="TP8-P8-8a5"/>
-                                <constraint firstAttribute="bottom" secondItem="2e3-kA-skU" secondAttribute="bottom" multiplier="0.95" constant="150" id="UL0-oo-CLH"/>
+                                <constraint firstAttribute="bottom" secondItem="2e3-kA-skU" secondAttribute="bottom" constant="50" id="UL0-oo-CLH"/>
                                 <constraint firstItem="GhT-SY-UMU" firstAttribute="width" secondItem="wb5-bo-O3e" secondAttribute="width" id="Zzb-r9-EZT"/>
-                                <constraint firstItem="GhT-SY-UMU" firstAttribute="height" secondItem="wb5-bo-O3e" secondAttribute="height" multiplier="0.848182" id="a1S-JZ-agn"/>
+                                <constraint firstItem="GhT-SY-UMU" firstAttribute="height" secondItem="wb5-bo-O3e" secondAttribute="height" multiplier="0.9" id="a1S-JZ-agn"/>
                                 <constraint firstItem="2e3-kA-skU" firstAttribute="height" secondItem="wb5-bo-O3e" secondAttribute="height" multiplier="0.0454545" id="lws-CO-obH"/>
                                 <constraint firstAttribute="height" constant="1100" id="y61-Rc-Bev"/>
                             </constraints>

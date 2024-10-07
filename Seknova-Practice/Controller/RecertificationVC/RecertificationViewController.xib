@@ -26,26 +26,26 @@
                     <rect key="frame" x="273" y="59" width="120" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acitivated Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMw-W0-oRN">
-                    <rect key="frame" x="74.666666666666686" y="99" width="244" height="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acitivated Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMw-W0-oRN">
+                    <rect key="frame" x="0.0" y="99" width="393" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="29"/>
                     <color key="textColor" red="0.75686274509803919" green="0.058823529411764705" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開 通 帳 號" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHK-gF-Ud1">
-                    <rect key="frame" x="137.66666666666666" y="160" width="118" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開 通 帳 號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHK-gF-Ud1">
+                    <rect key="frame" x="0.0" y="160" width="393" height="30"/>
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                     <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請到信箱點選認證信開通帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQZ-Dd-k53">
-                    <rect key="frame" x="64" y="361" width="265" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請到信箱點選認證信開通帳號" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQZ-Dd-k53">
+                    <rect key="frame" x="-244.66666666666666" y="361" width="882.33333333333337" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kba-Hx-mV4">
-                    <rect key="frame" x="97.666666666666686" y="409" width="198" height="35"/>
+                    <rect key="frame" x="83.333333333333329" y="409" width="226.33333333333337" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="重送認證信" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5" strokeOutset="3">
@@ -57,7 +57,7 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWH-ZV-vV9">
-                    <rect key="frame" x="97.666666666666686" y="748" width="198" height="35"/>
+                    <rect key="frame" x="83.333333333333329" y="750.33333333333337" width="226.33333333333337" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="下一步" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5" strokeOutset="3">
@@ -75,29 +75,29 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="AMw-W0-oRN" firstAttribute="width" secondItem="u0C-m8-N9f" secondAttribute="width" multiplier="0.620865" id="2vQ-df-lvb"/>
+                <constraint firstItem="AMw-W0-oRN" firstAttribute="width" secondItem="u0C-m8-N9f" secondAttribute="width" id="2vQ-df-lvb"/>
                 <constraint firstItem="AMw-W0-oRN" firstAttribute="height" secondItem="u0C-m8-N9f" secondAttribute="height" multiplier="0.0422535" id="2y5-J7-C3e"/>
-                <constraint firstItem="HWH-ZV-vV9" firstAttribute="centerX" secondItem="kba-Hx-mV4" secondAttribute="centerX" id="3Ja-FK-Nhn"/>
                 <constraint firstItem="FHK-gF-Ud1" firstAttribute="top" secondItem="AMw-W0-oRN" secondAttribute="bottom" constant="25" id="5Gt-1U-bWP"/>
+                <constraint firstItem="kba-Hx-mV4" firstAttribute="top" secondItem="VQZ-Dd-k53" secondAttribute="bottom" constant="24" id="6jn-K4-IMt"/>
                 <constraint firstItem="FHK-gF-Ud1" firstAttribute="centerX" secondItem="AMw-W0-oRN" secondAttribute="centerX" id="6sL-hp-y6t"/>
-                <constraint firstItem="kba-Hx-mV4" firstAttribute="top" secondItem="VQZ-Dd-k53" secondAttribute="bottom" constant="24" id="6ti-eT-gdY"/>
                 <constraint firstItem="VQZ-Dd-k53" firstAttribute="top" secondItem="FHK-gF-Ud1" secondAttribute="bottom" constant="171" id="88r-dE-pFD"/>
                 <constraint firstItem="VQZ-Dd-k53" firstAttribute="width" secondItem="FHK-gF-Ud1" secondAttribute="width" multiplier="2.24576" id="8Kg-dx-Rg3"/>
+                <constraint firstItem="HWH-ZV-vV9" firstAttribute="centerX" secondItem="kba-Hx-mV4" secondAttribute="centerX" id="C0H-8H-wCI"/>
                 <constraint firstItem="AMw-W0-oRN" firstAttribute="centerX" secondItem="u0C-m8-N9f" secondAttribute="centerX" id="CGd-Ky-e6G"/>
+                <constraint firstItem="kba-Hx-mV4" firstAttribute="centerX" secondItem="VQZ-Dd-k53" secondAttribute="centerX" id="DTt-IO-p7M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HWH-ZV-vV9" secondAttribute="bottom" constant="32.666666666666629" id="GE7-NL-L3b"/>
+                <constraint firstItem="HWH-ZV-vV9" firstAttribute="width" secondItem="kba-Hx-mV4" secondAttribute="width" id="Ltd-8Y-3D8"/>
                 <constraint firstItem="u0C-m8-N9f" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Nj6-RJ-cAA"/>
+                <constraint firstItem="kba-Hx-mV4" firstAttribute="width" secondItem="VQZ-Dd-k53" secondAttribute="width" multiplier="0.256139" id="OM1-2B-Hmo"/>
                 <constraint firstItem="u0C-m8-N9f" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UXo-wr-wmf"/>
                 <constraint firstItem="VQZ-Dd-k53" firstAttribute="height" secondItem="FHK-gF-Ud1" secondAttribute="height" multiplier="0.8" id="VrK-Bj-6NL"/>
-                <constraint firstItem="HWH-ZV-vV9" firstAttribute="width" secondItem="kba-Hx-mV4" secondAttribute="width" id="XMc-r2-azz"/>
-                <constraint firstItem="kba-Hx-mV4" firstAttribute="height" secondItem="VQZ-Dd-k53" secondAttribute="height" multiplier="1.45833" id="aQm-Y8-TIn"/>
+                <constraint firstItem="kba-Hx-mV4" firstAttribute="height" secondItem="VQZ-Dd-k53" secondAttribute="height" multiplier="1.45833" id="b9I-Nh-Y10"/>
+                <constraint firstItem="HWH-ZV-vV9" firstAttribute="height" secondItem="kba-Hx-mV4" secondAttribute="height" id="bgU-ze-pCv"/>
                 <constraint firstItem="u0C-m8-N9f" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="g8F-VG-dsc"/>
                 <constraint firstItem="VQZ-Dd-k53" firstAttribute="centerX" secondItem="FHK-gF-Ud1" secondAttribute="centerX" id="hJN-0y-Xua"/>
-                <constraint firstItem="HWH-ZV-vV9" firstAttribute="top" secondItem="kba-Hx-mV4" secondAttribute="bottom" constant="304" id="mr2-P9-cnc"/>
                 <constraint firstItem="FHK-gF-Ud1" firstAttribute="height" secondItem="AMw-W0-oRN" secondAttribute="height" multiplier="0.833333" id="nPM-I7-gjh"/>
                 <constraint firstItem="u0C-m8-N9f" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="1.1" id="phe-ZR-47F"/>
-                <constraint firstItem="HWH-ZV-vV9" firstAttribute="height" secondItem="kba-Hx-mV4" secondAttribute="height" id="q7m-Qc-n4J"/>
-                <constraint firstItem="kba-Hx-mV4" firstAttribute="centerX" secondItem="VQZ-Dd-k53" secondAttribute="centerX" id="td9-DM-Zbn"/>
-                <constraint firstItem="FHK-gF-Ud1" firstAttribute="width" secondItem="AMw-W0-oRN" secondAttribute="width" multiplier="0.483607" id="wV7-YG-682"/>
-                <constraint firstItem="kba-Hx-mV4" firstAttribute="width" secondItem="VQZ-Dd-k53" secondAttribute="width" multiplier="0.74717" id="xJS-Zl-04D"/>
+                <constraint firstItem="FHK-gF-Ud1" firstAttribute="width" secondItem="AMw-W0-oRN" secondAttribute="width" id="wV7-YG-682"/>
                 <constraint firstItem="u0C-m8-N9f" firstAttribute="top" secondItem="AMw-W0-oRN" secondAttribute="bottom" constant="-78.666666666666686" id="zLL-b0-hD1"/>
             </constraints>
             <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>

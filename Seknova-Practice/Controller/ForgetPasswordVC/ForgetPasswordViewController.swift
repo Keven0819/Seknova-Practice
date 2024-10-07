@@ -10,6 +10,7 @@ import UIKit
 class ForgetPasswordViewController: UIViewController {
     
     // MARK: - IBOutlet
+    @IBOutlet weak var btnSent: UIButton!
     
     // MARK: - Property
     
@@ -28,6 +29,10 @@ class ForgetPasswordViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    @IBAction func pushToResetVC(_ sender: Any) {
+        let resetVC = ResetPasswordViewController()
+        self.navigationController?.pushViewController(resetVC, animated: true)
+    }
     
     // MARK: - Function
     
