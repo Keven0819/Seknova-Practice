@@ -172,17 +172,17 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     
     // saveUserDefaults
     func saveUserDefaults() {
-        userDefault.setValue(txfMail.text, forKey: "Mail")
-        userDefault.setValue(txfPassword.text, forKey: "Password")
-        userDefault.setValue(txfConfirmPassword.text, forKey: "ConfirmPassword")
-        userDefault.setValue(btnCountry.currentTitle, forKey: "Country")
+        userDefault.setValue(txfMail.text, forKey: "email")
+        userDefault.setValue(txfPassword.text, forKey: "password")
+        userDefault.setValue(txfConfirmPassword.text, forKey: "confirmPassword")
+        userDefault.setValue(btnCountry.currentTitle, forKey: "country")
     }
     
     func useUserDefaults() {
-        txfMail.text = userDefault.string(forKey: "Mail")
-        txfPassword.text = userDefault.string(forKey: "Password")
-        txfConfirmPassword.text = userDefault.string(forKey: "ConfirmPassword")
-        btnCountry.setTitle(userDefault.string(forKey: "Country"), for: .normal)
+        txfMail.text = userDefault.string(forKey: "email")
+        txfPassword.text = userDefault.string(forKey: "password")
+        txfConfirmPassword.text = userDefault.string(forKey: "confirmPassword")
+        btnCountry.setTitle(userDefault.string(forKey: "country"), for: .normal)
     }
     
     func showAlert(message: String) {

@@ -118,13 +118,16 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(forgetVC, animated: true)
     }
     @IBAction func btnLoginTapped(_ sender: Any) {
+        let loginCount = UserDefaults.standard.integer(forKey: "loginCount")
         
-        // 第一次登入的話顯示TermsViewController，否則顯示HomeViewController
-        if UserDefaults.standard.bool(forKey: "FirstLogin") {
-            print("跳至主畫面")
-        } else {
+        if loginCount == 0 {
+            // 第一次登入跳至條款畫面
             let termsVC = TermsViewController()
             self.navigationController?.pushViewController(termsVC, animated: true)
+            
+            UserDefaults.standard.set(1, forKey: "loginCount")
+        } else {
+            // 非第一次登入跳至首頁
         }
     }
     

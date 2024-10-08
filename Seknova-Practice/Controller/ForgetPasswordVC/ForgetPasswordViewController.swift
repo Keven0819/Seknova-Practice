@@ -11,6 +11,7 @@ class ForgetPasswordViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var btnSent: UIButton!
+    @IBOutlet weak var txfEmail: UITextField!
     
     // MARK: - Property
     
@@ -30,8 +31,16 @@ class ForgetPasswordViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func pushToResetVC(_ sender: Any) {
-        let resetVC = ResetPasswordViewController()
-        self.navigationController?.pushViewController(resetVC, animated: true)
+        let email = UserDefaults.standard.string(forKey: "email")
+        if txfEmail.text == email {
+            let resetVC = ResetPasswordViewController()
+            self.navigationController?.pushViewController(resetVC, animated: true)
+        } else {
+            let alert = UIAlertController(title: "錯誤", message: "Email輸入錯誤", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Function

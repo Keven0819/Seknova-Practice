@@ -10,7 +10,11 @@ import UIKit
 class ResetPasswordViewController: UIViewController {
     
     // MARK: - IBOutlet
-    
+    @IBOutlet weak var txfEmail: UITextField!
+    @IBOutlet weak var txfOldPassword: UITextField!
+    @IBOutlet weak var txfNewPassword: UITextField!
+    @IBOutlet weak var txfAgainNewPassword: UITextField!
+    @IBOutlet weak var btnSent: UIButton!
     // MARK: - Property
     
     // MARK: - LifeCycle
