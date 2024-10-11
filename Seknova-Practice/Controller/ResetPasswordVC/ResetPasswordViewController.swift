@@ -55,6 +55,24 @@ class ResetPasswordViewController: UIViewController {
             showAlert(title: "錯誤", message: "新密碼輸入不一致")
         } else {
             showAlert(title: "提示", message: "密碼修改成功")
+            
+            // 將新密碼存進userDefault
+            userDefault.set(txfNewPassword.text, forKey: "password")
+            
+            // 回到 "登入頁面"
+            
+            let newPassword = userDefault.string(forKey: "password")
+            
+            if let loginVC = navigationController?.viewControllers.first(where: { $0 is LoginViewController }) as? LoginViewController {
+                print("LoginVC found.")
+                DispatchQueue.main.async {
+                    loginVC.txfUserName.text = String(email ?? "")
+                    loginVC.txfPassword.text = String(newPassword ?? "")
+                }
+
+            } else {
+                print("LoginVC not found.")
+            }
         }
     }
     
@@ -100,8 +118,15 @@ class ResetPasswordViewController: UIViewController {
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-        alert.addAction(okAction)
+        if title == "提示" {
+            let okAction = UIAlertAction(title: "確定", style: .default) { _ in
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            alert.addAction(okAction)
+        } else {
+            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+            alert.addAction(okAction)
+        }
         present(alert, animated: true, completion: nil)
     }
 }
