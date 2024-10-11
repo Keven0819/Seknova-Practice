@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnForgetPassword: UIButton!
     // MARK: - Property
     
+    let userDefault = UserDefaults() // 實例化UserDefaults
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -118,21 +120,42 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(forgetVC, animated: true)
     }
     @IBAction func btnLoginTapped(_ sender: Any) {
-        let loginCount = UserDefaults.standard.integer(forKey: "loginCount")
         
-        if loginCount == 0 {
-            // 第一次登入跳至條款畫面
-            let termsVC = TermsViewController()
-            self.navigationController?.pushViewController(termsVC, animated: true)
+        let loginCount = userDefault.integer(forKey: "loginCount")
+        let email = userDefault.string(forKey: "email")
+        let password = userDefault.string(forKey: "password")
+        
+        
+        if txfUserName.text != email {
             
-            UserDefaults.standard.set(1, forKey: "loginCount")
+            showAlert(message: "Email輸入錯誤")
+            
+        } else if txfPassword.text != password {
+            
+            showAlert(message: "密碼輸入錯誤")
+            
         } else {
-            // 非第一次登入跳至首頁
+            
+            if loginCount == 0 {
+                // 第一次登入跳至條款畫面
+                let termsVC = TermsViewController()
+                self.navigationController?.pushViewController(termsVC, animated: true)
+                
+                userDefault.set(1, forKey: "loginCount")
+            } else {
+                // 非第一次登入跳至首頁
+                print("跳至首頁")
+            }
         }
     }
-    
     // MARK: - Function
-    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "錯誤", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion:nil)
+        return
+    }
 }
 
 // MARK: - Extensions

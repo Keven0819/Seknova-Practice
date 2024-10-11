@@ -37,12 +37,7 @@ class TermsViewController: UIViewController {
     @IBAction func btnConfirmTapped(_ sender: Any) {
         // 點擊確認按鈕後關閉視圖控制器
         delegate?.didConfirmTerms()
-        self.dismiss(animated: true, completion: nil)
-        
-        // 如果是從LoginViewController來的，則直接跳回LoginViewController
-        if let loginVC = presentingViewController as? LoginViewController {
-            loginVC.dismiss(animated: true, completion: nil)
-        }
+        self.dismiss(animated: true)
     }
     
     // MARK: - Function

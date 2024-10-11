@@ -30,8 +30,8 @@ class RecertificationViewController: UIViewController {
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
         
         // 取得UserDefaults中的帳號密碼
-        let user = userDefault.string(forKey: "Mail")
-        let password = userDefault.string(forKey: "Password")
+        let user = userDefault.string(forKey: "email")
+        let password = userDefault.string(forKey: "password")
         
         // 透過navigationController找到LoginViewController
         if let loginVC = navigationController?.viewControllers.first(where: { $0 is LoginViewController }) as? LoginViewController {
