@@ -16,6 +16,7 @@ class TermsViewController: UIViewController {
     // MARK: - Property
     
     weak var delegate: TermsViewControllerDelegate?
+    let userDefault = UserDefaults()
     
     // MARK: - LifeCycle
     
@@ -35,9 +36,19 @@ class TermsViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func btnConfirmTapped(_ sender: Any) {
-        // 點擊確認按鈕後關閉視圖控制器
-        delegate?.didConfirmTerms()
-        self.dismiss(animated: true)
+        
+        // 是從LoginViewController push過來的話，則直接跳轉至BodyInformationViewController
+        let firstLogin = 0
+        if firstLogin == userDefault.integer(forKey: "loginCount") {
+            let bodyInfoVC = BodyInformationViewController()
+            self.navigationController?.pushViewController(bodyInfoVC, animated: true)
+            userDefault.set(1, forKey: "loginCount")
+            print("跳轉成功")
+        } else {
+            // 點擊確認按鈕後關閉視圖控制器
+            delegate?.didConfirmTerms()
+            self.dismiss(animated: true)
+        }
     }
     
     // MARK: - Function

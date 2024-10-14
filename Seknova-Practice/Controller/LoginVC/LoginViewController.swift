@@ -140,11 +140,10 @@ class LoginViewController: UIViewController {
                 // 第一次登入跳至條款畫面
                 let termsVC = TermsViewController()
                 self.navigationController?.pushViewController(termsVC, animated: true)
-                
-                userDefault.set(1, forKey: "loginCount")
             } else {
                 // 非第一次登入跳至首頁
-                print("跳至首頁")
+                let bodyVC = BodyInformationViewController()
+                self.navigationController?.pushViewController(bodyVC, animated: true)
             }
         }
     }
