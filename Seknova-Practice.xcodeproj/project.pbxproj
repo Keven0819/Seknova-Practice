@@ -25,6 +25,9 @@
 		7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8199232CA55F87002767D3 /* Color+Extensions.swift */; };
 		7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */; };
 		7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */; };
+		7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */; };
+		7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */; };
+		7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		7B8199232CA55F87002767D3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyInformationViewController.swift; sourceTree = "<group>"; };
 		7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyInformationViewController.xib; sourceTree = "<group>"; };
+		7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
+		7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
+		7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8199232CA55F87002767D3 /* Color+Extensions.swift */,
+				7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,10 +194,20 @@
 		7B9B92692CBCE23000203AD3 /* BodyInformationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7B9B926E2CBE737900203AD3 /* Components */,
 				7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */,
 				7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */,
 			);
 			path = BodyInformationViewController;
+			sourceTree = "<group>";
+		};
+		7B9B926E2CBE737900203AD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */,
+				7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7BD875BD2CA6AF04008BB100 /* TermsVC */ = {
@@ -279,6 +296,7 @@
 				7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */,
 				7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
+				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
+				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
+				7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */,
 				7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */,
 				7B6F7D0F2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift in Sources */,
 				7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */,

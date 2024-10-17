@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="35" id="KGk-i7-Jjw" customClass="PersonalInfoTableViewCell" customModule="Seknova_Practice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rj3-9b-kFJ">
+                        <rect key="frame" x="16" y="11.666666666666664" width="75" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="點擊進行編輯" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-lw-e4Y">
+                        <rect key="frame" x="99" y="5" width="205" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowDown2" translatesAutoresizingMaskIntoConstraints="NO" id="1q9-ml-nuZ">
+                        <rect key="frame" x="272" y="6" width="32" height="32"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1q9-ml-nuZ" firstAttribute="centerY" secondItem="z4d-lw-e4Y" secondAttribute="centerY" id="1GQ-HD-JR7"/>
+                    <constraint firstItem="Rj3-9b-kFJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7cS-NN-PSe"/>
+                    <constraint firstItem="1q9-ml-nuZ" firstAttribute="width" secondItem="z4d-lw-e4Y" secondAttribute="width" multiplier="0.156098" id="9Tc-Dn-Oer"/>
+                    <constraint firstItem="1q9-ml-nuZ" firstAttribute="height" secondItem="z4d-lw-e4Y" secondAttribute="height" multiplier="0.941176" id="ATr-NT-ma9"/>
+                    <constraint firstItem="Rj3-9b-kFJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JaL-2J-PMk"/>
+                    <constraint firstItem="z4d-lw-e4Y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KwV-C6-I1K"/>
+                    <constraint firstItem="Rj3-9b-kFJ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="Mcc-h1-X7c"/>
+                    <constraint firstAttribute="trailing" secondItem="1q9-ml-nuZ" secondAttribute="trailing" constant="16" id="T7c-MF-NML"/>
+                    <constraint firstItem="z4d-lw-e4Y" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.640625" id="bbH-h5-9kc"/>
+                    <constraint firstItem="Rj3-9b-kFJ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.234375" id="kU4-cY-hAs"/>
+                    <constraint firstItem="z4d-lw-e4Y" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.772727" id="qwp-QA-CYR"/>
+                    <constraint firstAttribute="trailing" secondItem="z4d-lw-e4Y" secondAttribute="trailing" constant="16" id="y8T-Cr-BW4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgvArrowDown" destination="1q9-ml-nuZ" id="5cv-7S-zQ4"/>
+                <outlet property="lbFieldName" destination="Rj3-9b-kFJ" id="Eq2-E7-yI3"/>
+                <outlet property="txfEdit" destination="z4d-lw-e4Y" id="Ixx-hi-eiB"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowDown2" width="512" height="512"/>
+    </resources>
+</document>
