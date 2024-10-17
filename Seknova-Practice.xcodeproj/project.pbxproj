@@ -28,6 +28,7 @@
 		7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */; };
 		7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */; };
 		7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */; };
+		7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92D12CC11D1200203AD3 /* UserInformation.swift */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
 		7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		7B9B92D12CC11D1200203AD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				7B8199232CA55F87002767D3 /* Color+Extensions.swift */,
 				7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */,
+				7B9B92D12CC11D1200203AD3 /* UserInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */,
 				7B7836802CA13AA7006EE7D8 /* SceneDelegate.swift in Sources */,
 				7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */,
+				7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */,
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,
 			);
