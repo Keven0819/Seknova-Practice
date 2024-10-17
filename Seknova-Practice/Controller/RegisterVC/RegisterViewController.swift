@@ -23,7 +23,6 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     
     let countries = [("Taiwan(台灣)"), ("America(美國)")]
     var isButtonTapped = false
-    let userDefault = UserDefaults() // 實例化UserDefaults
     
     // MARK: - LifeCycle
     
@@ -37,7 +36,6 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         setupNavigationBar()
         setupTextFields()
         setupPickerView()
-        useUserDefaults()
     }
     
     // 設定選擇國家的pickerView
@@ -172,17 +170,10 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     
     // saveUserDefaults
     func saveUserDefaults() {
-        userDefault.setValue(txfMail.text, forKey: "email")
-        userDefault.setValue(txfPassword.text, forKey: "password")
-        userDefault.setValue(txfConfirmPassword.text, forKey: "confirmPassword")
-        userDefault.setValue(btnCountry.currentTitle, forKey: "country")
-    }
-    
-    func useUserDefaults() {
-        txfMail.text = userDefault.string(forKey: "email")
-        txfPassword.text = userDefault.string(forKey: "password")
-        txfConfirmPassword.text = userDefault.string(forKey: "confirmPassword")
-        btnCountry.setTitle(userDefault.string(forKey: "country"), for: .normal)
+        UserPreferences.shared.mail = txfMail.text
+        UserPreferences.shared.password = txfPassword.text
+        UserPreferences.shared.confirmPassword = txfConfirmPassword.text
+        UserPreferences.shared.country = btnCountry.title(for: .normal)
     }
     
     func showAlert(message: String) {

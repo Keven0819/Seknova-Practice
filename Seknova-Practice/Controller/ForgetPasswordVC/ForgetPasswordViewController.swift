@@ -15,8 +15,6 @@ class ForgetPasswordViewController: UIViewController {
     
     // MARK: - Property
     
-    let userDefaut = UserDefaults()
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -33,7 +31,9 @@ class ForgetPasswordViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func pushToResetVC(_ sender: Any) {
-        let email = userDefaut.string(forKey: "email")
+        
+        let email = UserPreferences.shared.mail
+        
         if txfEmail.text == email {
             let resetVC = ResetPasswordViewController()
             self.navigationController?.pushViewController(resetVC, animated: true)

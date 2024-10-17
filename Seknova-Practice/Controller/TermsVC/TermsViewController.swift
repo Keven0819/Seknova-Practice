@@ -38,11 +38,12 @@ class TermsViewController: UIViewController {
     @IBAction func btnConfirmTapped(_ sender: Any) {
         
         // 是從LoginViewController push過來的話，則直接跳轉至BodyInformationViewController
-        let firstLogin = 0
-        if firstLogin == userDefault.integer(forKey: "loginCount") {
+        UserPreferences.shared.loginCount = 0
+        let loginCount = UserPreferences.shared.loginCount
+        if loginCount == 0 {
             let bodyInfoVC = BodyInformationViewController()
             self.navigationController?.pushViewController(bodyInfoVC, animated: true)
-            userDefault.set(1, forKey: "loginCount")
+            UserPreferences.shared.loginCount = 1
             print("跳轉成功")
         } else {
             // 點擊確認按鈕後關閉視圖控制器

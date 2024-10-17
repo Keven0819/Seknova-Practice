@@ -14,8 +14,6 @@ class RecertificationViewController: UIViewController {
     
     // MARK: - Property
     
-    let userDefault = UserDefaults() // 實例化UserDefaults
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -30,8 +28,8 @@ class RecertificationViewController: UIViewController {
         navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
         
         // 取得UserDefaults中的帳號密碼
-        let user = userDefault.string(forKey: "email")
-        let password = userDefault.string(forKey: "password")
+        let user = UserPreferences.shared.mail
+        let password = UserPreferences.shared.password
         
         // 透過navigationController找到LoginViewController
         if let loginVC = navigationController?.viewControllers.first(where: { $0 is LoginViewController }) as? LoginViewController {

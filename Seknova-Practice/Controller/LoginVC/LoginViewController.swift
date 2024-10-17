@@ -20,8 +20,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnForgetPassword: UIButton!
     // MARK: - Property
     
-    let userDefault = UserDefaults() // 實例化UserDefaults
-    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -121,35 +119,30 @@ class LoginViewController: UIViewController {
     }
     @IBAction func btnLoginTapped(_ sender: Any) {
         
-        let loginCount = userDefault.integer(forKey: "loginCount")
-        let email = userDefault.string(forKey: "email")
-        let password = userDefault.string(forKey: "password")
+        let email = UserPreferences.shared.mail
+        let password = UserPreferences.shared.password
+        let loginCount = UserPreferences.shared.loginCount
         
-        
-        // 非第一次登入跳至首頁
-        let bodyVC = BodyInformationViewController()
-        self.navigationController?.pushViewController(bodyVC, animated: true)
-        
-//        if txfUserName.text != email {
-//
-//            showAlert(message: "Email輸入錯誤")
-//
-//        } else if txfPassword.text != password {
-//
-//            showAlert(message: "密碼輸入錯誤")
-//
-//        } else {
-//
-//            if loginCount == 0 {
-//                // 第一次登入跳至條款畫面
-//                let termsVC = TermsViewController()
-//                self.navigationController?.pushViewController(termsVC, animated: true)
-//            } else {
-//                // 非第一次登入跳至首頁
-//                let bodyVC = BodyInformationViewController()
-//                self.navigationController?.pushViewController(bodyVC, animated: true)
-//            }
-//        }
+        if txfUserName.text != email {
+
+            showAlert(message: "Email輸入錯誤")
+
+        } else if txfPassword.text != password {
+
+            showAlert(message: "密碼輸入錯誤")
+
+        } else {
+
+            if loginCount == 0 {
+                // 第一次登入跳至條款畫面
+                let termsVC = TermsViewController()
+                self.navigationController?.pushViewController(termsVC, animated: true)
+            } else {
+                // 非第一次登入跳至首頁
+                let bodyVC = BodyInformationViewController()
+                self.navigationController?.pushViewController(bodyVC, animated: true)
+            }
+        }
     }
     // MARK: - Function
     func showAlert(message: String) {

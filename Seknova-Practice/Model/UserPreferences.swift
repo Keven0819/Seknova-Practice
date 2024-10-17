@@ -19,7 +19,11 @@ class UserPreferences {
     enum UserPreferenceKey: String {
         case mail
         case password
+        case loginCount
+        case confirmPassword
+        case country
         case newPassword
+        
     }
     
     var mail: String? {
@@ -37,6 +41,33 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.password.rawValue)
+        }
+    }
+    
+    var loginCount: Int? {
+        get {
+            return userPreference.integer(forKey: UserPreferenceKey.loginCount.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.loginCount.rawValue)
+        }
+    }
+    
+    var confirmPassword: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.confirmPassword.rawValue) ?? ""
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.confirmPassword.rawValue)
+        }
+    }
+    
+    var country: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.country.rawValue) ?? ""
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.country.rawValue)
         }
     }
     

@@ -36,8 +36,9 @@ class ResetPasswordViewController: UIViewController {
     // MARK: - IBAction
     @IBAction func btnSentTapped(_ sender: Any) {
         
-        let email = userDefault.string(forKey: "email")
-        let password = userDefault.string(forKey: "password")
+        let email = UserPreferences.shared.mail
+        var password = UserPreferences.shared.password
+        let newPassword = UserPreferences.shared.newPassword
         
         if txfEmail.text != email {
             showAlert(title: "錯誤", message: "Email輸入錯誤")
@@ -57,17 +58,15 @@ class ResetPasswordViewController: UIViewController {
             showAlert(title: "提示", message: "密碼修改成功")
             
             // 將新密碼存進userDefault
-            userDefault.set(txfNewPassword.text, forKey: "password")
+            password = newPassword
             
             // 回到 "登入頁面"
-            
-            let newPassword = userDefault.string(forKey: "password")
             
             if let loginVC = navigationController?.viewControllers.first(where: { $0 is LoginViewController }) as? LoginViewController {
                 print("LoginVC found.")
                 DispatchQueue.main.async {
                     loginVC.txfUserName.text = String(email ?? "")
-                    loginVC.txfPassword.text = String(newPassword ?? "")
+                    loginVC.txfPassword.text = String(password ?? "")
                 }
 
             } else {
