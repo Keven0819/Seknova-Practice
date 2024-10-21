@@ -15,6 +15,8 @@ class PersonalInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imgvArrowDown: UIImageView!
     
+    @IBOutlet weak var lbResult: UILabel!
+    
     static let identifier = "PersonalInfoTableViewCell"
     
     override func awakeFromNib() {

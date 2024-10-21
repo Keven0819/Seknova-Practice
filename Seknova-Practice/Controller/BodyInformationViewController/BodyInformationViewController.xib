@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BodyInformationViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="Toolbar" destination="thf-uE-X68" id="9I0-OJ-WI9"/>
+                <outlet property="btnNext" destination="fio-Hs-KO9" id="P91-ew-RyA"/>
+                <outlet property="dpkBirthday" destination="qFV-ZQ-0rx" id="5OL-UM-N6v"/>
                 <outlet property="tableView" destination="eCM-7L-bCe" id="MUj-dv-Ck0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,9 +22,30 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-7L-bCe">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-7L-bCe">
                     <rect key="frame" x="0.0" y="61.666666666666686" width="393" height="666"/>
                 </tableView>
+                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="qFV-ZQ-0rx">
+                    <rect key="frame" x="0.0" y="666" width="393" height="184"/>
+                </datePicker>
+                <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thf-uE-X68">
+                    <rect key="frame" x="0.0" y="643" width="393" height="44"/>
+                    <items>
+                        <barButtonItem title="取消" id="100-kX-9y6">
+                            <connections>
+                                <action selector="cancelPickerView:" destination="-1" id="bRB-ta-Z3i"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="出生日期" width="286" style="plain" id="dXm-bc-lH7">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem title="確認" id="neG-cK-ahm">
+                            <connections>
+                                <action selector="confirmPickerView:" destination="-1" id="ga1-3a-oRZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fio-Hs-KO9">
                     <rect key="frame" x="75.666666666666686" y="750" width="242" height="57"/>
                     <state key="normal" title="Button"/>
@@ -33,19 +57,30 @@
                         <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="Next:" destination="-1" eventType="touchUpInside" id="Ep4-VA-Yas"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="qFV-ZQ-0rx" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6N5-Y3-yEu"/>
                 <constraint firstItem="eCM-7L-bCe" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.9" id="C50-Ma-fqX"/>
                 <constraint firstItem="eCM-7L-bCe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Mtp-Dv-D08"/>
                 <constraint firstItem="fio-Hs-KO9" firstAttribute="width" secondItem="eCM-7L-bCe" secondAttribute="width" multiplier="0.615776" id="Pk1-tk-FqL"/>
+                <constraint firstItem="qFV-ZQ-0rx" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="S9b-Ue-b4e"/>
+                <constraint firstItem="qFV-ZQ-0rx" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.215962" id="TZA-N1-409"/>
                 <constraint firstItem="fio-Hs-KO9" firstAttribute="top" secondItem="eCM-7L-bCe" secondAttribute="bottom" constant="22.333333333333258" id="ViS-AB-saX"/>
+                <constraint firstItem="qFV-ZQ-0rx" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="32" id="Xh3-8Q-f0u"/>
                 <constraint firstItem="fio-Hs-KO9" firstAttribute="centerX" secondItem="eCM-7L-bCe" secondAttribute="centerX" id="YHA-ab-tiS"/>
                 <constraint firstItem="eCM-7L-bCe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hYg-2r-b3V"/>
+                <constraint firstItem="qFV-ZQ-0rx" firstAttribute="top" secondItem="thf-uE-X68" secondAttribute="bottom" multiplier="0.97" id="iou-vr-XVW"/>
                 <constraint firstItem="eCM-7L-bCe" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.78169" id="jcs-Z9-9dM"/>
+                <constraint firstItem="thf-uE-X68" firstAttribute="width" secondItem="qFV-ZQ-0rx" secondAttribute="width" id="l5X-Oq-Ah2"/>
                 <constraint firstItem="fio-Hs-KO9" firstAttribute="height" secondItem="eCM-7L-bCe" secondAttribute="height" multiplier="0.0855856" id="o9Y-NJ-Zv6"/>
+                <constraint firstItem="thf-uE-X68" firstAttribute="height" secondItem="qFV-ZQ-0rx" secondAttribute="height" multiplier="0.23913" id="uaM-b1-2Xc"/>
+                <constraint firstItem="thf-uE-X68" firstAttribute="centerX" secondItem="qFV-ZQ-0rx" secondAttribute="centerX" id="xxw-3D-JbU"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>

@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static var mainColor = UIColor(named: "TextColor")
+    static var mainColor = UIColor(named: "TestColor")
 }

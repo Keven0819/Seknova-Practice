@@ -5,10 +5,9 @@
 //  Created by imac-2627 on 2024/10/17.
 //
 
-import Foundation
 import RealmSwift
 
-class Todo: Object {
+class UserInformation: Object {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var UserId: String
     @Persisted var FirstName: String
@@ -22,7 +21,7 @@ class Todo: Object {
     @Persisted var Weight: String
     @Persisted var Race: String
     @Persisted var Liquor: String
-    @Persisted var Smoke: Bool
+    @Persisted var Smoke: String
     @Persisted var Check: Bool
     @Persisted var Phone_Verified: Bool
     
@@ -30,7 +29,7 @@ class Todo: Object {
                      Birthday: String, Email: String, Phone: String,
                      Address: String, Gender: String, Height: String,
                      Weight: String, Race: String, Liquor: String,
-                     Smoke: Bool, Check: Bool, Phone_Verified: Bool) {
+                     Smoke: String, Check: Bool, Phone_Verified: Bool) {
         self.init()
         self.UserId = UserId
         self.FirstName = FirstName
