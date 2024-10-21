@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioVisualTeachingViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNext" destination="GPu-fr-qUP" id="vzQ-of-n0M"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="wl6-Su-YIK" id="gN3-Ge-iuc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZzN-zG-AWG">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                </imageView>
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-mi-315">
+                    <rect key="frame" x="76" y="362" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUDIOVISUAL TEACHING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUh-YS-GbN">
+                    <rect key="frame" x="35.666666666666657" y="94" width="322" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教 學 影 片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-K2-E8f">
+                    <rect key="frame" x="130.66666666666666" y="157" width="131.99999999999997" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wl6-Su-YIK">
+                    <rect key="frame" x="0.0" y="319" width="393" height="179"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPu-fr-qUP">
+                    <rect key="frame" x="98" y="583" width="197" height="47"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="下一步" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="5">
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="turnVC:" destination="-1" eventType="touchUpInside" id="Z3L-th-75I"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GPu-fr-qUP" firstAttribute="width" secondItem="wl6-Su-YIK" secondAttribute="width" multiplier="0.501272" id="0q8-zL-NAp"/>
+                <constraint firstItem="wl6-Su-YIK" firstAttribute="top" secondItem="ANA-K2-E8f" secondAttribute="bottom" constant="128" id="1i1-32-c38"/>
+                <constraint firstItem="wl6-Su-YIK" firstAttribute="centerX" secondItem="ANA-K2-E8f" secondAttribute="centerX" id="2OU-f9-M86"/>
+                <constraint firstItem="ZzN-zG-AWG" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="2WK-hs-fsk"/>
+                <constraint firstItem="ZzN-zG-AWG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="2eQ-hD-m3y"/>
+                <constraint firstItem="VUh-YS-GbN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.819338" id="92V-fR-hwM"/>
+                <constraint firstItem="ANA-K2-E8f" firstAttribute="centerX" secondItem="VUh-YS-GbN" secondAttribute="centerX" id="ALf-gE-2hs"/>
+                <constraint firstItem="ANA-K2-E8f" firstAttribute="top" secondItem="VUh-YS-GbN" secondAttribute="bottom" constant="29" id="CX2-UW-42D"/>
+                <constraint firstItem="ZzN-zG-AWG" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.890845" id="Elt-Ln-Dvj"/>
+                <constraint firstItem="VUh-YS-GbN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="JuN-l1-2CN"/>
+                <constraint firstItem="wl6-Su-YIK" firstAttribute="height" secondItem="ANA-K2-E8f" secondAttribute="height" multiplier="5.26471" id="Nh6-Q7-Nyx"/>
+                <constraint firstItem="GPu-fr-qUP" firstAttribute="top" secondItem="wl6-Su-YIK" secondAttribute="bottom" constant="85" id="TfI-rS-UGr"/>
+                <constraint firstItem="VUh-YS-GbN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0399061" id="Ytc-qu-w7e"/>
+                <constraint firstItem="ZzN-zG-AWG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Zon-2z-fEo"/>
+                <constraint firstItem="GPu-fr-qUP" firstAttribute="centerX" secondItem="wl6-Su-YIK" secondAttribute="centerX" id="cnr-mc-uiN"/>
+                <constraint firstItem="wl6-Su-YIK" firstAttribute="width" secondItem="ANA-K2-E8f" secondAttribute="width" multiplier="2.97727" id="nFL-vb-i0V"/>
+                <constraint firstItem="GPu-fr-qUP" firstAttribute="height" secondItem="wl6-Su-YIK" secondAttribute="height" multiplier="0.26257" id="qyF-q0-qi8"/>
+                <constraint firstItem="ANA-K2-E8f" firstAttribute="width" secondItem="VUh-YS-GbN" secondAttribute="width" multiplier="0.409938" id="wzS-W6-NuT"/>
+                <constraint firstItem="ANA-K2-E8f" firstAttribute="height" secondItem="VUh-YS-GbN" secondAttribute="height" id="yUh-aa-o4u"/>
+                <constraint firstItem="VUh-YS-GbN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="zbb-HF-ukY"/>
+            </constraints>
+            <point key="canvasLocation" x="-356.48854961832058" y="315.49295774647891"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background" width="1126" height="2437"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

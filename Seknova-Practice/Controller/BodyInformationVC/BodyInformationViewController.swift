@@ -82,21 +82,32 @@ class BodyInformationViewController: UIViewController {
         let phone = (tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
         let address = (tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
         
-        // 獲取永久性資料
-        let gender = (tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
+        let gender = (tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
         let height = (tableView.cellForRow(at: IndexPath(row: 1, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
         let weight = (tableView.cellForRow(at: IndexPath(row: 2, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
-        let race = (tableView.cellForRow(at: IndexPath(row: 3, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
-        let smoke = (tableView.cellForRow(at: IndexPath(row: 4, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
-        let liquor = (tableView.cellForRow(at: IndexPath(row: 5, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
+        let race = (tableView.cellForRow(at: IndexPath(row: 3, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
+        let smoke = (tableView.cellForRow(at: IndexPath(row: 4, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
+        let liquor = (tableView.cellForRow(at: IndexPath(row: 5, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
         
-        // 檢查永久性資料欄位是否空
-        if gender.isEmpty || race.isEmpty || smoke.isEmpty || liquor.isEmpty {
-            // 顯示警告
-            let alert = UIAlertController(title: "錯誤", message: "所有永久性資料欄位都不可為空", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            return
+        // 檢查資料是否為空
+        switch (firstName.isEmpty, lastName.isEmpty, dateString.isEmpty, email.isEmpty, race.isEmpty, smoke.isEmpty, liquor.isEmpty) {
+        case (true, _, _, _, _, _, _):
+            showAlert(message: "名字不可為空")
+        case (_, true, _, _, _, _, _):
+            showAlert(message: "姓氏不可為空")
+        case (_, _, true, _, _, _, _):
+            showAlert(message: "日期不可為空")
+        case (_, _, _, true, _, _, _):
+            showAlert(message: "電子郵件不可為空")
+        case (_, _, _, _, true, _, _):
+            showAlert(message: "種族不可為空")
+        case (_, _, _, _, _, true, _):
+            showAlert(message: "吸菸狀況不可為空")
+        case (_, _, _, _, _, _, true):
+            showAlert(message: "飲酒狀況不可為空")
+        default:
+            // 所有欄位都已填寫，繼續後續的程式邏輯
+            break
         }
         
         // 檢查出生日期是否超過今天
@@ -132,10 +143,17 @@ class BodyInformationViewController: UIViewController {
         } catch {
             print("儲存使用者資訊時出現錯誤: \(error)")
         }
+        
+        let VideoVC = AudioVisualTeachingViewController()
+        self.navigationController?.pushViewController(VideoVC, animated: true)
     }
     
     // MARK: - Function
-    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "錯誤", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Extensions

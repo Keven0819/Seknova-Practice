@@ -29,6 +29,10 @@
 		7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */; };
 		7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */; };
 		7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92D12CC11D1200203AD3 /* UserInformation.swift */; };
+		7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */; };
+		7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */; };
+		7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */; };
+		7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE87322CC67C9D00A39EA2 /* BloodSugarViewController.xib */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -59,6 +63,10 @@
 		7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
 		7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		7B9B92D12CC11D1200203AD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualTeachingViewController.swift; sourceTree = "<group>"; };
+		7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioVisualTeachingViewController.xib; sourceTree = "<group>"; };
+		7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarViewController.swift; sourceTree = "<group>"; };
+		7BAE87322CC67C9D00A39EA2 /* BloodSugarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarViewController.xib; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +174,9 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7B9B92692CBCE23000203AD3 /* BodyInformationViewController */,
+				7BAE87302CC67C6D00A39EA2 /* BloodSugarVC */,
+				7BAE872B2CC624A400A39EA2 /* AudioVisualTeachingVC */,
+				7B9B92692CBCE23000203AD3 /* BodyInformationVC */,
 				7B655C5F2CB3FD7F00345704 /* ResetPasswordVC */,
 				7BD875BD2CA6AF04008BB100 /* TermsVC */,
 				7B20708D2CA45283000A46A4 /* RecertificationVC */,
@@ -194,14 +204,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7B9B92692CBCE23000203AD3 /* BodyInformationViewController */ = {
+		7B9B92692CBCE23000203AD3 /* BodyInformationVC */ = {
 			isa = PBXGroup;
 			children = (
 				7B9B926E2CBE737900203AD3 /* Components */,
 				7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */,
 				7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */,
 			);
-			path = BodyInformationViewController;
+			path = BodyInformationVC;
 			sourceTree = "<group>";
 		};
 		7B9B926E2CBE737900203AD3 /* Components */ = {
@@ -211,6 +221,24 @@
 				7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7BAE872B2CC624A400A39EA2 /* AudioVisualTeachingVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */,
+				7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */,
+			);
+			path = AudioVisualTeachingVC;
+			sourceTree = "<group>";
+		};
+		7BAE87302CC67C6D00A39EA2 /* BloodSugarVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */,
+				7BAE87322CC67C9D00A39EA2 /* BloodSugarViewController.xib */,
+			);
+			path = BloodSugarVC;
 			sourceTree = "<group>";
 		};
 		7BD875BD2CA6AF04008BB100 /* TermsVC */ = {
@@ -293,8 +321,10 @@
 				7B7836872CA13AA9006EE7D8 /* Assets.xcassets in Resources */,
 				7B6F7D102CA2A3E700E9A1DC /* ForgetPasswordViewController.xib in Resources */,
 				7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */,
+				7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */,
 				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
+				7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */,
 				7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */,
 				7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */,
 				7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */,
@@ -356,6 +386,8 @@
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
+				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
+				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,
 				7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */,
 				7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */,
 				7B6F7D0F2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift in Sources */,
