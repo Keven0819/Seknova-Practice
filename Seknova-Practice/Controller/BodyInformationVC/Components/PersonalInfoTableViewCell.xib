@@ -32,7 +32,7 @@
                         <rect key="frame" x="272" y="6" width="32" height="32"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtH-2c-irO">
-                        <rect key="frame" x="149.66666666666666" y="11.666666666666664" width="111.99999999999997" height="21"/>
+                        <rect key="frame" x="157.66666666666666" y="11.666666666666664" width="111.99999999999997" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                     <constraint firstItem="AtH-2c-irO" firstAttribute="height" secondItem="1q9-ml-nuZ" secondAttribute="height" multiplier="0.65625" id="hZy-mp-jfJ"/>
                     <constraint firstItem="Rj3-9b-kFJ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.234375" id="kU4-cY-hAs"/>
                     <constraint firstItem="z4d-lw-e4Y" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.772727" id="qwp-QA-CYR"/>
-                    <constraint firstItem="AtH-2c-irO" firstAttribute="leading" secondItem="1q9-ml-nuZ" secondAttribute="leading" multiplier="0.55" id="uWr-xE-SVb"/>
+                    <constraint firstItem="AtH-2c-irO" firstAttribute="leading" secondItem="1q9-ml-nuZ" secondAttribute="leading" multiplier="0.58" id="uWr-xE-SVb"/>
                     <constraint firstAttribute="trailing" secondItem="z4d-lw-e4Y" secondAttribute="trailing" constant="16" id="y8T-Cr-BW4"/>
                 </constraints>
             </tableViewCellContentView>
