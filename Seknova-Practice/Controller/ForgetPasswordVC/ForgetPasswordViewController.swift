@@ -38,10 +38,8 @@ class ForgetPasswordViewController: UIViewController {
             let resetVC = ResetPasswordViewController()
             self.navigationController?.pushViewController(resetVC, animated: true)
         } else {
-            let alert = UIAlertController(title: "錯誤", message: "Email輸入錯誤", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            let alert = Alert()
+            alert.showAlert(title: "錯誤", message: "Email輸入錯誤", vc: self, action: {})
         }
     }
     

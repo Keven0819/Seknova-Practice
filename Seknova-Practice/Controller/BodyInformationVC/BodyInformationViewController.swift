@@ -89,22 +89,47 @@ class BodyInformationViewController: UIViewController {
         let smoke = (tableView.cellForRow(at: IndexPath(row: 4, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
         let liquor = (tableView.cellForRow(at: IndexPath(row: 5, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
         
+        let alert = Alert()
+        
         // 檢查資料是否為空
-        switch (firstName.isEmpty, lastName.isEmpty, dateString.isEmpty, email.isEmpty, race.isEmpty, smoke.isEmpty, liquor.isEmpty) {
-        case (true, _, _, _, _, _, _):
-            showAlert(message: "名字不可為空")
-        case (_, true, _, _, _, _, _):
-            showAlert(message: "姓氏不可為空")
-        case (_, _, true, _, _, _, _):
-            showAlert(message: "日期不可為空")
-        case (_, _, _, true, _, _, _):
-            showAlert(message: "電子郵件不可為空")
-        case (_, _, _, _, true, _, _):
-            showAlert(message: "種族不可為空")
-        case (_, _, _, _, _, true, _):
-            showAlert(message: "吸菸狀況不可為空")
-        case (_, _, _, _, _, _, true):
-            showAlert(message: "飲酒狀況不可為空")
+        switch (firstName.isEmpty, lastName.isEmpty, dateString.isEmpty, email.isEmpty, race.isEmpty, smoke.isEmpty, liquor.isEmpty
+            , height.isEmpty, weight.isEmpty) {
+        case (true, _, _, _, _, _, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "名字不可為空", vc: self, action: {})
+            
+        case (_, true, _, _, _, _, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "姓氏不可為空", vc: self, action: {})
+            
+        case (_, _, true, _, _, _, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "日期不可為空", vc: self, action: {})
+            
+        case (_, _, _, true, _, _, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "信箱不可為空", vc: self, action: {})
+            
+        case (_, _, _, _, true, _, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "種族不可為空", vc: self, action: {})
+            
+        case (_, _, _, _, _, true, _, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "吸菸狀況不可為空", vc: self, action: {})
+            
+        case (_, _, _, _, _, _, true, _, _):
+            
+            alert.showAlert(title: "錯誤", message: "飲酒狀況不可為空", vc: self, action: {})
+            
+        case (_, _, _, _, _, _, _, true, _):
+            
+            alert.showAlert(title: "錯誤", message: "身高不可為空", vc: self, action: {})
+            
+        case (_, _, _, _, _, _, _, _, true):
+            
+            alert.showAlert(title: "錯誤", message: "體重不可為空", vc: self, action: {})
+            
         default:
             // 所有欄位都已填寫，繼續後續的程式邏輯
             break
@@ -112,10 +137,8 @@ class BodyInformationViewController: UIViewController {
         
         // 檢查出生日期是否超過今天
         if dpkBirthday.date > Date() {
-            let alert = UIAlertController(title: "錯誤", message: "出生日期不可超過今天", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            return
+            
+            alert.showAlert(title: "錯誤", message: "出生日期不可超過今天", vc: self, action: {})
         }
         
         // 創建 UserInformation 實例
@@ -149,11 +172,6 @@ class BodyInformationViewController: UIViewController {
     }
     
     // MARK: - Function
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "錯誤", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
 }
 
 // MARK: - Extensions
@@ -270,6 +288,7 @@ extension BodyInformationViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
+            
             if indexPath.row == 2 {
                 // 動畫顯示
                 UIView.transition(with: dpkBirthday, duration: 0.5, options: .transitionFlipFromTop, animations: nil, completion: nil)
@@ -280,131 +299,57 @@ extension BodyInformationViewController: UITableViewDelegate, UITableViewDataSou
                 
                 btnNext.isHidden = true
             }
+            
         } else {
+            
+            let alert = Alert()
+            
             switch indexPath.row {
+                
             case 0:
-                let alert = UIAlertController( title: nil, message: nil, preferredStyle: .actionSheet)
                 
-                alert.view.tintColor = UIColor.mainColor
+                let title = ["生理男", "生理女", "其他"]
                 
-                let maleAction = UIAlertAction(title: "生理男", style: .default) { _ in
+                alert.showActionSheet(titles: title, cancelTitle: "取消", vc: self) { result in
                     let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
                     cell.lbResult.isHidden = false
-                    cell.lbResult.text = "生理男"
+                    cell.lbResult.text = result
                 }
-                let femaleAction = UIAlertAction(title: "生理女", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "生理女"
-                }
-                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 
-                alert.addAction(maleAction)
-                alert.addAction(femaleAction)
-                alert.addAction(cancelAction)
-                present(alert, animated: true, completion: nil)
             case 3:
-                let alert = UIAlertController( title: nil, message: nil, preferredStyle: .actionSheet)
                 
-                alert.view.tintColor = UIColor.mainColor
+                let title = ["亞洲", "非洲", "高加索", "拉丁", "其他"]
                 
-                let oneAction = UIAlertAction(title: "亞洲", style: .default) { _ in
+                alert.showActionSheet(titles: title, cancelTitle: "取消", vc: self) { result in
                     let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
                     cell.lbResult.isHidden = false
-                    cell.lbResult.text = "亞洲"
-                }
-                let twoAction = UIAlertAction(title: "非洲", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "非洲"
+                    cell.lbResult.text = result
                 }
                 
-                let threeAction = UIAlertAction(title: "高加索", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "高加索"
-                }
-                
-                let fourAction = UIAlertAction(title: "拉丁", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "拉丁"
-                }
-                
-                let fiveAction = UIAlertAction(title: "其他", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "其他"
-                }
-                
-                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-                
-                alert.addAction(oneAction)
-                alert.addAction(twoAction)
-                alert.addAction(threeAction)
-                alert.addAction(fourAction)
-                alert.addAction(fiveAction)
-                alert.addAction(cancelAction)
-                present(alert, animated: true, completion: nil)
             case 4:
-                let alert = UIAlertController( title: nil, message: nil, preferredStyle: .actionSheet)
                 
-                alert.view.tintColor = UIColor.mainColor
+                let title = ["不喝酒", "偶爾喝", "經常喝", "每天喝"]
                 
-                let oneAction = UIAlertAction(title: "不喝酒", style: .default) { _ in
+                alert.showActionSheet(titles: title, cancelTitle: "取消", vc: self) { result in
                     let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
                     cell.lbResult.isHidden = false
-                    cell.lbResult.text = "不喝酒"
-                }
-                let twoAction = UIAlertAction(title: "偶爾喝", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "偶爾喝"
+                    cell.lbResult.text = result
                 }
                 
-                let threeAction = UIAlertAction(title: "經常喝", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "經常喝"
-                }
-                
-                let fourAction = UIAlertAction(title: "每天喝", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "每天喝"
-                }
-                
-                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-                
-                alert.addAction(oneAction)
-                alert.addAction(twoAction)
-                alert.addAction(threeAction)
-                alert.addAction(fourAction)
-                alert.addAction(cancelAction)
-                present(alert, animated: true, completion: nil)
             case 5:
-                let alert = UIAlertController( title: nil, message: nil, preferredStyle: .actionSheet)
                 
-                alert.view.tintColor = UIColor.mainColor
+                let title = ["有", "無"]
                 
-                let yesAction = UIAlertAction(title: "有", style: .default) { _ in
+                alert.showActionSheet(titles: title, cancelTitle: "取消", vc: self) { result in
                     let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
                     cell.lbResult.isHidden = false
-                    cell.lbResult.text = "有"
+                    cell.lbResult.text = result
                 }
-                let noAction = UIAlertAction(title: "無", style: .default) { _ in
-                    let cell = tableView.cellForRow(at: indexPath) as! PersonalInfoTableViewCell
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = "無"
-                }
-                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 
-                alert.addAction(yesAction)
-                alert.addAction(noAction)
-                alert.addAction(cancelAction)
-                present(alert, animated: true, completion: nil)
             default:
+                
                 break
+                
             }
         }
     }

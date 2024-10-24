@@ -29,6 +29,7 @@
 		7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */; };
 		7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */; };
 		7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92D12CC11D1200203AD3 /* UserInformation.swift */; };
+		7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7665D2CCA5F7B00D0F340 /* Alert.swift */; };
 		7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */; };
 		7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */; };
 		7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */; };
@@ -63,6 +64,7 @@
 		7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
 		7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		7B9B92D12CC11D1200203AD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		7BA7665D2CCA5F7B00D0F340 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualTeachingViewController.swift; sourceTree = "<group>"; };
 		7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioVisualTeachingViewController.xib; sourceTree = "<group>"; };
 		7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				7B8199232CA55F87002767D3 /* Color+Extensions.swift */,
 				7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */,
 				7B9B92D12CC11D1200203AD3 /* UserInformation.swift */,
+				7BA7665D2CCA5F7B00D0F340 /* Alert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */,
 				7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */,
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
+				7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

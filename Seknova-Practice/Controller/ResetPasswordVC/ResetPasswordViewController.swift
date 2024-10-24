@@ -40,38 +40,46 @@ class ResetPasswordViewController: UIViewController {
         var password = UserPreferences.shared.password
         let newPassword = UserPreferences.shared.newPassword
         
+        let alert = Alert()
+        
         if txfEmail.text != email {
-            showAlert(title: "錯誤", message: "Email輸入錯誤")
+            
+            alert.showAlert(title: "錯誤", message: "Email輸入錯誤", vc: self, action: {})
+            
         } else if txfOldPassword.text != password {
-            showAlert(title: "錯誤", message: "舊密碼輸入錯誤")
+            
+            alert.showAlert(title: "錯誤", message: "舊密碼輸入錯誤", vc: self, action: {})
+            
         } else if txfNewPassword.text!.count < 8 || txfNewPassword.text!.count > 16 {
-            showAlert(title: "錯誤", message: "密碼需為8~16字元")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需為8~16字元", vc: self, action: {})
+            
         } else if !txfNewPassword.text!.containsNumber {
-            showAlert(title: "錯誤", message: "密碼需含數字")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含數字", vc: self, action: {})
+            
         } else if !txfNewPassword.text!.containsLowercase {
-            showAlert(title: "錯誤", message: "密碼需含小寫字母")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含小寫字母", vc: self, action: {})
+            
         } else if !txfNewPassword.text!.containsUppercase {
-            showAlert(title: "錯誤", message: "密碼需含大寫字母")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含大寫字母", vc: self, action: {})
+            
         } else if txfNewPassword.text != txfAgainNewPassword.text {
-            showAlert(title: "錯誤", message: "新密碼輸入不一致")
+            
+            alert.showAlert(title: "錯誤", message: "新密碼輸入不一致", vc: self, action: {})
+            
         } else {
-            showAlert(title: "提示", message: "密碼修改成功")
             
-            // 將新密碼存進userDefault
-            password = newPassword
-            
-            // 回到 "登入頁面"
-            
-            if let loginVC = navigationController?.viewControllers.first(where: { $0 is LoginViewController }) as? LoginViewController {
-                print("LoginVC found.")
-                DispatchQueue.main.async {
-                    loginVC.txfUserName.text = String(email ?? "")
-                    loginVC.txfPassword.text = String(password ?? "")
-                }
-
-            } else {
-                print("LoginVC not found.")
-            }
+            alert.showAlert(title: "提示", message: "密碼修改成功", vc: self, action: {
+                
+                // 將新密碼存進userDefault
+                password = newPassword
+                
+                // 回到 "登入頁面"
+                self.navigationController?.popToRootViewController(animated: true)
+            })
         }
     }
     
@@ -113,20 +121,6 @@ class ResetPasswordViewController: UIViewController {
         default:
             break
         }
-    }
-    
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        if title == "提示" {
-            let okAction = UIAlertAction(title: "確定", style: .default) { _ in
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-            alert.addAction(okAction)
-        } else {
-            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-            alert.addAction(okAction)
-        }
-        present(alert, animated: true, completion: nil)
     }
 }
 

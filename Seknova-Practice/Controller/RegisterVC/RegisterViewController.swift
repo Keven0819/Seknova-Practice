@@ -101,26 +101,43 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     // 跳轉頁面
     @IBAction func btnRegisterTapped(_ sender: Any) {
         let RCTVC = RecertificationViewController()
+        let alert = Alert()
         
         // 確認資料都有填
         if txfMail.text == "" || txfPassword.text == "" || txfConfirmPassword.text == "" {
-            showAlert(message: "請填寫完整資料")
+            
+            alert.showAlert(title: "錯誤", message: "請填寫完整資料", vc: self, action: {})
+            
         } else if txfPassword.text != txfConfirmPassword.text {
-            showAlert(message: "密碼不一致")
+            
+            alert.showAlert(title: "錯誤", message: "密碼不一致", vc: self, action: {})
+            
         // 驗證信箱格式
         } else if isValidEmail(email: txfMail.text!) == false {
-            showAlert(message: "信箱格式錯誤")
+            
+            alert.showAlert(title: "錯誤", message: "信箱格式錯誤", vc: self, action: {})
+            
         // 密碼(8~16字元，需含大小寫字母與數字)
         } else if txfPassword.text!.count < 8 || txfPassword.text!.count > 16 {
-            showAlert(message: "密碼需為8~16字元")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需為8~16字元", vc: self, action: {})
+            
         } else if !txfPassword.text!.containsNumber {
-            showAlert(message: "密碼需含數字")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含數字", vc: self, action: {})
+            
         } else if !txfPassword.text!.containsLowercase {
-            showAlert(message: "密碼需含小寫字母")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含小寫字母", vc: self, action: {})
+            
         } else if !txfPassword.text!.containsUppercase {
-            showAlert(message: "密碼需含大寫字母")
+            
+            alert.showAlert(title: "錯誤", message: "密碼需含大寫字母", vc: self, action: {})
+            
         } else if !isButtonTapped {
-            showAlert(message: "請同意條款")
+            
+            alert.showAlert(title: "錯誤", message: "請同意條款", vc: self, action: {})
+            
         } else {
             // 都有填寫完畢才存進UserDefaults
             saveUserDefaults()
@@ -174,12 +191,6 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         UserPreferences.shared.password = txfPassword.text
         UserPreferences.shared.confirmPassword = txfConfirmPassword.text
         UserPreferences.shared.country = btnCountry.title(for: .normal)
-    }
-    
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
     
     // 驗證信箱格式

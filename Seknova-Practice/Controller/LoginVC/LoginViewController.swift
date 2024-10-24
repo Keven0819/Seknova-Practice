@@ -122,38 +122,35 @@ class LoginViewController: UIViewController {
         let email = UserPreferences.shared.mail
         let password = UserPreferences.shared.password
         let loginCount = UserPreferences.shared.loginCount
+        let alert = Alert()
         
-//        if txfUserName.text != email {
-//
-//            showAlert(message: "Email輸入錯誤")
-//
-//        } else if txfPassword.text != password {
-//
-//            showAlert(message: "密碼輸入錯誤")
-//
-//        } else {
-//
-//            if loginCount == 0 {
-//                // 第一次登入跳至條款畫面
-//                let termsVC = TermsViewController()
-//                self.navigationController?.pushViewController(termsVC, animated: true)
-//            } else {
-//                // 非第一次登入跳至首頁
-//                let bodyVC = BodyInformationViewController()
-//                self.navigationController?.pushViewController(bodyVC, animated: true)
-//            }
-//        }
-        let bodyVC = BodyInformationViewController()
-        self.navigationController?.pushViewController(bodyVC, animated: true)
+        if txfUserName.text?.isEmpty == false && txfPassword.text?.isEmpty == false {
+            
+            if txfUserName.text != email {
+                
+                alert.showAlert(title: "錯誤", message: "帳號輸入錯誤", vc: self, action: {})
+                
+            } else if txfPassword.text != password {
+                
+                alert.showAlert(title: "錯誤", message: "密碼輸入錯誤", vc: self, action: {})
+                
+            } else {
+                
+                if loginCount == 0 {
+                    // 第一次登入跳至條款畫面
+                    let termsVC = TermsViewController()
+                    self.navigationController?.pushViewController(termsVC, animated: true)
+                } else {
+                    // 非第一次登入跳至首頁
+                    let bodyVC = BodyInformationViewController()
+                    self.navigationController?.pushViewController(bodyVC, animated: true)
+                }
+            }
+        } else {
+            alert.showAlert(title: "錯誤", message: "請輸入帳號密碼", vc: self, action: {})
+        }
     }
     // MARK: - Function
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "錯誤", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion:nil)
-        return
-    }
 }
 
 // MARK: - Extensions
