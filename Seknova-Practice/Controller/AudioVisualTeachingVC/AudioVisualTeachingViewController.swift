@@ -21,13 +21,17 @@ class AudioVisualTeachingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getUrl()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
     
+    func setNavigationBar() {
+        navigationController?.navigationItem.leftBarButtonItem?.title = "Back"
+    }
+    
     // MARK: - IBAction
     @IBAction func turnVC(_ sender: Any) {
-        
         let beVC = BloodSugarViewController()
         self.navigationController?.pushViewController(beVC, animated: true)
     }

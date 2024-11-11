@@ -8,8 +8,6 @@
 import RealmSwift
 
 class UserInformation: Object {
-    @Persisted(primaryKey: true) var _id: ObjectId
-    @Persisted var UserId: String
     @Persisted var FirstName: String
     @Persisted var LastName: String
     @Persisted var Birthday: String
@@ -25,13 +23,12 @@ class UserInformation: Object {
     @Persisted var Check: Bool
     @Persisted var Phone_Verified: Bool
     
-    convenience init(UserId: String, FirstName: String, LastName: String, 
+    convenience init(FirstName: String, LastName: String,
                      Birthday: String, Email: String, Phone: String,
                      Address: String, Gender: String, Height: String,
                      Weight: String, Race: String, Liquor: String,
                      Smoke: String, Check: Bool, Phone_Verified: Bool) {
         self.init()
-        self.UserId = UserId
         self.FirstName = FirstName
         self.LastName = LastName
         self.Birthday = Birthday

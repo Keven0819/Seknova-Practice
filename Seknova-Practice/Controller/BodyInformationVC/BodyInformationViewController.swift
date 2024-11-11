@@ -132,41 +132,38 @@ class BodyInformationViewController: UIViewController {
             
         default:
             // 所有欄位都已填寫，繼續後續的程式邏輯
+            var checked = true
+            var phone_verified = true
+            // 創建 UserInformation 實例
+            let userInfo = UserInformation(
+                FirstName: firstName,
+                LastName: lastName,
+                Birthday: dateString,
+                Email: email,
+                Phone: phone,
+                Address: address,
+                Gender: gender,
+                Height: height,
+                Weight: weight,
+                Race: race,
+                Liquor: liquor,
+                Smoke: smoke,
+                Check: checked,
+                Phone_Verified: phone_verified)
+
+            // 儲存到 Realm
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.add(userInfo)
+                }
+                print("使用者資訊已成功儲存！")
+                print("fileURL: \(realm.configuration.fileURL!)")
+            } catch {
+                print("儲存使用者資訊時出現錯誤: \(error)")
+            }
             break
         }
-        
-        // 檢查出生日期是否超過今天
-        if dpkBirthday.date > Date() {
-            
-            alert.showAlert(title: "錯誤", message: "出生日期不可超過今天", vc: self, action: {})
-        }
-        
-        // 創建 UserInformation 實例
-        let userInfo = UserInformation()
-        userInfo.FirstName = firstName
-        userInfo.LastName = lastName
-        userInfo.Birthday = dateString
-        userInfo.Email = email
-        userInfo.Phone = phone
-        userInfo.Address = address
-        userInfo.Gender = gender
-        userInfo.Height = height
-        userInfo.Weight = weight
-        userInfo.Race = race
-        userInfo.Smoke = smoke
-        userInfo.Liquor = liquor
-
-        // 儲存到 Realm
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(userInfo)
-            }
-            print("使用者資訊已成功儲存！")
-        } catch {
-            print("儲存使用者資訊時出現錯誤: \(error)")
-        }
-        
         let VideoVC = AudioVisualTeachingViewController()
         self.navigationController?.pushViewController(VideoVC, animated: true)
     }

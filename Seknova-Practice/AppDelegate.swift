@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // resetRealmDatabase()
+        
+        func resetRealmDatabase() {
+            let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
+            let realmURLs = [
+                realmURL,
+                realmURL.appendingPathExtension("lock"),
+                realmURL.appendingPathExtension("note"),
+                realmURL.appendingPathExtension("management")
+            ]
+
+            for URL in realmURLs {
+                do {
+                    try FileManager.default.removeItem(at: URL)
+                    print("Realm 數據庫文件已成功刪除: \(URL)")
+                } catch let error as NSError {
+                    print("刪除 Realm 數據庫文件時出錯: \(error.localizedDescription)")
+                }
+            }
+        }
         return true
     }
 
