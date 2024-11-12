@@ -22,11 +22,20 @@ class ForgetPasswordViewController: UIViewController {
         setupNavigationBar()
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - UI Settings
     
     // 設定navigationbar標題
     func setupNavigationBar() {
         self.navigationItem.title = "Forgot Password"
+    }
+    
+    func setTextField() {
+        txfEmail.delegate = self
     }
     
     // MARK: - IBAction
@@ -48,3 +57,10 @@ class ForgetPasswordViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension ForgetPasswordViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

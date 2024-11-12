@@ -27,6 +27,10 @@ class LoginViewController: UIViewController {
         setupUI()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - UI Settings
     func setupUI() {
         setupNavigationBar()
@@ -81,6 +85,8 @@ class LoginViewController: UIViewController {
     
     // 設定TextField前面的圖檔
     func setupTextFields() {
+        txfUserName.delegate = self
+        txfPassword.delegate = self
         setupLeftView(for: txfUserName, imageName: "mail")
         setupLeftView(for: txfPassword, imageName: "password")
     }
@@ -154,3 +160,9 @@ class LoginViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

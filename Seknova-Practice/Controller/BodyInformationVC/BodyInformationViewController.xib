@@ -47,7 +47,7 @@
                     </items>
                 </toolbar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fio-Hs-KO9">
-                    <rect key="frame" x="75.666666666666657" y="750" width="242" height="45"/>
+                    <rect key="frame" x="75.666666666666686" y="750" width="242" height="45"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="下一步" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="5">

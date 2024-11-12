@@ -23,6 +23,8 @@ class UserPreferences {
         case confirmPassword
         case country
         case newPassword
+        case lowSugarValue
+        case highSugarValue
         
     }
     
@@ -77,6 +79,24 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.newPassword.rawValue)
+        }
+    }
+    
+    var lowSugarValue: Int? {
+        get {
+            return userPreference.integer(forKey: UserPreferenceKey.lowSugarValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.lowSugarValue.rawValue)
+        }
+    }
+    
+    var highSugarValue: Int? {
+        get {
+            return userPreference.integer(forKey: UserPreferenceKey.highSugarValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.highSugarValue.rawValue)
         }
     }
 }

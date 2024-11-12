@@ -31,6 +31,10 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
         setupUI()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - UI Settings
     func setupUI() {
         setupNavigationBar()
@@ -51,6 +55,9 @@ class RegisterViewController: UIViewController, TermsViewControllerDelegate {
     
     // 設定TextField前面的圖檔
     func setupTextFields() {
+        txfMail.delegate = self
+        txfPassword.delegate = self
+        txfConfirmPassword.delegate = self
         setupLeftView(for: txfMail, imageName: "mail")
         setupLeftView(for: txfPassword, imageName: "password")
         setupLeftView(for: txfConfirmPassword, imageName: "password")
@@ -252,5 +259,14 @@ extension String {
     // 檢查是否有數字
     var containsNumber: Bool {
         return rangeOfCharacter(from: .decimalDigits) != nil
+    }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    
+    // 按下return鍵後隱藏鍵盤
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -26,8 +26,16 @@ class ResetPasswordViewController: UIViewController {
         setupTextField()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - UI Settings
     func setupTextField() {
+        txfEmail.delegate = self
+        txfOldPassword.delegate = self
+        txfNewPassword.delegate = self
+        txfAgainNewPassword.delegate = self
         setupLeftView(for: txfEmail, imageName: "mail")
         setupLeftView(for: txfOldPassword, imageName: "password")
         setupLeftView(for: txfNewPassword, imageName: "password")
@@ -125,3 +133,10 @@ class ResetPasswordViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension ResetPasswordViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

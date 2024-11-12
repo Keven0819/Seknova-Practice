@@ -46,7 +46,6 @@ class BodyInformationViewController: UIViewController {
                            forCellReuseIdentifier: PersonalInfoTableViewCell.identifier)
         tableView.sectionHeaderHeight = 40
     }
-    
     // MARK: - IBAction
     @IBAction func confirmPickerView(_ sender: Any) {
         Toolbar.isHidden = true
@@ -132,8 +131,8 @@ class BodyInformationViewController: UIViewController {
             
         default:
             // 所有欄位都已填寫，繼續後續的程式邏輯
-            var checked = true
-            var phone_verified = true
+            let checked = true
+            let phone_verified = true
             // 創建 UserInformation 實例
             let userInfo = UserInformation(
                 FirstName: firstName,
