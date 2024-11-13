@@ -27,6 +27,8 @@
 		7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F90062CE2FBFB00703E1C /* TransmitterViewController.xib */; };
 		7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F900C2CE32CE400703E1C /* TipsViewController.xib */; };
 		7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F900B2CE32CE400703E1C /* TipsViewController.swift */; };
+		7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */; };
+		7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */; };
 		7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */; };
 		7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */; };
 		7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		7B8F90062CE2FBFB00703E1C /* TransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransmitterViewController.xib; sourceTree = "<group>"; };
 		7B8F900B2CE32CE400703E1C /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		7B8F900C2CE32CE400703E1C /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
+		7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingTransmitterViewController.swift; sourceTree = "<group>"; };
+		7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairingTransmitterViewController.xib; sourceTree = "<group>"; };
 		7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyInformationViewController.swift; sourceTree = "<group>"; };
 		7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyInformationViewController.xib; sourceTree = "<group>"; };
 		7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,7 +137,6 @@
 		7B6F7D072CA2A0FE00E9A1DC /* RegisterVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B8F90092CE32C3600703E1C /* Components */,
 				7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */,
 				7B6F7D092CA2A15C00E9A1DC /* RegisterViewController.xib */,
 			);
@@ -185,13 +188,16 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B8F900F2CE4CAFF00703E1C /* PairingTransmitterVC */,
 				7B8F90042CE2FBE200703E1C /* TransmitterVC */,
+				7B8F900A2CE32CB400703E1C /* TipsVC */,
 				7BAE87302CC67C6D00A39EA2 /* BloodSugarVC */,
 				7BAE872B2CC624A400A39EA2 /* AudioVisualTeachingVC */,
 				7B9B92692CBCE23000203AD3 /* BodyInformationVC */,
 				7B655C5F2CB3FD7F00345704 /* ResetPasswordVC */,
 				7B20708D2CA45283000A46A4 /* RecertificationVC */,
 				7B6F7D0C2CA2A3B700E9A1DC /* ForgetPasswordVC */,
+				7BD875BD2CA6AF04008BB100 /* TermsVC */,
 				7B6F7D072CA2A0FE00E9A1DC /* RegisterVC */,
 				7B6F7D062CA2A0EE00E9A1DC /* LoginVC */,
 			);
@@ -225,21 +231,22 @@
 			path = TransmitterVC;
 			sourceTree = "<group>";
 		};
-		7B8F90092CE32C3600703E1C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				7BD875BD2CA6AF04008BB100 /* TermsVC */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		7B8F900A2CE32CB400703E1C /* Components */ = {
+		7B8F900A2CE32CB400703E1C /* TipsVC */ = {
 			isa = PBXGroup;
 			children = (
 				7B8F900B2CE32CE400703E1C /* TipsViewController.swift */,
 				7B8F900C2CE32CE400703E1C /* TipsViewController.xib */,
 			);
-			path = Components;
+			path = TipsVC;
+			sourceTree = "<group>";
+		};
+		7B8F900F2CE4CAFF00703E1C /* PairingTransmitterVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */,
+				7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */,
+			);
+			path = PairingTransmitterVC;
 			sourceTree = "<group>";
 		};
 		7B9B92692CBCE23000203AD3 /* BodyInformationVC */ = {
@@ -273,7 +280,6 @@
 		7BAE87302CC67C6D00A39EA2 /* BloodSugarVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B8F900A2CE32CB400703E1C /* Components */,
 				7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */,
 				7BAE87322CC67C9D00A39EA2 /* BloodSugarViewController.xib */,
 			);
@@ -371,6 +377,7 @@
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
+				7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +445,7 @@
 				7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */,
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
 				7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */,
+				7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */,
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,
@@ -591,6 +599,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Seknova-Practice/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = QRCode;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -621,6 +630,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Seknova-Practice/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = QRCode;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

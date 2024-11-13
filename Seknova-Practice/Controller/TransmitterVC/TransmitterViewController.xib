@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransmitterViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="vCamera" destination="wtE-Y4-lKI" id="v3h-bY-df3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,6 +38,9 @@
                         <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="btnScan:" destination="-1" eventType="touchUpInside" id="3Zi-wr-HHA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-jD-ITc">
                     <rect key="frame" x="87.666666666666686" y="638" width="218" height="35"/>
@@ -60,6 +64,10 @@
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-Y4-lKI">
+                    <rect key="frame" x="16" y="113" width="361" height="412"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,9 +82,11 @@
                 <constraint firstItem="Rgf-A0-ydJ" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Fo9-2s-O3k"/>
                 <constraint firstItem="V25-sB-SQm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JXr-ca-J4n"/>
                 <constraint firstItem="Rgf-A0-ydJ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="1.05" id="KKk-gF-8OG"/>
+                <constraint firstItem="wtE-Y4-lKI" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OQK-cd-CPP"/>
                 <constraint firstItem="arz-Fz-oaw" firstAttribute="width" secondItem="a3d-gG-UBY" secondAttribute="width" multiplier="0.64881" id="T04-pa-IWg"/>
                 <constraint firstItem="V25-sB-SQm" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.227931" id="T1D-SZ-gaO"/>
                 <constraint firstItem="a3d-gG-UBY" firstAttribute="height" secondItem="V25-sB-SQm" secondAttribute="height" multiplier="1.0289" constant="23" id="Thd-bb-iiQ"/>
+                <constraint firstItem="wtE-Y4-lKI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="WoE-i9-2wX"/>
                 <constraint firstItem="qtz-jD-ITc" firstAttribute="centerX" secondItem="arz-Fz-oaw" secondAttribute="centerX" id="aBF-wc-kHO"/>
                 <constraint firstItem="arz-Fz-oaw" firstAttribute="top" secondItem="a3d-gG-UBY" secondAttribute="bottom" constant="47" id="aRl-u8-U3J"/>
                 <constraint firstItem="37L-ow-foB" firstAttribute="height" secondItem="qtz-jD-ITc" secondAttribute="height" id="bSL-zm-HA0"/>
@@ -85,6 +95,8 @@
                 <constraint firstItem="37L-ow-foB" firstAttribute="centerX" secondItem="qtz-jD-ITc" secondAttribute="centerX" id="fc3-eb-WyW"/>
                 <constraint firstItem="qtz-jD-ITc" firstAttribute="top" secondItem="arz-Fz-oaw" secondAttribute="bottom" constant="31" id="g7Y-3f-QYb"/>
                 <constraint firstItem="arz-Fz-oaw" firstAttribute="centerX" secondItem="a3d-gG-UBY" secondAttribute="centerX" id="jBX-QN-iXb"/>
+                <constraint firstItem="wtE-Y4-lKI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.918575" id="lSd-dR-0XN"/>
+                <constraint firstItem="wtE-Y4-lKI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.483568" id="qXo-ds-LJo"/>
                 <constraint firstItem="a3d-gG-UBY" firstAttribute="top" secondItem="V25-sB-SQm" secondAttribute="bottom" constant="18" id="sJp-3l-cpb"/>
                 <constraint firstItem="37L-ow-foB" firstAttribute="width" secondItem="qtz-jD-ITc" secondAttribute="width" id="tn3-lh-vsZ"/>
                 <constraint firstItem="a3d-gG-UBY" firstAttribute="centerX" secondItem="V25-sB-SQm" secondAttribute="centerX" id="vfC-n4-4Em"/>
