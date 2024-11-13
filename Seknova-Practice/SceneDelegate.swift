@@ -20,6 +20,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        // 檢查 iOS 版本是否是 iOS 15.0 或更新版本
+        if #available(iOS 15.0, *) {
+            // 創建導航欄外觀的配置對象
+            let appearance = UINavigationBarAppearance()
+            
+            // 配置外觀為不透明背景
+            appearance.configureWithOpaqueBackground()
+            
+            // 設置導航欄的背景顏色
+            appearance.backgroundColor = #colorLiteral(red: 0.7579411864, green: 0.05860135704, blue: 0.1392720342, alpha: 1) // 深紅色
+            
+            // 設置導航欄按鈕的顏色
+            navigationController.navigationBar.tintColor = #colorLiteral(red: 0.9953911901, green: 0.9881951213, blue: 1, alpha: 1) // 白色
+            
+            // 設置導航欄標題文字的顏色
+            appearance.titleTextAttributes = [
+                .foregroundColor: #colorLiteral(red: 0.9953911901, green: 0.9881951213, blue: 1, alpha: 1) // 白色
+            ]
+            
+            // 將配置應用於標準狀態下和滾動邊緣的導航欄外觀
+            navigationController.navigationBar.standardAppearance = appearance
+            navigationController.navigationBar.scrollEdgeAppearance = appearance
+        } else {
+            // 如果設備的 iOS 版本低於 15.0，則使用舊的方法設置導航欄外觀
+            
+            // 設置導航欄背景顏色
+            navigationController.navigationBar.barTintColor = #colorLiteral(red: 0.7579411864, green: 0.05860135704, blue: 0.1392720342, alpha: 1) // 深紅色
+            
+            // 設置導航欄按鈕的顏色
+            navigationController.navigationBar.tintColor = #colorLiteral(red: 0.9953911901, green: 0.9881951213, blue: 1, alpha: 1) // 白色
+            
+            // 設置導航欄標題文字的顏色
+            navigationController.navigationBar.titleTextAttributes = [
+                .foregroundColor: #colorLiteral(red: 0.9953911901, green: 0.9881951213, blue: 1, alpha: 1) // 白色
+            ]
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

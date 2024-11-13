@@ -17,10 +17,14 @@ class TransmitterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
-    
+    func setNavigationBar() {
+        self.navigationItem.title = "Scanning Transmitter"
+        self.navigationItem.hidesBackButton = true
+    }
     // MARK: - IBAction
     
     // MARK: - Function

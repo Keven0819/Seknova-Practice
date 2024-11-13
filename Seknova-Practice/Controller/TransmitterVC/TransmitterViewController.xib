@@ -1,22 +1,103 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransmitterViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransmitterViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background5" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-A0-ydJ">
+                    <rect key="frame" x="0.0" y="64" width="393" height="793"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CGMTransmitter" translatesAutoresizingMaskIntoConstraints="NO" id="V25-sB-SQm">
+                    <rect key="frame" x="76.666666666666686" y="133" width="240" height="173"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CGMTransmitterB" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-gG-UBY">
+                    <rect key="frame" x="28.666666666666657" y="324" width="336" height="201"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arz-Fz-oaw">
+                    <rect key="frame" x="87.666666666666686" y="572" width="218" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="QR 掃描" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="4" strokeOutset="2">
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-jD-ITc">
+                    <rect key="frame" x="87.666666666666686" y="638" width="218" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="文字輸入" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="4" strokeOutset="2">
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37L-ow-foB">
+                    <rect key="frame" x="87.666666666666686" y="707" width="218" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="返回" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="4" strokeOutset="2">
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Rgf-A0-ydJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="3NJ-0T-AFr"/>
+                <constraint firstItem="qtz-jD-ITc" firstAttribute="width" secondItem="arz-Fz-oaw" secondAttribute="width" id="4J8-02-aNs"/>
+                <constraint firstItem="qtz-jD-ITc" firstAttribute="height" secondItem="arz-Fz-oaw" secondAttribute="height" id="4gp-55-xqM"/>
+                <constraint firstItem="Rgf-A0-ydJ" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.0448" id="6QN-OK-Lrf"/>
+                <constraint firstItem="37L-ow-foB" firstAttribute="top" secondItem="qtz-jD-ITc" secondAttribute="bottom" constant="34" id="DGl-yp-Ckz"/>
+                <constraint firstItem="V25-sB-SQm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="74" id="DTd-Ku-TAz"/>
+                <constraint firstItem="V25-sB-SQm" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.610687" id="ENj-gm-kCT"/>
+                <constraint firstItem="Rgf-A0-ydJ" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Fo9-2s-O3k"/>
+                <constraint firstItem="V25-sB-SQm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JXr-ca-J4n"/>
+                <constraint firstItem="Rgf-A0-ydJ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="1.05" id="KKk-gF-8OG"/>
+                <constraint firstItem="arz-Fz-oaw" firstAttribute="width" secondItem="a3d-gG-UBY" secondAttribute="width" multiplier="0.64881" id="T04-pa-IWg"/>
+                <constraint firstItem="V25-sB-SQm" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.227931" id="T1D-SZ-gaO"/>
+                <constraint firstItem="a3d-gG-UBY" firstAttribute="height" secondItem="V25-sB-SQm" secondAttribute="height" multiplier="1.0289" constant="23" id="Thd-bb-iiQ"/>
+                <constraint firstItem="qtz-jD-ITc" firstAttribute="centerX" secondItem="arz-Fz-oaw" secondAttribute="centerX" id="aBF-wc-kHO"/>
+                <constraint firstItem="arz-Fz-oaw" firstAttribute="top" secondItem="a3d-gG-UBY" secondAttribute="bottom" constant="47" id="aRl-u8-U3J"/>
+                <constraint firstItem="37L-ow-foB" firstAttribute="height" secondItem="qtz-jD-ITc" secondAttribute="height" id="bSL-zm-HA0"/>
+                <constraint firstItem="a3d-gG-UBY" firstAttribute="width" secondItem="V25-sB-SQm" secondAttribute="width" multiplier="1.4" id="bgc-dn-UEy"/>
+                <constraint firstItem="arz-Fz-oaw" firstAttribute="height" secondItem="a3d-gG-UBY" secondAttribute="height" multiplier="0.174129" id="daN-m8-qCz"/>
+                <constraint firstItem="37L-ow-foB" firstAttribute="centerX" secondItem="qtz-jD-ITc" secondAttribute="centerX" id="fc3-eb-WyW"/>
+                <constraint firstItem="qtz-jD-ITc" firstAttribute="top" secondItem="arz-Fz-oaw" secondAttribute="bottom" constant="31" id="g7Y-3f-QYb"/>
+                <constraint firstItem="arz-Fz-oaw" firstAttribute="centerX" secondItem="a3d-gG-UBY" secondAttribute="centerX" id="jBX-QN-iXb"/>
+                <constraint firstItem="a3d-gG-UBY" firstAttribute="top" secondItem="V25-sB-SQm" secondAttribute="bottom" constant="18" id="sJp-3l-cpb"/>
+                <constraint firstItem="37L-ow-foB" firstAttribute="width" secondItem="qtz-jD-ITc" secondAttribute="width" id="tn3-lh-vsZ"/>
+                <constraint firstItem="a3d-gG-UBY" firstAttribute="centerX" secondItem="V25-sB-SQm" secondAttribute="centerX" id="vfC-n4-4Em"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background5" width="1126" height="2437"/>
+        <image name="CGMTransmitter" width="224" height="177"/>
+        <image name="CGMTransmitterB" width="214" height="192"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
