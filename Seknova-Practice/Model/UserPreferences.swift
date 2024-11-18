@@ -25,7 +25,7 @@ class UserPreferences {
         case newPassword
         case lowSugarValue
         case highSugarValue
-        
+        case deviceID
     }
     
     var mail: String? {
@@ -97,6 +97,14 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.highSugarValue.rawValue)
+        }
+    }
+    var deviceID: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.deviceID.rawValue) ?? ""
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.deviceID.rawValue)
         }
     }
 }

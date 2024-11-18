@@ -57,6 +57,39 @@ class TransmitterViewController: UIViewController, AVCaptureMetadataOutputObject
         // 加上框框到畫面上
         vCamera.addSubview(qrCodeBounds)
     }
+    @IBAction func btnTextInput(_ sender: Any) {
+        let alertController = UIAlertController(title: "文字輸入", message: "請輸入裝置ID", preferredStyle: .alert)
+        
+        alertController.addTextField {
+            (textField: UITextField) -> Void in
+             textField.placeholder = "請輸入裝置 ID 後六碼"
+        }
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "確認", style: .default) {_ in
+            
+            // textFields是一個陣列，取第一個textField的text，所以用first
+            let deviceID = alertController.textFields?.first?.text ?? ""
+            
+            // 儲存裝置 ID
+            UserPreferences.shared.deviceID = deviceID
+            print("Device ID: \(UserPreferences.shared.deviceID ?? "")")
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    @IBAction func btnBack(_ sender: Any) {
+        let loginVC = LoginViewController()
+        self.navigationController?.pushViewController(loginVC, animated: true)
+        loginVC.navigationItem.hidesBackButton = true
+        
+        // 清除登入畫面的txfField的text
+        loginVC.txfUserName?.text = ""
+        loginVC.txfPassword?.text = ""
+    }
     
     // MARK: - Function
     func startScanning() {
@@ -112,7 +145,7 @@ class TransmitterViewController: UIViewController, AVCaptureMetadataOutputObject
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
            let deviceID = metadataObject.stringValue {
             // 儲存裝置 ID
-            UserDefaults.standard.set(deviceID, forKey: "deviceID")
+            UserPreferences.shared.deviceID = deviceID
             print("Device ID: \(deviceID)")
             
             // 跳轉到配對發射器頁面
