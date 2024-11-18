@@ -17,10 +17,13 @@ class PairingTransmitterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
-    
+    func setNavigationBar() {
+        self.navigationItem.title = "Pair Bluetooth"
+    }
     // MARK: - IBAction
     
     // MARK: - Function
