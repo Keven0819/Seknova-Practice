@@ -10,6 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PairingTransmitterViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancel" destination="SYR-Uk-GxU" id="SxD-8c-SZN"/>
+                <outlet property="btnPair" destination="gT0-aW-Kdh" id="3wL-tV-ioW"/>
+                <outlet property="imgvDevice" destination="MbU-6G-Jzz" id="n9h-8X-Dcl"/>
+                <outlet property="imgvLoding" destination="xcB-q3-Fsg" id="fIS-0I-IVV"/>
+                <outlet property="imgvPhone" destination="54O-7F-JuU" id="BgD-iC-msy"/>
+                <outlet property="imgvSuccess" destination="ybw-l7-WhR" id="CZs-fa-GCM"/>
+                <outlet property="imgvTitle" destination="cFh-RK-z2L" id="LDh-X6-f3h"/>
+                <outlet property="lbTitle1" destination="ABY-oG-X7p" id="aTJ-gc-1gy"/>
+                <outlet property="lbTitle2" destination="gRA-dN-nd4" id="sR1-8P-iJl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,7 +65,7 @@
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="btnPair:" destination="-1" eventType="touchUpInside" id="05W-n8-opg"/>
+                        <action selector="btnPairTapped:" destination="-1" eventType="touchUpInside" id="05W-n8-opg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYR-Uk-GxU">
@@ -70,9 +79,12 @@
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="btnCancel:" destination="-1" eventType="touchUpInside" id="qh7-qf-zSC"/>
+                        <action selector="btnCancelTapped:" destination="-1" eventType="touchUpInside" id="qh7-qf-zSC"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-l7-WhR">
+                    <rect key="frame" x="3.6666666666666572" y="256" width="386" height="205"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,12 +92,14 @@
                 <constraint firstItem="MbU-6G-Jzz" firstAttribute="centerY" secondItem="xcB-q3-Fsg" secondAttribute="centerY" id="0V5-Z3-Jfn"/>
                 <constraint firstItem="bLF-oo-qxn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0lu-xa-cjn"/>
                 <constraint firstItem="gT0-aW-Kdh" firstAttribute="height" secondItem="xcB-q3-Fsg" secondAttribute="height" multiplier="0.87037" id="1dS-ZO-EFi"/>
+                <constraint firstItem="ybw-l7-WhR" firstAttribute="height" secondItem="bLF-oo-qxn" secondAttribute="height" multiplier="0.258512" id="21a-QX-PD6"/>
                 <constraint firstItem="xcB-q3-Fsg" firstAttribute="centerX" secondItem="gRA-dN-nd4" secondAttribute="centerX" id="3dH-BS-Eoy"/>
                 <constraint firstItem="MbU-6G-Jzz" firstAttribute="height" secondItem="xcB-q3-Fsg" secondAttribute="height" multiplier="0.796296" id="4YJ-cY-b0P"/>
                 <constraint firstItem="bLF-oo-qxn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="6fP-zb-Fes"/>
                 <constraint firstItem="MbU-6G-Jzz" firstAttribute="leading" secondItem="xcB-q3-Fsg" secondAttribute="trailing" constant="8" symbolic="YES" id="EVT-He-VAa"/>
                 <constraint firstItem="gT0-aW-Kdh" firstAttribute="top" secondItem="xcB-q3-Fsg" secondAttribute="bottom" constant="314" id="Eo7-pC-Acz"/>
                 <constraint firstItem="bLF-oo-qxn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.930751" id="HZ9-Fh-bGT"/>
+                <constraint firstItem="ybw-l7-WhR" firstAttribute="width" secondItem="bLF-oo-qxn" secondAttribute="width" multiplier="0.982188" id="JVl-Rx-EFG"/>
                 <constraint firstItem="54O-7F-JuU" firstAttribute="width" secondItem="xcB-q3-Fsg" secondAttribute="width" multiplier="1.41905" id="KTa-aL-LMh"/>
                 <constraint firstItem="xcB-q3-Fsg" firstAttribute="leading" secondItem="54O-7F-JuU" secondAttribute="trailing" constant="-5" id="LTi-7B-yGX"/>
                 <constraint firstItem="xcB-q3-Fsg" firstAttribute="top" secondItem="gRA-dN-nd4" secondAttribute="bottom" constant="57" id="LV4-f2-0Ar"/>
@@ -95,6 +109,7 @@
                 <constraint firstItem="xcB-q3-Fsg" firstAttribute="width" secondItem="gRA-dN-nd4" secondAttribute="width" multiplier="0.267176" id="P8j-ff-bco"/>
                 <constraint firstItem="SYR-Uk-GxU" firstAttribute="top" secondItem="gT0-aW-Kdh" secondAttribute="bottom" constant="26" id="PP4-6g-Nwk"/>
                 <constraint firstItem="gRA-dN-nd4" firstAttribute="height" secondItem="ABY-oG-X7p" secondAttribute="height" multiplier="0.525" id="SrL-rr-0Ra"/>
+                <constraint firstItem="ybw-l7-WhR" firstAttribute="centerX" secondItem="bLF-oo-qxn" secondAttribute="centerX" id="T3A-gs-mJB"/>
                 <constraint firstItem="cFh-RK-z2L" firstAttribute="height" secondItem="ABY-oG-X7p" secondAttribute="height" multiplier="1.425" id="THK-wY-Q9H"/>
                 <constraint firstItem="ABY-oG-X7p" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0469484" id="XMF-NW-kFR"/>
                 <constraint firstItem="SYR-Uk-GxU" firstAttribute="height" secondItem="gT0-aW-Kdh" secondAttribute="height" id="YSD-Ay-jRQ"/>
@@ -106,6 +121,7 @@
                 <constraint firstItem="cFh-RK-z2L" firstAttribute="leading" secondItem="ABY-oG-X7p" secondAttribute="trailing" constant="-106" id="j5s-VS-lnU"/>
                 <constraint firstItem="cFh-RK-z2L" firstAttribute="centerY" secondItem="ABY-oG-X7p" secondAttribute="centerY" id="jl5-x8-d5I"/>
                 <constraint firstItem="bLF-oo-qxn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="msM-Ui-3Xh"/>
+                <constraint firstItem="bLF-oo-qxn" firstAttribute="top" secondItem="ybw-l7-WhR" secondAttribute="bottom" constant="-402" id="o7W-aE-YBS"/>
                 <constraint firstItem="gT0-aW-Kdh" firstAttribute="centerX" secondItem="xcB-q3-Fsg" secondAttribute="centerX" id="sFG-gb-omx"/>
                 <constraint firstItem="MbU-6G-Jzz" firstAttribute="width" secondItem="xcB-q3-Fsg" secondAttribute="width" multiplier="0.771429" id="tb9-Dh-lhq"/>
                 <constraint firstItem="54O-7F-JuU" firstAttribute="centerY" secondItem="xcB-q3-Fsg" secondAttribute="centerY" id="v1i-aP-nf9"/>
@@ -123,6 +139,7 @@
         <image name="Device" width="181" height="121"/>
         <image name="Dot" width="334" height="13"/>
         <image name="Phone" width="435" height="493"/>
+        <image name="correct" width="224" height="223"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -31,6 +31,8 @@
 		7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */; };
 		7B8F90172CEC933800703E1C /* PairAnimateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */; };
 		7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */; };
+		7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F901A2CEC9DA500703E1C /* ScanningSensorViewController.swift */; };
+		7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F901B2CEC9DA500703E1C /* ScanningSensorViewController.xib */; };
 		7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */; };
 		7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */; };
 		7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */; };
@@ -74,6 +76,8 @@
 		7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairingTransmitterViewController.xib; sourceTree = "<group>"; };
 		7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairAnimateViewController.swift; sourceTree = "<group>"; };
 		7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairAnimateViewController.xib; sourceTree = "<group>"; };
+		7B8F901A2CEC9DA500703E1C /* ScanningSensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningSensorViewController.swift; sourceTree = "<group>"; };
+		7B8F901B2CEC9DA500703E1C /* ScanningSensorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanningSensorViewController.xib; sourceTree = "<group>"; };
 		7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyInformationViewController.swift; sourceTree = "<group>"; };
 		7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyInformationViewController.xib; sourceTree = "<group>"; };
 		7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,7 +196,8 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7B8F90142CEC931D00703E1C /* PairAnimate */,
+				7B8F90192CEC9D8000703E1C /* ScanningSensorVC */,
+				7B8F90142CEC931D00703E1C /* PairAnimateVC */,
 				7B8F900F2CE4CAFF00703E1C /* PairingTransmitterVC */,
 				7B8F90042CE2FBE200703E1C /* TransmitterVC */,
 				7B8F900A2CE32CB400703E1C /* TipsVC */,
@@ -254,13 +259,22 @@
 			path = PairingTransmitterVC;
 			sourceTree = "<group>";
 		};
-		7B8F90142CEC931D00703E1C /* PairAnimate */ = {
+		7B8F90142CEC931D00703E1C /* PairAnimateVC */ = {
 			isa = PBXGroup;
 			children = (
 				7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */,
 				7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */,
 			);
-			path = PairAnimate;
+			path = PairAnimateVC;
+			sourceTree = "<group>";
+		};
+		7B8F90192CEC9D8000703E1C /* ScanningSensorVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B8F901A2CEC9DA500703E1C /* ScanningSensorViewController.swift */,
+				7B8F901B2CEC9DA500703E1C /* ScanningSensorViewController.xib */,
+			);
+			path = ScanningSensorVC;
 			sourceTree = "<group>";
 		};
 		7B9B92692CBCE23000203AD3 /* BodyInformationVC */ = {
@@ -391,6 +405,7 @@
 				7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
+				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
 				7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */,
 			);
@@ -450,6 +465,7 @@
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
+				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,
 				7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */,

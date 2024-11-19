@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PairAnimateViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="imgvConection" destination="8wV-D4-ukX" id="OCQ-9E-eHa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-PZ-kK5">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connecting_0" translatesAutoresizingMaskIntoConstraints="NO" id="8wV-D4-ukX">
+                    <rect key="frame" x="-51.666666666666657" y="321" width="496.33333333333326" height="262"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3Q-8I-LZ9">
+                    <rect key="frame" x="0.0" y="427" width="393" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="連 線 中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuR-ty-tAu">
+                    <rect key="frame" x="0.0" y="448" width="393" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1oe-PZ-kK5" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="0Mg-Of-brS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="1oe-PZ-kK5" secondAttribute="top" constant="59" id="71e-ce-3d4"/>
+                <constraint firstItem="8wV-D4-ukX" firstAttribute="height" secondItem="1oe-PZ-kK5" secondAttribute="height" multiplier="0.307512" id="AZJ-0Q-opB"/>
+                <constraint firstItem="cuR-ty-tAu" firstAttribute="centerX" secondItem="w3Q-8I-LZ9" secondAttribute="centerX" id="Bbm-Mh-or6"/>
+                <constraint firstItem="w3Q-8I-LZ9" firstAttribute="width" secondItem="8wV-D4-ukX" secondAttribute="width" multiplier="0.791807" id="Bij-5e-3Y8"/>
+                <constraint firstItem="8wV-D4-ukX" firstAttribute="top" secondItem="w3Q-8I-LZ9" secondAttribute="bottom" constant="-127" id="FIP-t8-exQ"/>
+                <constraint firstItem="1oe-PZ-kK5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FVK-DC-OFK"/>
+                <constraint firstItem="w3Q-8I-LZ9" firstAttribute="height" secondItem="8wV-D4-ukX" secondAttribute="height" multiplier="0.0801527" id="NaQ-JC-Uql"/>
+                <constraint firstItem="8wV-D4-ukX" firstAttribute="width" secondItem="1oe-PZ-kK5" secondAttribute="width" multiplier="1.26209" id="QWk-hN-hRg"/>
+                <constraint firstItem="1oe-PZ-kK5" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.12253" id="UTO-WO-uYd"/>
+                <constraint firstItem="8wV-D4-ukX" firstAttribute="centerX" secondItem="1oe-PZ-kK5" secondAttribute="centerX" id="Vl0-5L-a3p"/>
+                <constraint firstItem="w3Q-8I-LZ9" firstAttribute="centerX" secondItem="8wV-D4-ukX" secondAttribute="centerX" id="cWf-DX-awp"/>
+                <constraint firstItem="8wV-D4-ukX" firstAttribute="top" secondItem="1oe-PZ-kK5" secondAttribute="bottom" constant="-531" id="mTn-yu-Kue"/>
+                <constraint firstItem="cuR-ty-tAu" firstAttribute="width" secondItem="w3Q-8I-LZ9" secondAttribute="width" id="nNg-nf-KGh"/>
+                <constraint firstItem="cuR-ty-tAu" firstAttribute="height" secondItem="w3Q-8I-LZ9" secondAttribute="height" id="orQ-yU-Ncw"/>
+                <constraint firstItem="cuR-ty-tAu" firstAttribute="top" secondItem="w3Q-8I-LZ9" secondAttribute="bottom" id="yIc-q5-oKe"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background" width="1126" height="2437"/>
+        <image name="connecting_0" width="809" height="808"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

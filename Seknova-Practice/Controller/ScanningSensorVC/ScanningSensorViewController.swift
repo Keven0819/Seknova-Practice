@@ -1,5 +1,5 @@
 //
-//  PairAnimateViewController.swift
+//  ScanningSensorViewController.swift
 //  Seknova-Practice
 //
 //  Created by imac-2627 on 2024/11/19.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PairAnimateViewController: UIViewController {
+class ScanningSensorViewController: UIViewController {
     
     // MARK: - IBOutlet
     
@@ -22,7 +22,8 @@ class PairAnimateViewController: UIViewController {
     
     // MARK: - UI Settings
     func setNavigationBar() {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationItem.title = "Scanning Sensor"
+        self.navigationItem.hidesBackButton = true
     }
     // MARK: - IBAction
     
