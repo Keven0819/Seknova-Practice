@@ -29,6 +29,8 @@
 		7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F900B2CE32CE400703E1C /* TipsViewController.swift */; };
 		7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */; };
 		7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */; };
+		7B8F90172CEC933800703E1C /* PairAnimateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */; };
+		7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */; };
 		7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */; };
 		7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */; };
 		7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */; };
@@ -70,6 +72,8 @@
 		7B8F900C2CE32CE400703E1C /* TipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
 		7B8F90102CE4CB1B00703E1C /* PairingTransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingTransmitterViewController.swift; sourceTree = "<group>"; };
 		7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairingTransmitterViewController.xib; sourceTree = "<group>"; };
+		7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairAnimateViewController.swift; sourceTree = "<group>"; };
+		7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairAnimateViewController.xib; sourceTree = "<group>"; };
 		7B9B926A2CBCE27600203AD3 /* BodyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyInformationViewController.swift; sourceTree = "<group>"; };
 		7B9B926B2CBCE27600203AD3 /* BodyInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyInformationViewController.xib; sourceTree = "<group>"; };
 		7B9B926F2CBE747100203AD3 /* PersonalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B8F90142CEC931D00703E1C /* PairAnimate */,
 				7B8F900F2CE4CAFF00703E1C /* PairingTransmitterVC */,
 				7B8F90042CE2FBE200703E1C /* TransmitterVC */,
 				7B8F900A2CE32CB400703E1C /* TipsVC */,
@@ -247,6 +252,15 @@
 				7B8F90112CE4CB1B00703E1C /* PairingTransmitterViewController.xib */,
 			);
 			path = PairingTransmitterVC;
+			sourceTree = "<group>";
+		};
+		7B8F90142CEC931D00703E1C /* PairAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				7B8F90152CEC933800703E1C /* PairAnimateViewController.swift */,
+				7B8F90162CEC933800703E1C /* PairAnimateViewController.xib */,
+			);
+			path = PairAnimate;
 			sourceTree = "<group>";
 		};
 		7B9B92692CBCE23000203AD3 /* BodyInformationVC */ = {
@@ -371,6 +385,7 @@
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
 				7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */,
 				7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */,
+				7B8F90172CEC933800703E1C /* PairAnimateViewController.xib in Resources */,
 				7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */,
 				7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */,
 				7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */,
@@ -430,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
