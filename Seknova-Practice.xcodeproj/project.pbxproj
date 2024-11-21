@@ -10,6 +10,8 @@
 		314FAC19E5F5BEF6EF4D28F5 /* Pods_Seknova_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A82984BC3E7BBA229FFF2EE /* Pods_Seknova_Practice.framework */; };
 		7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */; };
 		7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */; };
+		7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */; };
+		7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */; };
 		7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */; };
 		7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */; };
 		7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */; };
@@ -53,6 +55,8 @@
 		7718D1ABAC66BD0196AF3B5B /* Pods-Seknova-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.debug.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecertificationViewController.swift; sourceTree = "<group>"; };
 		7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecertificationViewController.xib; sourceTree = "<group>"; };
+		7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantBloodSugarViewController.swift; sourceTree = "<group>"; };
+		7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstantBloodSugarViewController.xib; sourceTree = "<group>"; };
 		7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 				7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */,
 			);
 			path = RecertificationVC;
+			sourceTree = "<group>";
+		};
+		7B6447242CEF3E16002C43D7 /* InstantBloodSugarVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */,
+				7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */,
+			);
+			path = InstantBloodSugarVC;
 			sourceTree = "<group>";
 		};
 		7B655C5F2CB3FD7F00345704 /* ResetPasswordVC */ = {
@@ -196,6 +209,7 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B6447242CEF3E16002C43D7 /* InstantBloodSugarVC */,
 				7B8F90192CEC9D8000703E1C /* ScanningSensorVC */,
 				7B8F90142CEC931D00703E1C /* PairAnimateVC */,
 				7B8F900F2CE4CAFF00703E1C /* PairingTransmitterVC */,
@@ -407,6 +421,7 @@
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
+				7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */,
 				7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */,
 				7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
