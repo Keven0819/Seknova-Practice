@@ -1,5 +1,5 @@
 //
-//  BindPhoneCallViewController.swift
+//  PersonInformationViewController.swift
 //  Seknova-Practice
 //
 //  Created by imac-2627 on 2024/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BindPhoneCallViewController: UIViewController {
+class PersonInformationViewController: UIViewController {
     
     // MARK: - IBOutlet
     
@@ -17,17 +17,11 @@ class BindPhoneCallViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
     }
     
     // MARK: - UI Settings
-    func setNavigationBar() {
-        self.navigationItem.title = "綁定手機"
-    }
+    
     // MARK: - IBAction
-    @IBAction func btnBakcTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     // MARK: - Function
     

@@ -14,6 +14,8 @@
 		7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */; };
 		7B64472C2CF062EA002C43D7 /* BindPhoneCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64472A2CF062EA002C43D7 /* BindPhoneCallViewController.swift */; };
 		7B64472D2CF062EA002C43D7 /* BindPhoneCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */; };
+		7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */; };
+		7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */; };
 		7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */; };
 		7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */; };
 		7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */; };
@@ -61,6 +63,8 @@
 		7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstantBloodSugarViewController.xib; sourceTree = "<group>"; };
 		7B64472A2CF062EA002C43D7 /* BindPhoneCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindPhoneCallViewController.swift; sourceTree = "<group>"; };
 		7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindPhoneCallViewController.xib; sourceTree = "<group>"; };
+		7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationViewController.swift; sourceTree = "<group>"; };
+		7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonInformationViewController.xib; sourceTree = "<group>"; };
 		7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 			path = BindPhoneCallVC;
 			sourceTree = "<group>";
 		};
+		7B64472E2CF0690F002C43D7 /* PersonInformatoinVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */,
+				7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */,
+			);
+			path = PersonInformatoinVC;
+			sourceTree = "<group>";
+		};
 		7B655C5F2CB3FD7F00345704 /* ResetPasswordVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +235,7 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B64472E2CF0690F002C43D7 /* PersonInformatoinVC */,
 				7B6447292CF062C3002C43D7 /* BindPhoneCallVC */,
 				7B6447242CEF3E16002C43D7 /* InstantBloodSugarVC */,
 				7B8F90192CEC9D8000703E1C /* ScanningSensorVC */,
@@ -431,6 +445,7 @@
 				7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */,
 				7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */,
 				7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */,
+				7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */,
 				7B64472D2CF062EA002C43D7 /* BindPhoneCallViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
@@ -510,6 +525,7 @@
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
 				7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */,
 				7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */,
+				7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */,
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,
