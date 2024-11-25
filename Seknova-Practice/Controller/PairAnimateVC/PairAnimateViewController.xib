@@ -20,19 +20,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-PZ-kK5">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connecting_0" translatesAutoresizingMaskIntoConstraints="NO" id="8wV-D4-ukX">
-                    <rect key="frame" x="-51.666666666666657" y="321" width="496.33333333333326" height="262"/>
+                    <rect key="frame" x="-51.666666666666657" y="228" width="496.33333333333326" height="233.33333333333337"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3Q-8I-LZ9">
-                    <rect key="frame" x="0.0" y="427" width="393" height="21"/>
+                    <rect key="frame" x="0.0" y="336.33333333333331" width="393" height="18.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="連 線 中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuR-ty-tAu">
-                    <rect key="frame" x="0.0" y="448" width="393" height="21"/>
+                    <rect key="frame" x="0.0" y="355" width="393" height="18.666666666666686"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                 <constraint firstItem="1oe-PZ-kK5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FVK-DC-OFK"/>
                 <constraint firstItem="w3Q-8I-LZ9" firstAttribute="height" secondItem="8wV-D4-ukX" secondAttribute="height" multiplier="0.0801527" id="NaQ-JC-Uql"/>
                 <constraint firstItem="8wV-D4-ukX" firstAttribute="width" secondItem="1oe-PZ-kK5" secondAttribute="width" multiplier="1.26209" id="QWk-hN-hRg"/>
-                <constraint firstItem="1oe-PZ-kK5" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.12253" id="UTO-WO-uYd"/>
+                <constraint firstItem="1oe-PZ-kK5" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="UTO-WO-uYd"/>
                 <constraint firstItem="8wV-D4-ukX" firstAttribute="centerX" secondItem="1oe-PZ-kK5" secondAttribute="centerX" id="Vl0-5L-a3p"/>
                 <constraint firstItem="w3Q-8I-LZ9" firstAttribute="centerX" secondItem="8wV-D4-ukX" secondAttribute="centerX" id="cWf-DX-awp"/>
                 <constraint firstItem="8wV-D4-ukX" firstAttribute="top" secondItem="1oe-PZ-kK5" secondAttribute="bottom" constant="-531" id="mTn-yu-Kue"/>
