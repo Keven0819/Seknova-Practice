@@ -72,8 +72,8 @@ class TransmitterViewController: UIViewController, AVCaptureMetadataOutputObject
             let deviceID = alertController.textFields?.first?.text ?? ""
             
             // 儲存裝置 ID
-            UserPreferences.shared.deviceID = deviceID
-            print("Device ID: \(UserPreferences.shared.deviceID ?? "")")
+            UserPreferences.shared.transmitterDeviceID = deviceID
+            print("Device ID: \(UserPreferences.shared.transmitterDeviceID ?? "")")
         }
         
         alertController.addAction(cancelAction)
@@ -145,7 +145,7 @@ class TransmitterViewController: UIViewController, AVCaptureMetadataOutputObject
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
            let deviceID = metadataObject.stringValue {
             // 儲存裝置 ID
-            UserPreferences.shared.deviceID = deviceID
+            UserPreferences.shared.transmitterDeviceID = deviceID
             print("Device ID: \(deviceID)")
             
             // 跳轉到配對發射器頁面

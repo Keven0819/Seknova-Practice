@@ -16,6 +16,10 @@
 		7B64472D2CF062EA002C43D7 /* BindPhoneCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */; };
 		7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */; };
 		7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */; };
+		7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */; };
+		7B6447402CF5B7B6002C43D7 /* SensorPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */; };
+		7B6447442CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447422CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift */; };
+		7B6447452CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447432CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib */; };
 		7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */; };
 		7B655C632CB3FDA200345704 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */; };
 		7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */; };
@@ -65,6 +69,10 @@
 		7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindPhoneCallViewController.xib; sourceTree = "<group>"; };
 		7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationViewController.swift; sourceTree = "<group>"; };
 		7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonInformationViewController.xib; sourceTree = "<group>"; };
+		7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPopoverViewController.swift; sourceTree = "<group>"; };
+		7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorPopoverViewController.xib; sourceTree = "<group>"; };
+		7B6447422CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonPopoverViewController.swift; sourceTree = "<group>"; };
+		7B6447432CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightButtonPopoverViewController.xib; sourceTree = "<group>"; };
 		7B655C602CB3FDA200345704 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7B655C612CB3FDA200345704 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		7B6F7D082CA2A15C00E9A1DC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 		7B6447242CEF3E16002C43D7 /* InstantBloodSugarVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B64473B2CF5B75D002C43D7 /* Components */,
 				7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */,
 				7B6447262CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib */,
 			);
@@ -161,6 +170,33 @@
 				7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */,
 			);
 			path = PersonInformatoinVC;
+			sourceTree = "<group>";
+		};
+		7B64473B2CF5B75D002C43D7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B6447412CF5B7BA002C43D7 /* RightButtonPopoverVC */,
+				7B64473C2CF5B770002C43D7 /* SensorPopoverVC */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7B64473C2CF5B770002C43D7 /* SensorPopoverVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */,
+				7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */,
+			);
+			path = SensorPopoverVC;
+			sourceTree = "<group>";
+		};
+		7B6447412CF5B7BA002C43D7 /* RightButtonPopoverVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B6447422CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift */,
+				7B6447432CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib */,
+			);
+			path = RightButtonPopoverVC;
 			sourceTree = "<group>";
 		};
 		7B655C5F2CB3FD7F00345704 /* ResetPasswordVC */ = {
@@ -434,8 +470,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7836872CA13AA9006EE7D8 /* Assets.xcassets in Resources */,
+				7B6447452CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib in Resources */,
 				7B6F7D102CA2A3E700E9A1DC /* ForgetPasswordViewController.xib in Resources */,
 				7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */,
+				7B6447402CF5B7B6002C43D7 /* SensorPopoverViewController.xib in Resources */,
 				7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */,
 				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
@@ -511,6 +549,7 @@
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
+				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewController.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,
@@ -523,6 +562,7 @@
 				7B9B926C2CBCE27600203AD3 /* BodyInformationViewController.swift in Sources */,
 				7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */,
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
+				7B6447442CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift in Sources */,
 				7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */,
 				7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */,
 				7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */,

@@ -25,7 +25,8 @@ class UserPreferences {
         case newPassword
         case lowSugarValue
         case highSugarValue
-        case deviceID
+        case transmitterDeviceID
+        case sensorDeviceID
     }
     
     var mail: String? {
@@ -99,12 +100,22 @@ class UserPreferences {
             userPreference.set(newValue, forKey: UserPreferenceKey.highSugarValue.rawValue)
         }
     }
-    var deviceID: String? {
+    
+    var transmitterDeviceID: String? {
         get {
-            return userPreference.string(forKey: UserPreferenceKey.deviceID.rawValue) ?? ""
+            return userPreference.string(forKey: UserPreferenceKey.transmitterDeviceID.rawValue) ?? ""
         }
         set {
-            userPreference.set(newValue, forKey: UserPreferenceKey.deviceID.rawValue)
+            userPreference.set(newValue, forKey: UserPreferenceKey.transmitterDeviceID.rawValue)
+        }
+    }
+    
+    var sesorDeviceID: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.sensorDeviceID.rawValue) ?? ""
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.sensorDeviceID.rawValue)
         }
     }
 }

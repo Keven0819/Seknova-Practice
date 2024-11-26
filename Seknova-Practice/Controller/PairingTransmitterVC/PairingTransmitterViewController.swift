@@ -37,10 +37,10 @@ class PairingTransmitterViewController: UIViewController {
     }
     // MARK: - IBAction
     @IBAction func btnCancelTapped(_ sender: Any) {
-        UserPreferences.shared.deviceID = ""
+        UserPreferences.shared.transmitterDeviceID = ""
         let transmitterVC = TransmitterViewController()
         navigationController?.pushViewController(transmitterVC, animated: true)
-        print(UserPreferences.shared.deviceID ?? "nil")
+        print(UserPreferences.shared.transmitterDeviceID ?? "nil")
     }
     @IBAction func btnPairTapped(_ sender: Any) {
         let animateVC = PairAnimateViewController()

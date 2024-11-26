@@ -10,7 +10,8 @@ import SwiftUI
 import CoreBluetooth
 import Network
 
-class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegate {
+class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegate, SensorPopoverViewControllerDelegate {
+    
     
     // MARK: - IBOutlet
     @IBOutlet weak var imgvMenuBackground: UIImageView!
@@ -249,13 +250,36 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
     
     @objc func linkButtonTapped() {
         print("linkButtonTapped")
+        let sensorPopoverVC = SensorPopoverViewController()
+        sensorPopoverVC.delegate = self
+        sensorPopoverVC.modalPresentationStyle = .popover
+        if let popover = sensorPopoverVC.popoverPresentationController {
+            
+            popover.sourceView = self.navigationItem.leftBarButtonItem?.customView?.subviews[1]
+            popover.sourceRect = navigationItem.leftBarButtonItem?.customView?.subviews[1].bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+            popover.delegate = self
+            popover.permittedArrowDirections = .up
+        }
+        
+        sensorPopoverVC.preferredContentSize = CGSize(width: 200, height: 50)
+        
+        present(sensorPopoverVC, animated: true)
     }
     
     @objc func rightButtonTapped() {
         print("rightButtonTapped")
     }
     // MARK: - Function
-    
+    func didConfirmSensor() {
+        print("Sensor confirmed.")
+    }
 }
 
 // MARK: - Extensions
+extension InstantBloodSugarViewController: UIPopoverPresentationControllerDelegate {
+    
+    // 這個方法會在iPhone上將popover改成全螢幕的方式
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none // 保持Popover的樣式
+    }
+}

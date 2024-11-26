@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol TermsViewControllerDelegate: AnyObject {
+    func didConfirmTerms()
+}
+
+
 class TermsViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -55,6 +60,3 @@ class TermsViewController: UIViewController {
 // MARK: - Extensions
 
 // MARK: - Protocol
-protocol TermsViewControllerDelegate: AnyObject {
-    func didConfirmTerms()
-}

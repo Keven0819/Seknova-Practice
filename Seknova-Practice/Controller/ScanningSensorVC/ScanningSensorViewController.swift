@@ -12,7 +12,7 @@ class ScanningSensorViewController: UIViewController {
     // MARK: - IBOutlet
     
     // MARK: - Property
-    
+    var sensorDeviceID = ""
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -42,11 +42,17 @@ class ScanningSensorViewController: UIViewController {
             
             // 顯示驗證成功訊息
             self?.showSuccessAlert()
+            UserPreferences.shared.sesorDeviceID = deviceID
+            print("UserPreferences.shared.sesorDeviceID: \(UserPreferences.shared.sesorDeviceID ?? "")")
         }
 
         alertController.addAction(cancelAction)
         alertController.addAction(confirmAction)
         present(alertController, animated: true, completion: nil)
+    }
+    @IBAction func btnSkipTapped(_ sender: Any) {
+        let instantBloodSugarVC = InstantBloodSugarViewController()
+        navigationController?.pushViewController(instantBloodSugarVC, animated: true)
     }
     
     // MARK: - Function
@@ -54,6 +60,7 @@ class ScanningSensorViewController: UIViewController {
         let successAlert = UIAlertController(title: "驗證成功", message: "裝置 ID 驗證成功", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "確定", style: .default) { [weak self] _ in
             self?.navigateToMainPage()
+            
         }
         successAlert.addAction(okAction)
         present(successAlert, animated: true, completion: nil)
