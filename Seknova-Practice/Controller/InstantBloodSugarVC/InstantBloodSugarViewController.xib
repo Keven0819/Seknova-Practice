@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstantBloodSugarViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="imgvBluetooth" destination="87d-Dv-FDL" id="Dgx-f6-vns"/>
                 <outlet property="imgvMenuBackground" destination="lwA-JT-2kX" id="vDX-zE-QUV"/>
+                <outlet property="imgvNetwork" destination="mst-Pw-uqg" id="STG-M5-FZa"/>
                 <outlet property="vMenu" destination="xJu-eO-XjQ" id="b1s-a5-R5G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -75,12 +77,24 @@
                         <constraint firstItem="qtU-qT-EjX" firstAttribute="centerX" secondItem="kIR-ih-3fo" secondAttribute="centerX" id="zWb-rk-Rcb"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluetooth-check" translatesAutoresizingMaskIntoConstraints="NO" id="87d-Dv-FDL">
+                    <rect key="frame" x="344" y="59" width="49" height="63"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="network-check" translatesAutoresizingMaskIntoConstraints="NO" id="mst-Pw-uqg">
+                    <rect key="frame" x="298" y="70" width="46" height="41"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="top" secondItem="lwA-JT-2kX" secondAttribute="bottom" constant="-190" id="3VI-a2-9nK"/>
+                <constraint firstItem="mst-Pw-uqg" firstAttribute="centerY" secondItem="87d-Dv-FDL" secondAttribute="centerY" id="3uy-78-vSo"/>
+                <constraint firstItem="87d-Dv-FDL" firstAttribute="trailing" secondItem="vkU-0w-NsC" secondAttribute="trailing" id="8so-PD-leY"/>
+                <constraint firstItem="vkU-0w-NsC" firstAttribute="top" secondItem="87d-Dv-FDL" secondAttribute="bottom" constant="-63" id="9wf-wy-L18"/>
                 <constraint firstItem="xJu-eO-XjQ" firstAttribute="height" secondItem="lwA-JT-2kX" secondAttribute="height" multiplier="0.8" id="Ei6-wn-yHa"/>
+                <constraint firstItem="mst-Pw-uqg" firstAttribute="width" secondItem="87d-Dv-FDL" secondAttribute="width" multiplier="0.938776" id="Ida-sM-4QU"/>
+                <constraint firstItem="87d-Dv-FDL" firstAttribute="width" secondItem="vkU-0w-NsC" secondAttribute="width" multiplier="0.145038" constant="-8" id="JjJ-lu-UyM"/>
+                <constraint firstItem="mst-Pw-uqg" firstAttribute="height" secondItem="87d-Dv-FDL" secondAttribute="height" multiplier="0.650794" id="Jua-iX-THg"/>
                 <constraint firstItem="lwA-JT-2kX" firstAttribute="height" secondItem="vkU-0w-NsC" secondAttribute="height" multiplier="0.238263" id="MSN-lZ-dMk"/>
                 <constraint firstItem="xJu-eO-XjQ" firstAttribute="width" secondItem="lwA-JT-2kX" secondAttribute="width" multiplier="0.9" id="VmE-cs-7q9"/>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="YRN-en-0Bm"/>
@@ -88,6 +102,8 @@
                 <constraint firstItem="xJu-eO-XjQ" firstAttribute="centerX" secondItem="lwA-JT-2kX" secondAttribute="centerX" id="Zxc-H9-mwj"/>
                 <constraint firstItem="lwA-JT-2kX" firstAttribute="leading" secondItem="vkU-0w-NsC" secondAttribute="leading" id="aDI-ZA-IDn"/>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cfM-wY-vXZ"/>
+                <constraint firstItem="87d-Dv-FDL" firstAttribute="leading" secondItem="mst-Pw-uqg" secondAttribute="trailing" id="hwx-4i-tIv"/>
+                <constraint firstItem="87d-Dv-FDL" firstAttribute="height" secondItem="vkU-0w-NsC" secondAttribute="height" multiplier="0.0739437" id="i9T-Xe-REB"/>
                 <constraint firstItem="xJu-eO-XjQ" firstAttribute="centerY" secondItem="lwA-JT-2kX" secondAttribute="centerY" id="v6J-4p-4zi"/>
                 <constraint firstItem="lwA-JT-2kX" firstAttribute="width" secondItem="vkU-0w-NsC" secondAttribute="width" multiplier="0.384224" id="wpO-fj-Y3t"/>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="yTW-K5-y91"/>
@@ -98,6 +114,8 @@
     <resources>
         <image name="Background5" width="1126" height="2437"/>
         <image name="TextFieldBackground" width="945" height="351"/>
+        <image name="bluetooth-check" width="600" height="600"/>
+        <image name="network-check" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

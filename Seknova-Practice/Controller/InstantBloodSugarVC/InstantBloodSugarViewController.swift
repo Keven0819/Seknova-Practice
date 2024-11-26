@@ -7,20 +7,29 @@
 
 import UIKit
 import SwiftUI
+import CoreBluetooth
+import Network
 
-class InstantBloodSugarViewController: UIViewController {
+class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegate {
     
     // MARK: - IBOutlet
     @IBOutlet weak var imgvMenuBackground: UIImageView!
     @IBOutlet weak var vMenu: UIView!
+    @IBOutlet weak var imgvBluetooth: UIImageView!
+    @IBOutlet weak var imgvNetwork: UIImageView!
     
     // MARK: - Property
     var btnMenuCount = 0
+    var centralManager: CBCentralManager?
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        
+        // 初始化 centralManager
+        centralManager = CBCentralManager(delegate: self, queue: nil)
+        checkWiFiStatus()
     }
     
     // MARK: - UI Settings
@@ -161,6 +170,69 @@ class InstantBloodSugarViewController: UIViewController {
         // 創建 UIBarButtonItem
         let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
         navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    // Bluetooth 狀態處理
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        switch central.state {
+        case .poweredOn:
+            imgvBluetooth.image = UIImage(named: "bluetooth-check")
+            print("Bluetooth is On")
+        case .poweredOff:
+            imgvBluetooth.image = UIImage(named: "bluetooth-false")
+            print("Bluetooth is Off")
+        case .unauthorized:
+            print("Bluetooth permissions not granted.")
+        case .unsupported:
+            print("Bluetooth is not supported on this device.")
+        default:
+            print("Unknown Bluetooth state.")
+        }
+    }
+    
+    func checkWiFiStatus() {
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "NetworkMonitor")
+
+        // 檢查網路狀態
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                if path.status == .satisfied {
+                    if path.usesInterfaceType(.wifi) {
+                        self.imgvNetwork.image = UIImage(named: "network-check")
+                        print("WiFi is connected.")
+                    } else {
+                        self.imgvNetwork.image = UIImage(named: "network-false")
+                        print("WiFi is not connected.")
+                    }
+                } else {
+                    self.imgvNetwork.image = UIImage(named: "network-false")
+                    print("No network connection.")
+                }
+            }
+        }
+
+        // 啟動監視器
+        monitor.start(queue: queue)
+
+        // 檢查初始網路狀態
+        DispatchQueue.global().async {
+            let path = monitor.currentPath
+            DispatchQueue.main.async {
+                if path.status == .satisfied {
+                    if path.usesInterfaceType(.wifi) {
+                        self.imgvNetwork.image = UIImage(named: "network-check")
+                        print("WiFi is connected (initial check).")
+                    } else {
+                        self.imgvNetwork.image = UIImage(named: "network-false")
+                        print("WiFi is not connected (initial check).")
+                    }
+                } else {
+                    self.imgvNetwork.image = UIImage(named: "network-false")
+                    print("No network connection (initial check).")
+                }
+            }
+        }
     }
     // MARK: - IBAction
     @objc func moreButtonTapped() {
