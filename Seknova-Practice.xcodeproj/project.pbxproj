@@ -16,7 +16,7 @@
 		7B64472D2CF062EA002C43D7 /* BindPhoneCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */; };
 		7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */; };
 		7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */; };
-		7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */; };
+		7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewControllerDelegate.swift */; };
 		7B6447402CF5B7B6002C43D7 /* SensorPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */; };
 		7B6447442CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447422CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift */; };
 		7B6447452CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6447432CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib */; };
@@ -69,7 +69,7 @@
 		7B64472B2CF062EA002C43D7 /* BindPhoneCallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindPhoneCallViewController.xib; sourceTree = "<group>"; };
 		7B64472F2CF0692C002C43D7 /* PersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationViewController.swift; sourceTree = "<group>"; };
 		7B6447302CF0692C002C43D7 /* PersonInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonInformationViewController.xib; sourceTree = "<group>"; };
-		7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPopoverViewController.swift; sourceTree = "<group>"; };
+		7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPopoverViewControllerDelegate.swift; sourceTree = "<group>"; };
 		7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorPopoverViewController.xib; sourceTree = "<group>"; };
 		7B6447422CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonPopoverViewController.swift; sourceTree = "<group>"; };
 		7B6447432CF5B7DF002C43D7 /* RightButtonPopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightButtonPopoverViewController.xib; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		7B64473C2CF5B770002C43D7 /* SensorPopoverVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewController.swift */,
+				7B64473D2CF5B7B5002C43D7 /* SensorPopoverViewControllerDelegate.swift */,
 				7B64473E2CF5B7B5002C43D7 /* SensorPopoverViewController.xib */,
 			);
 			path = SensorPopoverVC;
@@ -549,7 +549,7 @@
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
-				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewController.swift in Sources */,
+				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,

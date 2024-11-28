@@ -10,7 +10,7 @@ import SwiftUI
 import CoreBluetooth
 import Network
 
-class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegate, SensorPopoverViewControllerDelegate {
+class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegate, SensorPopoverViewControllerDelegate, RightButtonPopoverViewControllerDelegate {
     
     
     // MARK: - IBOutlet
@@ -268,10 +268,28 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
     
     @objc func rightButtonTapped() {
         print("rightButtonTapped")
+        let rightPopoverVC = RightButtonPopoverViewController()
+        rightPopoverVC.delegate = self
+        rightPopoverVC.modalPresentationStyle = .popover
+        if let popover = rightPopoverVC.popoverPresentationController {
+            
+            popover.sourceView = self.navigationItem.rightBarButtonItem?.customView
+            popover.sourceRect = navigationItem.rightBarButtonItem?.customView?.bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+            popover.delegate = self
+            popover.permittedArrowDirections = .up
+        }
+        
+        rightPopoverVC.preferredContentSize = CGSize(width: 200, height: 200)
+        
+        present(rightPopoverVC, animated: true)
     }
     // MARK: - Function
     func didConfirmSensor() {
         print("Sensor confirmed.")
+    }
+    
+    func didConfirmRightButton() {
+        print("Right button confirmed.")
     }
 }
 
