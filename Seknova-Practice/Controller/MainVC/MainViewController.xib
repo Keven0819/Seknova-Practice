@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="TabBarView" destination="hjv-Q9-aow" id="jXG-J2-L3A"/>
+                <outlet property="content" destination="B4q-1B-fSz" id="8rc-8W-J8G"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-1B-fSz">
+                    <rect key="frame" x="0.0" y="59" width="393" height="683"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjv-Q9-aow" customClass="CustomTabBar" customModule="Seknova_Practice" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="750" width="393" height="102"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hjv-Q9-aow" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.119718" id="055-gB-ruw"/>
+                <constraint firstItem="B4q-1B-fSz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="1Rb-7n-sTF"/>
+                <constraint firstItem="hjv-Q9-aow" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="PAk-uy-OV5"/>
+                <constraint firstItem="B4q-1B-fSz" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="T2d-LK-OIa"/>
+                <constraint firstItem="B4q-1B-fSz" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.801643" id="eb9-og-FmD"/>
+                <constraint firstItem="hjv-Q9-aow" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="h2x-Jd-5aB"/>
+                <constraint firstItem="hjv-Q9-aow" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="hIs-5s-Gk4"/>
+                <constraint firstItem="B4q-1B-fSz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vWX-aY-Nav"/>
+            </constraints>
+            <point key="canvasLocation" x="81.679389312977094" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

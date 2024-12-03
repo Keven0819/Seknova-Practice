@@ -18,10 +18,13 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
     @IBOutlet weak var vMenu: UIView!
     @IBOutlet weak var imgvBluetooth: UIImageView!
     @IBOutlet weak var imgvNetwork: UIImageView!
+    @IBOutlet weak var lbValue: UILabel!
     
     // MARK: - Property
     var btnMenuCount = 0
     var centralManager: CBCentralManager?
+    var number: Int = 0
+    var timer = Timer()
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -31,6 +34,7 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
         // 初始化 centralManager
         centralManager = CBCentralManager(delegate: self, queue: nil)
         checkWiFiStatus()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
     // MARK: - UI Settings
@@ -282,6 +286,11 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
         rightPopoverVC.preferredContentSize = CGSize(width: 200, height: 200)
         
         present(rightPopoverVC, animated: true)
+    }
+    
+    @objc func timerAction() {
+        number = Int.random(in: 55...400)
+        lbValue.text = "\(number)"
     }
     // MARK: - Function
     func didConfirmSensor() {

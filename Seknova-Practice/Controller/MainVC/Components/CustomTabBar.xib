@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBar" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="fiveView" destination="goQ-fl-uHw" id="zZC-KP-uSe"/>
+                <outlet property="fourView" destination="apE-Me-z4K" id="Gws-gT-653"/>
+                <outlet property="oneView" destination="ou8-vw-ldV" id="vTs-lD-vLd"/>
+                <outlet property="threeView" destination="9Rn-U0-EzJ" id="n91-in-RoL"/>
+                <outlet property="twoView" destination="7F1-8R-Jfj" id="fYm-5C-s0m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1000" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-t8-efr">
+                    <rect key="frame" x="0.0" y="12.666666666666671" width="1000" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apE-Me-z4K" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7F1-8R-Jfj" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+                            <rect key="frame" x="200" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou8-vw-ldV" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+                            <rect key="frame" x="400" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-U0-EzJ" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+                            <rect key="frame" x="600" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goQ-fl-uHw" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+                            <rect key="frame" x="800" y="0.0" width="200" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="apE-Me-z4K" firstAttribute="centerY" secondItem="Rfg-t8-efr" secondAttribute="centerY" id="0qN-bd-QHD"/>
+                        <constraint firstItem="7F1-8R-Jfj" firstAttribute="centerY" secondItem="Rfg-t8-efr" secondAttribute="centerY" id="1rB-dh-2Jm"/>
+                        <constraint firstItem="7F1-8R-Jfj" firstAttribute="width" secondItem="Rfg-t8-efr" secondAttribute="width" multiplier="0.2" id="CWW-lh-3RA"/>
+                        <constraint firstItem="ou8-vw-ldV" firstAttribute="centerY" secondItem="Rfg-t8-efr" secondAttribute="centerY" id="I1W-Ue-GYi"/>
+                        <constraint firstItem="9Rn-U0-EzJ" firstAttribute="centerY" secondItem="Rfg-t8-efr" secondAttribute="centerY" id="Rbq-Fd-163"/>
+                        <constraint firstItem="goQ-fl-uHw" firstAttribute="centerY" secondItem="Rfg-t8-efr" secondAttribute="centerY" id="eVr-9m-Jis"/>
+                        <constraint firstItem="ou8-vw-ldV" firstAttribute="width" secondItem="Rfg-t8-efr" secondAttribute="width" multiplier="0.2" id="ike-dI-yNg"/>
+                        <constraint firstItem="9Rn-U0-EzJ" firstAttribute="width" secondItem="Rfg-t8-efr" secondAttribute="width" multiplier="0.2" id="q8u-bj-lRX"/>
+                        <constraint firstItem="goQ-fl-uHw" firstAttribute="width" secondItem="Rfg-t8-efr" secondAttribute="width" multiplier="0.2" id="vtc-qT-edr"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Rfg-t8-efr" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="6O1-cx-qWk"/>
+                <constraint firstItem="Rfg-t8-efr" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="PZZ-PM-VPh"/>
+                <constraint firstItem="Rfg-t8-efr" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="UOt-rD-cBQ"/>
+                <constraint firstItem="Rfg-t8-efr" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1.86916" id="Zo8-Ot-dHA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="116.03053435114504" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

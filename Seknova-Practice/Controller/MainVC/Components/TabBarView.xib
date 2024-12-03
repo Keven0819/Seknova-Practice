@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarView" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="btnChangePage" destination="sbq-NS-MRT" id="Ha3-tE-Mny"/>
+                <outlet property="imgvPageIcon" destination="g5g-n7-XGN" id="BT0-ei-GzO"/>
+                <outlet property="lbPageName" destination="kUj-3q-2cr" id="zZt-rM-EHa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-NS-MRT">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="btnChangePageTapped:" destination="-1" eventType="touchUpInside" id="4vT-ve-A6A"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即時血糖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-3q-2cr">
+                    <rect key="frame" x="0.0" y="108" width="200" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trend" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-n7-XGN">
+                    <rect key="frame" x="59" y="78" width="82" height="44"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sbq-NS-MRT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AKr-zY-FLd"/>
+                <constraint firstItem="g5g-n7-XGN" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.411215" id="HP5-5q-73K"/>
+                <constraint firstItem="kUj-3q-2cr" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Kmz-MJ-r2m"/>
+                <constraint firstItem="g5g-n7-XGN" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.41" id="SQL-QR-gyi"/>
+                <constraint firstItem="sbq-NS-MRT" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Sun-di-kdT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="sbq-NS-MRT" secondAttribute="top" constant="59" id="b6s-4J-zv8"/>
+                <constraint firstItem="kUj-3q-2cr" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.560748" id="ceE-8t-opk"/>
+                <constraint firstItem="kUj-3q-2cr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="2" id="jAa-GJ-Of0"/>
+                <constraint firstItem="kUj-3q-2cr" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="mGL-fG-34W"/>
+                <constraint firstItem="g5g-n7-XGN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="mfm-e5-TJm"/>
+                <constraint firstItem="sbq-NS-MRT" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.86916" id="toz-Yv-h10"/>
+                <constraint firstItem="g5g-n7-XGN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="twW-5n-L6j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="54.961832061068698" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="trend" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -51,8 +51,7 @@ class ScanningSensorViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     @IBAction func btnSkipTapped(_ sender: Any) {
-        let instantBloodSugarVC = InstantBloodSugarViewController()
-        navigationController?.pushViewController(instantBloodSugarVC, animated: true)
+        navigateToMainPage()
     }
     
     // MARK: - Function
@@ -74,8 +73,8 @@ class ScanningSensorViewController: UIViewController {
     }
     
     private func navigateToMainPage() {
-        let instantBloodSugarVC = InstantBloodSugarViewController()
-        navigationController?.pushViewController(instantBloodSugarVC, animated: true)
+        let mainVC = MainViewController()
+        navigationController?.pushViewController(mainVC, animated: true)
     }
 }
 
