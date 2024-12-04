@@ -29,13 +29,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即時血糖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-3q-2cr">
-                    <rect key="frame" x="0.0" y="108" width="200" height="60"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="0.0" y="128" width="200" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trend" translatesAutoresizingMaskIntoConstraints="NO" id="g5g-n7-XGN">
-                    <rect key="frame" x="59" y="78" width="82" height="44"/>
+                    <rect key="frame" x="59" y="101" width="82" height="44"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -48,9 +48,9 @@
                 <constraint firstItem="sbq-NS-MRT" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Sun-di-kdT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="sbq-NS-MRT" secondAttribute="top" constant="59" id="b6s-4J-zv8"/>
                 <constraint firstItem="kUj-3q-2cr" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.560748" id="ceE-8t-opk"/>
-                <constraint firstItem="kUj-3q-2cr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="2" id="jAa-GJ-Of0"/>
+                <constraint firstItem="kUj-3q-2cr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="22" id="jAa-GJ-Of0"/>
                 <constraint firstItem="kUj-3q-2cr" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="mGL-fG-34W"/>
-                <constraint firstItem="g5g-n7-XGN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="mfm-e5-TJm"/>
+                <constraint firstItem="g5g-n7-XGN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="42" id="mfm-e5-TJm"/>
                 <constraint firstItem="sbq-NS-MRT" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.86916" id="toz-Yv-h10"/>
                 <constraint firstItem="g5g-n7-XGN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="twW-5n-L6j"/>
             </constraints>

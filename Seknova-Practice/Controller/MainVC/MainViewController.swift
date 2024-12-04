@@ -7,11 +7,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, SensorPopoverViewControllerDelegate, RightButtonPopoverViewControllerDelegate {
     
     // MARK: - IBOutlet
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var TabBarView: UIView!
+    @IBOutlet weak var imgvMenu: UIImageView!
+    @IBOutlet weak var vMenu: UIView!
     
     // MARK: - Property
     var vc: [UIViewController] = []
@@ -23,6 +25,7 @@ class MainViewController: UIViewController {
     let four = HistoryViewController()
     let five = BloodSugarCorrectionSureViewController()
     
+    var btnMenuCount = 0
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -43,9 +46,8 @@ class MainViewController: UIViewController {
     
     // MARK: - UI Settings
     func setUI() {
-        let instantBloodSugarVC = InstantBloodSugarViewController()
-        instantBloodSugarVC.imgvMenuBackground?.isHidden = true
-        instantBloodSugarVC.vMenu?.isHidden = true
+        imgvMenu.isHidden = true
+        vMenu.isHidden = true
         setNavigatioinBar()
     }
     func setNavigatioinBar() {
@@ -54,12 +56,12 @@ class MainViewController: UIViewController {
         let moreButton = UIButton(type: .system)
         moreButton.setImage(UIImage(named: "ThreeLineSmall"), for: .normal)
         moreButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        moreButton.addTarget(self, action: #selector(InstantBloodSugarViewController.moreButtonTapped), for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(moreButtonTapped), for: .touchUpInside)
 
         let linkButton = UIButton(type: .system)
         linkButton.setImage(UIImage(named: "link"), for: .normal)
         linkButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        linkButton.addTarget(self, action: #selector(InstantBloodSugarViewController.linkButtonTapped), for: .touchUpInside)
+        linkButton.addTarget(self, action: #selector(linkButtonTapped), for: .touchUpInside)
 
         // 使用 UIStackView
         let stackView = UIStackView(arrangedSubviews: [moreButton, linkButton])
@@ -175,14 +177,63 @@ class MainViewController: UIViewController {
         rightButton.layer.addSublayer(bottomSeparatorLayer)
 
         // 添加點擊事件
-        rightButton.addTarget(self, action: #selector(InstantBloodSugarViewController.rightButtonTapped), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
 
         // 創建 UIBarButtonItem
         let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     // MARK: - IBAction
+    @objc func moreButtonTapped() {
+        print("moreButtonTapped called, btnMenuCount: \(btnMenuCount)")
+        if btnMenuCount == 0 {
+            print("Showing imgvMenu and vMenu")
+            imgvMenu.isHidden = false
+            vMenu.isHidden = false
+            btnMenuCount += 1
+        } else {
+            print("Hiding imgvMenu and vMenu")
+            imgvMenu.isHidden = true
+            vMenu.isHidden = true
+            btnMenuCount = 0
+        }
+    }
     
+    @objc func linkButtonTapped() {
+        print("linkButtonTapped")
+        let sensorPopoverVC = SensorPopoverViewController()
+        sensorPopoverVC.delegate = self
+        sensorPopoverVC.modalPresentationStyle = .popover
+        if let popover = sensorPopoverVC.popoverPresentationController {
+            
+            popover.sourceView = self.navigationItem.leftBarButtonItem?.customView?.subviews[1]
+            popover.sourceRect = navigationItem.leftBarButtonItem?.customView?.subviews[1].bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+            popover.delegate = self
+            popover.permittedArrowDirections = .up
+        }
+        
+        sensorPopoverVC.preferredContentSize = CGSize(width: 200, height: 50)
+        
+        present(sensorPopoverVC, animated: true)
+    }
+    
+    @objc func rightButtonTapped() {
+        print("rightButtonTapped")
+        let rightPopoverVC = RightButtonPopoverViewController()
+        rightPopoverVC.delegate = self
+        rightPopoverVC.modalPresentationStyle = .popover
+        if let popover = rightPopoverVC.popoverPresentationController {
+            
+            popover.sourceView = self.navigationItem.rightBarButtonItem?.customView
+            popover.sourceRect = navigationItem.rightBarButtonItem?.customView?.bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+            popover.delegate = self
+            popover.permittedArrowDirections = .up
+        }
+        
+        rightPopoverVC.preferredContentSize = CGSize(width: 200, height: 200)
+        
+        present(rightPopoverVC, animated: true)
+    }
     // MARK: - Function
     func pageChange(page: Int) {
         updateView(page)
@@ -198,6 +249,21 @@ class MainViewController: UIViewController {
         }
         content.addSubview(vc[index].view ?? UIView())
     }
+    
+    func didConfirmSensor() {
+        print("Sensor confirmed.")
+    }
+    
+    func didConfirmRightButton() {
+        print("Right button confirmed.")
+    }
 }
 
 // MARK: - Extensions
+extension MainViewController: UIPopoverPresentationControllerDelegate {
+    
+    // 這個方法會在iPhone上將popover改成全螢幕的方式
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none // 保持Popover的樣式
+    }
+}
