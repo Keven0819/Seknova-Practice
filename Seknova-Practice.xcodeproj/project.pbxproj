@@ -68,6 +68,12 @@
 		7BC070B92CFF05B200A76DCF /* LifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC070B62CFF05B200A76DCF /* LifeViewController.swift */; };
 		7BC070BD2CFF05DE00A76DCF /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC070BC2CFF05DE00A76DCF /* HistoryViewController.xib */; };
 		7BC070BE2CFF05DE00A76DCF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC070BB2CFF05DE00A76DCF /* HistoryViewController.swift */; };
+		7BC15D802D01A50300A4AD50 /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15D7F2D01A50300A4AD50 /* ReportViewController.xib */; };
+		7BC15D812D01A50300A4AD50 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC15D7E2D01A50300A4AD50 /* ReportViewController.swift */; };
+		7BC15D852D01A56100A4AD50 /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15D842D01A56100A4AD50 /* LogViewController.xib */; };
+		7BC15D862D01A56100A4AD50 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC15D832D01A56100A4AD50 /* LogViewController.swift */; };
+		7BC15D8B2D01A59400A4AD50 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */; };
+		7BC15D8C2D01A59400A4AD50 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC15D892D01A59400A4AD50 /* SettingViewController.swift */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -137,6 +143,12 @@
 		7BC070B72CFF05B200A76DCF /* LifeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeViewController.xib; sourceTree = "<group>"; };
 		7BC070BB2CFF05DE00A76DCF /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7BC070BC2CFF05DE00A76DCF /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		7BC15D7E2D01A50300A4AD50 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		7BC15D7F2D01A50300A4AD50 /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
+		7BC15D832D01A56100A4AD50 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		7BC15D842D01A56100A4AD50 /* LogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
+		7BC15D892D01A59400A4AD50 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +311,9 @@
 		7B7836952CA14189006EE7D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7BC15D872D01A57A00A4AD50 /* SettingVC */,
+				7BC15D822D01A54C00A4AD50 /* LogVC */,
+				7BC15D7D2D01A4E600A4AD50 /* ReportVC */,
 				7BC070922CFED49600A76DCF /* MainVC */,
 				7B64472E2CF0690F002C43D7 /* PersonInformatoinVC */,
 				7BC070BA2CFF05BF00A76DCF /* HistoryVC */,
@@ -482,6 +497,33 @@
 			path = HistoryVC;
 			sourceTree = "<group>";
 		};
+		7BC15D7D2D01A4E600A4AD50 /* ReportVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BC15D7E2D01A50300A4AD50 /* ReportViewController.swift */,
+				7BC15D7F2D01A50300A4AD50 /* ReportViewController.xib */,
+			);
+			path = ReportVC;
+			sourceTree = "<group>";
+		};
+		7BC15D822D01A54C00A4AD50 /* LogVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BC15D832D01A56100A4AD50 /* LogViewController.swift */,
+				7BC15D842D01A56100A4AD50 /* LogViewController.xib */,
+			);
+			path = LogVC;
+			sourceTree = "<group>";
+		};
+		7BC15D872D01A57A00A4AD50 /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BC15D892D01A59400A4AD50 /* SettingViewController.swift */,
+				7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
 		7BD875BD2CA6AF04008BB100 /* TermsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +608,7 @@
 				7B6447402CF5B7B6002C43D7 /* SensorPopoverViewController.xib in Resources */,
 				7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */,
 				7BC070B82CFF05B200A76DCF /* LifeViewController.xib in Resources */,
+				7BC15D8B2D01A59400A4AD50 /* SettingViewController.xib in Resources */,
 				7BC070AD2CFF052200A76DCF /* BloodSugarCorrectionViewController.xib in Resources */,
 				7BC070A22CFED72800A76DCF /* TabBarView.xib in Resources */,
 				7BC070A92CFEFE1B00A76DCF /* CustomTabBar.xib in Resources */,
@@ -579,11 +622,13 @@
 				7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */,
 				7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */,
 				7B64472D2CF062EA002C43D7 /* BindPhoneCallViewController.xib in Resources */,
+				7BC15D802D01A50300A4AD50 /* ReportViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
+				7BC15D852D01A56100A4AD50 /* LogViewController.xib in Resources */,
 				7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */,
 				7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */,
 				7BC070BD2CFF05DE00A76DCF /* HistoryViewController.xib in Resources */,
@@ -663,8 +708,11 @@
 				7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */,
 				7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */,
 				7B6447442CF5B7DF002C43D7 /* RightButtonPopoverViewController.swift in Sources */,
+				7BC15D8C2D01A59400A4AD50 /* SettingViewController.swift in Sources */,
 				7B8F900E2CE32CE400703E1C /* TipsViewController.swift in Sources */,
+				7BC15D812D01A50300A4AD50 /* ReportViewController.swift in Sources */,
 				7B8F90132CE4CB1B00703E1C /* PairingTransmitterViewController.swift in Sources */,
+				7BC15D862D01A56100A4AD50 /* LogViewController.swift in Sources */,
 				7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */,
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BC070BE2CFF05DE00A76DCF /* HistoryViewController.swift in Sources */,

@@ -48,6 +48,9 @@
                                 <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="btnReport:" destination="-1" eventType="touchUpInside" id="YyH-qm-NNj"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-BO-2TP">
                             <rect key="frame" x="5.3333333333333357" y="65.666666666666671" width="126.33333333333331" height="36.666666666666671"/>
@@ -56,6 +59,9 @@
                                 <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="btnLog:" destination="-1" eventType="touchUpInside" id="HMh-fT-jre"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-cU-pQF">
                             <rect key="frame" x="5.3333333333333357" y="122.33333333333336" width="126.33333333333331" height="36.666666666666671"/>
@@ -64,6 +70,9 @@
                                 <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="btnSetting:" destination="-1" eventType="touchUpInside" id="9g0-kC-0BI"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

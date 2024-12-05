@@ -184,6 +184,22 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     // MARK: - IBAction
+    @IBAction func btnReport(_ sender: Any) {
+        let reportVC = ReportViewController()
+        self.navigationController?.pushViewController(reportVC, animated: true)
+    }
+    
+    @IBAction func btnLog(_ sender: Any) {
+        let logVC = LogViewController()
+        self.navigationController?.pushViewController(logVC, animated: true)
+    }
+    
+    @IBAction func btnSetting(_ sender: Any) {
+        let settingVC = SettingViewController()
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    
     @objc func moreButtonTapped() {
         print("moreButtonTapped called, btnMenuCount: \(btnMenuCount)")
         if btnMenuCount == 0 {
