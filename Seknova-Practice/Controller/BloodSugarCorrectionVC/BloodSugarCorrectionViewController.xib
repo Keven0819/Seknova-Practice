@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="btnKnowMore" destination="t2m-Jd-upD" id="s8E-rK-fHV"/>
+                <outlet property="btnSetdown" destination="XBe-vT-kqx" id="sau-Ko-bE5"/>
+                <outlet property="btnSetup" destination="2Rk-dz-vDd" id="hvl-rq-Bvl"/>
+                <outlet property="lbBloodSugarValue" destination="DkG-hq-R48" id="frU-Zi-IcM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,11 +32,17 @@
                     <rect key="frame" x="306" y="217.33333333333334" width="59" height="40.000000000000028"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="SetUp"/>
+                    <connections>
+                        <action selector="btnSetupTapped:" destination="-1" eventType="touchUpInside" id="hRg-Kl-CJW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-vT-kqx">
                     <rect key="frame" x="306" y="246" width="59" height="39"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="SetDown"/>
+                    <connections>
+                        <action selector="btnSetdownTapped:" destination="-1" eventType="touchUpInside" id="M0C-j7-V08"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-hq-R48">
                     <rect key="frame" x="94" y="204" width="205" height="96"/>
