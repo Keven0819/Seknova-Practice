@@ -52,6 +52,11 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
         
     }
     
+    @IBAction func btnSaveTapped(_ sender: Any) {
+        let bloodSugarCorrectionSureVC = BloodSugarCorrectionSureViewController()
+        self.navigationController?.pushViewController(bloodSugarCorrectionSureVC, animated: true)
+    }
+    
     // MARK: - Function
     func didKowMore() {
         print("didKowMore")
