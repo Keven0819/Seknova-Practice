@@ -1,22 +1,122 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background5_Nav" translatesAutoresizingMaskIntoConstraints="NO" id="N4j-dF-Etk">
+                    <rect key="frame" x="-39.333333333333343" y="-17" width="471.66666666666674" height="911"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sensorText" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-Ne-gNV">
+                    <rect key="frame" x="82.666666666666671" y="192" width="227.66666666666663" height="120"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rk-dz-vDd">
+                    <rect key="frame" x="306" y="217.33333333333334" width="59" height="40.000000000000028"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="SetUp"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-vT-kqx">
+                    <rect key="frame" x="306" y="246" width="59" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="SetDown"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-hq-R48">
+                    <rect key="frame" x="94" y="204" width="205" height="96"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg/dL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-Z7-QKV">
+                    <rect key="frame" x="-39.666666666666657" y="317" width="472.33333333333326" height="59"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2m-Jd-upD">
+                    <rect key="frame" x="83" y="478" width="227" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="了解更多" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="4">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmg-Sc-fBy">
+                    <rect key="frame" x="83" y="536" width="227" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="儲存" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="4">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rmg-Sc-fBy" firstAttribute="width" secondItem="t2m-Jd-upD" secondAttribute="width" id="0EB-4B-GGB"/>
+                <constraint firstItem="2Rk-dz-vDd" firstAttribute="top" secondItem="uGY-Ne-gNV" secondAttribute="top" multiplier="1.12" constant="2.2933333333333508" id="0q5-q9-1GS"/>
+                <constraint firstItem="XBe-vT-kqx" firstAttribute="width" secondItem="uGY-Ne-gNV" secondAttribute="width" multiplier="0.257687" id="0rE-Sx-EC0"/>
+                <constraint firstItem="t2m-Jd-upD" firstAttribute="centerX" secondItem="yPC-Z7-QKV" secondAttribute="centerX" id="3b2-RH-hId"/>
+                <constraint firstItem="t2m-Jd-upD" firstAttribute="height" secondItem="yPC-Z7-QKV" secondAttribute="height" multiplier="0.677966" constant="10" id="55j-g4-CSw"/>
+                <constraint firstItem="2Rk-dz-vDd" firstAttribute="height" secondItem="uGY-Ne-gNV" secondAttribute="height" multiplier="0.333333" id="6Md-NS-eOi"/>
+                <constraint firstItem="XBe-vT-kqx" firstAttribute="height" secondItem="uGY-Ne-gNV" secondAttribute="height" multiplier="0.325" id="7Xz-4d-P2l"/>
+                <constraint firstItem="2Rk-dz-vDd" firstAttribute="width" secondItem="uGY-Ne-gNV" secondAttribute="width" multiplier="0.257687" id="DeO-2z-3To"/>
+                <constraint firstItem="uGY-Ne-gNV" firstAttribute="centerX" secondItem="N4j-dF-Etk" secondAttribute="centerX" id="Hp5-L6-RXN"/>
+                <constraint firstItem="N4j-dF-Etk" firstAttribute="top" secondItem="uGY-Ne-gNV" secondAttribute="bottom" constant="-329" id="JXm-ZS-Z6S"/>
+                <constraint firstItem="N4j-dF-Etk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JxJ-C5-9ae"/>
+                <constraint firstItem="N4j-dF-Etk" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.2" id="LBP-tZ-OKX"/>
+                <constraint firstItem="N4j-dF-Etk" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="OeG-hw-EJu"/>
+                <constraint firstItem="yPC-Z7-QKV" firstAttribute="centerX" secondItem="uGY-Ne-gNV" secondAttribute="centerX" id="On6-Ep-9rk"/>
+                <constraint firstItem="t2m-Jd-upD" firstAttribute="width" secondItem="yPC-Z7-QKV" secondAttribute="width" multiplier="0.480593" id="R3S-66-r6d"/>
+                <constraint firstItem="DkG-hq-R48" firstAttribute="height" secondItem="uGY-Ne-gNV" secondAttribute="height" multiplier="0.8" id="UZZ-g2-SQt"/>
+                <constraint firstItem="yPC-Z7-QKV" firstAttribute="height" secondItem="uGY-Ne-gNV" secondAttribute="height" multiplier="0.491667" id="VaM-Xk-HCl"/>
+                <constraint firstItem="rmg-Sc-fBy" firstAttribute="top" secondItem="t2m-Jd-upD" secondAttribute="bottom" constant="8" symbolic="YES" id="Voe-Fx-AyC"/>
+                <constraint firstItem="XBe-vT-kqx" firstAttribute="leading" secondItem="uGY-Ne-gNV" secondAttribute="trailing" constant="-4.3333333333333144" id="YRk-bL-EfL"/>
+                <constraint firstItem="uGY-Ne-gNV" firstAttribute="height" secondItem="N4j-dF-Etk" secondAttribute="height" multiplier="0.131723" id="Z8v-K4-zyF"/>
+                <constraint firstItem="uGY-Ne-gNV" firstAttribute="width" secondItem="N4j-dF-Etk" secondAttribute="width" multiplier="0.483392" id="bAT-h8-qkF"/>
+                <constraint firstItem="rmg-Sc-fBy" firstAttribute="centerX" secondItem="t2m-Jd-upD" secondAttribute="centerX" id="d5E-dA-b86"/>
+                <constraint firstItem="DkG-hq-R48" firstAttribute="centerX" secondItem="uGY-Ne-gNV" secondAttribute="centerX" id="etW-uF-Dww"/>
+                <constraint firstItem="rmg-Sc-fBy" firstAttribute="height" secondItem="t2m-Jd-upD" secondAttribute="height" id="jhe-i7-FOq"/>
+                <constraint firstItem="DkG-hq-R48" firstAttribute="width" secondItem="uGY-Ne-gNV" secondAttribute="width" multiplier="0.9" id="lLQ-lg-wbQ"/>
+                <constraint firstItem="N4j-dF-Etk" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="1.2" id="mhf-3a-rHf"/>
+                <constraint firstItem="XBe-vT-kqx" firstAttribute="bottom" secondItem="uGY-Ne-gNV" secondAttribute="bottom" multiplier="0.92" constant="-2.0400000000000205" id="rtB-Md-MCf"/>
+                <constraint firstItem="yPC-Z7-QKV" firstAttribute="top" secondItem="uGY-Ne-gNV" secondAttribute="bottom" constant="5" id="sNf-jV-Ah4"/>
+                <constraint firstItem="DkG-hq-R48" firstAttribute="centerY" secondItem="uGY-Ne-gNV" secondAttribute="centerY" id="tjd-Bs-3cc"/>
+                <constraint firstItem="2Rk-dz-vDd" firstAttribute="leading" secondItem="uGY-Ne-gNV" secondAttribute="trailing" constant="-4.3300000000000001" id="uUk-AN-PgS"/>
+                <constraint firstItem="t2m-Jd-upD" firstAttribute="top" secondItem="yPC-Z7-QKV" secondAttribute="bottom" constant="102" id="wlU-jx-z1D"/>
+                <constraint firstItem="yPC-Z7-QKV" firstAttribute="width" secondItem="uGY-Ne-gNV" secondAttribute="width" multiplier="2.07321" id="zuC-K8-297"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background5_Nav" width="1126" height="2437"/>
+        <image name="SetDown" width="25" height="25"/>
+        <image name="SetUp" width="25" height="26"/>
+        <image name="sensorText" width="944" height="199"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

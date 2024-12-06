@@ -18,6 +18,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     // MARK: - Property
     var vc: [UIViewController] = []
     var nowVC: Int = BottomItems.InstantBloodSugarViewController.rawValue
+    var titles: [String] = ["即時血糖", "血糖校正", "生活作息", "歷史紀錄", "個人資訊"]
     
     let one = InstantBloodSugarViewController()
     let two = BloodSugarCorrectionViewController()
@@ -51,7 +52,8 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         setNavigatioinBar()
     }
     func setNavigatioinBar() {
-        self.navigationItem.title = "即時血糖"
+        
+        self.title = "即時血糖"
         
         let moreButton = UIButton(type: .system)
         moreButton.setImage(UIImage(named: "ThreeLineSmall"), for: .normal)
@@ -253,6 +255,21 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     // MARK: - Function
     func pageChange(page: Int) {
         updateView(page)
+        self.title = titles[page] // 更新 NavigationBar 標題
+        switch page {
+        case 0:
+            self.navigationItem.rightBarButtonItem?.isHidden = false
+        case 1:
+            self.navigationItem.rightBarButtonItem?.isHidden = true
+        case 2:
+            self.navigationItem.rightBarButtonItem?.isHidden = true
+        case 3:
+            self.navigationItem.rightBarButtonItem?.isHidden = true
+        case 4:
+            self.navigationItem.rightBarButtonItem?.isHidden = true
+        default:
+            break
+        }
     }
     
     func updateView(_ index: Int) {

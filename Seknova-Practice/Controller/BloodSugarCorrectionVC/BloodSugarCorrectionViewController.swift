@@ -17,9 +17,19 @@ class BloodSugarCorrectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     // MARK: - UI Settings
+    
+    func setupUI() {
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        self.navigationItem.title = "血糖校正"
+        self.navigationItem.rightBarButtonItem?.isHidden = true
+    }
     
     // MARK: - IBAction
     
