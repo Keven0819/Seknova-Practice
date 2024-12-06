@@ -31,7 +31,6 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
         centralManager = CBCentralManager(delegate: self, queue: nil)
         checkWiFiStatus()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        self.navigationController?.navigationBar.isHidden = false
     }
     
     // MARK: - UI Settings

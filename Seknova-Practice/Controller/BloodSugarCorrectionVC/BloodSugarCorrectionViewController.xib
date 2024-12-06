@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="btnKnowMore" destination="t2m-Jd-upD" id="s8E-rK-fHV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,6 +58,9 @@
                         <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="btnKnowMoreTapped:" destination="-1" eventType="touchUpInside" id="zLh-Pl-Ues"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmg-Sc-fBy">
                     <rect key="frame" x="83" y="536" width="227" height="50"/>

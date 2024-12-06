@@ -74,6 +74,8 @@
 		7BC15D862D01A56100A4AD50 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC15D832D01A56100A4AD50 /* LogViewController.swift */; };
 		7BC15D8B2D01A59400A4AD50 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */; };
 		7BC15D8C2D01A59400A4AD50 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC15D892D01A59400A4AD50 /* SettingViewController.swift */; };
+		7BC928E52D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC928E32D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift */; };
+		7BC928E62D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC928E42D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -149,6 +151,8 @@
 		7BC15D842D01A56100A4AD50 /* LogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
 		7BC15D892D01A59400A4AD50 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		7BC928E32D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarCorrectionKnowMoreViewController.swift; sourceTree = "<group>"; };
+		7BC928E42D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarCorrectionKnowMoreViewController.xib; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 		7BC070AA2CFF04FA00A76DCF /* BloodSugarCorrectionVC */ = {
 			isa = PBXGroup;
 			children = (
+				7BC928E22D02E52A00B9EE78 /* Components */,
 				7BC070AB2CFF052200A76DCF /* BloodSugarCorrectionViewController.swift */,
 				7BC070AC2CFF052200A76DCF /* BloodSugarCorrectionViewController.xib */,
 			);
@@ -522,6 +527,15 @@
 				7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */,
 			);
 			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		7BC928E22D02E52A00B9EE78 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7BC928E32D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift */,
+				7BC928E42D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7BD875BD2CA6AF04008BB100 /* TermsVC */ = {
@@ -628,6 +642,7 @@
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
+				7BC928E62D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib in Resources */,
 				7BC15D852D01A56100A4AD50 /* LogViewController.xib in Resources */,
 				7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */,
 				7B8F90122CE4CB1B00703E1C /* PairingTransmitterViewController.xib in Resources */,
@@ -693,6 +708,7 @@
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
 				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */,
+				7BC928E52D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,
