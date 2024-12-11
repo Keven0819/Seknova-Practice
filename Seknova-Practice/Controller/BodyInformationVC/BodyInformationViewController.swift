@@ -164,6 +164,8 @@ class BodyInformationViewController: UIViewController {
             break
         }
         let VideoVC = AudioVisualTeachingViewController()
+        self.navigationItem.title = ""
+        self.navigationItem.backButtonTitle = "Back"
         self.navigationController?.pushViewController(VideoVC, animated: true)
     }
     

@@ -24,7 +24,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     let two = BloodSugarCorrectionViewController()
     let three = LifeViewController()
     let four = HistoryViewController()
-    let five = BloodSugarCorrectionSureViewController()
+    let five = PersonInformationViewController()
     
     var btnMenuCount = 0
     // MARK: - LifeCycle
@@ -193,6 +193,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     
     @IBAction func btnLog(_ sender: Any) {
         let logVC = LogViewController()
+        self.navigationItem.backButtonTitle = ""
         self.navigationController?.pushViewController(logVC, animated: true)
     }
     

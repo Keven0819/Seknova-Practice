@@ -74,6 +74,9 @@ class TransmitterViewController: UIViewController, AVCaptureMetadataOutputObject
             // 儲存裝置 ID
             UserPreferences.shared.transmitterDeviceID = deviceID
             print("Device ID: \(UserPreferences.shared.transmitterDeviceID ?? "")")
+            
+            let pairingVC = PairingTransmitterViewController()
+            self.navigationController?.pushViewController(pairingVC, animated: true)
         }
         
         alertController.addAction(cancelAction)

@@ -114,7 +114,12 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
     @objc func handleLongPressSetdown(_ gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
             decrementBloodSugarValue()
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(decrementBloodSugarValue), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.1, 
+                                         target: self,
+                                         selector: #selector(decrementBloodSugarValue),
+                                         userInfo: nil,
+                                         repeats: true)
+            
         } else if gesture.state == .ended {
             timer?.invalidate()
             timer = nil
@@ -122,10 +127,12 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
     }
     
     @objc func incrementBloodSugarValue() {
-        guard let currentBloodSugarValue = lbBloodSugarValue.text, let currentValue = Int(currentBloodSugarValue),
+        guard let currentBloodSugarValue = lbBloodSugarValue.text,
+              let currentValue = Int(currentBloodSugarValue),
               let index = bloodSugarNum.firstIndex(of: currentValue), index < bloodSugarNum.count - 1 else {
             return
         }
+        
         lbBloodSugarValue.text = String(bloodSugarNum[index + 1])
     }
     

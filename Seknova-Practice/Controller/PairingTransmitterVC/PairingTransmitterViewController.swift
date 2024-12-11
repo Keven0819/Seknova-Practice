@@ -34,6 +34,7 @@ class PairingTransmitterViewController: UIViewController {
     // MARK: - UI Settings
     func setNavigationBar() {
         self.navigationItem.title = "Pair Bluetooth"
+        self.navigationItem.hidesBackButton = true
     }
     // MARK: - IBAction
     @IBAction func btnCancelTapped(_ sender: Any) {

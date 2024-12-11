@@ -17,12 +17,18 @@ class LogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
     }
     
     // MARK: - UI Settings
-    
+    func setNavigationBar() {
+        self.navigationItem.title = "Logs"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "All", style: .plain, target: self, action: #selector(btnAll))
+    }
     // MARK: - IBAction
-    
+    @objc func btnAll() {
+        print("btnAll")
+    }
     // MARK: - Function
     
 }
