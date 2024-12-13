@@ -111,7 +111,7 @@ class UserPreferences {
         }
     }
     
-    var sesorDeviceID: String? {
+    var sensorDeviceID: String? {
         get {
             return userPreference.string(forKey: UserPreferenceKey.sensorDeviceID.rawValue) ?? ""
         }

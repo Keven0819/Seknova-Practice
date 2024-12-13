@@ -87,7 +87,7 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
         // 抓到目前的lbBloodSugarValue.text
         let currentBloodSugarValue = lbBloodSugarValue.text
         // 判斷他在bloddSugarNum的位置
-        let index = bloodSugarNum.firstIndex(of: Int(currentBloodSugarValue!)!)
+        let index = bloodSugarNum.firstIndex(of: Int(currentBloodSugarValue!) ?? 0)
         // 設定下一個值
         lbBloodSugarValue.text = String(bloodSugarNum[index! + 1])
     }

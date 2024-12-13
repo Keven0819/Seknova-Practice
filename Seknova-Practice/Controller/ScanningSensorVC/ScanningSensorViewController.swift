@@ -42,8 +42,8 @@ class ScanningSensorViewController: UIViewController {
             
             // 顯示驗證成功訊息
             self?.showSuccessAlert()
-            UserPreferences.shared.sesorDeviceID = deviceID
-            print("UserPreferences.shared.sesorDeviceID: \(UserPreferences.shared.sesorDeviceID ?? "")")
+            UserPreferences.shared.sensorDeviceID = deviceID
+            print("UserPreferences.shared.sesorDeviceID: \(UserPreferences.shared.sensorDeviceID ?? "")")
         }
 
         alertController.addAction(cancelAction)

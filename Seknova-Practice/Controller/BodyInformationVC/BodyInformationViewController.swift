@@ -296,6 +296,9 @@ extension BodyInformationViewController: UITableViewDelegate, UITableViewDataSou
                 Toolbar.isHidden.toggle()
                 
                 btnNext.isHidden = true
+                
+                // 隱藏鍵盤
+                view.endEditing(true)
             }
             
         } else {

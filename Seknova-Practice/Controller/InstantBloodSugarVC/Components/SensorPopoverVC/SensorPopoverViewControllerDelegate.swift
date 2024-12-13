@@ -33,7 +33,7 @@ class SensorPopoverViewController: UIViewController {
     
     // MARK: - Function
     func checkSensorStatus() {
-        if UserPreferences.shared.sesorDeviceID !=  "" {
+        if UserPreferences.shared.sensorDeviceID !=  "" {
             lbSensorStatus.text = "感測器已啟用"
         } else {
             lbSensorStatus.text = "感測器未啟用"
