@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PersonInformationViewController: UIViewController {
     
@@ -13,18 +14,28 @@ class PersonInformationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Property
-    
+    let userInformation = UserInformation()
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        // 列印Realm資料庫位置
+        let realm = try! Realm()
+        print(realm.configuration.fileURL!)
+        
+        // 讀取Realm資料庫
+        let userInformation = realm.objects(UserInformation.self)
+        // 創建Realm陣列
+        let userInformationArray = Array(userInformation)
+        // 列印Realm資料庫
+        print(userInformationArray)
     }
     
     // MARK: - UI Settings
     func setupUI() {
         setupTableView()
-        registerTableViewCell()
     }
     
     // 設定tableView
@@ -32,24 +43,19 @@ class PersonInformationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionHeaderHeight = 40
-    }
-    // 註冊tableViewCell
-    func registerTableViewCell() {
-        let nib = UINib(nibName: "PersonalInfoTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: PersonalInfoTableViewCell.identifier)
+        tableView.register(UINib(nibName: "InfoTableViewCell", bundle: nil), forCellReuseIdentifier: InfoTableViewCell.identifier)
     }
     
     // MARK: - IBAction
     
     // MARK: - Function
-    
 }
 
 // MARK: - Extensions
-extension PersonInformationViewController: UITableViewDelegate, UITableViewDataSource {
+extension PersonInformationViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,7 +78,7 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
         case 0:
             return "基本資料"
         case 1:
-            return "聯絡資訊"
+            return "身體數值"
         case 2:
             return "帳號"
         case 3:
@@ -83,6 +89,129 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath) as! InfoTableViewCell
+        
+        // 利用email去篩選最新的資料
+        let realm = try! Realm()
+        let userInformation = realm.objects(UserInformation.self).filter("Email == %@", UserPreferences.shared.mail ?? "").first!
+        
+        cell.lbPhonenumber.isHidden = true
+        cell.imgvPhoneStatus.isHidden = true
+        cell.lbResult.isHidden = true
+        
+        switch indexPath.section {
+        case 0:
+            cell.btnLogOut.isHidden = true
+            switch indexPath.row {
+            case 0:
+                cell.lbName.text = "名"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.FirstName != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.FirstName
+                }
+            case 1:
+                cell.lbName.text = "姓"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.LastName != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.LastName
+                }
+            case 2:
+                cell.lbName.text = "出生日期"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Birthday != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Birthday
+                }
+            case 3:
+                cell.lbName.text = "電子信箱"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Email != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Email
+                }
+            case 4:
+                cell.lbName.text = "手機號碼"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = false
+                cell.lbResult.isHidden = true
+                cell.lbPhonenumber.isHidden = true
+                if userInformation.Phone != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbPhonenumber.isHidden = false
+                    cell.lbPhonenumber.text = userInformation.Phone
+                }
+            case 5:
+                cell.lbName.text = "地址"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                if userInformation.Address != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Address
+                }
+            default:
+                break
+            }
+        case 1:
+            cell.btnLogOut.isHidden = true
+            switch indexPath.row {
+            case 0:
+                cell.lbName.text = "性別"
+            case 1:
+                cell.lbName.text = "身高"
+            case 2:
+                cell.lbName.text = "體重"
+            case 3:
+                cell.lbName.text = "種族"
+            case 4:
+                cell.lbName.text = "飲酒"
+            case 5:
+                cell.lbName.text = "是"
+            default:
+                break
+            }
+        case 2:
+            cell.btnLogOut.isHidden = true
+            switch indexPath.row {
+            case 0:
+                cell.lbName.text = "發射器裝置"
+            case 1:
+                cell.lbName.text = "感測器裝置"
+            case 2:
+                cell.lbName.text = "修改密碼"
+            default:
+                break
+            }
+        case 3:
+            cell.lbName.isHidden = true
+            cell.btnLogOut.isHidden = false
+        default:
+            break
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
     }
 }

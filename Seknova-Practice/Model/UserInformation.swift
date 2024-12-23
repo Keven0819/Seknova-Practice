@@ -8,6 +8,8 @@
 import RealmSwift
 
 class UserInformation: Object {
+    //uuid
+    @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var FirstName: String
     @Persisted var LastName: String
     @Persisted var Birthday: String

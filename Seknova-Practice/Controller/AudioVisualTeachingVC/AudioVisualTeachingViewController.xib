@@ -23,24 +23,24 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fes-eX-TfI">
                     <rect key="frame" x="0.0" y="59.000000000000057" width="393" height="1022.3333333333335"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUDIOVISUAL TEACHING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUh-YS-GbN">
-                    <rect key="frame" x="35.666666666666657" y="101" width="322" height="54"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUDIOVISUAL TEACHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUh-YS-GbN">
+                    <rect key="frame" x="0.0" y="101" width="393" height="54"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教 學 影 片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-K2-E8f">
-                    <rect key="frame" x="135" y="170.66666666666666" width="123" height="35"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教 學 影 片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-K2-E8f">
+                    <rect key="frame" x="0.0" y="171" width="393" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wl6-Su-YIK">
-                    <rect key="frame" x="0.0" y="255" width="393" height="232"/>
+                    <rect key="frame" x="43.333333333333343" y="255" width="306.33333333333326" height="232"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPu-fr-qUP">
-                    <rect key="frame" x="78" y="638" width="237" height="43"/>
+                    <rect key="frame" x="104" y="638" width="185" height="43"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="下一步" cornerStyle="capsule">
                         <backgroundConfiguration key="background" strokeWidth="4">
@@ -65,7 +65,7 @@
                 <constraint firstItem="VUh-YS-GbN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="42" id="DWP-hp-O8c"/>
                 <constraint firstItem="wl6-Su-YIK" firstAttribute="top" secondItem="ANA-K2-E8f" secondAttribute="bottom" constant="49.333333333333343" id="F97-hn-iRl"/>
                 <constraint firstItem="wl6-Su-YIK" firstAttribute="centerX" secondItem="ANA-K2-E8f" secondAttribute="centerX" id="VuY-60-8qE"/>
-                <constraint firstItem="ANA-K2-E8f" firstAttribute="width" secondItem="VUh-YS-GbN" secondAttribute="width" multiplier="0.381988" id="X8j-Ul-ak2"/>
+                <constraint firstItem="ANA-K2-E8f" firstAttribute="width" secondItem="VUh-YS-GbN" secondAttribute="width" multiplier="0.381988" constant="242.878716" id="X8j-Ul-ak2"/>
                 <constraint firstItem="VUh-YS-GbN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0633803" id="ayp-SP-Iye"/>
                 <constraint firstItem="ANA-K2-E8f" firstAttribute="height" secondItem="VUh-YS-GbN" secondAttribute="height" multiplier="0.648148" id="fJp-3S-g5z"/>
                 <constraint firstItem="fes-eX-TfI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1.2" id="hMX-vm-09a"/>
@@ -73,9 +73,9 @@
                 <constraint firstItem="GPu-fr-qUP" firstAttribute="top" secondItem="wl6-Su-YIK" secondAttribute="bottom" constant="151" id="oJR-xp-ugA"/>
                 <constraint firstItem="wl6-Su-YIK" firstAttribute="height" secondItem="ANA-K2-E8f" secondAttribute="height" multiplier="6.62857" id="oZb-KD-yeW"/>
                 <constraint firstItem="ANA-K2-E8f" firstAttribute="top" secondItem="VUh-YS-GbN" secondAttribute="bottom" multiplier="1.05" constant="8" symbolic="YES" id="pVk-TD-vfd"/>
-                <constraint firstItem="VUh-YS-GbN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.819338" id="tKt-ti-YQ3"/>
+                <constraint firstItem="VUh-YS-GbN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.819338" constant="71.000165999999979" id="tKt-ti-YQ3"/>
                 <constraint firstItem="GPu-fr-qUP" firstAttribute="height" secondItem="wl6-Su-YIK" secondAttribute="height" multiplier="0.185345" id="vbz-GI-lcf"/>
-                <constraint firstItem="wl6-Su-YIK" firstAttribute="width" secondItem="ANA-K2-E8f" secondAttribute="width" multiplier="3.19512" id="yGn-Lm-LMO"/>
+                <constraint firstItem="wl6-Su-YIK" firstAttribute="width" secondItem="ANA-K2-E8f" secondAttribute="width" multiplier="3.19512" constant="-949.34882666666681" id="yGn-Lm-LMO"/>
                 <constraint firstItem="GPu-fr-qUP" firstAttribute="width" secondItem="wl6-Su-YIK" secondAttribute="width" multiplier="0.603053" id="z8K-r5-Hou"/>
             </constraints>
             <point key="canvasLocation" x="-356.48854961832058" y="315.49295774647891"/>

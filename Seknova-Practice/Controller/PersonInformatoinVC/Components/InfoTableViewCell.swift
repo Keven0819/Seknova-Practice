@@ -13,6 +13,9 @@ class InfoTableViewCell: UITableViewCell {
     @IBOutlet weak var txfEdit: UITextField!
     @IBOutlet weak var imgvPhoneStatus: UIImageView!
     @IBOutlet weak var lbResult: UILabel!
+    @IBOutlet weak var btnLogOut: UIButton!
+    @IBOutlet weak var lbPhonenumber: UILabel!
+    
     
     static let identifier = "InfoTableViewCell"
 
