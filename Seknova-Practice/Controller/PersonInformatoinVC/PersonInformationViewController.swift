@@ -177,12 +177,48 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             switch indexPath.row {
             case 0:
                 cell.lbName.text = "性別"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Gender != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Gender
+                }
             case 1:
                 cell.lbName.text = "身高"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Height != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Height
+                }
             case 2:
                 cell.lbName.text = "體重"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Weight != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Weight
+                }
             case 3:
                 cell.lbName.text = "種族"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Race != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Race
+                }
             case 4:
                 cell.lbName.text = "飲酒"
             case 5:

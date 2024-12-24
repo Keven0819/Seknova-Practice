@@ -85,8 +85,8 @@ class BodyInformationViewController: UIViewController {
         let height = (tableView.cellForRow(at: IndexPath(row: 1, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
         let weight = (tableView.cellForRow(at: IndexPath(row: 2, section: 1)) as! PersonalInfoTableViewCell).txfEdit.text ?? ""
         let race = (tableView.cellForRow(at: IndexPath(row: 3, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
-        let smoke = (tableView.cellForRow(at: IndexPath(row: 4, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
-        let liquor = (tableView.cellForRow(at: IndexPath(row: 5, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
+        let liquor = (tableView.cellForRow(at: IndexPath(row: 4, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
+        let smoke = (tableView.cellForRow(at: IndexPath(row: 5, section: 1)) as! PersonalInfoTableViewCell).lbResult.text ?? ""
         
         let alert = Alert()
         
