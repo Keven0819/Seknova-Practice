@@ -91,7 +91,7 @@ class BodyInformationViewController: UIViewController {
         let alert = Alert()
         
         // 檢查資料是否為空
-        switch (firstName.isEmpty, lastName.isEmpty, dateString.isEmpty, email.isEmpty, race.isEmpty, smoke.isEmpty, liquor.isEmpty
+        switch (firstName.isEmpty, lastName.isEmpty, dateString.isEmpty, email.isEmpty, race.isEmpty, liquor.isEmpty, smoke.isEmpty
             , height.isEmpty, weight.isEmpty) {
         case (true, _, _, _, _, _, _, _, _):
             

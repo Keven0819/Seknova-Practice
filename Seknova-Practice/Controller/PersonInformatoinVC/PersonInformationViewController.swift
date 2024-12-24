@@ -221,8 +221,26 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 }
             case 4:
                 cell.lbName.text = "飲酒"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Liquor != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Liquor
+                }
             case 5:
-                cell.lbName.text = "是"
+                cell.lbName.text = "抽菸"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                if userInformation.Smoke != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = userInformation.Smoke
+                }
             default:
                 break
             }
