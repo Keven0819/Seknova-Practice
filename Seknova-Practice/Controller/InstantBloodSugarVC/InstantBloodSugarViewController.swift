@@ -40,10 +40,8 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
         switch central.state {
         case .poweredOn:
             imgvBluetooth.image = UIImage(named: "bluetooth-check")
-            print("Bluetooth is On")
         case .poweredOff:
             imgvBluetooth.image = UIImage(named: "bluetooth-false")
-            print("Bluetooth is Off")
         case .unauthorized:
             print("Bluetooth permissions not granted.")
         case .unsupported:
@@ -63,14 +61,11 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
                 if path.status == .satisfied {
                     if path.usesInterfaceType(.wifi) {
                         self.imgvNetwork.image = UIImage(named: "network-check")
-                        print("WiFi is connected.")
                     } else {
                         self.imgvNetwork.image = UIImage(named: "network-false")
-                        print("WiFi is not connected.")
                     }
                 } else {
                     self.imgvNetwork.image = UIImage(named: "network-false")
-                    print("No network connection.")
                 }
             }
         }
@@ -85,14 +80,11 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
                 if path.status == .satisfied {
                     if path.usesInterfaceType(.wifi) {
                         self.imgvNetwork.image = UIImage(named: "network-check")
-                        print("WiFi is connected (initial check).")
                     } else {
                         self.imgvNetwork.image = UIImage(named: "network-false")
-                        print("WiFi is not connected (initial check).")
                     }
                 } else {
                     self.imgvNetwork.image = UIImage(named: "network-false")
-                    print("No network connection (initial check).")
                 }
             }
         }

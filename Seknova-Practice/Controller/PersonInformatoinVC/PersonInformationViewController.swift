@@ -157,7 +157,7 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 if userInformation.Phone != "" {
                     cell.txfEdit.isHidden = true
                     cell.lbPhonenumber.isHidden = false
-                    cell.lbPhonenumber.text = userInformation.Phone
+                    cell.lbPhonenumber.text = "+886" + userInformation.Phone
                 }
             case 5:
                 cell.lbName.text = "地址"
@@ -249,10 +249,35 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             switch indexPath.row {
             case 0:
                 cell.lbName.text = "發射器裝置"
+                cell.txfEdit.isHidden = false
+                cell.txfEdit.placeholder = "點擊進行編輯"
+                cell.imgvPhoneStatus.isHidden = true
+                cell.lbResult.isHidden = true
+                let transmitterID = UserPreferences.shared.transmitterDeviceID
+                if  transmitterID != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = transmitterID
+                }
+                
+                // 灰色箭頭
+                cell.accessoryType = .disclosureIndicator
             case 1:
                 cell.lbName.text = "感測器裝置"
+                let sensorID = UserPreferences.shared.sensorDeviceID
+                if  sensorID != "" {
+                    cell.txfEdit.isHidden = true
+                    cell.lbResult.isHidden = false
+                    cell.lbResult.text = sensorID
+                }
+                
+                // 灰色箭頭
+                cell.accessoryType = .disclosureIndicator
             case 2:
                 cell.lbName.text = "修改密碼"
+                
+                // 灰色箭頭
+                cell.accessoryType = .disclosureIndicator
             default:
                 break
             }

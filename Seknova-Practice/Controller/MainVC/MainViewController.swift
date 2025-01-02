@@ -204,14 +204,11 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     
     
     @objc func moreButtonTapped() {
-        print("moreButtonTapped called, btnMenuCount: \(btnMenuCount)")
         if btnMenuCount == 0 {
-            print("Showing imgvMenu and vMenu")
             imgvMenu.isHidden = false
             vMenu.isHidden = false
             btnMenuCount += 1
         } else {
-            print("Hiding imgvMenu and vMenu")
             imgvMenu.isHidden = true
             vMenu.isHidden = true
             btnMenuCount = 0
@@ -219,7 +216,6 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     }
     
     @objc func linkButtonTapped() {
-        print("linkButtonTapped")
         let sensorPopoverVC = SensorPopoverViewController()
         sensorPopoverVC.delegate = self
         sensorPopoverVC.modalPresentationStyle = .popover
@@ -237,7 +233,6 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     }
     
     @objc func rightButtonTapped() {
-        print("rightButtonTapped")
         let rightPopoverVC = RightButtonPopoverViewController()
         rightPopoverVC.delegate = self
         rightPopoverVC.modalPresentationStyle = .popover
@@ -267,7 +262,8 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         case 3:
             self.navigationItem.rightBarButtonItem?.isHidden = true
         case 4:
-            self.navigationItem.rightBarButtonItem?.isHidden = true
+            self.navigationItem.rightBarButtonItem?.isHidden = false
+            self.navigationItem.rightBarButtonItem?.title = "更新"
         default:
             break
         }
@@ -285,11 +281,9 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     }
     
     func didConfirmSensor() {
-        print("Sensor confirmed.")
     }
     
     func didConfirmRightButton() {
-        print("Right button confirmed.")
     }
 }
 
