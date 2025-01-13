@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonInformationViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="dpkBirthday" destination="tSA-KK-Bra" id="iJ9-P8-Z51"/>
+                <outlet property="dpkToolBar" destination="7ax-ne-c4h" id="OMG-Ag-0Fz"/>
                 <outlet property="tableView" destination="KDh-DQ-weE" id="0ZT-oZ-OoH"/>
+                <outlet property="vDpkBackground" destination="jaf-7P-ZIC" id="xI7-g0-BzV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,14 +26,47 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-7P-ZIC">
+                    <rect key="frame" x="0.0" y="464" width="393" height="354"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-KK-Bra">
+                    <rect key="frame" x="0.0" y="464" width="393" height="354"/>
+                    <locale key="locale" localeIdentifier="yue-Hant"/>
+                </datePicker>
+                <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ax-ne-c4h">
+                    <rect key="frame" x="0.0" y="464" width="393" height="44"/>
+                    <items>
+                        <barButtonItem title="取消" id="TNc-wt-dEX"/>
+                        <barButtonItem width="300" style="plain" systemItem="fixedSpace" id="lff-81-Sek"/>
+                        <barButtonItem title="確認" id="Y7T-mt-scJ">
+                            <connections>
+                                <action selector="confirmPickerView:" destination="-1" id="dUr-yB-cvW"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="centerX" secondItem="KDh-DQ-weE" secondAttribute="centerX" id="0Pk-xT-bbY"/>
+                <constraint firstItem="7ax-ne-c4h" firstAttribute="height" secondItem="tSA-KK-Bra" secondAttribute="height" multiplier="0.124294" id="1gH-qD-1TQ"/>
+                <constraint firstItem="jaf-7P-ZIC" firstAttribute="centerX" secondItem="tSA-KK-Bra" secondAttribute="centerX" id="8PM-3N-Ucf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KDh-DQ-weE" secondAttribute="trailing" id="Gas-OH-m21"/>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="top" secondItem="KDh-DQ-weE" secondAttribute="bottom" constant="-354" id="GzS-VE-oFe"/>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="top" secondItem="7ax-ne-c4h" secondAttribute="bottom" constant="-44" id="KHq-B0-j2r"/>
+                <constraint firstItem="jaf-7P-ZIC" firstAttribute="height" secondItem="tSA-KK-Bra" secondAttribute="height" id="P5d-PD-26a"/>
                 <constraint firstItem="KDh-DQ-weE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PCH-AS-lRo"/>
+                <constraint firstItem="jaf-7P-ZIC" firstAttribute="centerY" secondItem="tSA-KK-Bra" secondAttribute="centerY" id="YQO-Nr-F9N"/>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="height" secondItem="KDh-DQ-weE" secondAttribute="height" multiplier="0.466403" id="gcE-gP-GC8"/>
+                <constraint firstItem="7ax-ne-c4h" firstAttribute="width" secondItem="tSA-KK-Bra" secondAttribute="width" id="gfq-HI-nwu"/>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="bottom" secondItem="KDh-DQ-weE" secondAttribute="bottom" id="i8K-Ef-hZ3"/>
                 <constraint firstItem="KDh-DQ-weE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lPP-F6-oBb"/>
+                <constraint firstItem="jaf-7P-ZIC" firstAttribute="width" secondItem="tSA-KK-Bra" secondAttribute="width" id="lcK-OY-CeA"/>
+                <constraint firstItem="7ax-ne-c4h" firstAttribute="centerX" secondItem="tSA-KK-Bra" secondAttribute="centerX" id="miX-LU-wED"/>
                 <constraint firstItem="KDh-DQ-weE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="xQC-R7-kiE"/>
+                <constraint firstItem="tSA-KK-Bra" firstAttribute="width" secondItem="KDh-DQ-weE" secondAttribute="width" id="zHw-ES-aB7"/>
             </constraints>
             <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
         </view>
