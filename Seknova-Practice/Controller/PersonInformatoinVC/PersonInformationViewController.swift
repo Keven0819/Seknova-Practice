@@ -15,43 +15,108 @@ class PersonInformationViewController: UIViewController {
     @IBOutlet weak var dpkBirthday: UIDatePicker!
     @IBOutlet weak var dpkToolBar: UIToolbar!
     @IBOutlet weak var vDpkBackground: UIView!
+    @IBOutlet weak var btnConfirm: UIBarButtonItem!
+    @IBOutlet weak var btnCancel: UIBarButtonItem!
     
     // MARK: - Property
-    let userInformation = UserInformation()
+    
+    private var userInformation: UserInformation?
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        // 列印Realm資料庫位置
-        let realm = try! Realm()
-        print(realm.configuration.fileURL!)
-        
-        // 讀取Realm資料庫
-        let userInformation = realm.objects(UserInformation.self)
-        // 創建Realm陣列
-        let userInformationArray = Array(userInformation)
-        // 列印Realm資料庫
-        print(userInformationArray)
+        loadUserData()
     }
     
     // MARK: - UI Settings
-    func setupUI() {
+    private func setupUI() {
         setupTableView()
+        setupDatePicker()
+        setupBackgroundTapGesture()
     }
     
-    // 設定tableView
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionHeaderHeight = 40
-        tableView.register(UINib(nibName: "InfoTableViewCell", bundle: nil), forCellReuseIdentifier: InfoTableViewCell.identifier)
+        tableView.register(UINib(nibName: "InfoTableViewCell", bundle: nil),
+                         forCellReuseIdentifier: InfoTableViewCell.identifier)
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
-    // MARK: - IBAction
+    private func setupDatePicker() {
+        dpkBirthday.datePickerMode = .date
+        dpkBirthday.locale = Locale(identifier: "zh_TW")
+        dpkBirthday.maximumDate = Date() // 設置最大日期為今天
+        hideDatePickerViews()
+    }
     
+    private func setupBackgroundTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                               action: #selector(handleBackgroundTap))
+        vDpkBackground.addGestureRecognizer(tapGesture)
+    }
+    // MARK: - IBAction
+    @IBAction func doneDatePicker(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let selectedDate = formatter.string(from: dpkBirthday.date)
+        
+        if let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? InfoTableViewCell {
+            cell.lbResult.text = selectedDate
+            updateUserData(selectedDate, for: "Birthday")
+        }
+        
+        // 隱藏 DatePicker 相關視圖
+        hideDatePickerViews()
+    }
+    @IBAction func cancelDatePicker(_ sender: Any) {
+        // 直接隱藏 DatePicker 相關視圖，不更新值
+        hideDatePickerViews()
+    }
+    
+    @objc private func handleBackgroundTap() {
+        hideDatePickerViews()
+    }
     // MARK: - Function
+    private func hideDatePickerViews() {
+        dpkBirthday.isHidden = true
+        vDpkBackground.isHidden = true
+        dpkToolBar.isHidden = true
+    }
+    
+    private func loadUserData() {
+        let realm = try! Realm()
+        userInformation = realm.objects(UserInformation.self).first
+        print("Realm 資料庫位置: \(realm.configuration.fileURL!)")
+        tableView.reloadData()
+    }
+    
+    private func updateUserData(_ data: String, for field: String) {
+        guard let userInfo = userInformation else { return }
+        let realm = try! Realm()
+        
+        try! realm.write {
+            switch field {
+            case "FirstName": userInfo.FirstName = data
+            case "LastName": userInfo.LastName = data
+            case "Birthday": userInfo.Birthday = data
+            case "Email": userInfo.Email = data
+            case "Phone": userInfo.Phone = data
+            case "Address": userInfo.Address = data
+            case "Gender": userInfo.Gender = data
+            case "Height": userInfo.Height = data
+            case "Weight": userInfo.Weight = data
+            case "Race": userInfo.Race = data
+            case "Liquor": userInfo.Liquor = data
+            case "Smoke": userInfo.Smoke = data
+            default: break
+            }
+        }
+    }
 }
 
 // MARK: - Extensions
@@ -93,14 +158,18 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath) as! InfoTableViewCell
+        let realm = try! Realm()
+        let userInformation = realm.objects(UserInformation.self)
+        let userInformations = Array(userInformation)
         
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
                 cell.lbName.text = "名"
-                if userInformation.FirstName.isEmpty == false {
-                    cell.txfEdit.text = userInformation.FirstName
+                if userInformations[0].FirstName.isEmpty == false {
+                    cell.txfEdit.isHidden = false
+                    cell.txfEdit.text = userInformations[0].FirstName
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -111,8 +180,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 1:
                 cell.lbName.text = "姓"
-                if userInformation.LastName.isEmpty == false {
-                    cell.txfEdit.text = userInformation.LastName
+                if userInformations[0].LastName.isEmpty == false {
+                    cell.txfEdit.text = userInformations[0].LastName
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -123,8 +192,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 2:
                 cell.lbName.text = "出生日期"
-                if userInformation.Birthday.isEmpty == false {
-                    cell.lbResult.text = userInformation.Birthday
+                if userInformations[0].Birthday.isEmpty == false {
+                    cell.lbResult.text = userInformations[0].Birthday
                 } else {
                     cell.lbResult.text = ""
                 }
@@ -134,8 +203,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 3:
                 cell.lbName.text = "電子信箱"
-                if userInformation.Email.isEmpty == false {
-                    cell.txfEdit.text = userInformation.Email
+                if userInformations[0].Email.isEmpty == false {
+                    cell.txfEdit.text = userInformations[0].Email
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -146,8 +215,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 4:
                 cell.lbName.text = "手機號碼"
-                if userInformation.Phone.isEmpty == false {
-                    cell.lbPhonenumber.text = userInformation.Phone
+                if userInformations[0].Phone.isEmpty == false {
+                    cell.lbPhonenumber.text = userInformations[0].Phone
                 } else {
                     cell.lbPhonenumber.text = ""
                 }
@@ -157,8 +226,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.btnLogOut.isHidden = true
             case 5:
                 cell.lbName.text = "地址"
-                if userInformation.Address.isEmpty == false {
-                    cell.txfEdit.text = userInformation.Address
+                if userInformations[0].Address.isEmpty == false {
+                    cell.txfEdit.text = userInformations[0].Address
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -174,8 +243,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             switch indexPath.row {
             case 0:
                 cell.lbName.text = "性別"
-                if userInformation.Gender.isEmpty == false {
-                    cell.lbResult.text = userInformation.Gender
+                if userInformations[0].Gender.isEmpty == false {
+                    cell.lbResult.text = userInformations[0].Gender
                 } else {
                     cell.lbResult.text = ""
                 }
@@ -185,8 +254,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 1:
                 cell.lbName.text = "身高"
-                if userInformation.Height.isEmpty == false {
-                    cell.txfEdit.text = userInformation.Height
+                if userInformations[0].Height.isEmpty == false {
+                    cell.txfEdit.text = userInformations[0].Height
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -195,10 +264,11 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.imgvPhoneStatus.isHidden = true
                 cell.btnLogOut.isHidden = true
                 cell.lbPhonenumber.isHidden = true
+                cell.txfEdit.tag = 1
             case 2:
                 cell.lbName.text = "體重"
-                if userInformation.Weight.isEmpty == false {
-                    cell.txfEdit.text = userInformation.Weight
+                if userInformations[0].Weight.isEmpty == false {
+                    cell.txfEdit.text = userInformations[0].Weight
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
@@ -207,10 +277,11 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.imgvPhoneStatus.isHidden = true
                 cell.btnLogOut.isHidden = true
                 cell.lbPhonenumber.isHidden = true
+                cell.txfEdit.tag = 2
             case 3:
                 cell.lbName.text = "種族"
-                if userInformation.Race.isEmpty == false {
-                    cell.lbResult.text = userInformation.Race
+                if userInformations[0].Race.isEmpty == false {
+                    cell.lbResult.text = userInformations[0].Race
                 } else {
                     cell.lbResult.text = ""
                 }
@@ -220,8 +291,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 4:
                 cell.lbName.text = "飲酒"
-                if userInformation.Liquor.isEmpty == false {
-                    cell.lbResult.text = userInformation.Liquor
+                if userInformations[0].Liquor.isEmpty == false {
+                    cell.lbResult.text = userInformations[0].Liquor
                 } else {
                     cell.lbResult.text = ""
                 }
@@ -231,8 +302,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 cell.lbPhonenumber.isHidden = true
             case 5:
                 cell.lbName.text = "抽菸"
-                if userInformation.Smoke.isEmpty == false {
-                    cell.lbResult.text = userInformation.Smoke
+                if userInformations[0].Smoke.isEmpty == false {
+                    cell.lbResult.text = userInformations[0].Smoke
                 } else {
                     cell.lbResult.text = ""
                 }
@@ -299,97 +370,96 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath) as! InfoTableViewCell
-        
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 2:
-                // 出生日期
-                cell.lbName.text = "出生日期"
-                dpkToolBar.isHidden = false
-                dpkBirthday.isHidden = false
-                vDpkBackground.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
-            case 4:
-                cell.lbName.text = "手機號碼"
-                cell.lbName.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = false
-                cell.txfEdit.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = false
-                let bindVC = BindPhoneViewController()
-                navigationController?.pushViewController(bindVC, animated: true)
-            default:
-                break
-            }
-        case 1:
-            let alert = Alert()
-            switch indexPath.row {
+        // 直接使用 cellForRow 獲取現有的單元格
+        if let cell = tableView.cellForRow(at: indexPath) as? InfoTableViewCell {
+            switch indexPath.section {
             case 0:
-                cell.lbName.text = "性別"
-                cell.lbName.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
-                let titles = ["生理男", "生理女", "其他"]
-                alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = result
+                switch indexPath.row {
+                case 2:
+                    // 出生日期
+                    dpkToolBar.isHidden = false
+                    dpkBirthday.isHidden = false
+                    vDpkBackground.isHidden = false
+                case 4:
+                    // 手機號碼
+                    let bindVC = BindPhoneViewController()
+                    navigationController?.pushViewController(bindVC, animated: true)
+                default:
+                    break
                 }
-            case 3:
-                cell.lbName.text = "種族"
-                cell.lbName.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
-                let titles = ["亞洲", "非洲", "高加索", "拉丁", "其他"]
-                alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = result
+            case 1:
+                let alert = Alert()
+                switch indexPath.row {
+                case 0:
+                    // 性別
+                    let titles = ["生理男", "生理女", "其他"]
+                    alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
+                        cell.lbResult.text = result
+                    }
+                case 3:
+                    // 種族
+                    let titles = ["亞洲", "非洲", "高加索", "拉丁", "其他"]
+                    alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
+                        cell.lbResult.text = result
+                    }
+                case 4:
+                    // 飲酒
+                    let titles = ["不喝酒", "偶爾喝", "經常喝", "每天喝"]
+                    alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
+                        cell.lbResult.text = result
+                    }
+                case 5:
+                    // 抽菸
+                    let titles = ["有", "無"]
+                    alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
+                        cell.lbResult.text = result
+                    }
+                default:
+                    break
                 }
-            case 4:
-                cell.lbName.text = "飲酒"
-                cell.lbName.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
-                let titles = ["不喝酒", "偶爾喝", "經常喝", "每天喝"]
-                alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = result
-                }
-            case 5:
-                cell.lbName.text = "抽菸"
-                cell.lbName.isHidden = false
-                cell.lbResult.isHidden = true
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
-                let titles = ["有", "無"]
-                alert.showActionSheet(titles: titles, cancelTitle: "取消", vc: self) { result in
-                    cell.lbResult.isHidden = false
-                    cell.lbResult.text = result
+            case 2:
+                switch indexPath.row {
+                case 2:
+                    let resetPasswordVC = ResetPasswordViewController()
+                    navigationController?.pushViewController(resetPasswordVC, animated: true)
+                default:
+                    break
                 }
             default:
                 break
             }
-            
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+        
+        switch textField.tag {
+        case 1: // 身高
+            return newString.length <= 3
+        case 2: // 體重
+            return newString.length <= 3
         default:
-            break
+            return true
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let cell = textField.superview?.superview as? InfoTableViewCell,
+              let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        let text = textField.text ?? ""
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0): updateUserData(text, for: "FirstName")
+        case (0, 1): updateUserData(text, for: "LastName")
+        case (0, 3): updateUserData(text, for: "Email")
+        case (0, 5): updateUserData(text, for: "Address")
+        case (1, 1): updateUserData(text, for: "Height")
+        case (1, 2): updateUserData(text, for: "Weight")
+        default: break
         }
     }
 }

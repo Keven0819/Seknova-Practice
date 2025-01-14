@@ -6,5 +6,5 @@ target 'Seknova-Practice' do
   use_frameworks!
 
   # Pods for Seknova-Practice
-	pod 'RealmSwift', '~>10.33.0'
+	pod 'RealmSwift', '10.33.0'
 end

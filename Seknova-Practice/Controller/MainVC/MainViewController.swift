@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController, SensorPopoverViewControllerDelegate, RightButtonPopoverViewControllerDelegate {
     
@@ -248,6 +249,89 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         
         present(rightPopoverVC, animated: true)
     }
+    
+    @objc func personInfoRightButtonTapped() {
+        let realm = try! Realm()
+        
+        // 從子視圖控制器中獲取 PersonInformationViewController 實例
+        if let personInfoVC = children.first(where: { $0 is PersonInformationViewController }) as? PersonInformationViewController,
+           let tableView = personInfoVC.tableView {
+            
+            // 獲取可見的單元格以檢索更新的資料
+            _ = tableView.visibleCells.compactMap { $0 as? InfoTableViewCell }
+            
+            // 獲取當前用戶資訊
+            guard let userInfo = realm.objects(UserInformation.self).first else {
+                // 如果找不到用戶資料，顯示錯誤提示
+                let errorAlert = UIAlertController(
+                    title: "更新失敗",
+                    message: "找不到用戶資料",
+                    preferredStyle: .alert
+                )
+                errorAlert.addAction(UIAlertAction(title: "確定", style: .default))
+                present(errorAlert, animated: true)
+                return
+            }
+            
+            // 使用 Realm 交易更新資料
+            try! realm.write {
+                // 更新基本資料（第 0 區段）和身體數值（第 1 區段）
+                for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+                    if let cell = tableView.cellForRow(at: indexPath) as? InfoTableViewCell {
+                        switch indexPath.section {
+                        case 0: // 基本資料
+                            switch indexPath.row {
+                            case 0: // 名
+                                userInfo.FirstName = cell.txfEdit.text ?? ""
+                            case 1: // 姓
+                                userInfo.LastName = cell.txfEdit.text ?? ""
+                            case 2: // 出生日期
+                                userInfo.Birthday = cell.lbResult.text ?? ""
+                            case 3: // 電子信箱
+                                userInfo.Email = cell.txfEdit.text ?? ""
+                            case 4: // 手機號碼
+                                userInfo.Phone = cell.lbPhonenumber.text ?? ""
+                            case 5: // 地址
+                                userInfo.Address = cell.txfEdit.text ?? ""
+                            default:
+                                break
+                            }
+                            
+                        case 1: // 身體數值
+                            switch indexPath.row {
+                            case 0: // 性別
+                                userInfo.Gender = cell.lbResult.text ?? ""
+                            case 1: // 身高
+                                userInfo.Height = cell.txfEdit.text ?? ""
+                            case 2: // 體重
+                                userInfo.Weight = cell.txfEdit.text ?? ""
+                            case 3: // 種族
+                                userInfo.Race = cell.lbResult.text ?? ""
+                            case 4: // 飲酒
+                                userInfo.Liquor = cell.lbResult.text ?? ""
+                            case 5: // 抽菸
+                                userInfo.Smoke = cell.lbResult.text ?? ""
+                            default:
+                                break
+                            }
+                            
+                        default:
+                            break
+                        }
+                    }
+                }
+            }
+            
+            // 顯示更新成功提示
+            let successAlert = UIAlertController(
+                title: "更新成功",
+                message: "您的個人資料已成功更新",
+                preferredStyle: .alert
+            )
+            successAlert.addAction(UIAlertAction(title: "確定", style: .default))
+            present(successAlert, animated: true)
+        }
+    }
     // MARK: - Function
     func pageChange(page: Int) {
         updateView(page)
@@ -263,7 +347,13 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             self.navigationItem.rightBarButtonItem?.isHidden = true
         case 4:
             self.navigationItem.rightBarButtonItem?.isHidden = false
-            self.navigationItem.rightBarButtonItem?.title = "更新"
+            // 把原本的button改為另一個button
+            let rightButton = UIButton(type: .system)
+            rightButton.setTitle("更新", for: .normal)
+            rightButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            rightButton.addTarget(self, action: #selector(personInfoRightButtonTapped), for: .touchUpInside)
+            let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+            navigationItem.rightBarButtonItem = rightBarButtonItem
         default:
             break
         }

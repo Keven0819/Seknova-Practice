@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonInformationViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancel" destination="TNc-wt-dEX" id="fNf-RW-UFf"/>
+                <outlet property="btnConfirm" destination="Y7T-mt-scJ" id="NWf-sm-EWz"/>
                 <outlet property="dpkBirthday" destination="tSA-KK-Bra" id="iJ9-P8-Z51"/>
                 <outlet property="dpkToolBar" destination="7ax-ne-c4h" id="OMG-Ag-0Fz"/>
                 <outlet property="tableView" destination="KDh-DQ-weE" id="0ZT-oZ-OoH"/>
@@ -37,11 +39,15 @@
                 <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ax-ne-c4h">
                     <rect key="frame" x="0.0" y="464" width="393" height="44"/>
                     <items>
-                        <barButtonItem title="取消" id="TNc-wt-dEX"/>
+                        <barButtonItem title="取消" id="TNc-wt-dEX">
+                            <connections>
+                                <action selector="cancelDatePicker:" destination="-1" id="bvw-Td-F5Y"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="300" style="plain" systemItem="fixedSpace" id="lff-81-Sek"/>
                         <barButtonItem title="確認" id="Y7T-mt-scJ">
                             <connections>
-                                <action selector="confirmPickerView:" destination="-1" id="dUr-yB-cvW"/>
+                                <action selector="doneDatePicker:" destination="-1" id="be2-wM-sCt"/>
                             </connections>
                         </barButtonItem>
                     </items>
@@ -54,7 +60,6 @@
                 <constraint firstItem="7ax-ne-c4h" firstAttribute="height" secondItem="tSA-KK-Bra" secondAttribute="height" multiplier="0.124294" id="1gH-qD-1TQ"/>
                 <constraint firstItem="jaf-7P-ZIC" firstAttribute="centerX" secondItem="tSA-KK-Bra" secondAttribute="centerX" id="8PM-3N-Ucf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KDh-DQ-weE" secondAttribute="trailing" id="Gas-OH-m21"/>
-                <constraint firstItem="tSA-KK-Bra" firstAttribute="top" secondItem="KDh-DQ-weE" secondAttribute="bottom" constant="-354" id="GzS-VE-oFe"/>
                 <constraint firstItem="tSA-KK-Bra" firstAttribute="top" secondItem="7ax-ne-c4h" secondAttribute="bottom" constant="-44" id="KHq-B0-j2r"/>
                 <constraint firstItem="jaf-7P-ZIC" firstAttribute="height" secondItem="tSA-KK-Bra" secondAttribute="height" id="P5d-PD-26a"/>
                 <constraint firstItem="KDh-DQ-weE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PCH-AS-lRo"/>
