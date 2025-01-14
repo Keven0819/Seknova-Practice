@@ -41,8 +41,8 @@ class TermsViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func btnConfirmTapped(_ sender: Any) {
-        let loginCount = UserPreferences.shared.loginCount
-        if loginCount == 0 {
+        // 如果是從登錄視圖控制器過來的，則跳轉到身體信息視圖控制器
+        if let previousViewController = navigationController?.viewControllers.last(where: { $0 is LoginViewController }) {
             let bodyInfoVC = BodyInformationViewController()
             self.navigationController?.pushViewController(bodyInfoVC, animated: true)
             print("跳轉成功")

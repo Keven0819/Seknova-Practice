@@ -81,6 +81,32 @@ class PersonInformationViewController: UIViewController {
     @objc private func handleBackgroundTap() {
         hideDatePickerViews()
     }
+    
+    @objc private func logoutButtonTapped() {
+        print("Logout button tapped") // 用於測試按鈕是否被點擊
+        
+        let alert = UIAlertController(title: "確定要登出嗎？",
+                                     message: nil,
+                                     preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "取消",
+                                        style: .cancel,
+                                        handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "確定",
+                                         style: .default) { [weak self] _ in
+            self?.navigationController?.popToRootViewController(animated: true)
+            // 返回之後，將返回到的頁面的TextField清空
+            if let loginVC = self?.navigationController?.viewControllers.first as? LoginViewController {
+                loginVC.txfUserName.text = ""
+                loginVC.txfPassword.text = ""
+            }
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        present(alert, animated: true)
+    }
     // MARK: - Function
     private func hideDatePickerViews() {
         dpkBirthday.isHidden = true
@@ -160,7 +186,8 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath) as! InfoTableViewCell
         let realm = try! Realm()
         let userInformation = realm.objects(UserInformation.self)
-        let userInformations = Array(userInformation)
+        // 將 Results 轉換為 Array，並取最新的資料
+        let userInformations = Array(arrayLiteral: userInformation.last ?? UserInformation())
         
         switch indexPath.section {
         case 0:
@@ -358,6 +385,10 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             cell.imgvPhoneStatus.isHidden = true
             cell.btnLogOut.isHidden = false
             cell.lbPhonenumber.isHidden = true
+            // 直接在這裡添加按鈕事件
+            cell.btnLogOut.addTarget(self,
+                                    action: #selector(logoutButtonTapped),
+                                    for: .touchUpInside)
         default:
             break
         }
@@ -422,6 +453,28 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
                 case 2:
                     let resetPasswordVC = ResetPasswordViewController()
                     navigationController?.pushViewController(resetPasswordVC, animated: true)
+                default:
+                    break
+                }
+            case 3:
+                switch indexPath.row {
+                case 0:
+                    let alert = UIAlertController(title: "確定要登出嗎？", message: nil, preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    let confirmAction = UIAlertAction(title: "確定", style: .default) { _ in
+                        // 回到 LoginViewController 並清除輸入框
+                        if let navigationController = self.navigationController,
+                           let loginVC = navigationController.viewControllers.first as? LoginViewController {
+                            // 清除登入頁面的輸入框
+                            loginVC.txfUserName.text = ""
+                            loginVC.txfPassword.text = ""
+                            // 返回到登入頁面
+                            navigationController.popToViewController(loginVC, animated: true)
+                        }
+                    }
+                    alert.addAction(cancelAction)
+                    alert.addAction(confirmAction)
+                    present(alert, animated: true, completion: nil)
                 default:
                     break
                 }

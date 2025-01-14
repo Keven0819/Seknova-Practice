@@ -7,4 +7,5 @@ target 'Seknova-Practice' do
 
   # Pods for Seknova-Practice
 	pod 'RealmSwift', '10.33.0'
+	pod 'Charts', '4.1.0'
 end

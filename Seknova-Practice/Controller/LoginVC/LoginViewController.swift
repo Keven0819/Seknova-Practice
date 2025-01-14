@@ -146,9 +146,10 @@ class LoginViewController: UIViewController {
                     // 第一次登入跳至條款畫面
                     let termsVC = TermsViewController()
                     self.navigationController?.pushViewController(termsVC, animated: true)
+                    UserPreferences.shared.loginCount! += 1
                 } else {
                     // 非第一次登入跳至首頁
-                    let bodyVC = BodyInformationViewController()
+                    let bodyVC = MainViewController()
                     self.navigationController?.pushViewController(bodyVC, animated: true)
                 }
             }
