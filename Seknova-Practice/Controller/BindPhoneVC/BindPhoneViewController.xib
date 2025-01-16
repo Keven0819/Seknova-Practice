@@ -69,7 +69,7 @@
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請輸入您的電話號碼" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-Ww-Uno">
                     <rect key="frame" x="122" y="264.33333333333331" width="202" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" textContentType="tel"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-xF-I6M">
                     <rect key="frame" x="75" y="343" width="243" height="51"/>
