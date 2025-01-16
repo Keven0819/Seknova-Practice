@@ -335,14 +335,30 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         updateView(page)
         self.title = titles[page] // 更新 NavigationBar 標題
         switch page {
+        
+        // 即時血糖
         case 0:
             self.navigationItem.rightBarButtonItem?.isHidden = false
+        
+        // 血糖校正
         case 1:
             self.navigationItem.rightBarButtonItem?.isHidden = true
+            
+        // 生活作息
         case 2:
-            self.navigationItem.rightBarButtonItem?.isHidden = true
+            self.navigationItem.rightBarButtonItem?.isHidden =  false
+            let rightButton = UIButton(type: .system)
+            rightButton.setTitle("事件記錄", for: .normal)
+            rightButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            rightButton.addTarget(self, action: #selector(btnLog), for: .touchUpInside)
+            let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+            navigationItem.rightBarButtonItem = rightBarButtonItem
+            
+        // 歷史紀錄
         case 3:
             self.navigationItem.rightBarButtonItem?.isHidden = true
+            
+        // 個人資訊
         case 4:
             self.navigationItem.rightBarButtonItem?.isHidden = false
             // 把原本的button改為另一個button
