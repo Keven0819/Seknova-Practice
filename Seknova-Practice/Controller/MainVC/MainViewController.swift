@@ -289,8 +289,6 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
                                 userInfo.Birthday = cell.lbResult.text ?? ""
                             case 3: // 電子信箱
                                 userInfo.Email = cell.txfEdit.text ?? ""
-                            case 4: // 手機號碼
-                                userInfo.Phone = cell.lbPhonenumber.text ?? ""
                             case 5: // 地址
                                 userInfo.Address = cell.txfEdit.text ?? ""
                             default:

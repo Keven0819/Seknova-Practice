@@ -24,10 +24,14 @@ class PersonInformationViewController: UIViewController {
     
     // MARK: - LifeCycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadUserData()
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadUserData()
     }
     
     // MARK: - UI Settings
@@ -189,81 +193,72 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
         // 將 Results 轉換為 Array，並取最新的資料
         let userInformations = Array(arrayLiteral: userInformation.last ?? UserInformation())
         
+        cell.lbName.isHidden = false
+        cell.lbResult.isHidden = true
+        cell.txfEdit.isHidden = true
+        cell.lbPhonenumber.isHidden = true
+        cell.imgvPhoneStatus.isHidden = true
+        cell.btnLogOut.isHidden = true
+        cell.accessoryType = .none
+        
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
                 cell.lbName.text = "名"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].FirstName.isEmpty == false {
-                    cell.txfEdit.isHidden = false
                     cell.txfEdit.text = userInformations[0].FirstName
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 1:
                 cell.lbName.text = "姓"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].LastName.isEmpty == false {
                     cell.txfEdit.text = userInformations[0].LastName
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 2:
                 cell.lbName.text = "出生日期"
                 if userInformations[0].Birthday.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = userInformations[0].Birthday
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 3:
                 cell.lbName.text = "電子信箱"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].Email.isEmpty == false {
                     cell.txfEdit.text = userInformations[0].Email
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 4:
                 cell.lbName.text = "手機號碼"
+                cell.lbPhonenumber.isHidden = false
+                cell.imgvPhoneStatus.isHidden = false
                 if userInformations[0].Phone.isEmpty == false {
-                    cell.lbPhonenumber.text = "+886" + userInformations[0].Phone
+                    cell.lbPhonenumber.text = "+886 " +  userInformations[0].Phone
+                    cell.imgvPhoneStatus.image = UIImage(named: "phone_verified")
                 } else {
                     cell.lbPhonenumber.text = "+886"
                     cell.imgvPhoneStatus.image = UIImage(named: "phone_alarm")
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = false
-                cell.txfEdit.isHidden = true
-                cell.btnLogOut.isHidden = true
             case 5:
                 cell.lbName.text = "地址"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].Address.isEmpty == false {
                     cell.txfEdit.text = userInformations[0].Address
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             default:
                 break
             }
@@ -272,73 +267,55 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             case 0:
                 cell.lbName.text = "性別"
                 if userInformations[0].Gender.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = userInformations[0].Gender
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 1:
                 cell.lbName.text = "身高"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].Height.isEmpty == false {
                     cell.txfEdit.text = userInformations[0].Height
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
                 cell.txfEdit.tag = 1
             case 2:
                 cell.lbName.text = "體重"
+                cell.txfEdit.isHidden = false
                 if userInformations[0].Weight.isEmpty == false {
                     cell.txfEdit.text = userInformations[0].Weight
                 } else {
                     cell.txfEdit.text = ""
                     cell.txfEdit.placeholder = "點擊進行編輯"
                 }
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
                 cell.txfEdit.tag = 2
             case 3:
                 cell.lbName.text = "種族"
                 if userInformations[0].Race.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = userInformations[0].Race
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 4:
                 cell.lbName.text = "飲酒"
                 if userInformations[0].Liquor.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = userInformations[0].Liquor
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             case 5:
                 cell.lbName.text = "抽菸"
                 if userInformations[0].Smoke.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = userInformations[0].Smoke
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
             default:
                 break
             }
@@ -347,45 +324,30 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             case 0:
                 cell.lbName.text = "發射器裝置"
                 if UserPreferences.shared.transmitterDeviceID?.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = UserPreferences.shared.transmitterDeviceID
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
                 cell.accessoryType = .disclosureIndicator
             case 1:
                 cell.lbName.text = "感測器裝置"
                 if UserPreferences.shared.sensorDeviceID?.isEmpty == false {
+                    cell.lbResult.isHidden = false
                     cell.lbResult.text = UserPreferences.shared.sensorDeviceID
                 } else {
-                    cell.lbResult.text = ""
+                    cell.lbResult.isHidden = true
                 }
-                cell.txfEdit.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
                 cell.accessoryType = .disclosureIndicator
             case 2:
                 cell.lbName.text = "修改密碼"
-                cell.txfEdit.isHidden = true
-                cell.lbResult.isHidden = true
-                cell.imgvPhoneStatus.isHidden = true
-                cell.btnLogOut.isHidden = true
-                cell.lbPhonenumber.isHidden = true
                 cell.accessoryType = .disclosureIndicator
             default:
                 break
             }
         case 3:
             cell.lbName.isHidden = true
-            cell.txfEdit.isHidden = true
-            cell.lbResult.isHidden = true
-            cell.imgvPhoneStatus.isHidden = true
             cell.btnLogOut.isHidden = false
-            cell.lbPhonenumber.isHidden = true
             // 直接在這裡添加按鈕事件
             cell.btnLogOut.addTarget(self,
                                     action: #selector(logoutButtonTapped),

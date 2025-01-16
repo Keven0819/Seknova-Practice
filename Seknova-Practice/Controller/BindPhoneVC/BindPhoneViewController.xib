@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BindPhoneViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="btnBack" destination="Yla-sQ-2ey" id="fD1-nK-vvm"/>
+                <outlet property="btnInputPassKey" destination="69w-rI-PZp" id="ujA-ih-PRs"/>
+                <outlet property="btnReturn" destination="Yla-sQ-2ey" id="cnJ-bo-kaB"/>
+                <outlet property="txfInputPassKey" destination="Y1Q-Hw-ILF" id="imC-s7-Zhu"/>
+                <outlet property="txfInputPhoneNumber" destination="Y5k-Ww-Uno" id="Oca-aq-PnZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,6 +36,9 @@
                         <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="btnReturnTapped:" destination="-1" eventType="touchUpInside" id="WET-hH-YnG"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69w-rI-PZp">
                     <rect key="frame" x="75" y="669" width="243" height="51"/>
@@ -42,6 +50,9 @@
                         <color key="baseForegroundColor" red="0.75686274509999996" green="0.058823529409999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="btnInputPassKeyTapped:" destination="-1" eventType="touchUpInside" id="zd5-cn-jMC"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sensorText" translatesAutoresizingMaskIntoConstraints="NO" id="1Me-bC-RZw">
                     <rect key="frame" x="29" y="417" width="335" height="79"/>
