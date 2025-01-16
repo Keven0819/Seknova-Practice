@@ -13,6 +13,7 @@
                 <outlet property="imgvBluetooth" destination="87d-Dv-FDL" id="Dgx-f6-vns"/>
                 <outlet property="imgvNetwork" destination="mst-Pw-uqg" id="STG-M5-FZa"/>
                 <outlet property="lbValue" destination="SIw-WK-cgw" id="zJt-CO-pcb"/>
+                <outlet property="myView" destination="aqO-44-W6G" id="GL0-lZ-F4r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,6 +52,10 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="network-check" translatesAutoresizingMaskIntoConstraints="NO" id="mst-Pw-uqg">
                     <rect key="frame" x="292" y="68" width="40" height="40"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqO-44-W6G" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="40.666666666666657" y="418" width="312" height="259"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,6 +63,8 @@
                 <constraint firstItem="9jL-OW-cdR" firstAttribute="height" secondItem="SIw-WK-cgw" secondAttribute="height" multiplier="0.52" id="0W9-bc-IOe"/>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="33X-18-jWM"/>
                 <constraint firstItem="87d-Dv-FDL" firstAttribute="height" secondItem="vkU-0w-NsC" secondAttribute="height" multiplier="0.0691548" constant="-14.000000000000007" id="4lf-Yx-OKD"/>
+                <constraint firstItem="aqO-44-W6G" firstAttribute="centerX" secondItem="ANG-uL-mVq" secondAttribute="centerX" id="5hB-bC-8k1"/>
+                <constraint firstItem="aqO-44-W6G" firstAttribute="height" secondItem="ANG-uL-mVq" secondAttribute="height" multiplier="5.39583" id="6DK-3E-Nc1"/>
                 <constraint firstItem="XC8-Pk-Qdw" firstAttribute="width" secondItem="vkU-0w-NsC" secondAttribute="width" multiplier="0.29258" id="6sA-UQ-s8v"/>
                 <constraint firstItem="SIw-WK-cgw" firstAttribute="height" secondItem="vkU-0w-NsC" secondAttribute="height" multiplier="0.0823271" id="70P-zD-09B"/>
                 <constraint firstItem="XC8-Pk-Qdw" firstAttribute="trailing" secondItem="vkU-0w-NsC" secondAttribute="trailing" multiplier="0.9" id="812-5z-wGh"/>
@@ -68,6 +75,8 @@
                 <constraint firstItem="XC8-Pk-Qdw" firstAttribute="height" secondItem="vkU-0w-NsC" secondAttribute="height" multiplier="0.0428101" id="MS8-Lc-ysA"/>
                 <constraint firstItem="mst-Pw-uqg" firstAttribute="width" secondItem="87d-Dv-FDL" secondAttribute="width" multiplier="0.816327" id="Mmc-R5-Io1"/>
                 <constraint firstItem="vkU-0w-NsC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OY6-NY-GaB"/>
+                <constraint firstItem="aqO-44-W6G" firstAttribute="width" secondItem="ANG-uL-mVq" secondAttribute="width" multiplier="0.793893" id="T2W-ef-Pk0"/>
+                <constraint firstItem="aqO-44-W6G" firstAttribute="top" secondItem="ANG-uL-mVq" secondAttribute="bottom" constant="8" symbolic="YES" id="VB8-rG-Rgj"/>
                 <constraint firstItem="SIw-WK-cgw" firstAttribute="width" secondItem="vkU-0w-NsC" secondAttribute="width" multiplier="0.532155" id="Xpc-vE-cZR"/>
                 <constraint firstItem="9jL-OW-cdR" firstAttribute="leading" secondItem="SIw-WK-cgw" secondAttribute="trailing" constant="7.666666666666714" id="Z6R-O2-Kzf"/>
                 <constraint firstItem="87d-Dv-FDL" firstAttribute="width" secondItem="vkU-0w-NsC" secondAttribute="width" multiplier="0.103887" id="ctR-ah-AXb"/>
