@@ -243,9 +243,10 @@ extension PersonInformationViewController: UITableViewDelegate, UITableViewDataS
             case 4:
                 cell.lbName.text = "手機號碼"
                 if userInformations[0].Phone.isEmpty == false {
-                    cell.lbPhonenumber.text = userInformations[0].Phone
+                    cell.lbPhonenumber.text = "+886" + userInformations[0].Phone
                 } else {
-                    cell.lbPhonenumber.text = ""
+                    cell.lbPhonenumber.text = "+886"
+                    cell.imgvPhoneStatus.image = UIImage(named: "phone_alarm")
                 }
                 cell.lbResult.isHidden = true
                 cell.imgvPhoneStatus.isHidden = false

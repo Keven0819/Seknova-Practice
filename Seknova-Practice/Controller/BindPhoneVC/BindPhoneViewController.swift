@@ -17,9 +17,17 @@ class BindPhoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     // MARK: - UI Settings
+    func setupUI() {
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        self.navigationItem.title = "綁定手機"
+    }
     
     // MARK: - IBAction
     
