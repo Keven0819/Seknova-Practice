@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
+                <outlet property="barCharView" destination="wg8-g6-k10" id="gXA-0N-OzO"/>
+                <outlet property="lbTime" destination="U1q-nw-yxd" id="CM1-KO-BJR"/>
+                <outlet property="lineChartView" destination="BFz-5t-ep0" id="YhU-8Y-yWS"/>
+                <outlet property="segcChangeCharts" destination="PKC-oM-a4B" id="Ehr-DV-1nf"/>
+                <outlet property="segcChangeTime" destination="euw-zh-Qb2" id="gs4-E4-3i3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,6 +47,9 @@
                         <segment title="Daily Patterns"/>
                         <segment title="Time in Target"/>
                     </segments>
+                    <connections>
+                        <action selector="changeChart:" destination="-1" eventType="valueChanged" id="vvb-b7-G06"/>
+                    </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-5t-ep0" customClass="LineChartView" customModule="Charts">
                     <rect key="frame" x="16" y="201.99999999999997" width="361" height="437.33333333333326"/>
@@ -59,10 +67,13 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="euw-zh-Qb2">
                     <rect key="frame" x="79.333333333333329" y="706" width="234.33333333333337" height="61"/>
                     <segments>
-                        <segment title="7 Days"/>
-                        <segment title="14 Days"/>
-                        <segment title="30 Days"/>
+                        <segment title="7 DAYS"/>
+                        <segment title="14 DAYS"/>
+                        <segment title="30 DAYS"/>
                     </segments>
+                    <connections>
+                        <action selector="changeTime:" destination="-1" eventType="valueChanged" id="0UY-37-azG"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

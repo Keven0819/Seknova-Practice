@@ -331,6 +331,20 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             present(successAlert, animated: true)
         }
     }
+    
+    @objc func historyReloadButtonTapped() {
+        // 獲取當前顯示的 HistoryViewController
+        if let historyVC = children.first(where: { $0 is HistoryViewController }) as? HistoryViewController {
+            // 重置圖表數據
+            historyVC.chartEntries.removeAll()
+            historyVC.timeAxisEntries.removeAll()
+            
+            // 更新圖表
+            historyVC.setupChart()
+            historyVC.XAxisUpdate()
+            historyVC.startRandomNumberUpdate()
+        }
+    }
     // MARK: - Function
     func pageChange(page: Int) {
         updateView(page)
@@ -357,7 +371,22 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             
         // 歷史紀錄
         case 3:
-            self.navigationItem.rightBarButtonItem?.isHidden = true
+            self.navigationItem.rightBarButtonItem?.isHidden = false
+                        
+            // 加載原始圖片
+            if let originalImage = UIImage(named: "reload") {
+                // 調整圖片大小
+                let resizedImage = resizeImage(image: originalImage, targetSize: CGSize(width: 24, height: 24))
+                
+                let rightButton = UIButton(type: .system)
+                rightButton.setImage(resizedImage.withRenderingMode(.alwaysTemplate), for: .normal)
+                rightButton.tintColor = .white
+                rightButton.contentMode = .scaleAspectFit
+                rightButton.addTarget(self, action: #selector(historyReloadButtonTapped), for: .touchUpInside)
+                
+                let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+                navigationItem.rightBarButtonItem = rightBarButtonItem
+            }
             
         // 個人資訊
         case 4:
@@ -372,6 +401,26 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         default:
             break
         }
+    }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio = targetSize.width / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // 選擇較小的比例，以保持圖片比例
+        let scaleFactor = min(widthRatio, heightRatio)
+        
+        let scaledSize = CGSize(width: size.width * scaleFactor, height: size.height * scaleFactor)
+        let renderer = UIGraphicsImageRenderer(size: scaledSize)
+        
+        // 繪製調整大小的圖片
+        let scaledImage = renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: scaledSize))
+        }
+        
+        return scaledImage
     }
     
     func updateView(_ index: Int) {

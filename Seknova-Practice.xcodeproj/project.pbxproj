@@ -80,6 +80,7 @@
 		7BC928E62D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC928E42D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib */; };
 		7BD458552D0C312E00993AF2 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD458542D0C312E00993AF2 /* InfoTableViewCell.xib */; };
 		7BD458562D0C312E00993AF2 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD458532D0C312E00993AF2 /* InfoTableViewCell.swift */; };
+		7BD4A79C2D412ECF00FC3151 /* LifeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4A79B2D412ECF00FC3151 /* LifeEvents.swift */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
 		7BE4FF692D3A28CF00CD967D /* LifeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BE4FF682D3A28CF00CD967D /* LifeCollectionViewCell.xib */; };
@@ -165,6 +166,7 @@
 		7BC928E42D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BloodSugarCorrectionKnowMoreViewController.xib; sourceTree = "<group>"; };
 		7BD458532D0C312E00993AF2 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		7BD458542D0C312E00993AF2 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		7BD4A79B2D412ECF00FC3151 /* LifeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeEvents.swift; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		7BE4FF672D3A28CF00CD967D /* LifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */,
 				7B9B92D12CC11D1200203AD3 /* UserInformation.swift */,
 				7BA7665D2CCA5F7B00D0F340 /* Alert.swift */,
+				7BD4A79B2D412ECF00FC3151 /* LifeEvents.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				7B64472C2CF062EA002C43D7 /* BindPhoneCallViewController.swift in Sources */,
 				7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */,
 				7BAD78102D34EC810082B037 /* BindPhoneViewController.swift in Sources */,
+				7BD4A79C2D412ECF00FC3151 /* LifeEvents.swift in Sources */,
 				7B6F7D0F2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift in Sources */,
 				7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */,
 				7B7836802CA13AA7006EE7D8 /* SceneDelegate.swift in Sources */,
