@@ -14,8 +14,18 @@ class LifeViewController: UIViewController {
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var vBackground: UIView!
     @IBOutlet weak var lbDate: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView2: UICollectionView!
     
     // MARK: - Property
+    
+    
+    // 用來記錄點擊的 collectionView 是哪一個
+    var controlSecondCollectionView: Int = 0
+    
+    
+    // 根據點擊回傳的 index 去控制第二個 collectionView 的 cell 數量
+    let indexarray: [Int] = [5, 3, 4, 3, 0 ,0, 0]
     
     // MARK: - LifeCycle
     
@@ -27,9 +37,21 @@ class LifeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.maximumDate = Date()
+        setCollectionView()
     }
     
     // MARK: - UI Settings
+    
+    // 設定collectionView
+    func setCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "LifeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LifeCollectionViewCell")
+        collectionView2.delegate = self
+        collectionView2.dataSource = self
+        collectionView2.register(UINib(nibName: "LifeChoseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LifeChoseCollectionViewCell")
+    }
+    
     
     // MARK: - IBAction
     @IBAction func btnDatePicker(_ sender: Any) {
@@ -71,3 +93,141 @@ class LifeViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionViews(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 70, height: 90)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if collectionView == self.collectionView {
+            return 7
+        } else if collectionView == self.collectionView2 {
+            let count = indexarray[controlSecondCollectionView]
+            print("collectionView2: controlSecondCollectionView = \(controlSecondCollectionView), count = \(count)")
+            return count
+        }
+        
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView === self.collectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LifeCollectionViewCell", for: indexPath) as? LifeCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.vBackground.backgroundColor = UIColor(red: 255/255, green: 143/255, blue: 149/255, alpha: 1)
+            
+            switch indexPath.item {
+            case 0:
+                cell.lbTitle.text = "用餐"
+                cell.imageView.image = UIImage(named: "meal")
+            case 1:
+                cell.lbTitle.text = "運動"
+                cell.imageView.image = UIImage(named: "exercise")
+            case 2:
+                cell.lbTitle.text = "睡眠"
+                cell.imageView.image = UIImage(named: "sleep")
+            case 3:
+                cell.lbTitle.text = "胰島素"
+                cell.imageView.image = UIImage(named: "insulin")
+            case 4:
+                cell.lbTitle.text = "起床"
+                cell.imageView.image = UIImage(named: "awaken")
+            case 5:
+                cell.lbTitle.text = "洗澡"
+                cell.imageView.image = UIImage(named: "bath")
+            case 6:
+                cell.lbTitle.text = "其他"
+                cell.imageView.image = UIImage(named: "other")
+            default:
+                break
+            }
+            return cell
+        } else if collectionView === self.collectionView2 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LifeChoseCollectionViewCell", for: indexPath) as? LifeChoseCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            switch controlSecondCollectionView {
+            case 0:
+                switch indexPath.item {
+                case 0:
+                    cell.lbTitle.text = "早餐"
+                    cell.imageView.image = UIImage(named: "breakfast")
+                case 1:
+                    cell.lbTitle.text = "午餐"
+                    cell.imageView.image = UIImage(named: "launch")
+                case 2:
+                    cell.lbTitle.text = "晚餐"
+                    cell.imageView.image = UIImage(named: "dinner")
+                case 3:
+                    cell.lbTitle.text = "點心"
+                    cell.imageView.image = UIImage(named: "snacks")
+                case 4:
+                    cell.lbTitle.text = "飲料"
+                    cell.imageView.image = UIImage(named: "drinks")
+                default:
+                    break
+                }
+            case 1:
+                switch indexPath.item {
+                case 0:
+                    cell.lbTitle.text = "高強度"
+                    cell.imageView.image = UIImage(named: "high_motion")
+                case 1:
+                    cell.lbTitle.text = "中強度"
+                    cell.imageView.image = UIImage(named: "mid_motion")
+                case 2:
+                    cell.lbTitle.text = "低強度"
+                    cell.imageView.image = UIImage(named: "low_motion")
+                default:
+                    break
+                }
+            case 2:
+                switch indexPath.item {
+                case 0:
+                    cell.lbTitle.text = "就寢"
+                    cell.imageView.image = UIImage(named: "sleep")
+                case 1:
+                    cell.lbTitle.text = "午睡"
+                    cell.imageView.image = UIImage(named: "sleepy")
+                case 2:
+                    cell.lbTitle.text = "小憩"
+                    cell.imageView.image = UIImage(named: "nap")
+                case 3:
+                    cell.lbTitle.text = "放鬆時刻"
+                    cell.imageView.image = UIImage(named: "relax")
+                default:
+                    break
+                }
+            default:
+                break
+            }
+            return cell
+        }
+        
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 重置所有 cell 的背景顏色
+        for index in 0..<collectionView.numberOfItems(inSection: 0) {
+            if let otherCell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? LifeCollectionViewCell {
+                otherCell.vBackground.backgroundColor = UIColor(red: 255/255, green: 143/255, blue: 149/255, alpha: 1) // 默認顏色
+            }
+        }
+        
+        // 設置選中的 cell 的背景顏色
+        if let cell = collectionView.cellForItem(at: indexPath) as? LifeCollectionViewCell {
+            cell.vBackground.backgroundColor = UIColor(red: 195/255, green: 14/255, blue: 35/255, alpha: 1) // 選中顏色
+            print("顏色改變")
+            
+            // 抓取選中的 cell 的 index
+            controlSecondCollectionView = indexPath.item
+            print("controlSecondCollectionView: \(controlSecondCollectionView)")
+            collectionView2.reloadData()
+        }
+    }
+}

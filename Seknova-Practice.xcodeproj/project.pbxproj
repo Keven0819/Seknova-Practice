@@ -82,6 +82,10 @@
 		7BD458562D0C312E00993AF2 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD458532D0C312E00993AF2 /* InfoTableViewCell.swift */; };
 		7BD875C02CA6AF28008BB100 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */; };
 		7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */; };
+		7BE4FF692D3A28CF00CD967D /* LifeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BE4FF682D3A28CF00CD967D /* LifeCollectionViewCell.xib */; };
+		7BE4FF6A2D3A28CF00CD967D /* LifeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE4FF672D3A28CF00CD967D /* LifeCollectionViewCell.swift */; };
+		7BE4FF762D409BC000CD967D /* LifeChoseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BE4FF752D409BC000CD967D /* LifeChoseCollectionViewCell.xib */; };
+		7BE4FF772D409BC000CD967D /* LifeChoseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE4FF742D409BC000CD967D /* LifeChoseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +167,10 @@
 		7BD458542D0C312E00993AF2 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		7BD875BE2CA6AF28008BB100 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
+		7BE4FF672D3A28CF00CD967D /* LifeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BE4FF682D3A28CF00CD967D /* LifeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeCollectionViewCell.xib; sourceTree = "<group>"; };
+		7BE4FF742D409BC000CD967D /* LifeChoseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeChoseCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BE4FF752D409BC000CD967D /* LifeChoseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeChoseCollectionViewCell.xib; sourceTree = "<group>"; };
 		D097F0ED15F38BCC246A09FC /* Pods-Seknova-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seknova-Practice.release.xcconfig"; path = "Target Support Files/Pods-Seknova-Practice/Pods-Seknova-Practice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -506,6 +514,7 @@
 		7BC070B52CFF059A00A76DCF /* LifeVC */ = {
 			isa = PBXGroup;
 			children = (
+				7BE4FF6B2D3A28D400CD967D /* Components */,
 				7BC070B62CFF05B200A76DCF /* LifeViewController.swift */,
 				7BC070B72CFF05B200A76DCF /* LifeViewController.xib */,
 			);
@@ -573,6 +582,17 @@
 				7BD875BF2CA6AF28008BB100 /* TermsViewController.xib */,
 			);
 			path = TermsVC;
+			sourceTree = "<group>";
+		};
+		7BE4FF6B2D3A28D400CD967D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7BE4FF672D3A28CF00CD967D /* LifeCollectionViewCell.swift */,
+				7BE4FF682D3A28CF00CD967D /* LifeCollectionViewCell.xib */,
+				7BE4FF742D409BC000CD967D /* LifeChoseCollectionViewCell.swift */,
+				7BE4FF752D409BC000CD967D /* LifeChoseCollectionViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FB1D1B6AE6661EAA1163B5F0 /* Frameworks */ = {
@@ -669,8 +689,10 @@
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
+				7BE4FF692D3A28CF00CD967D /* LifeCollectionViewCell.xib in Resources */,
 				7BAD780F2D34EC810082B037 /* BindPhoneViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
+				7BE4FF762D409BC000CD967D /* LifeChoseCollectionViewCell.xib in Resources */,
 				7BC928E62D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.xib in Resources */,
 				7BC15D852D01A56100A4AD50 /* LogViewController.xib in Resources */,
 				7B6447282CEF3E3B002C43D7 /* InstantBloodSugarViewController.xib in Resources */,
@@ -732,6 +754,7 @@
 			files = (
 				7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */,
 				7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */,
+				7BE4FF772D409BC000CD967D /* LifeChoseCollectionViewCell.swift in Sources */,
 				7BC070A32CFED72800A76DCF /* TabBarView.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
@@ -740,6 +763,7 @@
 				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */,
 				7BC928E52D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
+				7BE4FF6A2D3A28CF00CD967D /* LifeCollectionViewCell.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BD458562D0C312E00993AF2 /* InfoTableViewCell.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,

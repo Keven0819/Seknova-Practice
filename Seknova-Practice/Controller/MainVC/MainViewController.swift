@@ -189,6 +189,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     // MARK: - IBAction
     @IBAction func btnReport(_ sender: Any) {
         let reportVC = ReportViewController()
+        self.navigationItem.backButtonTitle = "返回"
         self.navigationController?.pushViewController(reportVC, animated: true)
     }
     

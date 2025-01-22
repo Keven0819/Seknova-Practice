@@ -21,6 +21,14 @@ class ReportViewController: UIViewController {
     
     // MARK: - UI Settings
     
+    func setupUI() {
+        
+    }
+    
+    func setupNavigationBar() {
+        self.navigationItem.title = "報表"
+    }
+    
     // MARK: - IBAction
     
     // MARK: - Function
