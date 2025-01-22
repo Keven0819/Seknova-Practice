@@ -36,22 +36,62 @@
                         <constraint firstItem="U1q-nw-yxd" firstAttribute="width" secondItem="Nlb-aA-5c5" secondAttribute="width" id="Cho-q6-nVQ"/>
                     </constraints>
                 </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PKC-oM-a4B">
-                    <rect key="frame" x="96" y="170" width="200" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PKC-oM-a4B">
+                    <rect key="frame" x="68.666666666666671" y="140" width="255.66666666666663" height="48.666666666666657"/>
                     <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
+                        <segment title="Daily Patterns"/>
+                        <segment title="Time in Target"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-5t-ep0" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="16" y="201.99999999999997" width="361" height="437.33333333333326"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg8-g6-k10" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="16" y="201.99999999999997" width="361" height="437.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date available for 7 of 30 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2a-TT-l2P">
+                    <rect key="frame" x="16" y="658" width="361" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemGray2Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="euw-zh-Qb2">
+                    <rect key="frame" x="79.333333333333329" y="706" width="234.33333333333337" height="61"/>
+                    <segments>
+                        <segment title="7 Days"/>
+                        <segment title="14 Days"/>
+                        <segment title="30 Days"/>
                     </segments>
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="euw-zh-Qb2" firstAttribute="top" secondItem="y2a-TT-l2P" secondAttribute="bottom" constant="8" id="5YK-fr-Hn4"/>
+                <constraint firstItem="PKC-oM-a4B" firstAttribute="top" secondItem="U1q-nw-yxd" secondAttribute="bottom" constant="28" id="6vj-n7-Cnh"/>
                 <constraint firstItem="Nlb-aA-5c5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7mA-1t-Qbi"/>
+                <constraint firstItem="y2a-TT-l2P" firstAttribute="top" secondItem="BFz-5t-ep0" secondAttribute="bottom" constant="18.666666666666742" id="9PC-26-Mhc"/>
+                <constraint firstItem="PKC-oM-a4B" firstAttribute="centerX" secondItem="U1q-nw-yxd" secondAttribute="centerX" id="AjY-bn-oRn"/>
+                <constraint firstItem="euw-zh-Qb2" firstAttribute="width" secondItem="y2a-TT-l2P" secondAttribute="width" multiplier="0.65" id="B67-0p-NEl"/>
+                <constraint firstItem="BFz-5t-ep0" firstAttribute="centerX" secondItem="PKC-oM-a4B" secondAttribute="centerX" id="C3T-Eq-6JR"/>
+                <constraint firstItem="wg8-g6-k10" firstAttribute="height" secondItem="BFz-5t-ep0" secondAttribute="height" id="CS0-ua-cgq"/>
+                <constraint firstItem="BFz-5t-ep0" firstAttribute="top" secondItem="PKC-oM-a4B" secondAttribute="bottom" constant="14.333333333333343" id="Gog-H5-UCe"/>
+                <constraint firstItem="PKC-oM-a4B" firstAttribute="width" secondItem="U1q-nw-yxd" secondAttribute="width" multiplier="0.65" id="HLV-ji-zCv"/>
                 <constraint firstItem="Nlb-aA-5c5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HWq-JX-oso"/>
+                <constraint firstItem="BFz-5t-ep0" firstAttribute="width" secondItem="PKC-oM-a4B" secondAttribute="width" multiplier="1.41199" id="JKp-cR-2vC"/>
                 <constraint firstItem="Nlb-aA-5c5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="OUk-Ih-YXE"/>
+                <constraint firstItem="y2a-TT-l2P" firstAttribute="height" secondItem="BFz-5t-ep0" secondAttribute="height" multiplier="0.0914634" id="Qn1-2b-MAD"/>
+                <constraint firstItem="wg8-g6-k10" firstAttribute="centerY" secondItem="BFz-5t-ep0" secondAttribute="centerY" id="Spn-Zo-2bU"/>
+                <constraint firstItem="euw-zh-Qb2" firstAttribute="height" secondItem="y2a-TT-l2P" secondAttribute="height" multiplier="1.5" id="VF9-Gj-KnP"/>
+                <constraint firstItem="y2a-TT-l2P" firstAttribute="width" secondItem="BFz-5t-ep0" secondAttribute="width" id="W7p-oj-o2B"/>
+                <constraint firstItem="PKC-oM-a4B" firstAttribute="height" secondItem="U1q-nw-yxd" secondAttribute="height" multiplier="0.9" id="WL3-97-qxW"/>
                 <constraint firstItem="Nlb-aA-5c5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0622066" id="dma-pb-lnt"/>
+                <constraint firstItem="euw-zh-Qb2" firstAttribute="centerX" secondItem="y2a-TT-l2P" secondAttribute="centerX" id="ghU-wV-tGT"/>
+                <constraint firstItem="BFz-5t-ep0" firstAttribute="height" secondItem="PKC-oM-a4B" secondAttribute="height" multiplier="9.16783" id="n0V-Nf-hyx"/>
+                <constraint firstItem="wg8-g6-k10" firstAttribute="centerX" secondItem="BFz-5t-ep0" secondAttribute="centerX" id="oAT-H9-8vf"/>
+                <constraint firstItem="y2a-TT-l2P" firstAttribute="centerX" secondItem="BFz-5t-ep0" secondAttribute="centerX" id="r6O-DQ-8kW"/>
+                <constraint firstItem="wg8-g6-k10" firstAttribute="width" secondItem="BFz-5t-ep0" secondAttribute="width" id="t1c-rl-JE5"/>
             </constraints>
             <point key="canvasLocation" x="78.625954198473281" y="19.718309859154932"/>
         </view>
@@ -59,6 +99,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

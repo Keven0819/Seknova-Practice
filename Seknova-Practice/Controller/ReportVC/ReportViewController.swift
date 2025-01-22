@@ -17,12 +17,13 @@ class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     // MARK: - UI Settings
     
     func setupUI() {
-        
+        setupNavigationBar()
     }
     
     func setupNavigationBar() {
