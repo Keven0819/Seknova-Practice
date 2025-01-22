@@ -354,6 +354,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         // 即時血糖
         case 0:
             self.navigationItem.rightBarButtonItem?.isHidden = false
+            setNavigatioinBar()
         
         // 血糖校正
         case 1:
