@@ -129,32 +129,41 @@ class LoginViewController: UIViewController {
         let password = UserPreferences.shared.password
         let loginCount = UserPreferences.shared.loginCount
         let alert = Alert()
-        
+
+        // 创建转圈圈的动画
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = self.view.center
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+
         if txfUserName.text?.isEmpty == false && txfPassword.text?.isEmpty == false {
-            
-            if txfUserName.text != email {
-                
-                alert.showAlert(title: "錯誤", message: "帳號輸入錯誤", vc: self, action: {})
-                
-            } else if txfPassword.text != password {
-                
-                alert.showAlert(title: "錯誤", message: "密碼輸入錯誤", vc: self, action: {})
-                
-            } else {
-                
-                if loginCount == 0 {
-                    // 第一次登入跳至條款畫面
-                    let termsVC = TermsViewController()
-                    self.navigationController?.pushViewController(termsVC, animated: true)
-                    UserPreferences.shared.loginCount! += 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // 模擬1.5秒的處理時間
+                activityIndicator.stopAnimating() // 停止動畫
+                activityIndicator.removeFromSuperview()
+
+                if self.txfUserName.text != email {
+                    alert.showAlert(title: "錯誤", message: "帳號輸入錯誤", vc: self, action: {})
+                } else if self.txfPassword.text != password {
+                    alert.showAlert(title: "錯誤", message: "密碼輸入錯誤", vc: self, action: {})
                 } else {
-                    // 非第一次登入跳至首頁
-                    let bodyVC = MainViewController()
-                    self.navigationController?.pushViewController(bodyVC, animated: true)
+                    if loginCount == 0 {
+                        // 第一次登入跳至條款畫面
+                        let termsVC = TermsViewController()
+                        self.navigationController?.pushViewController(termsVC, animated: true)
+                        UserPreferences.shared.loginCount! += 1
+                    } else {
+                        // 非第一次登入跳至首頁
+                        let bodyVC = MainViewController()
+                        self.navigationController?.pushViewController(bodyVC, animated: true)
+                    }
                 }
             }
         } else {
-            alert.showAlert(title: "錯誤", message: "請輸入帳號密碼", vc: self, action: {})
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // 模擬延遲
+                activityIndicator.stopAnimating() // 停止動畫
+                activityIndicator.removeFromSuperview()
+                alert.showAlert(title: "錯誤", message: "請輸入帳號密碼", vc: self, action: {})
+            }
         }
     }
     // MARK: - Function

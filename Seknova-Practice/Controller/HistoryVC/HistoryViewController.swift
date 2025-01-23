@@ -43,20 +43,9 @@ class HistoryViewController: UIViewController {
         XAxisUpdate()
         events = Array(realm.objects(LifeEvents.self))
         segcHr.addTarget(self, action: #selector(segmentedControlChanged(_:)), for: .valueChanged)
-        setupFullScreenButton()
     }
     
     // MARK: - UI Settings
-    
-    func setupFullScreenButton() {
-        btnFullScreen.addTarget(self, action: #selector(fullScreenButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc func fullScreenButtonTapped() {
-       isFullScreen = true
-       let fullScreenVC = HistoryViewController()
-       self.navigationController?.pushViewController(fullScreenVC, animated: true)
-    }
     
     @objc func segmentedControlChanged(_ sender: UISegmentedControl) {
         let hours = [1, 3, 6, 12, 24][sender.selectedSegmentIndex]
