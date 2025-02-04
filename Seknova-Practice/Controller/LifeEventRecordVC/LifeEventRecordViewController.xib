@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LifeEventRecordViewController" customModule="Seknova_Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="tbvLIfeEvent" destination="5LU-No-Hhg" id="Nah-Q8-mOt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background5" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-R5-Xc4">
+                    <rect key="frame" x="20.5" y="48.5" width="373" height="899.5"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seknova" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-fq-Hfn">
+                    <rect key="frame" x="290" y="821" width="124" height="41"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" estimatedSectionHeaderHeight="-1" sectionFooterHeight="50" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5LU-No-Hhg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LAi-fq-Hfn" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.3" id="7zx-dn-jKF"/>
+                <constraint firstItem="Q7F-R5-Xc4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CJd-IG-t8x"/>
+                <constraint firstItem="Q7F-R5-Xc4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="1.1" id="HCB-Wi-cri"/>
+                <constraint firstItem="LAi-fq-Hfn" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.05" id="KVN-AI-AZ3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LAi-fq-Hfn" secondAttribute="trailing" id="L3s-sE-H5o"/>
+                <constraint firstItem="5LU-No-Hhg" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="gmR-Ce-Vvf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LAi-fq-Hfn" secondAttribute="bottom" id="iyL-Lq-8be"/>
+                <constraint firstItem="5LU-No-Hhg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kx0-FU-5m2"/>
+                <constraint firstItem="Q7F-R5-Xc4" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1.1" id="l1C-Md-ptf"/>
+                <constraint firstItem="Q7F-R5-Xc4" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.9" id="piK-Vb-YpT"/>
+                <constraint firstItem="5LU-No-Hhg" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="t2h-dz-u23"/>
+                <constraint firstItem="5LU-No-Hhg" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="x19-Fd-jAw"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="29"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background5" width="1126" height="2437"/>
+        <image name="Seknova" width="467" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

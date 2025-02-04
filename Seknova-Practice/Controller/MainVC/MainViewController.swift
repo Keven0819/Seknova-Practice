@@ -217,6 +217,11 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         }
     }
     
+    @objc func pushToLifeEventRecord() {
+        let lifeEventVC = LifeEventRecordViewController()
+        self.navigationController?.pushViewController(lifeEventVC, animated: true)
+    }
+    
     @objc func linkButtonTapped() {
         let sensorPopoverVC = SensorPopoverViewController()
         sensorPopoverVC.delegate = self
@@ -366,7 +371,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             let rightButton = UIButton(type: .system)
             rightButton.setTitle("事件記錄", for: .normal)
             rightButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-            rightButton.addTarget(self, action: #selector(btnLog), for: .touchUpInside)
+            rightButton.addTarget(self, action: #selector(pushToLifeEventRecord), for: .touchUpInside)
             let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
             navigationItem.rightBarButtonItem = rightBarButtonItem
             
