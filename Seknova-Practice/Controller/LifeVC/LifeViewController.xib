@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,7 +16,8 @@
                 <outlet property="datePicker" destination="MkJ-NT-at3" id="0my-Ab-c0c"/>
                 <outlet property="lbDate" destination="eUL-YD-w2G" id="Mtu-Nu-8qG"/>
                 <outlet property="toolBar" destination="Va3-r6-pAd" id="gT4-kf-IdQ"/>
-                <outlet property="vBackground" destination="bTs-a1-lqQ" id="bNv-6h-uq7"/>
+                <outlet property="vBGcollectionView" destination="4oU-17-rkg" id="K9X-V6-tUM"/>
+                <outlet property="vBackground" destination="bTs-a1-lqQ" id="MIm-np-Q0Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -94,8 +96,8 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tzb-a4-hQi">
                     <rect key="frame" x="16" y="242" width="361" height="107"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="L2C-MJ-00N">
-                        <size key="itemSize" width="70" height="90"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aba-2Y-j6d">
+                        <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -111,7 +113,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="eUL-YD-w2G" firstAttribute="centerY" secondItem="oKI-kA-4ay" secondAttribute="centerY" id="2NE-VR-caQ"/>
-                <constraint firstItem="tzb-a4-hQi" firstAttribute="centerY" secondItem="4oU-17-rkg" secondAttribute="centerY" id="3KY-gd-6VV"/>
                 <constraint firstItem="bTs-a1-lqQ" firstAttribute="width" secondItem="MkJ-NT-at3" secondAttribute="width" id="3fR-M2-0r6"/>
                 <constraint firstItem="eUL-YD-w2G" firstAttribute="width" secondItem="oKI-kA-4ay" secondAttribute="width" multiplier="0.587786" constant="7" id="49z-9N-TbS"/>
                 <constraint firstItem="4oU-17-rkg" firstAttribute="top" secondItem="bXO-aU-LuF" secondAttribute="bottom" id="5Xu-tm-hmW"/>
@@ -119,20 +120,21 @@
                 <constraint firstItem="ltP-wF-Vky" firstAttribute="height" secondItem="oKI-kA-4ay" secondAttribute="height" multiplier="1.14286" id="7xw-RQ-fqE"/>
                 <constraint firstItem="oKI-kA-4ay" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="9rh-VD-KNq"/>
                 <constraint firstItem="ltP-wF-Vky" firstAttribute="leading" secondItem="oKI-kA-4ay" secondAttribute="trailing" constant="-377" id="A4T-s4-SpU"/>
-                <constraint firstItem="tzb-a4-hQi" firstAttribute="height" secondItem="4oU-17-rkg" secondAttribute="height" multiplier="0.856" id="DlP-Q7-F9I"/>
+                <constraint firstItem="tzb-a4-hQi" firstAttribute="width" secondItem="4oU-17-rkg" secondAttribute="width" multiplier="0.918575" id="B5g-0f-BmY"/>
                 <constraint firstItem="bXO-aU-LuF" firstAttribute="height" secondItem="oKI-kA-4ay" secondAttribute="height" multiplier="3.65714" id="EAH-ff-E73"/>
                 <constraint firstItem="MkJ-NT-at3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="EWm-md-8y4"/>
                 <constraint firstItem="oKI-kA-4ay" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="3" id="H7q-65-xI0"/>
                 <constraint firstItem="bXO-aU-LuF" firstAttribute="centerX" secondItem="oKI-kA-4ay" secondAttribute="centerX" id="JVs-S5-svZ"/>
                 <constraint firstItem="oKI-kA-4ay" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="NJk-4o-CNa"/>
+                <constraint firstItem="tzb-a4-hQi" firstAttribute="height" secondItem="4oU-17-rkg" secondAttribute="height" multiplier="0.856" id="OuZ-V0-D7T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MkJ-NT-at3" secondAttribute="bottom" constant="68" id="PsS-jf-klM"/>
                 <constraint firstItem="eUL-YD-w2G" firstAttribute="height" secondItem="oKI-kA-4ay" secondAttribute="height" multiplier="0.6" id="QMm-3g-1EG"/>
-                <constraint firstItem="tzb-a4-hQi" firstAttribute="centerX" secondItem="4oU-17-rkg" secondAttribute="centerX" id="Uwj-Oi-fDw"/>
+                <constraint firstItem="tzb-a4-hQi" firstAttribute="centerX" secondItem="4oU-17-rkg" secondAttribute="centerX" id="Sub-zt-ZPj"/>
+                <constraint firstItem="tzb-a4-hQi" firstAttribute="centerY" secondItem="4oU-17-rkg" secondAttribute="centerY" id="WZ8-ww-ZhA"/>
                 <constraint firstItem="bXO-aU-LuF" firstAttribute="width" secondItem="oKI-kA-4ay" secondAttribute="width" id="Wqm-ag-s4L"/>
                 <constraint firstItem="2zr-H8-8AM" firstAttribute="height" secondItem="oKI-kA-4ay" secondAttribute="height" multiplier="0.571429" constant="5" id="YpK-Yc-RIe"/>
                 <constraint firstItem="MkJ-NT-at3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="azc-ju-HXd"/>
                 <constraint firstItem="bXO-aU-LuF" firstAttribute="top" secondItem="oKI-kA-4ay" secondAttribute="bottom" constant="8" symbolic="YES" id="bSN-9p-kkN"/>
-                <constraint firstItem="tzb-a4-hQi" firstAttribute="width" secondItem="4oU-17-rkg" secondAttribute="width" multiplier="0.918575" id="bhR-7c-nLO"/>
                 <constraint firstItem="iUr-Ks-pIQ" firstAttribute="top" secondItem="bXO-aU-LuF" secondAttribute="top" id="btg-Ig-cNu"/>
                 <constraint firstItem="4oU-17-rkg" firstAttribute="centerX" secondItem="bXO-aU-LuF" secondAttribute="centerX" id="cwa-J7-Ltj"/>
                 <constraint firstItem="MkJ-NT-at3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.333333" id="d0u-3y-WgL"/>
@@ -164,7 +166,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -16,6 +16,7 @@ class LifeViewController: UIViewController {
     @IBOutlet weak var lbDate: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var vBGcollectionView: UIView!
     
     // MARK: - Property
     
@@ -26,6 +27,8 @@ class LifeViewController: UIViewController {
     
     // 根據點擊回傳的 index 去控制第二個 collectionView 的 cell 數量
     let indexarray: [Int] = [5, 3, 4, 3, 0 ,0, 0]
+    
+    var newWidth:Int = 0
     
     // MARK: - LifeCycle
     
@@ -93,9 +96,23 @@ class LifeViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionViews(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 90)
+extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.collectionView {
+            print("collectionView1")
+            return CGSize(width: 70, height: 90)
+        } else if collectionView == self.collectionView2 {
+            print("collectionView2")
+            return CGSize(width: newWidth, height: 90)
+        } else {
+            print("none")
+            return CGSize(width: 70, height: 90)
+        }
+    }
+    
+    // 設置每個 cell 之間的水平間距
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // 設置項目間的最小間距為 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -105,6 +122,13 @@ extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == self.collectionView2 {
             let count = indexarray[controlSecondCollectionView]
             print("collectionView2: controlSecondCollectionView = \(controlSecondCollectionView), count = \(count)")
+            let width = collectionView.frame.width
+            if count == 0 {
+                return 0
+            } else {
+                newWidth = Int(width) / count
+                print("newWidth: \(newWidth)")
+            }
             return count
         }
         
