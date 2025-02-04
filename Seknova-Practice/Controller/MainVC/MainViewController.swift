@@ -209,10 +209,28 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         if btnMenuCount == 0 {
             imgvMenu.isHidden = false
             vMenu.isHidden = false
+            
+            // 初始位置 (隱藏在左側)
+            imgvMenu.transform = CGAffineTransform(translationX: -vMenu.frame.width, y: 0)
+            vMenu.transform = CGAffineTransform(translationX: -vMenu.frame.width, y: 0)
+
+            // 動畫滑入
+            UIView.animate(withDuration: 0.3, animations: {
+                self.imgvMenu.transform = .identity // 恢復到原位
+                self.vMenu.transform = .identity // 恢復到原位
+            })
+
             btnMenuCount += 1
         } else {
-            imgvMenu.isHidden = true
-            vMenu.isHidden = true
+            // 動畫滑出
+            UIView.animate(withDuration: 0.3, animations: {
+                self.vMenu.transform = CGAffineTransform(translationX: -self.vMenu.frame.width, y: 0)
+                self.imgvMenu.transform = CGAffineTransform(translationX: -self.vMenu.frame.width, y: 0)
+            }, completion: { _ in
+                self.vMenu.isHidden = true
+                self.imgvMenu.isHidden = true
+            })
+
             btnMenuCount = 0
         }
     }
