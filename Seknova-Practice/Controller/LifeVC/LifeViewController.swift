@@ -120,16 +120,16 @@ extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == self.collectionView {
             return 7
         } else if collectionView == self.collectionView2 {
-            let count = indexarray[controlSecondCollectionView]
-            print("collectionView2: controlSecondCollectionView = \(controlSecondCollectionView), count = \(count)")
-            let width = collectionView.frame.width
-            if count == 0 {
-                return 0
-            } else {
-                newWidth = Int(width) / count
-                print("newWidth: \(newWidth)")
-            }
-            return count
+//            let count = indexarray[controlSecondCollectionView]
+//            print("collectionView2: controlSecondCollectionView = \(controlSecondCollectionView), count = \(count)")
+//            let width = collectionView.frame.width
+//            if count == 0 {
+//                return 0
+//            } else {
+//                newWidth = Int(width) / count
+//                print("newWidth: \(newWidth)")
+//            }
+            return indexarray[controlSecondCollectionView]
         }
         
         return 0
@@ -251,7 +251,18 @@ extension LifeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             // 抓取選中的 cell 的 index
             controlSecondCollectionView = indexPath.item
             print("controlSecondCollectionView: \(controlSecondCollectionView)")
+            
+            // 計算新的 cell 寬度
+            let count = indexarray[controlSecondCollectionView]
+            let width = collectionView2.frame.width
+            newWidth = count == 0 ? 70 : Int(width) / count // 預設 70 防止 width = 0 時的問
+            
             collectionView2.reloadData()
+            
+            // **使用 performBatchUpdates 來更流暢地更新 UI**
+//            collectionView2.performBatchUpdates {
+//                collectionView2.reloadSections(IndexSet(integer: 0))
+//            }
         }
     }
 }
