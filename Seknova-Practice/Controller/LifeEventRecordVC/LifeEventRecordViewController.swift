@@ -101,7 +101,8 @@ class LifeEventRecordViewController: UIViewController {
     // MARK: - Function
     // 返回上一頁
     @objc func backButtonTapped() {
-        navigationController?.popViewController(animated: true)
+        // pop到最剛開始的頁面
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     // 把今天和昨天的資料分組
@@ -190,8 +191,8 @@ class LifeEventRecordViewController: UIViewController {
             print("UUID:",selectedEvent.id)
             print("CVTag0 = ",selectedEvent.eventId)
             print("CVTag1 = ",selectedEvent.eventValue)
-            print("事件1 = ",LifeEventData.shared.event1)
-            print("事件2 = ",LifeEventData.shared.event2)
+            print("事件1 = ",LifeEventData.shared.event1 ?? "")
+            print("事件2 = ",LifeEventData.shared.event2 ?? "")
             print("備註 = ",selectedEvent.note)
             
             let LifeViewVC = LifeViewController()
