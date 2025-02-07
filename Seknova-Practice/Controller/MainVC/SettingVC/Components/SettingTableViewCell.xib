@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettingTableViewCell" customModule="Seknova_Practice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="警示設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQa-oH-mWP">
+                        <rect key="frame" x="19" y="11.666666666666664" width="128" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-X3-cdh">
+                        <rect key="frame" x="278" y="10.666666666666664" width="26" height="23"/>
+                    </imageView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RVt-fo-WcJ">
+                        <rect key="frame" x="257" y="6.6666666666666679" width="49" height="31.000000000000004"/>
+                    </switch>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reload" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-My-VJT">
+                        <rect key="frame" x="265" y="5.6666666666666679" width="39" height="33"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/05 02:16:35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Vo-cGE">
+                        <rect key="frame" x="155" y="11.666666666666664" width="149" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="VJB-X3-cdh" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.08125" id="2a7-Jd-yp4"/>
+                    <constraint firstItem="5yP-My-VJT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.121875" id="2ah-rZ-na8"/>
+                    <constraint firstItem="5yP-My-VJT" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="63v-D0-GFd"/>
+                    <constraint firstItem="RVt-fo-WcJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CZV-7q-Wgi"/>
+                    <constraint firstItem="yQa-oH-mWP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="GnC-8V-YAy"/>
+                    <constraint firstItem="5yP-My-VJT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MCG-kE-wzf"/>
+                    <constraint firstAttribute="trailing" secondItem="Uz6-Vo-cGE" secondAttribute="trailing" constant="16" id="NIY-Q1-ycn"/>
+                    <constraint firstItem="RVt-fo-WcJ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.704545" id="OPX-Pc-xAO"/>
+                    <constraint firstAttribute="trailing" secondItem="RVt-fo-WcJ" secondAttribute="trailing" constant="16" id="QWg-wR-8O7"/>
+                    <constraint firstItem="RVt-fo-WcJ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.146875" id="R3M-Vq-gOG"/>
+                    <constraint firstAttribute="trailing" secondItem="VJB-X3-cdh" secondAttribute="trailing" constant="16" id="SPH-WE-mMe"/>
+                    <constraint firstItem="yQa-oH-mWP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uwb-TQ-f0T"/>
+                    <constraint firstItem="VJB-X3-cdh" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.522727" id="V66-3T-fRV"/>
+                    <constraint firstItem="Uz6-Vo-cGE" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="VaZ-B0-4C8"/>
+                    <constraint firstItem="VJB-X3-cdh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zza-co-ECm"/>
+                    <constraint firstItem="yQa-oH-mWP" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="gju-az-UUX"/>
+                    <constraint firstItem="Uz6-Vo-cGE" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.465625" id="prl-a8-YrF"/>
+                    <constraint firstItem="Uz6-Vo-cGE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="swz-HP-8zL"/>
+                    <constraint firstAttribute="trailing" secondItem="5yP-My-VJT" secondAttribute="trailing" constant="16" id="w4o-eI-66x"/>
+                    <constraint firstItem="yQa-oH-mWP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2375" constant="52" id="yMK-nu-1is"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgvArrowRight" destination="VJB-X3-cdh" id="61x-wH-qtm"/>
+                <outlet property="imgvReload" destination="5yP-My-VJT" id="47c-ul-z1I"/>
+                <outlet property="lbContent" destination="Uz6-Vo-cGE" id="d4p-A9-TvC"/>
+                <outlet property="lbTitle" destination="yQa-oH-mWP" id="DPE-90-E1l"/>
+                <outlet property="swOnOff" destination="RVt-fo-WcJ" id="w9e-BX-NoV"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowRight" width="32" height="32"/>
+        <image name="reload" width="512" height="512"/>
+    </resources>
+</document>

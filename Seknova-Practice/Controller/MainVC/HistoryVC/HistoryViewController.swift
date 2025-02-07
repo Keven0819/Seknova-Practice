@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var vChart: LineChartView!
     @IBOutlet weak var segcHr: UISegmentedControl!
     @IBOutlet weak var btnFullScreen: UIButton!
-    @IBOutlet weak var btnLastData: UIImageView!
+    @IBOutlet weak var btnLastData: UIButton!
     @IBOutlet weak var imgFullScreen: UIImageView!
     @IBOutlet weak var imgLastData: UIImageView!
     
@@ -75,6 +75,10 @@ class HistoryViewController: UIViewController {
         setInitialXAxisLabels()
     }
     // MARK: - IBAction
+    @IBAction func fullScreen(_ sender: Any) {
+        let fullVC = HorizontalHistoryViewController()
+        self.navigationController?.pushViewController(fullVC, animated: true)
+    }
     
     // MARK: - Function
     func updateChartForTimeInterval(hours: Int) {
@@ -200,7 +204,7 @@ class HistoryViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension HistoryViewController: AxisValueFormatter {
+extension HorizontalHistoryViewController: AxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let timestamp = Date(timeIntervalSince1970: value)
         let formatter = DateFormatter()

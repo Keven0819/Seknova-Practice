@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="btnFullScreen" destination="xLW-DY-Fi4" id="tMR-kR-CtZ"/>
-                <outlet property="btnLastData" destination="hKg-Ae-wM5" id="TZh-jp-vqV"/>
+                <outlet property="btnLastData" destination="Dhk-TS-HWA" id="Gyc-c0-M2d"/>
                 <outlet property="imgFullScreen" destination="APY-6K-r3V" id="YuK-OF-b2u"/>
                 <outlet property="imgLastData" destination="hKg-Ae-wM5" id="N5w-9C-XQb"/>
                 <outlet property="segcHr" destination="HSR-Oz-Zsa" id="ZWe-rh-aq2"/>
@@ -47,6 +47,9 @@
                     <buttonConfiguration key="configuration" style="plain">
                         <backgroundConfiguration key="background"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="fullScreen:" destination="-1" eventType="touchUpInside" id="69N-jU-Xdu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhk-TS-HWA">
                     <rect key="frame" x="341.66666666666669" y="714" width="36.333333333333314" height="42"/>

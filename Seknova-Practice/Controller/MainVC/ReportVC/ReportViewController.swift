@@ -94,7 +94,10 @@ class ReportViewController: UIViewController {
         
         let randomEntries = generateBarChartRandomEntries()
         
+        setupBarChart(with: randomEntries)  // 加入這行來更新 barCharView
+        
         let dataEntries = (0..<4).map { _ in generateRandomEntries() }
+        
         setupLineChart(with: dataEntries)
     }
     
