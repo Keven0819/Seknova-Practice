@@ -26,6 +26,10 @@
 		7B14D5482D55DD35001C2D26 /* LifeEventReordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5422D55DD34001C2D26 /* LifeEventReordTableViewCell.xib */; };
 		7B14D5492D55DD35001C2D26 /* LifeEventRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5442D55DD34001C2D26 /* LifeEventRecordViewController.swift */; };
 		7B14D54A2D55DD35001C2D26 /* LifeEventRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5452D55DD34001C2D26 /* LifeEventRecordViewController.xib */; };
+		7B14D5502D55E0B8001C2D26 /* WarningSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */; };
+		7B14D5512D55E0B8001C2D26 /* WarningSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */; };
+		7B14D5552D55E1BA001C2D26 /* WSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */; };
+		7B14D5562D55E1BA001C2D26 /* WSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */; };
 		7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */; };
 		7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */; };
 		7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */; };
@@ -120,6 +124,10 @@
 		7B14D5422D55DD34001C2D26 /* LifeEventReordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeEventReordTableViewCell.xib; sourceTree = "<group>"; };
 		7B14D5442D55DD34001C2D26 /* LifeEventRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeEventRecordViewController.swift; sourceTree = "<group>"; };
 		7B14D5452D55DD34001C2D26 /* LifeEventRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LifeEventRecordViewController.xib; sourceTree = "<group>"; };
+		7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningSettingViewController.swift; sourceTree = "<group>"; };
+		7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarningSettingViewController.xib; sourceTree = "<group>"; };
+		7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTableViewCell.swift; sourceTree = "<group>"; };
+		7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSTableViewCell.xib; sourceTree = "<group>"; };
 		7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecertificationViewController.swift; sourceTree = "<group>"; };
 		7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecertificationViewController.xib; sourceTree = "<group>"; };
 		7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantBloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +294,25 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5522D55E18E001C2D26 /* WSTableViewCell */,
+				7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */,
+				7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */,
+			);
+			path = WarningSettingVC;
+			sourceTree = "<group>";
+		};
+		7B14D5522D55E18E001C2D26 /* WSTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */,
+				7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */,
+			);
+			path = WSTableViewCell;
 			sourceTree = "<group>";
 		};
 		7B20708D2CA45283000A46A4 /* RecertificationVC */ = {
@@ -619,6 +646,7 @@
 		7BC15D872D01A57A00A4AD50 /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B14D54D2D55E08C001C2D26 /* WarningSettingVC */,
 				7B14D5402D54B34E001C2D26 /* Components */,
 				7BC15D892D01A59400A4AD50 /* SettingViewController.swift */,
 				7BC15D8A2D01A59400A4AD50 /* SettingViewController.xib */,
@@ -733,6 +761,7 @@
 				7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */,
 				7B14D5482D55DD35001C2D26 /* LifeEventReordTableViewCell.xib in Resources */,
 				7BC15D8B2D01A59400A4AD50 /* SettingViewController.xib in Resources */,
+				7B14D5502D55E0B8001C2D26 /* WarningSettingViewController.xib in Resources */,
 				7BC070AD2CFF052200A76DCF /* BloodSugarCorrectionViewController.xib in Resources */,
 				7B14D5282D5277D8001C2D26 /* TxfGTableViewCell.xib in Resources */,
 				7B14D5222D5277D8001C2D26 /* LifeCollectionViewCell.xib in Resources */,
@@ -753,6 +782,7 @@
 				7B14D54A2D55DD35001C2D26 /* LifeEventRecordViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B14D53E2D54B347001C2D26 /* SettingTableViewCell.xib in Resources */,
+				7B14D5552D55E1BA001C2D26 /* WSTableViewCell.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
 				7B14D5262D5277D8001C2D26 /* LifeTableViewCell.xib in Resources */,
@@ -819,10 +849,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B14D5512D55E0B8001C2D26 /* WarningSettingViewController.swift in Sources */,
 				7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */,
 				7B8F90182CEC933800703E1C /* PairAnimateViewController.swift in Sources */,
 				7BC070A32CFED72800A76DCF /* TabBarView.swift in Sources */,
 				7B14D5232D5277D8001C2D26 /* LifeRoutineCollectionViewCell.swift in Sources */,
+				7B14D5562D55E1BA001C2D26 /* WSTableViewCell.swift in Sources */,
 				7B14D5272D5277D8001C2D26 /* TxfGTableViewCell.swift in Sources */,
 				7B14D5292D5277D8001C2D26 /* LifeViewController.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,

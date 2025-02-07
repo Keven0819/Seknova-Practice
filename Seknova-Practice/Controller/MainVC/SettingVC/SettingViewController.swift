@@ -94,6 +94,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt")
+        
+        switch indexPath.row {
+        case 0:
+            let warningSettingVC = WarningSettingViewController()
+            self.navigationItem.backButtonTitle = "設定"
+            navigationController?.pushViewController(warningSettingVC, animated: true)
+        default:
+            break
+        }
     }
 }
