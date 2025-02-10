@@ -195,6 +195,7 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             switch indexPath.row {
             case 0:
                 cell.lbTitle.text = "Audio"
+                cell.lbSubTitle.text = UserPreferences.shared.audioValue
             default:
                 break
             }
@@ -224,6 +225,14 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             switch indexPath.row {
             case 0:
                 let vc = RateAlertsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            default:
+                break
+            }
+        case 2:
+            switch indexPath.row {
+            case 0:
+                let vc = AudioViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             default:
                 break

@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="none" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-Gg-viW">
-                        <rect key="frame" x="16" y="23" width="38" height="21"/>
+                        <rect key="frame" x="16" y="23" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <constraint firstItem="P51-Os-gT4" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="CbB-ey-fWW"/>
                     <constraint firstAttribute="bottom" secondItem="ezE-Gg-viW" secondAttribute="bottom" id="HxH-33-jeB"/>
                     <constraint firstItem="P51-Os-gT4" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.428125" id="LKJ-IG-zo3"/>
-                    <constraint firstItem="ezE-Gg-viW" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.11875" id="Qf9-Kl-hud"/>
+                    <constraint firstItem="ezE-Gg-viW" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.11875" constant="250" id="Qf9-Kl-hud"/>
                     <constraint firstItem="ezE-Gg-viW" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="b21-Ht-VkY"/>
                     <constraint firstItem="ezE-Gg-viW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sbG-yW-21K"/>
                     <constraint firstItem="P51-Os-gT4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tBV-c5-uJh"/>

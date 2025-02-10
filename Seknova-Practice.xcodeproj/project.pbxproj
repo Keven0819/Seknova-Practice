@@ -40,6 +40,12 @@
 		7B14D56F2D59EEC6001C2D26 /* RateAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D56C2D59EEC6001C2D26 /* RateAlertsViewController.swift */; };
 		7B14D5732D59F1DC001C2D26 /* RateAlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */; };
 		7B14D5742D59F1DC001C2D26 /* RateAlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */; };
+		7B14D5782D5A03DE001C2D26 /* AudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5772D5A03DE001C2D26 /* AudioViewController.xib */; };
+		7B14D5792D5A03DE001C2D26 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5762D5A03DE001C2D26 /* AudioViewController.swift */; };
+		7B14D57D2D5A0443001C2D26 /* AudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D57C2D5A0443001C2D26 /* AudioTableViewCell.xib */; };
+		7B14D57E2D5A0443001C2D26 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D57B2D5A0443001C2D26 /* AudioTableViewCell.swift */; };
+		7B14D5812D5A0520001C2D26 /* AudiopkvTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5802D5A0520001C2D26 /* AudiopkvTableViewCell.xib */; };
+		7B14D5822D5A0520001C2D26 /* AudiopkvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D57F2D5A0520001C2D26 /* AudiopkvTableViewCell.swift */; };
 		7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */; };
 		7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */; };
 		7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */; };
@@ -148,6 +154,12 @@
 		7B14D56D2D59EEC6001C2D26 /* RateAlertsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateAlertsViewController.xib; sourceTree = "<group>"; };
 		7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlertsTableViewCell.swift; sourceTree = "<group>"; };
 		7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateAlertsTableViewCell.xib; sourceTree = "<group>"; };
+		7B14D5762D5A03DE001C2D26 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		7B14D5772D5A03DE001C2D26 /* AudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioViewController.xib; sourceTree = "<group>"; };
+		7B14D57B2D5A0443001C2D26 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		7B14D57C2D5A0443001C2D26 /* AudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioTableViewCell.xib; sourceTree = "<group>"; };
+		7B14D57F2D5A0520001C2D26 /* AudiopkvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiopkvTableViewCell.swift; sourceTree = "<group>"; };
+		7B14D5802D5A0520001C2D26 /* AudiopkvTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudiopkvTableViewCell.xib; sourceTree = "<group>"; };
 		7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecertificationViewController.swift; sourceTree = "<group>"; };
 		7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecertificationViewController.xib; sourceTree = "<group>"; };
 		7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantBloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +331,7 @@
 		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B14D5752D5A03B0001C2D26 /* AudioVC */,
 				7B14D56B2D59EE6D001C2D26 /* RateAlertsVC */,
 				7B14D5572D55EEB0001C2D26 /* HighAlertsVC */,
 				7B14D5522D55E18E001C2D26 /* Components */,
@@ -373,6 +386,27 @@
 			children = (
 				7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */,
 				7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7B14D5752D5A03B0001C2D26 /* AudioVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D57A2D5A0429001C2D26 /* Components */,
+				7B14D5762D5A03DE001C2D26 /* AudioViewController.swift */,
+				7B14D5772D5A03DE001C2D26 /* AudioViewController.xib */,
+			);
+			path = AudioVC;
+			sourceTree = "<group>";
+		};
+		7B14D57A2D5A0429001C2D26 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D57B2D5A0443001C2D26 /* AudioTableViewCell.swift */,
+				7B14D57C2D5A0443001C2D26 /* AudioTableViewCell.xib */,
+				7B14D57F2D5A0520001C2D26 /* AudiopkvTableViewCell.swift */,
+				7B14D5802D5A0520001C2D26 /* AudiopkvTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -827,6 +861,7 @@
 				7BC070AD2CFF052200A76DCF /* BloodSugarCorrectionViewController.xib in Resources */,
 				7B14D5282D5277D8001C2D26 /* TxfGTableViewCell.xib in Resources */,
 				7B14D5222D5277D8001C2D26 /* LifeCollectionViewCell.xib in Resources */,
+				7B14D57D2D5A0443001C2D26 /* AudioTableViewCell.xib in Resources */,
 				7B14D5732D59F1DC001C2D26 /* RateAlertsTableViewCell.xib in Resources */,
 				7BC070A22CFED72800A76DCF /* TabBarView.xib in Resources */,
 				7BC070A92CFEFE1B00A76DCF /* CustomTabBar.xib in Resources */,
@@ -834,6 +869,7 @@
 				7B14D55A2D55EEDD001C2D26 /* HighAlertsViewController.xib in Resources */,
 				7B14D5242D5277D8001C2D26 /* LifeRoutineCollectionViewCell.xib in Resources */,
 				7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */,
+				7B14D5812D5A0520001C2D26 /* AudiopkvTableViewCell.xib in Resources */,
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
 				7B14D56E2D59EEC6001C2D26 /* RateAlertsViewController.xib in Resources */,
 				7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */,
@@ -852,6 +888,7 @@
 				7B14D5552D55E1BA001C2D26 /* WSTableViewCell.xib in Resources */,
 				7B8F90082CE2FBFB00703E1C /* TransmitterViewController.xib in Resources */,
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
+				7B14D5782D5A03DE001C2D26 /* AudioViewController.xib in Resources */,
 				7B14D5262D5277D8001C2D26 /* LifeTableViewCell.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7BAD780F2D34EC810082B037 /* BindPhoneViewController.xib in Resources */,
@@ -924,6 +961,7 @@
 				7B14D5562D55E1BA001C2D26 /* WSTableViewCell.swift in Sources */,
 				7B14D5742D59F1DC001C2D26 /* RateAlertsTableViewCell.swift in Sources */,
 				7B14D5272D5277D8001C2D26 /* TxfGTableViewCell.swift in Sources */,
+				7B14D57E2D5A0443001C2D26 /* AudioTableViewCell.swift in Sources */,
 				7B14D5292D5277D8001C2D26 /* LifeViewController.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
 				7B14D5472D55DD35001C2D26 /* LifeEventReordTableViewCell.swift in Sources */,
@@ -935,10 +973,12 @@
 				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */,
 				7BC928E52D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
+				7B14D5792D5A03DE001C2D26 /* AudioViewController.swift in Sources */,
 				7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */,
 				7BD458562D0C312E00993AF2 /* InfoTableViewCell.swift in Sources */,
 				7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */,
 				7BC070B42CFF057C00A76DCF /* BloodSugarCorrectionSureViewController.swift in Sources */,
+				7B14D5822D5A0520001C2D26 /* AudiopkvTableViewCell.swift in Sources */,
 				7B9B92712CBE747100203AD3 /* PersonalInfoTableViewCell.swift in Sources */,
 				7B14D53A2D53326A001C2D26 /* HorizontalHistoryViewController.swift in Sources */,
 				7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */,

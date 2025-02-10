@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6AB-18-Qc0" customClass="AudiopkvTableViewCell" customModule="Seknova_Practice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6AB-18-Qc0" id="IuV-zK-3k1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-7a-iXW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                    </pickerView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Pl-7a-iXW" firstAttribute="height" secondItem="IuV-zK-3k1" secondAttribute="height" id="08g-Qe-7i9"/>
+                    <constraint firstItem="7Pl-7a-iXW" firstAttribute="centerY" secondItem="IuV-zK-3k1" secondAttribute="centerY" id="Ekk-lk-ggW"/>
+                    <constraint firstItem="7Pl-7a-iXW" firstAttribute="width" secondItem="IuV-zK-3k1" secondAttribute="width" id="xDo-vK-m1a"/>
+                    <constraint firstItem="7Pl-7a-iXW" firstAttribute="centerX" secondItem="IuV-zK-3k1" secondAttribute="centerX" id="xjZ-0R-wiT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="2fP-wU-lvO"/>
+            <connections>
+                <outlet property="pickerView" destination="7Pl-7a-iXW" id="SVi-xw-2iu"/>
+            </connections>
+            <point key="canvasLocation" x="128" y="120"/>
+        </tableViewCell>
+    </objects>
+</document>

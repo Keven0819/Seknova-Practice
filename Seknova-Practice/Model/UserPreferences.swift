@@ -31,6 +31,7 @@ class UserPreferences {
         case highAertsValue
         case lowAlertsValue
         case developmentModeKey
+        case audioValue
     }
     
     var mail: String? {
@@ -156,6 +157,15 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.developmentModeKey.rawValue)
+        }
+    }
+    
+    var audioValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.audioValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.audioValue.rawValue)
         }
     }
 }
