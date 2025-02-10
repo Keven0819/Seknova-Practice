@@ -7,6 +7,11 @@
 
 import UIKit
 
+class HighOrLow {
+    static let shared = HighOrLow()
+    var highOrLow: Bool = true
+}
+
 class WarningSettingViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -16,6 +21,11 @@ class WarningSettingViewController: UIViewController {
     // MARK: - Property
     
     // MARK: - LifeCycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,8 +143,10 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             switch indexPath.row {
             case 0:
                 cell.lbTitle.text = "High Alerts"
+                cell.lbSubTitle.text = UserPreferences.shared.highAlertsValue
             case 1:
                 cell.lbTitle.text = "Low Alerts"
+                cell.lbSubTitle.text = UserPreferences.shared.lowAlertsValue
             default:
                 break
             }
@@ -156,5 +168,26 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             break
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                HighOrLow.shared.highOrLow = true
+                let vc = HighAlertsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                HighOrLow.shared.highOrLow = false
+                let vc = HighAlertsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            default:
+                break
+            }
+        default:
+            break
+        }
     }
 }

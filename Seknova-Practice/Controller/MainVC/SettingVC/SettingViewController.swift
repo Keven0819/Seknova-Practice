@@ -7,6 +7,12 @@
 
 import UIKit
 
+class Switch {
+    static let shared = Switch()
+    var swUnitChangeState: Bool = false
+    var swOverHighLowAlertState: Bool = false
+}
+
 class SettingViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -61,9 +67,11 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             cell.lbTitle.text = "單位切換(mmol/L)"
             cell.swOnOff.isHidden = false
+            cell.swOnOff.isOn = Switch.shared.swUnitChangeState
         case 2:
             cell.lbTitle.text = "超出高低血糖警示"
             cell.swOnOff.isHidden = false
+            cell.swOnOff.isOn = Switch.shared.swOverHighLowAlertState
         case 3:
             cell.lbTitle.text = "資料同步"
             cell.imgvReload.isHidden = false

@@ -28,6 +28,8 @@ class UserPreferences {
         case transmitterDeviceID
         case sensorDeviceID
         case bloodsugarCorrectionValue
+        case highAertsValue
+        case lowAlertsValue
     }
     
     var mail: String? {
@@ -126,6 +128,24 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.bloodsugarCorrectionValue.rawValue)
+        }
+    }
+    
+    var highAlertsValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.highAertsValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.highAertsValue.rawValue)
+        }
+    }
+    
+    var lowAlertsValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.lowAlertsValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.lowAlertsValue.rawValue)
         }
     }
 }

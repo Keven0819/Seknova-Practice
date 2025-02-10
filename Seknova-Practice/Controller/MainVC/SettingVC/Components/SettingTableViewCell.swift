@@ -27,5 +27,12 @@ class SettingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    @IBAction func switchState(_ sender: Any) {
+        if lbTitle.text == "單位切換(mmol/L)" {
+            Switch.shared.swUnitChangeState = swOnOff.isOn
+        } else if lbTitle.text == "超出高低血糖警示" {
+            Switch.shared.swOverHighLowAlertState = swOnOff.isOn
+        }
+    }
     
 }

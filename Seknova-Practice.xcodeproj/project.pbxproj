@@ -30,6 +30,12 @@
 		7B14D5512D55E0B8001C2D26 /* WarningSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */; };
 		7B14D5552D55E1BA001C2D26 /* WSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */; };
 		7B14D5562D55E1BA001C2D26 /* WSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */; };
+		7B14D55A2D55EEDD001C2D26 /* HighAlertsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5592D55EEDD001C2D26 /* HighAlertsViewController.xib */; };
+		7B14D55B2D55EEDD001C2D26 /* HighAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5582D55EEDD001C2D26 /* HighAlertsViewController.swift */; };
+		7B14D5632D55EF9E001C2D26 /* HATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5622D55EF9E001C2D26 /* HATableViewCell.xib */; };
+		7B14D5642D55EF9E001C2D26 /* HATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5612D55EF9E001C2D26 /* HATableViewCell.swift */; };
+		7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */; };
+		7B14D56A2D55F71F001C2D26 /* HApkvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */; };
 		7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */; };
 		7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */; };
 		7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */; };
@@ -128,6 +134,12 @@
 		7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarningSettingViewController.xib; sourceTree = "<group>"; };
 		7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSTableViewCell.swift; sourceTree = "<group>"; };
 		7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WSTableViewCell.xib; sourceTree = "<group>"; };
+		7B14D5582D55EEDD001C2D26 /* HighAlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighAlertsViewController.swift; sourceTree = "<group>"; };
+		7B14D5592D55EEDD001C2D26 /* HighAlertsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighAlertsViewController.xib; sourceTree = "<group>"; };
+		7B14D5612D55EF9E001C2D26 /* HATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HATableViewCell.swift; sourceTree = "<group>"; };
+		7B14D5622D55EF9E001C2D26 /* HATableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HATableViewCell.xib; sourceTree = "<group>"; };
+		7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HApkvTableViewCell.swift; sourceTree = "<group>"; };
+		7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HApkvTableViewCell.xib; sourceTree = "<group>"; };
 		7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecertificationViewController.swift; sourceTree = "<group>"; };
 		7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecertificationViewController.xib; sourceTree = "<group>"; };
 		7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantBloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +311,7 @@
 		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B14D5572D55EEB0001C2D26 /* HighAlertsVC */,
 				7B14D5522D55E18E001C2D26 /* WSTableViewCell */,
 				7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */,
 				7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */,
@@ -313,6 +326,35 @@
 				7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */,
 			);
 			path = WSTableViewCell;
+			sourceTree = "<group>";
+		};
+		7B14D5572D55EEB0001C2D26 /* HighAlertsVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5652D55F6E7001C2D26 /* HApkvTableViewCell */,
+				7B14D55C2D55EF58001C2D26 /* HATableViewCell */,
+				7B14D5582D55EEDD001C2D26 /* HighAlertsViewController.swift */,
+				7B14D5592D55EEDD001C2D26 /* HighAlertsViewController.xib */,
+			);
+			path = HighAlertsVC;
+			sourceTree = "<group>";
+		};
+		7B14D55C2D55EF58001C2D26 /* HATableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5612D55EF9E001C2D26 /* HATableViewCell.swift */,
+				7B14D5622D55EF9E001C2D26 /* HATableViewCell.xib */,
+			);
+			path = HATableViewCell;
+			sourceTree = "<group>";
+		};
+		7B14D5652D55F6E7001C2D26 /* HApkvTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */,
+				7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */,
+			);
+			path = HApkvTableViewCell;
 			sourceTree = "<group>";
 		};
 		7B20708D2CA45283000A46A4 /* RecertificationVC */ = {
@@ -768,7 +810,9 @@
 				7BC070A22CFED72800A76DCF /* TabBarView.xib in Resources */,
 				7BC070A92CFEFE1B00A76DCF /* CustomTabBar.xib in Resources */,
 				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
+				7B14D55A2D55EEDD001C2D26 /* HighAlertsViewController.xib in Resources */,
 				7B14D5242D5277D8001C2D26 /* LifeRoutineCollectionViewCell.xib in Resources */,
+				7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */,
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
 				7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */,
 				7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */,
@@ -778,6 +822,7 @@
 				7B8F900D2CE32CE400703E1C /* TipsViewController.xib in Resources */,
 				7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */,
 				7B14D52A2D5277D8001C2D26 /* LifeViewController.xib in Resources */,
+				7B14D5632D55EF9E001C2D26 /* HATableViewCell.xib in Resources */,
 				7BC15D802D01A50300A4AD50 /* ReportViewController.xib in Resources */,
 				7B14D54A2D55DD35001C2D26 /* LifeEventRecordViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
@@ -861,7 +906,9 @@
 				7B14D5472D55DD35001C2D26 /* LifeEventReordTableViewCell.swift in Sources */,
 				7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */,
 				7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */,
+				7B14D56A2D55F71F001C2D26 /* HApkvTableViewCell.swift in Sources */,
 				7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */,
+				7B14D5642D55EF9E001C2D26 /* HATableViewCell.swift in Sources */,
 				7B64473F2CF5B7B6002C43D7 /* SensorPopoverViewControllerDelegate.swift in Sources */,
 				7BC928E52D02E56600B9EE78 /* BloodSugarCorrectionKnowMoreViewController.swift in Sources */,
 				7B8F901C2CEC9DA500703E1C /* ScanningSensorViewController.swift in Sources */,
@@ -892,6 +939,7 @@
 				7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */,
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BC070BE2CFF05DE00A76DCF /* HistoryViewController.swift in Sources */,
+				7B14D55B2D55EEDD001C2D26 /* HighAlertsViewController.swift in Sources */,
 				7B14D5212D5277D8001C2D26 /* LifeCollectionViewCell.swift in Sources */,
 				7BC070962CFED4B400A76DCF /* MainViewController.swift in Sources */,
 				7BC070AE2CFF052200A76DCF /* BloodSugarCorrectionViewController.swift in Sources */,
