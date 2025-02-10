@@ -16,6 +16,7 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var swOnOff: UISwitch!
     @IBOutlet weak var imgvReload: UIImageView!
     @IBOutlet weak var lbContent: UILabel!
+    @IBOutlet weak var txfInput: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +33,12 @@ class SettingTableViewCell: UITableViewCell {
             Switch.shared.swUnitChangeState = swOnOff.isOn
         } else if lbTitle.text == "超出高低血糖警示" {
             Switch.shared.swOverHighLowAlertState = swOnOff.isOn
+        } else if lbTitle.text == "顯示數值資訊" {
+            Switch.shared.swDisplayValueInfo = swOnOff.isOn
+        } else if lbTitle.text == "顯示 RSSI" {
+            Switch.shared.swDisplayRSSI = swOnOff.isOn
+        } else if lbTitle.text == "上傳雲端" {
+            Switch.shared.swUploadCloud = swOnOff.isOn
         }
     }
     

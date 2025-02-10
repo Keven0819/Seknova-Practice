@@ -30,6 +30,7 @@ class UserPreferences {
         case bloodsugarCorrectionValue
         case highAertsValue
         case lowAlertsValue
+        case developmentModeKey
     }
     
     var mail: String? {
@@ -146,6 +147,15 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.lowAlertsValue.rawValue)
+        }
+    }
+    
+    var developmentModeKey: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.developmentModeKey.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.developmentModeKey.rawValue)
         }
     }
 }

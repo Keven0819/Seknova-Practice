@@ -36,6 +36,10 @@
 		7B14D5642D55EF9E001C2D26 /* HATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5612D55EF9E001C2D26 /* HATableViewCell.swift */; };
 		7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */; };
 		7B14D56A2D55F71F001C2D26 /* HApkvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */; };
+		7B14D56E2D59EEC6001C2D26 /* RateAlertsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D56D2D59EEC6001C2D26 /* RateAlertsViewController.xib */; };
+		7B14D56F2D59EEC6001C2D26 /* RateAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D56C2D59EEC6001C2D26 /* RateAlertsViewController.swift */; };
+		7B14D5732D59F1DC001C2D26 /* RateAlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */; };
+		7B14D5742D59F1DC001C2D26 /* RateAlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */; };
 		7B2070902CA452C0000A46A4 /* RecertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */; };
 		7B2070912CA452C0000A46A4 /* RecertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */; };
 		7B6447272CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */; };
@@ -140,6 +144,10 @@
 		7B14D5622D55EF9E001C2D26 /* HATableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HATableViewCell.xib; sourceTree = "<group>"; };
 		7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HApkvTableViewCell.swift; sourceTree = "<group>"; };
 		7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HApkvTableViewCell.xib; sourceTree = "<group>"; };
+		7B14D56C2D59EEC6001C2D26 /* RateAlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlertsViewController.swift; sourceTree = "<group>"; };
+		7B14D56D2D59EEC6001C2D26 /* RateAlertsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateAlertsViewController.xib; sourceTree = "<group>"; };
+		7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlertsTableViewCell.swift; sourceTree = "<group>"; };
+		7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateAlertsTableViewCell.xib; sourceTree = "<group>"; };
 		7B20708E2CA452C0000A46A4 /* RecertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecertificationViewController.swift; sourceTree = "<group>"; };
 		7B20708F2CA452C0000A46A4 /* RecertificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecertificationViewController.xib; sourceTree = "<group>"; };
 		7B6447252CEF3E3B002C43D7 /* InstantBloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantBloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -311,50 +319,62 @@
 		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B14D56B2D59EE6D001C2D26 /* RateAlertsVC */,
 				7B14D5572D55EEB0001C2D26 /* HighAlertsVC */,
-				7B14D5522D55E18E001C2D26 /* WSTableViewCell */,
+				7B14D5522D55E18E001C2D26 /* Components */,
 				7B14D54E2D55E0B8001C2D26 /* WarningSettingViewController.swift */,
 				7B14D54F2D55E0B8001C2D26 /* WarningSettingViewController.xib */,
 			);
 			path = WarningSettingVC;
 			sourceTree = "<group>";
 		};
-		7B14D5522D55E18E001C2D26 /* WSTableViewCell */ = {
+		7B14D5522D55E18E001C2D26 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				7B14D5532D55E1BA001C2D26 /* WSTableViewCell.swift */,
 				7B14D5542D55E1BA001C2D26 /* WSTableViewCell.xib */,
 			);
-			path = WSTableViewCell;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7B14D5572D55EEB0001C2D26 /* HighAlertsVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B14D5652D55F6E7001C2D26 /* HApkvTableViewCell */,
-				7B14D55C2D55EF58001C2D26 /* HATableViewCell */,
+				7B14D5652D55F6E7001C2D26 /* Components */,
 				7B14D5582D55EEDD001C2D26 /* HighAlertsViewController.swift */,
 				7B14D5592D55EEDD001C2D26 /* HighAlertsViewController.xib */,
 			);
 			path = HighAlertsVC;
 			sourceTree = "<group>";
 		};
-		7B14D55C2D55EF58001C2D26 /* HATableViewCell */ = {
+		7B14D5652D55F6E7001C2D26 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				7B14D5612D55EF9E001C2D26 /* HATableViewCell.swift */,
 				7B14D5622D55EF9E001C2D26 /* HATableViewCell.xib */,
-			);
-			path = HATableViewCell;
-			sourceTree = "<group>";
-		};
-		7B14D5652D55F6E7001C2D26 /* HApkvTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
 				7B14D5672D55F71F001C2D26 /* HApkvTableViewCell.swift */,
 				7B14D5682D55F71F001C2D26 /* HApkvTableViewCell.xib */,
 			);
-			path = HApkvTableViewCell;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7B14D56B2D59EE6D001C2D26 /* RateAlertsVC */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5702D59F092001C2D26 /* Components */,
+				7B14D56C2D59EEC6001C2D26 /* RateAlertsViewController.swift */,
+				7B14D56D2D59EEC6001C2D26 /* RateAlertsViewController.xib */,
+			);
+			path = RateAlertsVC;
+			sourceTree = "<group>";
+		};
+		7B14D5702D59F092001C2D26 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B14D5712D59F1DC001C2D26 /* RateAlertsTableViewCell.swift */,
+				7B14D5722D59F1DC001C2D26 /* RateAlertsTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7B20708D2CA45283000A46A4 /* RecertificationVC */ = {
@@ -807,6 +827,7 @@
 				7BC070AD2CFF052200A76DCF /* BloodSugarCorrectionViewController.xib in Resources */,
 				7B14D5282D5277D8001C2D26 /* TxfGTableViewCell.xib in Resources */,
 				7B14D5222D5277D8001C2D26 /* LifeCollectionViewCell.xib in Resources */,
+				7B14D5732D59F1DC001C2D26 /* RateAlertsTableViewCell.xib in Resources */,
 				7BC070A22CFED72800A76DCF /* TabBarView.xib in Resources */,
 				7BC070A92CFEFE1B00A76DCF /* CustomTabBar.xib in Resources */,
 				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
@@ -814,6 +835,7 @@
 				7B14D5242D5277D8001C2D26 /* LifeRoutineCollectionViewCell.xib in Resources */,
 				7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */,
 				7B9B926D2CBCE27600203AD3 /* BodyInformationViewController.xib in Resources */,
+				7B14D56E2D59EEC6001C2D26 /* RateAlertsViewController.xib in Resources */,
 				7BAE87342CC67C9D00A39EA2 /* BloodSugarViewController.xib in Resources */,
 				7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */,
 				7B8F90172CEC933800703E1C /* PairAnimateViewController.xib in Resources */,
@@ -900,6 +922,7 @@
 				7BC070A32CFED72800A76DCF /* TabBarView.swift in Sources */,
 				7B14D5232D5277D8001C2D26 /* LifeRoutineCollectionViewCell.swift in Sources */,
 				7B14D5562D55E1BA001C2D26 /* WSTableViewCell.swift in Sources */,
+				7B14D5742D59F1DC001C2D26 /* RateAlertsTableViewCell.swift in Sources */,
 				7B14D5272D5277D8001C2D26 /* TxfGTableViewCell.swift in Sources */,
 				7B14D5292D5277D8001C2D26 /* LifeViewController.swift in Sources */,
 				7B655C622CB3FDA200345704 /* ResetPasswordViewController.swift in Sources */,
@@ -942,6 +965,7 @@
 				7B14D55B2D55EEDD001C2D26 /* HighAlertsViewController.swift in Sources */,
 				7B14D5212D5277D8001C2D26 /* LifeCollectionViewCell.swift in Sources */,
 				7BC070962CFED4B400A76DCF /* MainViewController.swift in Sources */,
+				7B14D56F2D59EEC6001C2D26 /* RateAlertsViewController.swift in Sources */,
 				7BC070AE2CFF052200A76DCF /* BloodSugarCorrectionViewController.swift in Sources */,
 				7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */,
 				7B6F7D0A2CA2A15C00E9A1DC /* RegisterViewController.swift in Sources */,

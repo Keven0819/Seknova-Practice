@@ -87,7 +87,7 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
         case 1:
             return ""
         case 2:
-            return " "
+            return ""
         default:
             return nil
         }
@@ -102,7 +102,7 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
         case 1:
             return 0
         case 2:
-            return 2.5
+            return 0
         default :
             return 0
         }
@@ -115,12 +115,41 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
         case 0:
             return "Note: Urgent low alert at 55 mg/dL is always on."
         default:
-            return nil
+            return ""
+        }
+    }
+    
+    // 設定 Section 的 Footer 字體大小
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        switch section {
+        case 0:
+            let footerView = UIView()
+            let label = UILabel()
+            label.text = "Note: Urgent low alert at 55 mg/dL is always on."
+            label.font = UIFont.systemFont(ofSize: 12)
+            label.textColor = .gray
+            label.textAlignment = .left
+            label.numberOfLines = 0
+            label.frame = CGRect(x: 20, y: -5, width: tableView.frame.width, height: 40)
+            footerView.addSubview(label)
+            return footerView
+        default:
+                return nil
         }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 40 // 設定 footer 高度
+        
+        switch section {
+        case 0:
+            return 40
+        case 1:
+            return 10
+        case 2:
+            return 0
+        default:
+            return 0
+        }
     }
     
     // 設定 cell 的高度
@@ -154,6 +183,11 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             switch indexPath.row {
             case 0:
                 cell.lbTitle.text = "Rate Alerts"
+                if RateAlertSwitch.shared.swRiseAlertState || RateAlertSwitch.shared.swFallAlertState {
+                    cell.lbSubTitle.text = "On"
+                } else {
+                    cell.lbSubTitle.text = "Off"
+                }
             default:
                 break
             }
@@ -182,6 +216,14 @@ extension WarningSettingViewController: UITableViewDelegate, UITableViewDataSour
             case 1:
                 HighOrLow.shared.highOrLow = false
                 let vc = HighAlertsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            default:
+                break
+            }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                let vc = RateAlertsViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             default:
                 break
