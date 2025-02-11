@@ -268,7 +268,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 let vc = WarningSettingViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             case 1:
-                print("跳轉至校正模式")
+                let vc = CalibrationModeViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             case 11:
                 // 能輸入文字的 AlertController
                 let alertController = UIAlertController(title: "請輸入對應字串！",
