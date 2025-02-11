@@ -44,6 +44,7 @@ class SettingViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        saveTextFieldText()
     }
     
     // MARK: - UI Settings
@@ -61,6 +62,19 @@ class SettingViewController: UIViewController {
     
     func whatMode() {
         developmentMode = UserPreferences.shared.developmentModeKey ?? "0000"
+    }
+    
+    func saveTextFieldText() {
+        if developmentMode == "8888" {
+            let cell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as! SettingTableViewCell
+            UserPreferences.shared.adcInitialValue = cell.txfInput.text
+            
+            let cell1 = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as! SettingTableViewCell
+            UserPreferences.shared.timeIntervalValue = cell1.txfInput.text
+            
+            let cell2 = tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as! SettingTableViewCell
+            UserPreferences.shared.yAxisLimitsValue = cell2.txfInput.text
+        }
     }
     
     // MARK: - IBAction
@@ -113,7 +127,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "Off"
             case 5:
-                cell.lbTitle.text = "韌體版本"
+                cell.lbTitle.text = "上傳事件日誌"
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "09/05 02:16:35"
             case 6:
@@ -139,15 +153,33 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             case 2:
                 cell.lbTitle.text = "設定ADC初始值"
                 cell.txfInput.isHidden = false
-                cell.txfInput.text = "0"
+                if UserPreferences.shared.adcInitialValue == "" {
+                    cell.txfInput.text = "0"
+                } else {
+                    cell.txfInput.text = UserPreferences.shared.adcInitialValue
+                }
+                cell.txfInput.keyboardType = .numberPad
             case 3:
                 cell.lbTitle.text = "設定X軸時間間距 (per/s)"
                 cell.txfInput.isHidden = false
-                cell.txfInput.text = "3600.0 per/s"
+                if UserPreferences.shared.timeIntervalValue == "" {
+                    cell.txfInput.text = "3600.0 per/s"
+                } else {
+                    cell.txfInput.text = UserPreferences.shared.timeIntervalValue
+                    if cell.txfInput.text?.contains("per/s") == false {
+                        cell.txfInput.text = cell.txfInput.text! + " per/s"
+                    }
+                }
+                cell.txfInput.keyboardType = .numberPad
             case 4:
                 cell.lbTitle.text = "設定y軸上下限"
                 cell.txfInput.isHidden = false
-                cell.txfInput.text = "400,0"
+                if UserPreferences.shared.yAxisLimitsValue == "" {
+                    cell.txfInput.text = "400,0"
+                } else {
+                    cell.txfInput.text = UserPreferences.shared.yAxisLimitsValue
+                }
+                cell.txfInput.keyboardType = .numberPad
             case 5:
                 cell.lbTitle.text = "單位切換(mmol/L)"
                 cell.swOnOff.isHidden = false
@@ -176,7 +208,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "Off"
             case 12:
-                cell.lbTitle.text = "韌體版本"
+                cell.lbTitle.text = "上傳事件日誌"
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "09/05 02:16:35"
             case 13:
@@ -202,32 +234,62 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.row {
-        case 0:
-            let warningSettingVC = WarningSettingViewController()
-            self.navigationItem.backButtonTitle = "設定"
-            navigationController?.pushViewController(warningSettingVC, animated: true)
-        case 4:
-            // 能輸入文字的 AlertController
-            let alertController = UIAlertController(title: "請輸入對應字串！",
-                                                    message: "如果輸入 0000 會切換暖機狀態\n如果輸入 8888 則開啟開發模式",
-                                                    preferredStyle: .alert)
-            alertController.addTextField { (textField) in
-                textField.placeholder = ""
+        if developmentMode == "0000" {
+            switch indexPath.row {
+            case 0:
+                let warningSettingVC = WarningSettingViewController()
+                self.navigationItem.backButtonTitle = "設定"
+                navigationController?.pushViewController(warningSettingVC, animated: true)
+            case 4:
+                // 能輸入文字的 AlertController
+                let alertController = UIAlertController(title: "請輸入對應字串！",
+                                                        message: "如果輸入 0000 會切換暖機狀態\n如果輸入 8888 則開啟開發模式",
+                                                        preferredStyle: .alert)
+                alertController.addTextField { (textField) in
+                    textField.placeholder = ""
+                }
+                let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+                let okAction = UIAlertAction(title: "確認", style: .default) { (action) in
+                    self.developmentMode = alertController.textFields?[0].text ?? ""
+                    print("輸入的字串：\(self.developmentMode)")
+                    UserPreferences.shared.developmentModeKey = self.developmentMode
+                    self.tableView.reloadData()
+                }
+                alertController.addAction(cancelAction)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+                
+            default:
+                break
             }
-            let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
-            let okAction = UIAlertAction(title: "確認", style: .default) { (action) in
-                self.developmentMode = alertController.textFields?[0].text ?? ""
-                print("輸入的字串：\(self.developmentMode)")
-                UserPreferences.shared.developmentModeKey = self.developmentMode
-                self.tableView.reloadData()
+        } else if developmentMode == "8888" {
+            switch indexPath.row {
+            case 0:
+                let vc = WarningSettingViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                print("跳轉至校正模式")
+            case 11:
+                // 能輸入文字的 AlertController
+                let alertController = UIAlertController(title: "請輸入對應字串！",
+                                                        message: "如果輸入 0000 會切換暖機狀態\n如果輸入 8888 則開啟開發模式",
+                                                        preferredStyle: .alert)
+                alertController.addTextField { (textField) in
+                    textField.placeholder = ""
+                }
+                let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+                let okAction = UIAlertAction(title: "確認", style: .default) { (action) in
+                    self.developmentMode = alertController.textFields?[0].text ?? ""
+                    print("輸入的字串：\(self.developmentMode)")
+                    UserPreferences.shared.developmentModeKey = self.developmentMode
+                    self.tableView.reloadData()
+                }
+                alertController.addAction(cancelAction)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            default:
+                break
             }
-            alertController.addAction(cancelAction)
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-            
-        default:
-            break
         }
     }
 }

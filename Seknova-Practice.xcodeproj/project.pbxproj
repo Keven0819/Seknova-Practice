@@ -88,6 +88,8 @@
 		7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7665D2CCA5F7B00D0F340 /* Alert.swift */; };
 		7BAD780F2D34EC810082B037 /* BindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD780E2D34EC810082B037 /* BindPhoneViewController.xib */; };
 		7BAD78102D34EC810082B037 /* BindPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD780D2D34EC810082B037 /* BindPhoneViewController.swift */; };
+		7BAE05CB2D5B2D5700685067 /* CalibrationModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE05C92D5B2D5700685067 /* CalibrationModeViewController.swift */; };
+		7BAE05CC2D5B2D5700685067 /* CalibrationModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE05CA2D5B2D5700685067 /* CalibrationModeViewController.xib */; };
 		7BAE872E2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */; };
 		7BAE872F2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */; };
 		7BAE87332CC67C9D00A39EA2 /* BloodSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */; };
@@ -204,6 +206,8 @@
 		7BA7665D2CCA5F7B00D0F340 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7BAD780D2D34EC810082B037 /* BindPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindPhoneViewController.swift; sourceTree = "<group>"; };
 		7BAD780E2D34EC810082B037 /* BindPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindPhoneViewController.xib; sourceTree = "<group>"; };
+		7BAE05C92D5B2D5700685067 /* CalibrationModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationModeViewController.swift; sourceTree = "<group>"; };
+		7BAE05CA2D5B2D5700685067 /* CalibrationModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalibrationModeViewController.xib; sourceTree = "<group>"; };
 		7BAE872C2CC6254400A39EA2 /* AudioVisualTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualTeachingViewController.swift; sourceTree = "<group>"; };
 		7BAE872D2CC6254400A39EA2 /* AudioVisualTeachingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioVisualTeachingViewController.xib; sourceTree = "<group>"; };
 		7BAE87312CC67C9D00A39EA2 /* BloodSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				7BAE05C82D5B2D2200685067 /* CalibrationModeVC */,
 				7B14D5752D5A03B0001C2D26 /* AudioVC */,
 				7B14D56B2D59EE6D001C2D26 /* RateAlertsVC */,
 				7B14D5572D55EEB0001C2D26 /* HighAlertsVC */,
@@ -644,6 +649,15 @@
 			path = BindPhoneVC;
 			sourceTree = "<group>";
 		};
+		7BAE05C82D5B2D2200685067 /* CalibrationModeVC */ = {
+			isa = PBXGroup;
+			children = (
+				7BAE05C92D5B2D5700685067 /* CalibrationModeViewController.swift */,
+				7BAE05CA2D5B2D5700685067 /* CalibrationModeViewController.xib */,
+			);
+			path = CalibrationModeVC;
+			sourceTree = "<group>";
+		};
 		7BAE872B2CC624A400A39EA2 /* AudioVisualTeachingVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +897,7 @@
 				7B14D5632D55EF9E001C2D26 /* HATableViewCell.xib in Resources */,
 				7BC15D802D01A50300A4AD50 /* ReportViewController.xib in Resources */,
 				7B14D54A2D55DD35001C2D26 /* LifeEventRecordViewController.xib in Resources */,
+				7BAE05CC2D5B2D5700685067 /* CalibrationModeViewController.xib in Resources */,
 				7BD875C12CA6AF28008BB100 /* TermsViewController.xib in Resources */,
 				7B14D53E2D54B347001C2D26 /* SettingTableViewCell.xib in Resources */,
 				7B14D5552D55E1BA001C2D26 /* WSTableViewCell.xib in Resources */,
@@ -1003,6 +1018,7 @@
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BC070BE2CFF05DE00A76DCF /* HistoryViewController.swift in Sources */,
 				7B14D55B2D55EEDD001C2D26 /* HighAlertsViewController.swift in Sources */,
+				7BAE05CB2D5B2D5700685067 /* CalibrationModeViewController.swift in Sources */,
 				7B14D5212D5277D8001C2D26 /* LifeCollectionViewCell.swift in Sources */,
 				7BC070962CFED4B400A76DCF /* MainViewController.swift in Sources */,
 				7B14D56F2D59EEC6001C2D26 /* RateAlertsViewController.swift in Sources */,

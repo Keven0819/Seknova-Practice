@@ -48,6 +48,9 @@ class WarningSettingViewController: UIViewController {
     
     func setupNavigationBar() {
         self.navigationItem.title = "警示設定"
+        let backButton = UIBarButtonItem()
+        backButton.title = "返回"
+        navigationItem.backBarButtonItem = backButton
     }
     
     // MARK: - IBAction

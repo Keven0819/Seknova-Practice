@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOY-9Z-SeI">
-                        <rect key="frame" x="166" y="5" width="138" height="34"/>
+                        <rect key="frame" x="120" y="5" width="184" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -56,7 +56,7 @@
                     <constraint firstItem="RVt-fo-WcJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CZV-7q-Wgi"/>
                     <constraint firstItem="yQa-oH-mWP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="GnC-8V-YAy"/>
                     <constraint firstItem="nOY-9Z-SeI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IKq-UK-ZQC"/>
-                    <constraint firstItem="nOY-9Z-SeI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.43125" id="Ji6-Wf-d9z"/>
+                    <constraint firstItem="nOY-9Z-SeI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.43125" constant="46" id="Ji6-Wf-d9z"/>
                     <constraint firstItem="5yP-My-VJT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MCG-kE-wzf"/>
                     <constraint firstAttribute="trailing" secondItem="Uz6-Vo-cGE" secondAttribute="trailing" constant="16" id="NIY-Q1-ycn"/>
                     <constraint firstItem="RVt-fo-WcJ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.704545" id="OPX-Pc-xAO"/>

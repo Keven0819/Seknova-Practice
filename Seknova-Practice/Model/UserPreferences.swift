@@ -32,6 +32,9 @@ class UserPreferences {
         case lowAlertsValue
         case developmentModeKey
         case audioValue
+        case adcInitialValue
+        case timeIntervalValue
+        case yAxisLimitsValue
     }
     
     var mail: String? {
@@ -166,6 +169,33 @@ class UserPreferences {
         }
         set {
             userPreference.set(newValue, forKey: UserPreferenceKey.audioValue.rawValue)
+        }
+    }
+    
+    var adcInitialValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.adcInitialValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.adcInitialValue.rawValue)
+        }
+    }
+    
+    var timeIntervalValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.timeIntervalValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.timeIntervalValue.rawValue)
+        }
+    }
+    
+    var yAxisLimitsValue: String? {
+        get {
+            return userPreference.string(forKey: UserPreferenceKey.yAxisLimitsValue.rawValue)
+        }
+        set {
+            userPreference.set(newValue, forKey: UserPreferenceKey.yAxisLimitsValue.rawValue)
         }
     }
 }
