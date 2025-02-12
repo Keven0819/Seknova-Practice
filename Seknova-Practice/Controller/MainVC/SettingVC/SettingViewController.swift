@@ -52,6 +52,7 @@ class SettingViewController: UIViewController {
     func setupUI() {
         setupTableView()
         whatMode()
+        setupNavigationBar()
     }
     
     func setupTableView() {
@@ -62,6 +63,10 @@ class SettingViewController: UIViewController {
     
     func whatMode() {
         developmentMode = UserPreferences.shared.developmentModeKey ?? "0000"
+    }
+    
+    func setupNavigationBar() {
+        self.navigationItem.title = "設定"
     }
     
     func saveTextFieldText() {

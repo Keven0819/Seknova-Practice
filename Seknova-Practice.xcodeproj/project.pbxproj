@@ -62,6 +62,8 @@
 		7B6F7D0B2CA2A15C00E9A1DC /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F7D092CA2A15C00E9A1DC /* RegisterViewController.xib */; };
 		7B6F7D0F2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F7D0D2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift */; };
 		7B6F7D102CA2A3E700E9A1DC /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F7D0E2CA2A3E700E9A1DC /* ForgetPasswordViewController.xib */; };
+		7B6FFDE72D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6FFDE52D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.swift */; };
+		7B6FFDE82D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6FFDE62D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.xib */; };
 		7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B78367D2CA13AA7006EE7D8 /* AppDelegate.swift */; };
 		7B7836802CA13AA7006EE7D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B78367F2CA13AA7006EE7D8 /* SceneDelegate.swift */; };
 		7B7836872CA13AA9006EE7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836862CA13AA9006EE7D8 /* Assets.xcassets */; };
@@ -178,6 +180,8 @@
 		7B6F7D092CA2A15C00E9A1DC /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		7B6F7D0D2CA2A3E700E9A1DC /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		7B6F7D0E2CA2A3E700E9A1DC /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		7B6FFDE52D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationModeTableViewCell.swift; sourceTree = "<group>"; };
+		7B6FFDE62D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalibrationModeTableViewCell.xib; sourceTree = "<group>"; };
 		7B78367A2CA13AA7006EE7D8 /* Seknova-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seknova-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B78367D2CA13AA7006EE7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B78367F2CA13AA7006EE7D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -509,6 +513,15 @@
 			path = ForgetPasswordVC;
 			sourceTree = "<group>";
 		};
+		7B6FFDE42D5C4D0600B9ABA2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B6FFDE52D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.swift */,
+				7B6FFDE62D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7B7836712CA13AA7006EE7D8 = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +665,7 @@
 		7BAE05C82D5B2D2200685067 /* CalibrationModeVC */ = {
 			isa = PBXGroup;
 			children = (
+				7B6FFDE42D5C4D0600B9ABA2 /* Components */,
 				7BAE05C92D5B2D5700685067 /* CalibrationModeViewController.swift */,
 				7BAE05CA2D5B2D5700685067 /* CalibrationModeViewController.xib */,
 			);
@@ -905,6 +919,7 @@
 				7BC070952CFED4B400A76DCF /* MainViewController.xib in Resources */,
 				7B14D5782D5A03DE001C2D26 /* AudioViewController.xib in Resources */,
 				7B14D5262D5277D8001C2D26 /* LifeTableViewCell.xib in Resources */,
+				7B6FFDE82D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.xib in Resources */,
 				7B8F901D2CEC9DA500703E1C /* ScanningSensorViewController.xib in Resources */,
 				7BAD780F2D34EC810082B037 /* BindPhoneViewController.xib in Resources */,
 				7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */,
@@ -1015,6 +1030,7 @@
 				7B14D5492D55DD35001C2D26 /* LifeEventRecordViewController.swift in Sources */,
 				7BC15D862D01A56100A4AD50 /* LogViewController.swift in Sources */,
 				7B6447312CF0692C002C43D7 /* PersonInformationViewController.swift in Sources */,
+				7B6FFDE72D5C4D2600B9ABA2 /* CalibrationModeTableViewCell.swift in Sources */,
 				7B8F90072CE2FBFB00703E1C /* TransmitterViewController.swift in Sources */,
 				7BC070BE2CFF05DE00A76DCF /* HistoryViewController.swift in Sources */,
 				7B14D55B2D55EEDD001C2D26 /* HighAlertsViewController.swift in Sources */,
