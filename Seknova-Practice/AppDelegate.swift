@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // resetRealmDatabase()
+        // IQKeyboardManager設定
+        IQKeyboardManager.shared().isEnabled = true
         
+        // 點擊空白處收起鍵盤
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
+        
+        IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "完成"
+        IQKeyboardManager.shared().keyboardDistanceFromTextField = 10
+        IQKeyboardManager.shared().previousNextDisplayMode = .alwaysShow
+        
+        
+        // 重設 Realm 數據庫
         func resetRealmDatabase() {
             let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
             let realmURLs = [
