@@ -53,6 +53,7 @@ class LifeEvents: Object {
     @Persisted var event: String = ""
     @Persisted var dateTime: String = ""
     @Persisted var displayTime: String = ""
+    @Persisted var timestamp: Double // 新增 timestamp 欄位
     @Persisted var mealName: String = ""
     @Persisted var mealNum: String = ""
     @Persisted var exeName: String = ""
@@ -73,6 +74,7 @@ class LifeEvents: Object {
     convenience init(event: String,
                      dateTime: String,
                      displayTime: String,
+                     timestamp: Double,
                      mealName: String,
                      mealNum: String,
                      exeName: String,
@@ -88,6 +90,7 @@ class LifeEvents: Object {
         self.event = event
         self.dateTime = dateTime
         self.displayTime = displayTime
+        self.timestamp = timestamp
         self.mealName = mealName
         self.mealNum = mealNum
         self.exeName = exeName

@@ -430,7 +430,7 @@ class LifeViewController: UIViewController {
             if let date = currentDateFormatter.date(from: currentDateText) {
                 // 使用新的日期格式
                 let newDateFormatter = DateFormatter()
-                newDateFormatter.dateFormat = "MM/dd hh:mm a"
+                newDateFormatter.dateFormat = "MM/dd a hh:mm"
                 newDateFormatter.locale = Locale(identifier: "zh_TW")
                 
                 displayTime = newDateFormatter.string(from: date)
@@ -466,9 +466,17 @@ class LifeViewController: UIViewController {
                 print("未找到對應的資料，UUID：", uuid)
             }
         } else {
+            
+            // 先確保 dateTime 可轉換為 Date 型別
+            guard let eventDate = convertToDate(lbDate.text ?? "") else {
+                print("日期轉換失敗")
+                return
+            }
+            
             let event = LifeEvents(event: selectedLifeRoutin,
                                    dateTime: lbDate.text ?? "",
                                    displayTime: displayTime,
+                                   timestamp: eventDate.timeIntervalSince1970, // 存入 UNIX timestamp
                                    mealName: DataMealName,
                                    mealNum: DataMealNum,
                                    exeName: DataExeName,
@@ -495,6 +503,15 @@ class LifeViewController: UIViewController {
         navigationController?.pushViewController(LifeEventRecordVC, animated: false)
     }
     // MARK: - Function
+    
+    // 日期轉換函式
+    func convertToDate(_ dateString: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm"
+        formatter.locale = Locale(identifier: "zh_TW")
+        return formatter.date(from: dateString)
+    }
+    
     func viewDidLoadTime() {
         dpkDate.maximumDate = Date()
         

@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import Charts
 
-class HorizontalHistoryViewController: UIViewController {
+class HorizontalHistoryViewController: UIViewController, ChartViewDelegate {
     
     // MARK: - IBOutlet
     @IBOutlet weak var segcHr: UISegmentedControl!
@@ -17,6 +17,9 @@ class HorizontalHistoryViewController: UIViewController {
     @IBOutlet weak var imgvLastData: UIImageView!
     @IBOutlet weak var vEventDetails: UIView!
     @IBOutlet weak var btnvLastData: UIButton!
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbTime: UILabel!
+    @IBOutlet weak var lbName: UILabel!
     
     // MARK: - Property
     var number = Int.random(in: 55...400)
@@ -36,6 +39,7 @@ class HorizontalHistoryViewController: UIViewController {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.orientationLock = .landscape
         }
+        loadEventsFromRealm()
     }
     
     override func viewDidLoad() {
@@ -46,6 +50,9 @@ class HorizontalHistoryViewController: UIViewController {
         XAxisUpdate()
         events = Array(realm.objects(LifeEvents.self))
         segcHr.addTarget(self, action: #selector(segmentedControlChanged(_:)), for: .valueChanged)
+        loadEventsFromRealm() // 讀取事件
+        
+        vChart.delegate = self // 設定代理
     }
     
     // 讓返回時恢復為直向畫面
@@ -215,6 +222,104 @@ class HorizontalHistoryViewController: UIViewController {
     func updateChartData() {
         generateXAxisLabels()
         vChart.notifyDataSetChanged()
+    }
+    
+    func loadEventsFromRealm() {
+        let realm = try! Realm()
+        events = Array(realm.objects(LifeEvents.self).sorted(byKeyPath: "timestamp", ascending: true)) // 依時間排序
+        updateChartWithEvents()
+    }
+    
+    func updateChartWithEvents() {
+        chartEntries.removeAll()
+        
+        for event in events {
+            let timestamp = event.timestamp
+            let icon = getEventIcon(event.eventId, eventValue: event.eventValue)?.resize(to: CGSize(width: 30, height: 30)) // 🔹 設定圖示大小
+            
+            let newEntry = ChartDataEntry(x: timestamp, y: 20, icon: icon) // 🔹 y 設為 0 避免產生曲線
+            chartEntries.append(newEntry)
+        }
+
+        let dataSet = LineChartDataSet(entries: chartEntries)
+        dataSet.drawIconsEnabled = true
+        dataSet.drawCirclesEnabled = false
+        dataSet.drawValuesEnabled = false
+        dataSet.drawFilledEnabled = false
+        dataSet.highlightEnabled = false
+        dataSet.colors = [.clear]
+
+        let chartData = LineChartData(dataSet: dataSet)
+        vChart.data = chartData
+        vChart.notifyDataSetChanged()
+    }
+    
+    func getEventIcon(_ eventId: Int, eventValue: Int) -> UIImage? {
+        switch eventId {
+        case 0:
+            switch eventValue {
+            case 0:
+                return UIImage(named: "breakfast")
+            case 1:
+                return UIImage(named: "launch")
+            case 2:
+                return UIImage(named: "dinner")
+            case 3:
+                return UIImage(named: "snacks")
+            case 4:
+                return UIImage(named: "dinrks")
+            default:
+                break
+            }
+        case 1:
+            switch LifeEvents().eventValue {
+            case 0:
+                return UIImage(named: "high_motion")
+            case 1:
+                return UIImage(named: "mid_motion")
+            case 2:
+                return UIImage(named: "low_motion")
+            default:
+                break
+            }
+        case 2:
+            return UIImage(named: "insulin")
+        case 3:
+            return UIImage(named: "awaken")
+        case 4:
+            return UIImage(named: "bath")
+        case 5:
+            return UIImage(named: "other")
+        default:
+            break
+        }
+        return nil
+    }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let selectedEvent = events.first(where: { $0.timestamp == entry.x }) else {
+            return
+        }
+        
+        lbTitle.text = selectedEvent.event  // 事件名稱
+        lbTime.text = selectedEvent.displayTime // 事件時間
+        
+        if selectedEvent.eventId == 0 {
+            lbName.text = selectedEvent.mealName + " " + selectedEvent.mealNum // 用餐名稱
+        } else if selectedEvent.eventId == 1 {
+            lbName.text = selectedEvent.exeName + " " + selectedEvent.exeTime // 運動名稱
+        } else if selectedEvent.eventId == 2 {
+            lbName.text = selectedEvent.sleepTime // 睡眠時間
+        } else if selectedEvent.eventId == 3 {
+            lbName.text = selectedEvent.doseG // 胰島素劑量
+        } else {
+            lbName.text = "" // 其他
+        }
+        vEventDetails.isHidden = false      // 顯示事件資訊 View
+    }
+    
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        vEventDetails.isHidden = true // 點擊空白區域時隱藏
     }
 }
 
