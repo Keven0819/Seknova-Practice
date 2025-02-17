@@ -19,6 +19,7 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
     @IBOutlet weak var imgvNetwork: UIImageView!
     @IBOutlet weak var lbValue: UILabel!
     @IBOutlet weak var myView: LineChartView!
+    @IBOutlet weak var lbContent: UILabel!
     
     // MARK: - Property
     var centralManager: CBCentralManager?
@@ -42,6 +43,12 @@ class InstantBloodSugarViewController: UIViewController, CBCentralManagerDelegat
         // 折線圖
         setupChart()
         XAxisUpdate()
+        lbContent.text = NSLocalizedString("The downward trend is less than 2 or 3 mg/dL per minute", comment: "")
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            lbContent.font = UIFont.systemFont(ofSize: 14)
+        } else {
+            lbContent.font = UIFont.systemFont(ofSize: 22)
+        }
     }
     
     // MARK: - UI Settings

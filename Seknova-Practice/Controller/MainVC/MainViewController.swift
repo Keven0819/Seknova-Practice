@@ -189,7 +189,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     // MARK: - IBAction
     @IBAction func btnReport(_ sender: Any) {
         let reportVC = ReportViewController()
-        self.navigationItem.backButtonTitle = "返回"
+        self.navigationItem.backButtonTitle = NSLocalizedString("Return", comment: "返回")
         self.navigationController?.pushViewController(reportVC, animated: true)
     }
     
@@ -288,11 +288,11 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             guard let userInfo = realm.objects(UserInformation.self).first else {
                 // 如果找不到用戶資料，顯示錯誤提示
                 let errorAlert = UIAlertController(
-                    title: "更新失敗",
-                    message: "找不到用戶資料",
+                    title: NSLocalizedString("Upload failed!", comment: ""),
+                    message: "",
                     preferredStyle: .alert
                 )
-                errorAlert.addAction(UIAlertAction(title: "確定", style: .default))
+                errorAlert.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default))
                 present(errorAlert, animated: true)
                 return
             }
@@ -346,11 +346,11 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             
             // 顯示更新成功提示
             let successAlert = UIAlertController(
-                title: "更新成功",
-                message: "您的個人資料已成功更新",
+                title: NSLocalizedString("Upload succeed!", comment: ""),
+                message: "",
                 preferredStyle: .alert
             )
-            successAlert.addAction(UIAlertAction(title: "確定", style: .default))
+            successAlert.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default))
             present(successAlert, animated: true)
         }
     }
@@ -387,7 +387,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         case 2:
             self.navigationItem.rightBarButtonItem?.isHidden =  false
             let rightButton = UIButton(type: .system)
-            rightButton.setTitle("事件記錄", for: .normal)
+            rightButton.setTitle(NSLocalizedString("Event log", comment: ""), for: .normal)
             rightButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             rightButton.addTarget(self, action: #selector(pushToLifeEventRecord), for: .touchUpInside)
             let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
@@ -417,7 +417,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
             self.navigationItem.rightBarButtonItem?.isHidden = false
             // 把原本的button改為另一個button
             let rightButton = UIButton(type: .system)
-            rightButton.setTitle("更新", for: .normal)
+            rightButton.setTitle(NSLocalizedString("Update", comment: ""), for: .normal)
             rightButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             rightButton.addTarget(self, action: #selector(personInfoRightButtonTapped), for: .touchUpInside)
             let rightBarButtonItem = UIBarButtonItem(customView: rightButton)

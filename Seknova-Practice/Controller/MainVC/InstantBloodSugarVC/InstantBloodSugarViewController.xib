@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,6 +13,7 @@
             <connections>
                 <outlet property="imgvBluetooth" destination="87d-Dv-FDL" id="Dgx-f6-vns"/>
                 <outlet property="imgvNetwork" destination="mst-Pw-uqg" id="STG-M5-FZa"/>
+                <outlet property="lbContent" destination="ANG-uL-mVq" id="Icz-M0-wlJ"/>
                 <outlet property="lbValue" destination="SIw-WK-cgw" id="zJt-CO-pcb"/>
                 <outlet property="myView" destination="aqO-44-W6G" id="GL0-lZ-F4r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
