@@ -40,6 +40,11 @@ class ResetPasswordViewController: UIViewController {
         setupLeftView(for: txfOldPassword, imageName: "password")
         setupLeftView(for: txfNewPassword, imageName: "password")
         setupLeftView(for: txfAgainNewPassword, imageName: "password")
+        txfEmail.placeholder = NSLocalizedString("Email", comment: "")
+        txfOldPassword.placeholder = NSLocalizedString("OldPassword", comment: "")
+        txfNewPassword.placeholder = NSLocalizedString("Please enter the password", comment: "")
+        txfAgainNewPassword.placeholder = NSLocalizedString("Confirmation password", comment: "")
+        btnSent.setTitle(NSLocalizedString("Send", comment: ""), for: .normal)
     }
     // MARK: - IBAction
     @IBAction func btnSentTapped(_ sender: Any) {
@@ -52,35 +57,35 @@ class ResetPasswordViewController: UIViewController {
         
         if txfEmail.text != email {
             
-            alert.showAlert(title: "錯誤", message: "Email輸入錯誤", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Email format error", comment: ""), vc: self, action: {})
             
         } else if txfOldPassword.text != password {
             
-            alert.showAlert(title: "錯誤", message: "舊密碼輸入錯誤", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Old Password format error", comment: ""), vc: self, action: {})
             
         } else if txfNewPassword.text!.count < 8 || txfNewPassword.text!.count > 16 {
             
-            alert.showAlert(title: "錯誤", message: "密碼需為8~16字元", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Password length must be 8~16 digits", comment: ""), vc: self, action: {})
             
         } else if !txfNewPassword.text!.containsNumber {
             
-            alert.showAlert(title: "錯誤", message: "密碼需含數字", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Password must contain numbers", comment: ""), vc: self, action: {})
             
         } else if !txfNewPassword.text!.containsLowercase {
             
-            alert.showAlert(title: "錯誤", message: "密碼需含小寫字母", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Password must contain lowercase letters", comment: ""), vc: self, action: {})
             
         } else if !txfNewPassword.text!.containsUppercase {
             
-            alert.showAlert(title: "錯誤", message: "密碼需含大寫字母", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Password must contain capital letters", comment: ""), vc: self, action: {})
             
         } else if txfNewPassword.text != txfAgainNewPassword.text {
             
-            alert.showAlert(title: "錯誤", message: "新密碼輸入不一致", vc: self, action: {})
+            alert.showAlert(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("The new password entered is inconsistent", comment: ""), vc: self, action: {})
             
         } else {
             
-            alert.showAlert(title: "提示", message: "密碼修改成功", vc: self, action: {
+            alert.showAlert(title: NSLocalizedString("Prompt", comment: ""), message: NSLocalizedString("Password setting completed", comment: ""), vc: self, action: {
                 
                 // 將新密碼存進userDefault
                 password = newPassword

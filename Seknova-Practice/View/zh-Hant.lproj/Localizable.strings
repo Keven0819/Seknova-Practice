@@ -119,7 +119,11 @@
 "The two passwords are different" = "兩次輸入密碼不同";
 "Did not agree to the membership terms" = "尚未同意會員條款";
 "Password must contain uppercase and lowercase letters and numbers" = "密碼需有大小字母與數字";
-"Password length must be 8 digits" = "密碼長度需有8位數";
+"Password must contain numbers" = "密碼需含數字";
+"Password must contain lowercase letters" = "密碼需含小寫字母";
+"Password must contain capital letters" = "密碼需含大寫字母";
+"Password length must be 8~16 digits" = "密碼長度需有8~16位數";
+"The new password entered is inconsistent" = "輸入的新密碼不一致";
 "Please go to the mailbox to receive the verification letter" = "請到信箱收取驗證信";
 "Invalid case" = "無效";
 "The verification code has been sent to" = "驗證碼已發送到";
