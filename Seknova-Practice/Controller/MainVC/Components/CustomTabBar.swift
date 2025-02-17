@@ -62,11 +62,11 @@ fileprivate extension CustomTabBar {
         threeView.delegate = self
         fourView.delegate = self
         fiveView.delegate = self
-        oneView.setinit(tag: 0, icon: UIImage(named: "trend")!, name: "即時血糖")
-        twoView.setinit(tag: 1, icon: UIImage(named: "blood-1")!, name: "血糖校正")
-        threeView.setinit(tag: 2, icon: UIImage(named: "calendar-1")!, name: "生活作息")
-        fourView.setinit(tag: 3, icon: UIImage(named: "history")!, name: "歷史紀錄")
-        fiveView.setinit(tag: 4, icon: UIImage(named: "user")!, name: "個人資訊")
+        oneView.setinit(tag: 0, icon: UIImage(named: "trend")!, name: NSLocalizedString("Glycemic Index", comment: ""))
+        twoView.setinit(tag: 1, icon: UIImage(named: "blood-1")!, name: NSLocalizedString("Calibrate", comment: ""))
+        threeView.setinit(tag: 2, icon: UIImage(named: "calendar-1")!, name: NSLocalizedString("LifeStyle", comment: ""))
+        fourView.setinit(tag: 3, icon: UIImage(named: "history")!, name: NSLocalizedString("History", comment: ""))
+        fiveView.setinit(tag: 4, icon: UIImage(named: "user")!, name: NSLocalizedString("Personal Info", comment: ""))
     }
 }
 

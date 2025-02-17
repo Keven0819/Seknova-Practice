@@ -27,6 +27,11 @@ class TabBarView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         addView()
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            lbPageName.font = UIFont.systemFont(ofSize: 10)
+        } else {
+            lbPageName.font = UIFont.systemFont(ofSize: 15)
+        }
     }
     
     // MARK: - UI Settings
