@@ -185,6 +185,12 @@ class LifeViewController: UIViewController {
         }
         
         lbRecordTime.text = NSLocalizedString("Record time", comment: "")
+        
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            dpkDate.locale = Locale(identifier: "en")
+        } else {
+            dpkDate.locale = Locale(identifier: "zh_TW")
+        }
     }
     // MARK: - UI Setting
     func setupLocalizedUI() {
