@@ -18,6 +18,11 @@ class LifeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            lbLife.font = UIFont.systemFont(ofSize: 14)
+        } else {
+            lbLife.font = UIFont.systemFont(ofSize: 17)
+        }
     }
     
 }

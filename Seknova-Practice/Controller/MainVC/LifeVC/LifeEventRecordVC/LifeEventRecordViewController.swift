@@ -46,9 +46,9 @@ class LifeEventRecordViewController: UIViewController {
     }
     
     func setupNavigationbar () {
-        self.navigationItem.title = "事件記錄"
+        self.navigationItem.title = NSLocalizedString("Event log", comment: "")
         
-        let editButton = UIBarButtonItem(title: "刪除",
+        let editButton = UIBarButtonItem(title: NSLocalizedString("Delete", comment: ""),
                                          style: .plain,
                                          target: self,
                                          action: #selector(editButtonTapped))
@@ -87,10 +87,10 @@ class LifeEventRecordViewController: UIViewController {
     @objc func editButtonTapped() {
         
         if isEditingMode {
-            self.navigationItem.rightBarButtonItem?.title = "刪除"
+            self.navigationItem.rightBarButtonItem?.title = NSLocalizedString("Delete", comment: "")
             btnTag = 0
         } else {
-            self.navigationItem.rightBarButtonItem?.title = "編輯"
+            self.navigationItem.rightBarButtonItem?.title = NSLocalizedString("Edit", comment: "")
             btnTag = 1
         }
         print(btnTag)
@@ -118,7 +118,12 @@ class LifeEventRecordViewController: UIViewController {
         // 初始化 DateFormatter 用來將字符串轉換為 Date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm"
-        dateFormatter.locale = Locale(identifier: "zh_TW")
+        
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            dateFormatter.locale = Locale(identifier: "en_US")
+        } else {
+            dateFormatter.locale = Locale(identifier: "zh_TW")
+        }
         
         
         for event in events {
@@ -186,7 +191,7 @@ class LifeEventRecordViewController: UIViewController {
                 break
             }
             
-            print("編輯", row)
+            print(NSLocalizedString("Edit", comment: ""), row)
             print("顯示時間: ",selectedEvent)
             print("UUID:",selectedEvent.id)
             print("CVTag0 = ",selectedEvent.eventId)
@@ -225,7 +230,7 @@ class LifeEventRecordViewController: UIViewController {
                 realm.delete(event)
             }
             tbvLIfeEvent.reloadData()
-            print("刪除", row)
+            print(NSLocalizedString("Delete", comment: ""), row)
         }
     }
 }
@@ -266,51 +271,51 @@ extension LifeEventRecordViewController: UITableViewDelegate, UITableViewDataSou
         
         switch event.eventId {
         case 0:
-            cell.lbLift0.text = "品名:"
-            cell.lbLift1.text = "份量:"
-            cell.lbLift2.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Meal Name", comment: "")):"
+            cell.lbLift1.text = "\(NSLocalizedString("Quantity", comment: "")):"
+            cell.lbLift2.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbRight0.text = event.mealName
             cell.lbRight1.text = event.mealNum
             cell.lbRight2.text = event.note
         case 1:
-            cell.lbLift0.text = "類型:"
-            cell.lbLift1.text = "時長:"
-            cell.lbLift2.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Exercise Type", comment: "")):"
+            cell.lbLift1.text = "\(NSLocalizedString("During Time", comment: "")):"
+            cell.lbLift2.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbRight0.text = event.exeName
             cell.lbRight1.text = event.exeTime
             cell.lbRight2.text = event.note
             
         case 2:
-            cell.lbLift0.text = "時長:"
-            cell.lbLift1.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("During Time", comment: "")):"
+            cell.lbLift1.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbLift2.text = ""
             cell.lbRight0.text = event.sleepTime
             cell.lbRight1.text = event.note
             cell.lbRight2.text = ""
             
         case 3:
-            cell.lbLift0.text = "劑量:"
-            cell.lbLift1.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Dose", comment: "")):"
+            cell.lbLift1.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbLift2.text = ""
             cell.lbRight0.text = event.doseG
             cell.lbRight1.text = event.note
             cell.lbRight2.text = ""
         case 4:
-            cell.lbLift0.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbLift1.text = ""
             cell.lbLift2.text = ""
             cell.lbRight0.text = event.note
             cell.lbRight1.text = ""
             cell.lbRight2.text = ""
         case 5:
-            cell.lbLift0.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbLift1.text = ""
             cell.lbLift2.text = ""
             cell.lbRight0.text = event.note
             cell.lbRight1.text = ""
             cell.lbRight2.text = ""
         case 6:
-            cell.lbLift0.text = "註記:"
+            cell.lbLift0.text = "\(NSLocalizedString("Note", comment: "")):"
             cell.lbLift1.text = ""
             cell.lbLift2.text = ""
             cell.lbRight0.text = event.note

@@ -39,6 +39,7 @@ class LifeViewController: UIViewController {
     @IBOutlet var cvLifeRoutin: UICollectionView!
     @IBOutlet var tbvLifeMain: UITableView!
     @IBOutlet var btnAdd: UIButton!
+    @IBOutlet weak var lbRecordTime: UILabel!
     // MARK: - Proprtty
     var vDisplay: Bool = false
     var isTableViewExpanded = false
@@ -46,7 +47,15 @@ class LifeViewController: UIViewController {
     var isAnimatingHidding = false
     var firstIN: Bool = true
     var dateString: String = ""
-    var lifeArr = ["用餐", "運動", "睡眠", "胰島素","起床","洗澡","其他"]
+    var lifeArr = [
+            NSLocalizedString("Dining", comment: ""),
+            NSLocalizedString("Exercise", comment: ""),
+            NSLocalizedString("Sleeping", comment: ""),
+            NSLocalizedString("Insulin", comment: ""),
+            NSLocalizedString("Get up", comment: ""),
+            NSLocalizedString("Bath", comment: ""),
+            NSLocalizedString("Others", comment: "")
+        ]
     let cellImages = [
         UIImage(named: "meal"),
         UIImage(named: "exercise"),
@@ -125,7 +134,7 @@ class LifeViewController: UIViewController {
                     }
                 }
             }
-            btnAdd.setTitle("更新", for: .normal)
+            btnAdd.setTitle(NSLocalizedString("Update", comment: ""), for: .normal)
             print("編輯模式")
             if selectedCVId0 < 4 {
                 isAnimatingHidding = false
@@ -172,13 +181,22 @@ class LifeViewController: UIViewController {
             cvLifeRoutin.reloadData()
         } else {
             print("editOrNot.shared.isEditIng = ",editOrNot.shared.isEditingMode)
+            btnAdd.setTitle(NSLocalizedString("Insert", comment: ""), for: .normal)
         }
+        
+        lbRecordTime.text = NSLocalizedString("Record time", comment: "")
     }
     // MARK: - UI Setting
+    func setupLocalizedUI() {
+        btnAdd.setTitle(NSLocalizedString("Update", comment: ""), for: .normal)
+        btnSelectDate.setTitle(NSLocalizedString("Select Date", comment: ""), for: .normal)
+    }
+    
+    
     func setupToolbar() {
-        let leftItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(leftItemTapped))
+        let leftItem = UIBarButtonItem(title: NSLocalizedString("Cancel", comment: ""), style: .plain, target: self, action: #selector(leftItemTapped))
         let midItem = UIBarButtonItem(title: "")
-        let rightItem = UIBarButtonItem(title: "完成", style: .plain, target: self, action: #selector(rightItemTapped))
+        let rightItem = UIBarButtonItem(title: NSLocalizedString("Complete", comment: ""), style: .plain, target: self, action: #selector(rightItemTapped))
         leftItem.tintColor = .black
         rightItem.tintColor = .black
         
@@ -200,7 +218,11 @@ class LifeViewController: UIViewController {
             print(pkvDate.tag)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm"
-            dateFormatter.locale = Locale(identifier: "zh_TW")
+            if NSLocale.current.language.languageCode?.identifier == "en" {
+                dateFormatter.locale = Locale(identifier: "en")
+            } else {
+                dateFormatter.locale = Locale(identifier: "zh_TW")
+            }
             
             dateString = dateFormatter.string(from: selectDate)
             print(dateString)
@@ -219,13 +241,13 @@ class LifeViewController: UIViewController {
             // 格式化時間為 "00:00"
             let formattedTime = String(format: "%02d:%02d", hours, minutes)
             print(formattedTime)
-            // 更新 TableView 中的 "時長" 欄位的 txfLifeEvent
+            // 更新 TableView 中的 時長 欄位的 txfLifeEvent
             if let indexPath = tbvLifeMain.indexPathForSelectedRow {
                 if let cell = tbvLifeMain.cellForRow(at: indexPath) as? LifeTableViewCell {
-                    if cell.lbLifeEvent.text == "時長" && selectedTag == 1 {
+                    if cell.lbLifeEvent.text == NSLocalizedString("During Time", comment: "") && selectedTag == 1 {
                         cell.txfLifeEvent.placeholder = formattedTime
                         exeTime = formattedTime
-                    } else if cell.lbLifeEvent.text == "時長" && selectedTag == 2 {
+                    } else if cell.lbLifeEvent.text == NSLocalizedString("During Time", comment: "") && selectedTag == 2 {
                         cell.txfLifeEvent.placeholder = formattedTime
                         sleepTime = formattedTime
                     }
@@ -283,9 +305,9 @@ class LifeViewController: UIViewController {
         case 0:
             if selectedTag == 0 {
                 tableData = [
-                    TableViewData(title: "品名", subtitle: nil, txfValue: "添加"),
-                    TableViewData(title: "份量", subtitle: nil, txfValue: ""),
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Meal Name", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Add Product Name", comment: "")),
+                    TableViewData(title: NSLocalizedString("Quantity", comment: ""), subtitle: nil, txfValue: ""),
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             print(tableData)
@@ -293,9 +315,9 @@ class LifeViewController: UIViewController {
         case 1:
             if selectedTag == 1 {
                 tableData = [
-                    TableViewData(title: "類型", subtitle: nil, txfValue: "添加"),
-                    TableViewData(title: "時長", subtitle: nil, txfValue: "00:30"),
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Exercise Type", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Add Product Name", comment: "")),
+                    TableViewData(title: NSLocalizedString("During Time", comment: ""), subtitle: nil, txfValue: "00:30"),
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             print(tableData)
@@ -303,8 +325,8 @@ class LifeViewController: UIViewController {
         case 2:
             if selectedTag == 2 {
                 tableData = [
-                    TableViewData(title: "時長", subtitle: nil, txfValue: "00:30"),
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("During Time", comment: ""), subtitle: nil, txfValue: "00:30"),
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             tbvLife.isHidden = true
@@ -312,14 +334,14 @@ class LifeViewController: UIViewController {
             if selectedTag == 3 {
                 tableData = [
                     TableViewData(title: "", subtitle: nil, txfValue: ""),
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             tbvLife.isHidden = true
         case 4:
             if selectedTag == 4 {
                 tableData = [
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             tbvLifeMain.isHidden = true
@@ -327,7 +349,7 @@ class LifeViewController: UIViewController {
         case 5:
             if selectedTag == 5 {
                 tableData = [
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             tbvLifeMain.isHidden = true
@@ -335,7 +357,7 @@ class LifeViewController: UIViewController {
         case 6:
             if selectedTag == 6 {
                 tableData = [
-                    TableViewData(title: "註記", subtitle: nil, txfValue: "記錄一下吧")
+                    TableViewData(title: NSLocalizedString("Note", comment: ""), subtitle: nil, txfValue: NSLocalizedString("Additional Notes", comment: ""))
                 ]
             }
             tbvLifeMain.isHidden = true
@@ -365,11 +387,11 @@ class LifeViewController: UIViewController {
 
         if selectedCollectionViewTag == -1 && selectedTag < 3 {
             let alertController = UIAlertController(
-                title: "請選擇一個副類別",
-                message: "請先選擇一個類別，才能繼續。",
+                title: NSLocalizedString("Error", comment: ""),
+                message: NSLocalizedString("Please select an event", comment: ""),
                 preferredStyle: .alert
             )
-            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
             return
@@ -425,13 +447,22 @@ class LifeViewController: UIViewController {
         if let currentDateText = lbDate.text {
             let currentDateFormatter = DateFormatter()
             currentDateFormatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm" // 假设当前的日期格式是这个
-            currentDateFormatter.locale = Locale(identifier: "zh_TW")
+            if NSLocale.current.language.languageCode?.identifier == "en" {
+                currentDateFormatter.locale = Locale(identifier: "en")
+            } else {
+                currentDateFormatter.locale = Locale(identifier: "zh_TW")
+            }
             
             if let date = currentDateFormatter.date(from: currentDateText) {
                 // 使用新的日期格式
                 let newDateFormatter = DateFormatter()
                 newDateFormatter.dateFormat = "MM/dd a hh:mm"
-                newDateFormatter.locale = Locale(identifier: "zh_TW")
+                
+                if NSLocale.current.language.languageCode?.identifier == "en" {
+                    newDateFormatter.locale = Locale(identifier: "en")
+                } else {
+                    newDateFormatter.locale = Locale(identifier: "zh_TW")
+                }
                 
                 displayTime = newDateFormatter.string(from: date)
                 print(displayTime)
@@ -508,7 +539,13 @@ class LifeViewController: UIViewController {
     func convertToDate(_ dateString: String) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm"
-        formatter.locale = Locale(identifier: "zh_TW")
+        
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            formatter.locale = Locale(identifier: "en")
+        } else {
+            formatter.locale = Locale(identifier: "zh_TW")
+        }
+        
         return formatter.date(from: dateString)
     }
     
@@ -519,7 +556,12 @@ class LifeViewController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd EEEE a hh:mm"
-        dateFormatter.locale = Locale(identifier: "zh_TW")
+        
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            dateFormatter.locale = Locale(identifier: "en")
+        } else {
+            dateFormatter.locale = Locale(identifier: "zh_TW")
+        }
         
         let dateString = dateFormatter.string(from: currentDate)
         lbDate.text = dateString
@@ -681,30 +723,30 @@ class LifeViewController: UIViewController {
         switch selectedTag {
         case 0:
             lifeRoutineItems = [
-                LifeRoutineItem(id: 0, title: "早餐", image: UIImage(named: "breakfast") ?? UIImage()),
-                LifeRoutineItem(id: 1, title: "午餐", image: UIImage(named: "launch") ?? UIImage()),
-                LifeRoutineItem(id: 2, title: "晚餐", image: UIImage(named: "dinner") ?? UIImage()),
-                LifeRoutineItem(id: 3, title: "點心", image: UIImage(named: "snacks") ?? UIImage()),
-                LifeRoutineItem(id: 4, title: "飲料", image: UIImage(named: "drinks") ?? UIImage())
+                LifeRoutineItem(id: 0, title: NSLocalizedString("Breakfast", comment: ""), image: UIImage(named: "breakfast") ?? UIImage()),
+                LifeRoutineItem(id: 1, title: NSLocalizedString("Lunch", comment: ""), image: UIImage(named: "launch") ?? UIImage()),
+                LifeRoutineItem(id: 2, title: NSLocalizedString("Dinner", comment: ""), image: UIImage(named: "dinner") ?? UIImage()),
+                LifeRoutineItem(id: 3, title: NSLocalizedString("Snack", comment: ""), image: UIImage(named: "snacks") ?? UIImage()),
+                LifeRoutineItem(id: 4, title: NSLocalizedString("Drinks", comment: ""), image: UIImage(named: "drinks") ?? UIImage())
             ]
         case 1:
             lifeRoutineItems = [
-                LifeRoutineItem(id: 0, title: "高強度", image: UIImage(named: "high_motion") ?? UIImage()),
-                LifeRoutineItem(id: 1, title: "中強度", image: UIImage(named: "mid_motion") ?? UIImage()),
-                LifeRoutineItem(id: 2, title: "低強度", image: UIImage(named: "low_motion") ?? UIImage())
+                LifeRoutineItem(id: 0, title: NSLocalizedString("High Intensity", comment: ""), image: UIImage(named: "high_motion") ?? UIImage()),
+                LifeRoutineItem(id: 1, title: NSLocalizedString("Medium Intensity", comment: ""), image: UIImage(named: "mid_motion") ?? UIImage()),
+                LifeRoutineItem(id: 2, title: NSLocalizedString("Low Intensity", comment: ""), image: UIImage(named: "low_motion") ?? UIImage())
             ]
         case 2:
             lifeRoutineItems = [
-                LifeRoutineItem(id: 0, title: "就寢", image: UIImage(named: "sleep") ?? UIImage()),
-                LifeRoutineItem(id: 1, title: "午覺", image: UIImage(named: "sleepy") ?? UIImage()),
-                LifeRoutineItem(id: 2, title: "小憩", image: UIImage(named: "nap") ?? UIImage()),
-                LifeRoutineItem(id: 3, title: "放鬆時刻", image: UIImage(named: "relax") ?? UIImage())
+                LifeRoutineItem(id: 0, title: NSLocalizedString("Sleep", comment: ""), image: UIImage(named: "sleep") ?? UIImage()),
+                LifeRoutineItem(id: 1, title: NSLocalizedString("Nap", comment: ""), image: UIImage(named: "sleepy") ?? UIImage()),
+                LifeRoutineItem(id: 2, title: NSLocalizedString("Rest", comment: ""), image: UIImage(named: "nap") ?? UIImage()),
+                LifeRoutineItem(id: 3, title: NSLocalizedString("Relax time", comment: ""), image: UIImage(named: "relax") ?? UIImage())
             ]
         case 3:
             lifeRoutineItems = [
-                LifeRoutineItem(id: 0, title: "速效型", image: UIImage(named: "insulin") ?? UIImage()),
-                LifeRoutineItem(id: 1, title: "長效型", image: UIImage(named: "insulin") ?? UIImage()),
-                LifeRoutineItem(id: 2, title: "未指定", image: UIImage(named: "insulin") ?? UIImage())
+                LifeRoutineItem(id: 0, title: NSLocalizedString("Rapid acting", comment: ""), image: UIImage(named: "insulin") ?? UIImage()),
+                LifeRoutineItem(id: 1, title: NSLocalizedString("Long acting", comment: ""), image: UIImage(named: "insulin") ?? UIImage()),
+                LifeRoutineItem(id: 2, title: NSLocalizedString("Unspecified", comment: ""), image: UIImage(named: "insulin") ?? UIImage())
             ]
         case 4...6:
             lifeRoutineItems = []  // 空陣列時隱藏相關 UI
@@ -720,59 +762,59 @@ class LifeViewController: UIViewController {
         case 0:
             switch selectedCollectionViewTag {
             case 0:
-                selectedLifeRoutin = "早餐"
+                selectedLifeRoutin = NSLocalizedString("Breakfast", comment: "")
             case 1:
-                selectedLifeRoutin = "午餐"
+                selectedLifeRoutin = NSLocalizedString("Lunch", comment: "")
             case 2:
-                selectedLifeRoutin = "晚餐"
+                selectedLifeRoutin = NSLocalizedString("Dinner", comment: "")
             case 3:
-                selectedLifeRoutin = "點心"
+                selectedLifeRoutin = NSLocalizedString("Snack", comment: "")
             case 4:
-                selectedLifeRoutin = "飲料"
+                selectedLifeRoutin = NSLocalizedString("Drinks", comment: "")
             default:
                 break
             }
         case 1:
             switch selectedCollectionViewTag {
             case 0:
-                selectedLifeRoutin = "高強度"
+                selectedLifeRoutin = NSLocalizedString("High Intensity", comment: "")
             case 1:
-                selectedLifeRoutin = "中強度"
+                selectedLifeRoutin = NSLocalizedString("Medium Intensity", comment: "")
             case 2:
-                selectedLifeRoutin = "低強度"
+                selectedLifeRoutin = NSLocalizedString("Low Intensity", comment: "")
             default:
                 break
             }
         case 2:
             switch selectedCollectionViewTag {
             case 0:
-                selectedLifeRoutin = "就寢"
+                selectedLifeRoutin = NSLocalizedString("Sleep", comment: "")
             case 1:
-                selectedLifeRoutin = "午睡"
+                selectedLifeRoutin = NSLocalizedString("Nap", comment: "")
             case 2:
-                selectedLifeRoutin = "小憩"
+                selectedLifeRoutin = NSLocalizedString("Rest", comment: "")
             case 3:
-                selectedLifeRoutin = "放鬆時刻"
+                selectedLifeRoutin = NSLocalizedString("Relax time", comment: "")
             default:
                 break
             }
         case 3:
             switch selectedCollectionViewTag {
             case 0:
-                selectedLifeRoutin = "速效型"
+                selectedLifeRoutin = NSLocalizedString("Rapid acting", comment: "")
             case 1:
-                selectedLifeRoutin = "長效型"
+                selectedLifeRoutin = NSLocalizedString("Long acting", comment: "")
             case 2:
-                selectedLifeRoutin = "未指定"
+                selectedLifeRoutin = NSLocalizedString("Unspecified", comment: "")
             default:
                 break
             }
         case 4:
-            selectedLifeRoutin = "起床"
+            selectedLifeRoutin = NSLocalizedString("Get up", comment: "")
         case 5:
-            selectedLifeRoutin = "洗澡"
+            selectedLifeRoutin = NSLocalizedString("Bath", comment: "")
         case 6:
-            selectedLifeRoutin = "其他"
+            selectedLifeRoutin = NSLocalizedString("Others", comment: "")
         default:
             break
         }
@@ -806,11 +848,11 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 0:
             return "\(row)"
         case 1:
-            return "小時"
+            return NSLocalizedString("hour", comment: "")
         case 2:
             return "\(row)"
         case 3:
-            return "分鐘"
+            return NSLocalizedString("minute", comment: "")
         default:
             return ""
         }
@@ -923,14 +965,14 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
                     } else {
                         MainCell.txfLifeEvent.text = sleepTime
                     }
-                    //                    MainCell.txfLifeEvent.text = LifeEventData.shared.event1 // event1 對應 "時長"
+                    //                    MainCell.txfLifeEvent.text = LifeEventData.shared.event1 // event1 對應 時長
                 case 1:
                     if sleepInfo.isEmpty {
                         MainCell.txfLifeEvent.placeholder = tableDataItem.txfValue
                     } else {
                         MainCell.txfLifeEvent.text = sleepInfo
                     }
-                    //MainCell.txfLifeEvent.text = LifeEventData.shared.event3 // event3 對應 "註記"
+                    //MainCell.txfLifeEvent.text = LifeEventData.shared.event3 // event3 對應 NSLocalizedString("Note", comment: "")
                 default:
                     break
                 }
@@ -946,7 +988,7 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
                 if indexPath.row == 0 {
                     // 直接初始化為 TxfGTableViewCell
                     let TxfGcell = tbvLifeMain.dequeueReusableCell(withIdentifier: TxfGTableViewCell.identifiler, for: indexPath) as! TxfGTableViewCell
-                    TxfGcell.lbDose.text = "劑量"
+                    TxfGcell.lbDose.text = NSLocalizedString("Dose", comment: "")
                     // 設定劑量的值
                     if String(DoseG).isEmpty {
                         TxfGcell.txfDose.placeholder = "---"
@@ -1032,7 +1074,7 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
             if tableView.tag == 0 {
                 if selectedTag == 3 && indexPath.row == 0 {
                     let TxfGcell = tbvLifeMain.dequeueReusableCell(withIdentifier: TxfGTableViewCell.identifiler, for: indexPath) as! TxfGTableViewCell
-                    TxfGcell.lbDose.text = "劑量"
+                    TxfGcell.lbDose.text = NSLocalizedString("Dose", comment: "")
                     // 设置 txfLifeEvent 的值
                     if String(DoseG).isEmpty {
                         TxfGcell.txfDose.placeholder = "---"
@@ -1139,7 +1181,7 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
                 }
             } else {
                 let ElseCell = tbvLife.dequeueReusableCell(withIdentifier: LifeTableViewCell.identifiler, for: indexPath) as! LifeTableViewCell
-                ElseCell.lbLifeEvent.text = "註記"
+                ElseCell.lbLifeEvent.text = NSLocalizedString("Note", comment: "")
                 let tableDataItem = tableData[indexPath.row]
                 ElseCell.txfLifeEvent.text = ""
                 switch(selectedTag, indexPath.row) {
@@ -1181,7 +1223,7 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if tableView.tag == 0 {
             // 不需要重新建立 cell
             let data = tableData[indexPath.row]
-            if data.title == "註記" {
+            if data.title == NSLocalizedString("Note", comment: "") {
                 return 80
             }
             return 50
@@ -1194,7 +1236,7 @@ extension LifeViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = tableView.cellForRow(at: indexPath) as? LifeTableViewCell else { return }
         print(indexPath.row)
         let selectedData = tableData[indexPath.row]
-        if selectedData.title == "時長" && selectedTag == 1 || selectedTag == 2 {
+        if selectedData.title == NSLocalizedString("During Time", comment: "") && selectedTag == 1 || selectedTag == 2 {
             vDate.isHidden = false
             dpkDate.isHidden = true
             pkvDate.isHidden = false

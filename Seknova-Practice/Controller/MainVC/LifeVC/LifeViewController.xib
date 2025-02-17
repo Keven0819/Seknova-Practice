@@ -18,6 +18,7 @@
                 <outlet property="cvLifeRoutin" destination="tmC-Rb-dnQ" id="LY6-A6-HQu"/>
                 <outlet property="dpkDate" destination="ecW-5q-1RQ" id="tQB-q8-JHR"/>
                 <outlet property="lbDate" destination="7gg-8c-T3k" id="trq-O2-KTw"/>
+                <outlet property="lbRecordTime" destination="sIN-Gw-HPQ" id="kxC-Ec-qr5"/>
                 <outlet property="pkvDate" destination="fKT-Bc-Lmj" id="ARF-bj-QeX"/>
                 <outlet property="tbvLife" destination="AUn-9C-M7K" id="BaB-uB-KeX"/>
                 <outlet property="tbvLifeMain" destination="xhG-6z-TuV" id="MoU-yv-5w8"/>
@@ -222,7 +223,7 @@
             <color red="0.75686274509803919" green="0.058823529411764705" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

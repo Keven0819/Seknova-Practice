@@ -22,6 +22,12 @@ class LifeRoutineCollectionViewCell: UICollectionViewCell {
         if let separator = separator {
             self.addSubview(separator)
         }
+        
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            lbLifeRoutine.font = UIFont.systemFont(ofSize: 12)
+        } else {
+            lbLifeRoutine.font = UIFont.systemFont(ofSize: 17)
+        }
     }
 
 }

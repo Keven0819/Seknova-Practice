@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfA-pZ-fbk">
-                        <rect key="frame" x="10" y="25.5" width="50.5" height="34"/>
+                        <rect key="frame" x="10" y="26" width="136" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,13 +39,13 @@
                 <constraint firstItem="OfA-pZ-fbk" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="gJt-TY-qrN"/>
                 <constraint firstItem="OfA-pZ-fbk" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="m9H-JJ-trJ"/>
                 <constraint firstItem="LkZ-6P-cew" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" multiplier="0.6" id="mhQ-uI-uHb"/>
-                <constraint firstItem="OfA-pZ-fbk" firstAttribute="width" secondItem="njF-e1-oar" secondAttribute="width" multiplier="0.15" id="yll-V4-UM9"/>
+                <constraint firstItem="OfA-pZ-fbk" firstAttribute="width" secondItem="njF-e1-oar" secondAttribute="width" multiplier="0.15" constant="85.450000000000003" id="yll-V4-UM9"/>
             </constraints>
             <connections>
                 <outlet property="lbLifeEvent" destination="OfA-pZ-fbk" id="X8A-Lo-dG5"/>
                 <outlet property="txfLifeEvent" destination="LkZ-6P-cew" id="Es3-Xe-8fR"/>
             </connections>
-            <point key="canvasLocation" x="134" y="22"/>
+            <point key="canvasLocation" x="132.60869565217394" y="21.763392857142858"/>
         </tableViewCell>
     </objects>
 </document>

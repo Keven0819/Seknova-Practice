@@ -6,6 +6,8 @@
   
 */
 // MARK: - Menu Title
+
+"Please select an event" = "請選擇一個類別";
 "Login" = "登入";
 "Register" = "註冊";
 "Activated Account" = "開通帳號";
