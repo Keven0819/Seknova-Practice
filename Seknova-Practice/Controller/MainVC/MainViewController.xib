@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="TabBarView" destination="hjv-Q9-aow" id="jXG-J2-L3A"/>
+                <outlet property="btnLog" destination="Bqe-BO-2TP" id="PGh-vt-pyP"/>
+                <outlet property="btnReport" destination="c7g-SP-n8L" id="fcf-RL-Mq2"/>
+                <outlet property="btnSetting" destination="bSp-cU-pQF" id="kP0-Pk-hCM"/>
                 <outlet property="content" destination="B4q-1B-fSz" id="8rc-8W-J8G"/>
                 <outlet property="imgvMenu" destination="mYl-9p-rHn" id="qP7-e1-h4s"/>
                 <outlet property="vMenu" destination="IlH-Vu-XEs" id="RZ2-fp-MQx"/>

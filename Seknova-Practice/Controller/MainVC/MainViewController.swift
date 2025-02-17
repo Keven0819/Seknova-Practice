@@ -15,6 +15,9 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     @IBOutlet weak var TabBarView: UIView!
     @IBOutlet weak var imgvMenu: UIImageView!
     @IBOutlet weak var vMenu: UIView!
+    @IBOutlet weak var btnReport: UIButton!
+    @IBOutlet weak var btnLog: UIButton!
+    @IBOutlet weak var btnSetting: UIButton!
     
     // MARK: - Property
     var vc: [UIViewController] = []
@@ -51,6 +54,9 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
         imgvMenu.isHidden = true
         vMenu.isHidden = true
         setNavigatioinBar()
+        btnReport.setTitle(NSLocalizedString("Report", comment: ""), for: .normal)
+        btnLog.setTitle(NSLocalizedString("Logs", comment: ""), for: .normal)
+        btnSetting.setTitle(NSLocalizedString("SetPlan", comment: ""), for: .normal)
     }
     func setNavigatioinBar() {
         
