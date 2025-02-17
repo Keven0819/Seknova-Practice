@@ -1,0 +1,435 @@
+/* 
+  Localizable.strings
+  Seknova-Practice
+
+  Created by imac-2627 on 2025/2/17.
+  
+*/
+// MARK: - Menu Title
+"Login" = "登入";
+"Register" = "註冊";
+"Activated Account" = "開通帳號";
+"Glycemic Index" = "即時血糖";
+"Calibrate" = "血糖校正";
+"LifeStyle" = "生活作息";
+"SetPlan" = "設定";
+"Share" = "分享";
+"Personal Info" = "個人資訊";
+"History" = "歷史紀錄";
+"Privacy Consent Agree" = "隱私權同意書";
+"Audiovisual Teaching" = "教學影片";
+"Set BloodSugar" = "設定高低血糖";
+"Personal Information" = "身體資訊蒐集";
+"Scanning QRCode" = "掃描 QRCode";
+"Scanning Transmitter" = "啟用發射器";
+"Scanning Sensor" = "啟用感測器";
+"Sensor Code" = "輸入驗證碼";
+"Pair Bluetooth" = "藍芽配對";
+"Connection" = "連線中";
+"Bind Phone Cell" = "綁定手機";
+"Report" = "報表";
+"Setting Calibration Mode" = "設定校正模式";
+
+// MARK: - Btn
+"Confirm" = "確認";
+"Save" = "儲存";
+"Understand More" = "了解更多";
+"Correct" = "更正";
+"Next" = "下一步";
+"Login" = "登入";
+"Sign Out" = "登出";
+"Register" = "註冊";
+"Forgot" = "忘記密碼";
+"Facebook Login" = "Facebook 登入";
+"Sign in with Apple" = "Apple 登入";
+"Google Login" = "Google 登入";
+"Send" = "送出";
+"Submit" = "提交";
+"Resend" = "重送驗證信";
+"Return" = "返回";
+"Skip" = "跳過";
+"Scan QR" = "QR 掃描";
+"Input Text" = "文字輸入";
+"Complete" = "完成";
+"Pair" = "配對";
+"Event log" = "事件紀錄";
+"Logs" = "日誌";
+"Update" = "更新";
+"Get verify code" = "獲取驗證碼";
+"Input verify code" = "輸入驗證碼";
+"Cancel record" = "取消這筆紀錄";
+"Delete" = "刪除";
+"Insert" = "新增";
+"Start" = "開始";
+"Disconnect" = "斷線";
+"Edit" = "編輯";
+"Quit" = "退出";
+"CalibrationModeSync" = "同步";
+"isAutoSyncCalibrationMode" = "自動同步雲端";
+
+
+// MARK: - TF Placeholder
+"Account" = "帳號";
+"Password" = "密碼";
+"OldPassword" = "舊密碼";
+"NewPassword" = "新密碼";
+"Email" = "電子信箱";
+"6-digit verification code" = "六位數的驗證碼";
+"Please enter the verification code" = "請輸入訊息中包含的驗證碼";
+"Password(8-16 digits)" = "密碼（8-16字元,需含大小寫英文與數字";
+"Confirmation password" = "再一次輸入密碼";
+"I have read and agree to the membership agreement" = "我已閱讀並同意會員協議的";
+"Terms and conditions" = "條款和條件";
+"6-digit device ID (including numbers, letters A-F)" = "六位數裝置ID(包含數字,字母A-F)";
+"Click to edit" = "點擊進行編輯";
+"Enter phone number" = "請輸入您的手機號碼";
+"6-digit verify code" = "請輸入六位數驗證碼";
+"Can add some notes to this event!" = "可以對此事件增加一些註記!";
+"The more detailed the food content is entered, the more accurate care advice you will get!" = "輸入食物內容越詳細，會得到越精準的照護建議!";
+"Please enter the dosage of this medication!" = "請輸入此次用藥劑量！";
+"Enter the upper limit of the y-axis" = "請輸入y軸上限值";
+"Enter the lower limit of the y-axis" = "請輸入y軸下限值";
+
+
+
+// MARK: - AlertView
+"Error" = "錯誤";
+"Warning" = "警告";
+"Cancel" = "取消";
+"Success" = "成功";
+"Notification" = "通知";
+"Prompt" = "提示";
+"Account format error" = "帳號格式有誤";
+"Password format error" = "密碼格式有誤";
+"Email format error" = "電子信箱格式有誤";
+"Input format error" = "輸入格式有誤";
+"Phone format error" = "電話格式有誤(請輸入10位數字)";
+"Old Password format error" = "舊密碼格式有誤";
+"New Password format error" = "新密碼格式有誤";
+"No Network" = "無網路連線";
+"No network signal received" = "無接收到網路訊號";
+"Mail verification is not completed" = "尚未完成信箱驗證";
+"The device has expired, please verify the new device" = "裝置已過期，請驗證新裝置";
+"The original sensor has been cancelled, and the new device is not bound" = "已取消原感測器，新裝置尚未綁定";
+"Battery below 10%, the transmitter will be automatically unbound. Please rebind the transmitter" = "電量低於 10%，將自動解除綁定發射器。請重新綁定發射器！";
+"Please rebind the transmitter" = "請重新綁定發射器！";
+"The password must contain uppercase and lowercase symbols and numbers and at least 8 digits" = "密碼需包含有大小寫符號跟數字且至少8碼";
+"The two passwords are different" = "兩次輸入密碼不同";
+"Did not agree to the membership terms" = "尚未同意會員條款";
+"Password must contain uppercase and lowercase letters and numbers" = "密碼需有大小字母與數字";
+"Password length must be 8 digits" = "密碼長度需有8位數";
+"Please go to the mailbox to receive the verification letter" = "請到信箱收取驗證信";
+"Invalid case" = "無效";
+"The verification code has been sent to" = "驗證碼已發送到";
+"Please enter the 6-digit verification code" = "請輸入六位數的驗證碼";
+"Please enter the 4-digit verification code" = "請輸入四位數的驗證碼";
+"Password setting completed" = "密碼設定完成";
+"Unable to change password" = "無法變更密碼";
+"Camera permission is not allowed\nPlease go to Settings->Seknova->Camera'On'" = "偵測到未允許相機權限\n請至設定->Seknova->相機'開啟'";
+"Please enter the device ID" = "請輸入裝置ID";
+"Please enter a 6-digit ID" = "請輸入六位數的ID";
+"Please enter the device ID (including numbers, letters A-F)" = "請輸入裝置ID(包含數字,字母A-F)";
+"Confirm Device ID" = "確認裝置ID";
+"Device is already registered" = "裝置已註冊過";
+"Please re-verify" = "請重新驗證";
+"Transmiter Verify Code Error!" = "發射器驗證碼錯誤！";
+"Senosr Verify Code Error!" = "感測器驗證碼錯誤！";
+"unfilled" = "尚未填寫";
+"The firmware version of this device is not supported, please upgrade the version!" = "不支援此裝置韌體版本，請升級版本！";
+"Identifying" = "確認身份";
+"Please enter the password" = "請輸入密碼";
+"The verification code will be sent to your phone" = "驗證碼將寄到您的手機";
+"The phone number has already been bound! Please change your mobile number" = "該手機號碼已經被綁定過了！請更換手機號碼";
+"Phone binding has been completed" = "手機綁定已完成";
+"Password modification is complete" = "修改密碼已完成";
+"This behavior will result in failure to receive blood glucose values and clear records and devices!" = "此行為將會造成無法接收血糖值並清除記錄與裝置！";
+"This behavior will result in failure to receive blood glucose, whether to continue sign out" = "此行為將會造成無法接收血糖，是否繼續進行登出";
+"Please complete blood glucose calibration as soon as possible" = "請盡快完成血糖校正";
+"Data upload failed" = "ADC值 上傳失敗";
+"Device connection timed out" = "裝置連線逾時";
+"Please enter the calibration value" = "請輸入校正值";
+"Input range" = "輸入範圍";
+"It's time for blood glucose calibration" = "血糖校正時間已到";
+"Please complete blood glucose calibration as soon as possible so that the data can be displayed more accurately" = "請盡快完成血糖校正，以便資料顯示更為精確";
+"Server connection timed out, please try again later" = "伺服器連線逾時，請稍後再試";
+"Whether to delete this record" = "是否刪除此項紀錄";
+"Whether to edit this record" = "是否編輯此項紀錄";
+"Upload failed!" = "上傳失敗!";
+"Upload succeed!" = "上傳成功!";
+"data compensation" = "測試回補";
+"transfer rate" = "傳輸速率";
+"Connection failed" = "連線失敗";
+"Recover test completed" = "已完成回補測試";
+"Total second" = "總秒數";
+"Rate" = "速率";
+"The input cannot be greater than 225!" = "指令不可大於225!";
+"Bluetooth is off" = "藍芽已關閉";
+"Seknova blood glucose device needs to measure the blood glucose value, please turn on the Bluetooth connection device" = "Seknova血糖裝置需測量血糖數值，請開啟藍芽連線裝置";
+"Binding Transmitter" = "綁定發射器";
+"Cancel Transmitter" = "取消發射器";
+"Binding Sensor" = "綁定感測器";
+"Cancel Sensor" = "取消感測器";
+"No Network，Will upload when the network is restored" = "網路無連線，當網路恢復時將重新上傳";
+"Your changes have not been saved. Are you sure you want to go back?" = "您的變更尚未儲存，您確定要返回嗎？";
+"No Network，Can't Edit" = "無網路連線，不能進行編輯！";
+"No Network，Can't Delete" = "無網路連線，不能進行刪除！";
+"Field Input Error" = "欄位輸入錯誤！";
+"Sensor LifeCycle is End" = "Sensor 使用期限到期";
+"Battery Below 30%" = "電量低於 30%";
+"Unknown" = "未知";
+"Fault/abnormal ADC Value" = "故障/ADC值異常";
+"Unknown, Unbind Transmitter" = "未知，解除綁定發射器";
+"Over User Default High Low Blood Suger" = "超過使用者預設的高低血糖";
+"Low Blood Suger 70mg/dL" = "低血糖 70mg/dL";
+"High Blood Suger 180mg/dL" = "高血糖 180mg/dL";
+"Slope Over 3" = "斜率超過 3";
+"Out of Temperature Range" = "超出溫度範圍";
+"Go to Calibration" = "請前往校正";
+"Please select the file first" = "請先選擇檔案";
+"Wrong file type" = "錯誤的檔案類型";
+"OTA update completed" = "已完成 OTA 更新";
+"Upload Log" = "上傳日誌！";
+
+// MARK: - Label
+"Please go to the mailbox and click the certification letter" = "請到信箱點選認證信開通帳號"; //gomail
+"Enter your Email" = "請輸入您的電子信箱";
+"Set high blood sugar" = "設定高血糖值";
+"Set Low blood sugar" = "設定低血糖值";
+"Yes" = "有";
+"No" = "無";
+"hour" = "小時";
+"minute" = "分鐘";
+"The device is warming up" = "裝置暖機中";
+"Warm up countdown" = "暖機倒數";
+"Getting Firmware Info" = "正在取得韌體資訊";
+"Data calibration" = "資料校正中";
+"Incomplete calibration" = "尚未完成校正";
+"minutes ago" = "分鐘前";
+"The upward trend is higher than 2 or 3 mg/dL per minute" = "上升趨勢高於每分鐘2 or 3 mg/dL";
+"The downward trend is less than 2 or 3 mg/dL per minute" = "下降趨勢低於每分鐘2 or 3 mg/dL";
+"Less than 55mg/dL" = "低於 55mg/dL";
+"Lower than the set low blood sugar" = "低於設定的低血糖";
+"Higher than the set high blood sugar" = "高於設定的高血糖";
+"The device is connected normally" = "裝置正常連線";
+"No device signal received" = "無接收到裝置訊號";
+"Please note the current connection status" = "請注意目前連線狀態";
+"Blood glucose level is out of range" = "血糖值超出範圍";
+"Please pay attention to the current blood sugar level" = "請注意目前血糖值";
+"e.g., listening to music, watching movies, massage, meditating" = "例:聽音樂、看電影、按摩、打坐冥想";
+"e.g., Jogging, basketball, football, tennis, cycling (fast)" = "例:慢跑、籃球、足球、網球、腳踏車(快)";
+"e.g., Swimming, badminton, golf, cycling (slow)" = "例:游泳、羽毛球、高爾夫、腳踏車(慢)";
+"e.g., Walking, yoga, stretching" = "例:走路、瑜珈、伸展操";
+"e.g., Humalog®、Novolog®" = "例:Humalog®、Novolog®";
+"e.g., Lantus®、Levemir®" = "例:Lantus®、Levemir®";
+"e.g., Humulin R®、Novolin R®、Humulin N®、Novolin N®" = "例:Humulin R®、Novolin R®、Humulin N®、Novolin N®";
+"e.g., " = "例:";
+"Mark" = "註記";
+"New event" = "新增事件";
+"Dose" = "劑量";
+"Transmission" = "傳輸";
+"Executing..." = "執行中...";
+"Version does not support " = "版本不支援";
+"Write successfully" = "寫入成功";
+"Write failed" = "寫入失敗";
+"Record time" = "紀錄時間";
+"Null" = "無";
+"PairTitle" = "配對藍芽裝置";
+"ConnectTitle" = "連線中";
+
+
+
+"Personal information" = "個人資訊";
+"Body value" = "身體數值";
+"Date of birth" = "出生日期";
+"Record time" = "紀錄時間";
+"Bluetooth" = "藍芽連線";
+"Cover Data" = "回補Data";
+"Data upload" = "資料上傳";
+"Count record" = "Count紀錄";
+"Notification email is set" = "已設定通知email";
+
+"Set X axis time interval (per/s)" = "設定X軸時間間距(per/s)";
+
+"Please pay attention to the current network status in order to upload various data" = "請注意當前網絡狀態，以便上傳各種數據";
+
+// RF Test 頁面
+"RF_File Name" = "檔案名稱";
+"RF_File Version" = "檔案版本";
+"RF_File Size" = "檔案大小";
+"RF_Open File" = "開啟檔案";
+
+// MARK: - CommandBase
+"Dining" = "用餐";
+"Exercise" = "運動";
+"Sleeping" = "睡眠";
+"Insulin" = "胰島素";
+"Get up" = "起床";
+"Bath" = "洗澡";
+"Others" = "其他";
+
+"Breakfast" = "早餐";
+"Lunch" = "午餐";
+"Dinner" = "晚餐";
+"Snack" = "點心";
+"Drinks" = "飲料";
+
+"High Intensity" = "高強度";
+"Medium Intensity" = "中強度";
+"Low Intensity" = "低強度";
+"End of Exercise" = "運動結束";
+
+"Sleep" = "就寢";
+"Nap" = "午睡";
+"Rest" = "小憩";
+"Relax time" = "放鬆時刻";
+
+"Rapid acting" = "速效型";
+"Long acting" = "長效型";
+"Unspecified" = "未指定";
+
+"Events" = "生活作息事件";
+"Strength" = "劇烈程度";
+"Sleeping" = "睡眠";
+"Type of medication" = "用藥種類";
+
+"Meal Name" = "品名";
+"Exercise Type" = "類型";
+"Dose" = "劑量";
+"Quantity" = "份量";
+"Add Product Name" = "添加";
+"During Time" = "時長";
+"Note" = "註記";
+"Additional Notes" = "記錄一下吧";
+"Notes must not exceed 100 characters" = "註記字數不得超過 100 字元";
+"Currect Notes Characters：" = "目前註記字數：";
+
+// 生活作息欄位文字預設值
+"Steamed bun" = "饅頭"; // 用餐－早餐
+"Rice" = "米飯"; // 用餐－午餐
+"Noodles" = "麵食"; // 用餐－晚餐
+"Bread" = "麵包"; // 用餐－點心
+"Milk tea" = "奶茶"; // 用餐－飲料
+"Run" = "跑步"; // 運動－高強度
+"Swimming" = "游泳"; // 運動－中強度
+"Walk" = "散步"; // 運動－低強度
+
+"Vibration Notification" = "震動通知";
+"Ring Notification" = "響鈴通知";
+"Ring Setting" = "鈴聲設定";
+"Low blood sugar" = "低血糖";
+"High blood sugar" = "高血糖";
+"Alert Settings" = "警示設定";
+"Calibration Mode" = "校正模式";
+"Set Data initial value" = "設定ADC初始值";
+"Set y-axis upper and lower limits" = "設定y軸上下限";
+"Unit Change" = "單位切換";
+"Display Value Information" = "顯示數值資訊";
+"Display RSSI" = "顯示RSSI";
+"Upload to the cloud" = "上傳雲端";
+"Exceeding high and low blood sugar warning" = "超出高低血糖警示";
+"Y-axis automatic alignment" = "Y軸自動對齊";
+"Data Sync" = "資料同步";
+"Warm-up state" = "暖機狀態";
+"Warm-up state On" = "開";
+"Warm-up state Off" = "關";
+"Upload Event Log" = "上傳事件日誌";
+"Click Me" = "點我上傳";
+"App Version" = "App版本";
+"Firmware Version" = "韌體版本";
+"Help" = "幫助";
+
+"High Alerts" = "高血糖警示";
+"Low Alerts" = "低血糖警示";
+"Rate Alerts" = "速率警示";
+"Audio" = "鈴聲";
+"Note: Urgent Low Alert at 55mg/dL is always on." = "注意: 低於 55 mg/dL緊急警示永遠開啟";
+"None" = "無";
+"Override ringer for all alerts" = "覆蓋所有警示的鈴聲";
+
+"High Blood Suger Alert" = "高血糖警示";
+"Low Blood Suger Alert" = "低血糖警示";
+"Rate Alert" = "速率警示";
+"Audio Alert" = "鈴聲";
+
+"High Limit" = "高血糖上限";
+"Low Limit" = "低血糖下限";
+"Rise Alert" = "上升警示";
+"Fall Alert" = "下降警示";
+"Alerts when sensor glucose is rising quickly" = "感測器血糖值快速上升時的警示";
+"Alerts when sensor glucose is falling quickly" = "感測器血糖值快速下降時的警示";
+"Override" = "強制警示鈴聲權限";
+"Audio Settings" = "覆蓋鈴聲";
+"Overrides ringers setting to always play a tone, even when ringers is silenced." = "覆蓋鈴聲設置，始終播放，即使鈴聲被靜音，依然會發出聲音通知。";
+"Note: the Urgent Low Alert will always override your ringer, regardless of this setting." = "注意: 這個設定與緊急低警示始終覆蓋鈴聲無關。";
+"OPTIONS" = "選項";
+"Open" = "開啟";
+
+"FirstName" = "名";
+"LastName" = "姓";
+"Birthday" = "出生日期";
+"Email" = "電子信箱";
+"Phone" = "手機號碼";
+"Address" = "地址";
+
+"Gender" = "性別";
+"Height" = "身高";
+"Weight" = "體重";
+"Race" = "種族";
+"Liquor" = "飲酒";
+"Smoke" = "抽菸";
+
+"Male" = "男性";
+"Female" = "女性";
+
+"Asia" = "亞洲";
+"Africa" = "非洲";
+"Caucasus" = "高加索";
+"Latin" = "拉丁";
+
+"Don't drink" = "不喝酒";
+"Drink occasionally" = "偶爾喝";
+"Drink often" = "經常喝";
+"Drink every day" = "每天喝";
+
+"Transmitter Device" = "發射器裝置";
+"Sensor Device" = "感測器裝置";
+"Go To Binding" = "前往綁定";
+"Change Password" = "修改密碼";
+
+"Error, please re-register/login or report to customer service" = "錯誤，請重新註冊/登入或回報客服";
+"Wrong password" = "密碼錯誤";
+"Please reset your password" = "請重設密碼";
+"No such user" = "無此使用者";
+"Duplicate Username" = "重複的使用者名稱";
+"The account has not been opened, please go to the mailbox and click the authentication letter to open" = "帳號未開通，請到信箱點選認證信開通";
+"User canceled login" = "使用者取消登入";
+"Invalid code provided, please request a code again." = "提供的驗證碼無效，請再次請求驗證碼。";
+
+"Seknova App Terms of Use" = "Seknova 應用程式使用條款";
+"Set high and low blood sugar" = "設定高低血糖";
+"Glucose Calibration" = "血糖校正";
+
+// Sensor PopVC 頁面
+"Transmitter hasn't been activated.\nPlease activate it first before \ndisplaying further data." = "發射器尚未啟用，請使用者先進\n行啟用後才可以進一步顯示資料。";
+"Sensor hasn't been activated.\nPlease activate it first before \ndisplaying data." = "感測器尚未啟用，請使用者先進\n行啟用後才可以顯示資料。";
+"No such status." = "無此狀態";
+"Sensor has been activated." = "感測器已啟用";
+
+// 報表頁面
+"Daily Patterns" = "日常模式";
+"Time in Target" = "目標時間";
+"dataAvailableLabel" = "%d / 30 天內可用數據";
+"Target Range" = "目標區間: ";
+"DAYS" = "天";
+"Report_ChartViewNoDataText" = "資料抓取失敗！無法顯示在畫面上";
+"API Data Fetching! will be displayed on the graph later" = "資料抓取中！稍後將顯示在畫面上";
+"API Data Fetching Failed! Can't be displayed on the graph" = "資料抓取失敗！無法顯示在畫面上";
+"Offline Mode Can't Use Report Page" = "Offline Mode 無法使用報表頁面";
+"No Network Can't Use Report Page" = "無網路連線時，將無法使用報表頁面";
+
+//"歡迎您使用Seknove（以下簡稱本服務）應用程式（以下簡稱APP）為保障您的權益，請詳細閱讀下列條款內容。若您點擊「同意」，即表示您已閱讀、了解並同意遵守下列條款。日後智準生醫科技如有修改或變更本服務使用條款之內容，修改後的使用條款內容將公布網站上。若您於前開修改或變更後繼續使用本服務，視為您已閱讀、瞭解並同意接受該等修改或變更。如果您無法遵守本服務使用條款內容，或不同意本服務使用條款內容時，請您立即停止使用本服務。為確保您的權益，建議您經常確認本服務使用條款之最新內容。\n若您未滿二十歲，應於點選同意前，將本使用條款請您的法定代理人（家長）或監護人閱讀，並得到其同意，才可以使用本服務。當您使用本服務時，則視為您的家長（或監護人）已經閱讀、瞭解並同意本服務條款之所有內容及其後之修改變更：\n一、服務內容\n(一)使用者:本服務APP須先申請成為使用者，並由使用者支付本服務APP之費用。前述之申請可至本公司客服中心或本服務APP網站辦理，當申請完成後即開始計費。使用者欲終止使用本服務APP，須辦理終止使用手續。若使用者違反本公司規定，本服務APP亦將自動終止或暫停使用。\n(二)本服務APP可安裝於智慧型行動設備(包含智慧型手機、平板)，服務內容包含服務內容等。\n1.服務內容：提供持續性血糖監控。\n2.APP使用時間：可依平日（星期一~五）、假日（六、日）設定APP使用時段。\n(三)本服務僅提供Android作業系統且版本2.2以上使用。\n二、服務認知\n(一)本服務APP使用前，管理者與使用者應充份溝通並取得同意使用本服務APP後，才下載、安裝及登錄註冊使用。\n(二)本服務APP之客戶服務，應由管理者向本公司客服中心、各營運窗口或本服務APP網站辦理，並遵守本公司相關規定（如：管理者進線客服中心，須經一定程序驗證身分後辦理）。\n(三)本服務APP僅提供第一條服務內容所述之服務，其他所需之設備（如：個人電腦、行動裝置及其他相關裝置）及所需之費用（如行動上網費用、通訊費用等）均由使用者自行負擔。\n(四)本服務APP使用條款若有變更，本公司得依需求向用戶公告或通知以變更本條款。用戶於變更後繼續使用本服務APP者，視為同意本條款之變更，使用者須遵守該變更後條款之規範；未規定事項，同意遵守本公司相關服務營業規章規定。\n三、免責聲明\n(一)本服務APP之使用者，若與他人間因使用本服務APP而產生之爭議及訴訟，由使用者與爭議人自行溝通、協調，概與本公司無涉，本公司不負任何責任。\n(二)本服務APP依本公司既有之規劃提供，不保證符合管理者或使用者的全部需求、不受干擾、安全可靠或免於出錯。\n(三) 本服務依一般合理之技術及方式，維持系統及服務之正常運作。但於下列各項情況時，本平台有權可以停止、中斷提供本服務，且不會為下列原因所引發的損失或傷害而負賠償責任。\n1.    本服務相關設備進行必要之保養及施工時。\n2.    本服務相關設備發生突發性之故障時。\n3.    本服務申請之電子通信服務被停止，無法提供服務時。\n4.    第三人透過本服務傳輸任何錯誤軟體、病毒、木馬或類似性質的程式。\n5.    由於天災等不可抗力之因素或其他不可歸責致使無法提供服務時。\n(四)如因下載、安裝、使用本服務APP，致使用者之設備直接或間接之損害或損失時，本公司不負任何責任。\n(五)本公司如因情事變更，得暫停或終止本服務全部或一部，管理者或使用者不得異議或要求任何補償。\n四、個人資料蒐集告知條款\n(一)本公司於本服務期間基於「消費者、客戶管理與服務」合理關聯之特定目的範圍內，蒐集、處理及利用包括但不限於使用者本人所填寫之所有個人資料，俾利本公司得以提供本服務，並得以發送本服務相關訊息。若提供之資料不足或有誤時，本公司將無法提供完整服務。\n(二)管理者就其個人資料得依個人資料保護法及相關法律向本公司請求查詢、閱覽、製給複製本、補充更正、請求停止蒐集、處理、利用及刪除等權利。申請手續依本公司之規定辦理。\n(三)使用者了解並同意，本服務依上述提供服務之必要範圍外，據法律的要求或基於以下目的之合理必要範圍內，認定必須將使用者的帳戶資訊或內容，加以保存或揭露予政府機關、司法警察等時，得加以保存及揭露：\n1.    遵守法令或政府機關之要求。\n2.    為防止他人權益之重大危害而有必要者。\n3.    為免除使用者及公眾之生命、身體、自由、權利、財產上之急迫危險者。\n(四)使用者及管理者開始使用本服務APP時，則視為已了解及同意本公司及本服務對其個人資料之合法使用。\n五、智慧財產保護\n本服務APP及相關網站上所使用或提供之軟體、程式及內容（包括但不限於文字、說明、圖畫、圖片、圖形、檔案、頁面設計、網站規劃與安排等）之專利權、著作權、商標權、營業秘密、專門技術及其他智慧財產權均屬本公司或其他權利人所有，非經權利人事先書面授權同意，不得重製、公開傳播、公開播送、公開演出、公開上映、改作、編輯、出租、散布、進行還原工程、解編、反向組譯、或其他方式之使用，如有違反，除應自行負法律責任外，如因而對本公司造成損害或損失，本公司得請求損害賠償。\n六、用戶責任\n如因使用本服務APP而使本公司遭受第三人申訴、請求或提起訴訟等時，使用者應自己負責並自費處理之，不對本公司造成困擾。如因使用本服務APP而使本公司受有任何損害（包含律師費用之負擔）時，本公司得請求損害賠償。\n七、準據法及管轄法院\n(一)本服務條款以中華民國法律為準據法。\n(二)因使用本服務而與本公司所生之爭議，同意本誠信原則解決之，如有訴訟之必要時，同意以台灣台北地方法院為第一審管轄法院。"
+"SetUpBloodSugarUnderstandMore" = "設定高低血糖值，系統會於血糖高於高血糖值或是血糖低於低血糖值時透過通知使用者須進一步處理。通知方式為訊息，鈴聲(可關掉)或電子郵件信箱。";
+
+"CalibrateUnderstandMore" = "系統暖機完後須進行第一次血糖校正，請透過認證的血糖機量測血糖值，並將量測的血糖值輸入在血糖校正的欄位。";
+
+"SeknovaAppTermsOfUse" = "本使用條款（以下簡稱“本條款”）是智準生醫科技股份有限公司（以下簡稱“智準生醫”）與智準生醫產品用戶或購買者（您）之間的協議。本條款適用於您使用或訪問智準生醫提供的工具及服務（包括但不限於智準生醫智準生醫運營的其他網站，智準生醫在網站、蘋果應用商店或其他移動服務平台提供下載及訪問的App）。\n當您使用任何智準生醫網站、App 或點擊“接受”條款時，即表示同意您同意本條款。時閱讀本條款。本條款最近更新時間為2021年9月1日。\n\n醫療信息\n智準生醫網站或App上提供的產品或服務等相關信息僅用於一般的信息傳遞及達到一般的教育目的。\n\n智準生醫提供醫療建議。\n智準生醫不提供醫療、治療服務等相關建議，智準生醫網站或醫療保健應用程序上的信息也不應接受醫療建議。\n\n創作權與商標\n智準生醫網站或應用程序內容的所有權為智準生醫網站或應用程序內容受《中華民國著作權》（以下簡稱“著作權法”）保護。時，您必須遵守權利法的相關規定。\n\n智準生醫產品及服務的名稱為智準生醫所有，且受《中華民國商標法》（以下簡稱“商標法”）保護。智準生醫網站App中帶有右上標“®”符號的名稱已經被註冊商標；伴隨著右上標“TM”符號的名稱已經作為商標使用。\n如果您以本條款中未明確表示允許以使用智準生醫網站或應用程序的內容或商標的方式，您將違反與智準生醫之間的協議，也可能違反創業權法、商標法或其他法律。發生，智準生醫將自動通知您使用智準生醫網站或應用程序的許可。\n移科技網站或App內容的原型為智準生醫所有。所有未曾存在用戶的權利將被保留。\n\n智準生醫網站或App鏈接\n您將被授權使用智準生醫或App智準生醫。如果您同意智準生醫修改撤銷此授權，您將同意立即移除或停止鏈接使用網站或App上的移動宇科技網站或應用程序鏈接。\n\n不承諾聲明\n智準生醫或App以「當前」、「現有」為基礎提供所有內容，不做任何形式的網站擔保。\n\n智準生醫將不對智準生醫的所有內容準確、網站科技、應用程序或社交性或提供任何保證或陳述，不對這些內容或信息的錯誤、錯誤或遺漏承擔承擔。移動宇科技不保證移動宇科技網站或應用程序不會受到病毒及任何可能破壞計算器或智能設備的程序的影響，您需要自動採取預防措施。訪問及使用智準生醫網站或應用程序的相關行為及針對產生的任何爭議的方法解決受中華民國法律約束。";

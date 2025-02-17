@@ -67,7 +67,6 @@
 		7B78367E2CA13AA7006EE7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B78367D2CA13AA7006EE7D8 /* AppDelegate.swift */; };
 		7B7836802CA13AA7006EE7D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B78367F2CA13AA7006EE7D8 /* SceneDelegate.swift */; };
 		7B7836872CA13AA9006EE7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836862CA13AA9006EE7D8 /* Assets.xcassets */; };
-		7B78368A2CA13AA9006EE7D8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836892CA13AA9006EE7D8 /* Base */; };
 		7B7836932CA13E14006EE7D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7836912CA13E14006EE7D8 /* LoginViewController.swift */; };
 		7B7836942CA13E14006EE7D8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7836922CA13E14006EE7D8 /* LoginViewController.xib */; };
 		7B8199242CA55F87002767D3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8199232CA55F87002767D3 /* Color+Extensions.swift */; };
@@ -87,6 +86,7 @@
 		7B9B92722CBE747100203AD3 /* PersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */; };
 		7B9B92782CBFB80C00203AD3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */; };
 		7B9B92D22CC11D1200203AD3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B92D12CC11D1200203AD3 /* UserInformation.swift */; };
+		7BA20FA52D630ED500737535 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BA20FA32D630ED500737535 /* Localizable.strings */; };
 		7BA7665E2CCA5F7B00D0F340 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7665D2CCA5F7B00D0F340 /* Alert.swift */; };
 		7BAD780F2D34EC810082B037 /* BindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD780E2D34EC810082B037 /* BindPhoneViewController.xib */; };
 		7BAD78102D34EC810082B037 /* BindPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD780D2D34EC810082B037 /* BindPhoneViewController.swift */; };
@@ -186,7 +186,6 @@
 		7B78367D2CA13AA7006EE7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B78367F2CA13AA7006EE7D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B7836862CA13AA9006EE7D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7B7836892CA13AA9006EE7D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B78368B2CA13AA9006EE7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B7836912CA13E14006EE7D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B7836922CA13E14006EE7D8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -207,6 +206,8 @@
 		7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
 		7B9B92772CBFB80C00203AD3 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		7B9B92D12CC11D1200203AD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		7BA20FA42D630ED500737535 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7BA20FA62D630EEF00737535 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7BA7665D2CCA5F7B00D0F340 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7BAD780D2D34EC810082B037 /* BindPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindPhoneViewController.swift; sourceTree = "<group>"; };
 		7BAD780E2D34EC810082B037 /* BindPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindPhoneViewController.xib; sourceTree = "<group>"; };
@@ -327,13 +328,6 @@
 				7B14D5452D55DD34001C2D26 /* LifeEventRecordViewController.xib */,
 			);
 			path = LifeEventRecordVC;
-			sourceTree = "<group>";
-		};
-		7B14D54B2D55DDF9001C2D26 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7B14D54D2D55E08C001C2D26 /* WarningSettingVC */ = {
@@ -543,13 +537,12 @@
 		7B78367C2CA13AA7006EE7D8 /* Seknova-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				7BA20F9F2D630E1800737535 /* View */,
 				7B7836972CA1419A006EE7D8 /* Model */,
-				7B14D54B2D55DDF9001C2D26 /* View */,
 				7B7836952CA14189006EE7D8 /* Controller */,
 				7B78367D2CA13AA7006EE7D8 /* AppDelegate.swift */,
 				7B78367F2CA13AA7006EE7D8 /* SceneDelegate.swift */,
 				7B7836862CA13AA9006EE7D8 /* Assets.xcassets */,
-				7B7836882CA13AA9006EE7D8 /* LaunchScreen.storyboard */,
 				7B78368B2CA13AA9006EE7D8 /* Info.plist */,
 			);
 			path = "Seknova-Practice";
@@ -651,6 +644,14 @@
 				7B9B92702CBE747100203AD3 /* PersonalInfoTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7BA20F9F2D630E1800737535 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BA20FA32D630ED500737535 /* Localizable.strings */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7BAD780C2D34EC460082B037 /* BindPhoneVC */ = {
@@ -859,6 +860,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 7B7836712CA13AA7006EE7D8;
 			packageReferences = (
@@ -893,7 +895,6 @@
 				7B14D5732D59F1DC001C2D26 /* RateAlertsTableViewCell.xib in Resources */,
 				7BC070A22CFED72800A76DCF /* TabBarView.xib in Resources */,
 				7BC070A92CFEFE1B00A76DCF /* CustomTabBar.xib in Resources */,
-				7B78368A2CA13AA9006EE7D8 /* Base in Resources */,
 				7B14D55A2D55EEDD001C2D26 /* HighAlertsViewController.xib in Resources */,
 				7B14D5242D5277D8001C2D26 /* LifeRoutineCollectionViewCell.xib in Resources */,
 				7B14D5692D55F71F001C2D26 /* HApkvTableViewCell.xib in Resources */,
@@ -909,6 +910,7 @@
 				7B6447322CF0692C002C43D7 /* PersonInformationViewController.xib in Resources */,
 				7B14D52A2D5277D8001C2D26 /* LifeViewController.xib in Resources */,
 				7B14D5632D55EF9E001C2D26 /* HATableViewCell.xib in Resources */,
+				7BA20FA52D630ED500737535 /* Localizable.strings in Resources */,
 				7BC15D802D01A50300A4AD50 /* ReportViewController.xib in Resources */,
 				7B14D54A2D55DD35001C2D26 /* LifeEventRecordViewController.xib in Resources */,
 				7BAE05CC2D5B2D5700685067 /* CalibrationModeViewController.xib in Resources */,
@@ -1048,12 +1050,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B7836882CA13AA9006EE7D8 /* LaunchScreen.storyboard */ = {
+		7BA20FA32D630ED500737535 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B7836892CA13AA9006EE7D8 /* Base */,
+				7BA20FA42D630ED500737535 /* en */,
+				7BA20FA62D630EEF00737535 /* zh-Hant */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
