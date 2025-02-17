@@ -34,9 +34,14 @@ class SensorPopoverViewController: UIViewController {
     // MARK: - Function
     func checkSensorStatus() {
         if UserPreferences.shared.sensorDeviceID !=  "" {
-            lbSensorStatus.text = "感測器已啟用"
+            lbSensorStatus.text = NSLocalizedString("Sensor has been activated.", comment: "")
         } else {
-            lbSensorStatus.text = "感測器未啟用"
+            lbSensorStatus.text = NSLocalizedString("Sensor hasn't been activated.\nPlease activate it first before \ndisplaying data.", comment: "")
+        }
+        if NSLocale.current.language.languageCode?.identifier == "en" {
+            lbSensorStatus.font = UIFont.systemFont(ofSize: 14)
+        } else {
+            lbSensorStatus.font = UIFont.systemFont(ofSize: 17)
         }
     }
 }
