@@ -6,7 +6,7 @@
   
 */
 // MARK: - Menu Title
-
+"Are you sure you want to log out ?" = "確定要登出嗎？";
 "Please select an event" = "請選擇一個類別";
 "Login" = "登入";
 "Register" = "註冊";
