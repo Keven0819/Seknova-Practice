@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BindPhoneViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="btnBack" destination="Yla-sQ-2ey" id="fD1-nK-vvm"/>
+                <outlet property="btnGetPassKey" destination="gWC-xF-I6M" id="HrI-ps-fDB"/>
                 <outlet property="btnInputPassKey" destination="69w-rI-PZp" id="ujA-ih-PRs"/>
                 <outlet property="btnReturn" destination="Yla-sQ-2ey" id="cnJ-bo-kaB"/>
                 <outlet property="txfInputPassKey" destination="Y1Q-Hw-ILF" id="imC-s7-Zhu"/>

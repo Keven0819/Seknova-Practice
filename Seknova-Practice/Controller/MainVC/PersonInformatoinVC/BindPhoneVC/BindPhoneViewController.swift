@@ -16,6 +16,7 @@ class BindPhoneViewController: UIViewController {
     @IBOutlet weak var txfInputPassKey: UITextField!
     @IBOutlet weak var btnInputPassKey: UIButton!
     @IBOutlet weak var btnReturn: UIButton!
+    @IBOutlet weak var btnGetPassKey: UIButton!
     
     // MARK: - Property
     
@@ -29,10 +30,15 @@ class BindPhoneViewController: UIViewController {
     // MARK: - UI Settings
     func setupUI() {
         setupNavigationBar()
+        txfInputPhoneNumber.placeholder = NSLocalizedString("Enter phone number", comment: "")
+        txfInputPassKey.placeholder = NSLocalizedString("6-digit verify code", comment: "")
+        btnInputPassKey.setTitle(NSLocalizedString("Input verify code", comment: ""), for: .normal)
+        btnBack.setTitle(NSLocalizedString("Return", comment: ""), for: .normal)
+        btnGetPassKey.setTitle(NSLocalizedString("Get verify code", comment: ""), for: .normal)
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "綁定手機"
+        self.navigationItem.title = NSLocalizedString("Bind Phone Cell", comment: "")
     }
     
     // MARK: - IBAction
@@ -51,8 +57,8 @@ class BindPhoneViewController: UIViewController {
             }
             self.navigationController?.popViewController(animated: true)
         } else {
-            let alert = UIAlertController(title: "請輸入手機號碼", message: "", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "確認", style: .default, handler: nil)
+            let alert = UIAlertController(title: NSLocalizedString("Enter phone number", comment: ""), message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
