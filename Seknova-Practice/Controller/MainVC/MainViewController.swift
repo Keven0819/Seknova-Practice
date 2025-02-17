@@ -19,7 +19,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     // MARK: - Property
     var vc: [UIViewController] = []
     var nowVC: Int = BottomItems.InstantBloodSugarViewController.rawValue
-    var titles: [String] = ["即時血糖", "血糖校正", "生活作息", "歷史紀錄", "個人資訊"]
+    var titles: [String] = [NSLocalizedString("Glycemic Index", comment: "即時血糖"), NSLocalizedString("Calibrate", comment: "血糖校正"), NSLocalizedString("LifeStyle", comment: "生活作息"), NSLocalizedString("History", comment: "歷史紀錄"), NSLocalizedString("Personal Info", comment: "個人資訊")]
     
     let one = InstantBloodSugarViewController()
     let two = BloodSugarCorrectionViewController()
@@ -54,7 +54,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     }
     func setNavigatioinBar() {
         
-        self.title = "即時血糖"
+        self.title = NSLocalizedString("Glycemic Index", comment: "")
         
         let moreButton = UIButton(type: .system)
         moreButton.setImage(UIImage(named: "ThreeLineSmall"), for: .normal)
