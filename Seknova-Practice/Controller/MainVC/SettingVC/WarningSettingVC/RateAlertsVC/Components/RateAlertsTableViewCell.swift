@@ -14,9 +14,13 @@ class RateAlertsTableViewCell: UITableViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var swOnOff: UISwitch!
     
+    // 新增回調
+    var switchChanged: ((Bool) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        swOnOff.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,14 +29,9 @@ class RateAlertsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func switchState(_ sender: Any) {
-        
-        if lbTitle.text == "Rise Alert" {
-            RateAlertSwitch.shared.swRiseAlertState = swOnOff.isOn
-        } else if lbTitle.text == "Fall Alert" {
-            RateAlertSwitch.shared.swFallAlertState = swOnOff.isOn
-        }
-        
+    // 當 UISwitch 值變更時，呼叫回調
+    @objc func switchValueChanged(_ sender: UISwitch) {
+        switchChanged?(sender.isOn)
     }
     
 }

@@ -39,9 +39,9 @@ class HighAlertsViewController: UIViewController {
     
     func setupNavigationBar() {
         if whatVC {
-            self.navigationItem.title = "高血糖警示"
+            self.navigationItem.title = NSLocalizedString("High Alerts", comment: "")
         } else {
-            self.navigationItem.title = "低血糖警示"
+            self.navigationItem.title = NSLocalizedString("Low Alerts", comment: "")
         }
     }
     
@@ -53,7 +53,7 @@ class HighAlertsViewController: UIViewController {
     }
     
     func setupNavigationRightButton() {
-        let rightButton = UIBarButtonItem(title: "儲存", style: .plain, target: self, action: #selector(saveTapped))
+        let rightButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .plain, target: self, action: #selector(saveTapped))
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
@@ -115,9 +115,9 @@ extension HighAlertsViewController: UITableViewDelegate, UITableViewDataSource {
             return " "
         case 1:
             if whatVC {
-                return "高血糖警示"
+                return NSLocalizedString("High Alerts", comment: "")
             } else {
-                return "低血糖警示"
+                return NSLocalizedString("Low Alerts", comment: "")
             }
         default:
             return ""
@@ -143,14 +143,14 @@ extension HighAlertsViewController: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 
                 if whatVC {
-                    cell.lbTitle.text = "高血糖警示"
+                    cell.lbTitle.text = NSLocalizedString("High Alerts", comment: "")
                     if UserPreferences.shared.highAlertsValue == "none" {
                         cell.swOnOff.isOn = false
                     } else {
                         cell.swOnOff.isOn = true
                     }
                 } else {
-                    cell.lbTitle.text = "低血糖警示"
+                    cell.lbTitle.text = NSLocalizedString("Low Alerts", comment: "")
                     if UserPreferences.shared.lowAlertsValue == "none" {
                         cell.swOnOff.isOn = false
                     } else {

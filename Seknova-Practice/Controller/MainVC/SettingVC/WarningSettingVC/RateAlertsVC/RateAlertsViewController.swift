@@ -41,7 +41,7 @@ class RateAlertsViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "速率警示"
+        self.navigationItem.title = NSLocalizedString("Rate Alerts", comment: "")
     }
     
     func setupTableView() {
@@ -51,18 +51,16 @@ class RateAlertsViewController: UIViewController {
     }
     
     func setupNavigationRightButton() {
-        let rightButton = UIBarButtonItem(title: "儲存", style: .plain, target: self, action: #selector(saveTapped))
+        let rightButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .plain, target: self, action: #selector(saveTapped))
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
     // MARK: - IBAction
     
     @objc func saveTapped() {
-        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? RateAlertsTableViewCell {
-            RateAlertSwitch.shared.swRiseAlertState = cell.swOnOff.isOn
-        } else if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? RateAlertsTableViewCell {
-            RateAlertSwitch.shared.swFallAlertState = cell.swOnOff.isOn
-        }
+        // 當儲存時，將值儲存到 shared 中
+        RateAlertSwitch.shared.swRiseAlertState = switchRiseState
+        RateAlertSwitch.shared.swFallAlertState = switchFallState
     }
     
     // MARK: - Function
@@ -96,7 +94,11 @@ extension RateAlertsViewController: UITableViewDelegate, UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 cell.lbTitle.text = "Rise Alert"
-                cell.swOnOff.isOn =  RateAlertSwitch.shared.swRiseAlertState
+                cell.swOnOff.isOn = RateAlertSwitch.shared.swRiseAlertState
+                // 設置開關值變更時的回調
+                cell.switchChanged = { isOn in
+                    self.switchRiseState = isOn
+                }
             default:
                 break
             }
@@ -106,6 +108,10 @@ extension RateAlertsViewController: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 cell.lbTitle.text = "Fall Alert"
                 cell.swOnOff.isOn = RateAlertSwitch.shared.swFallAlertState
+                // 設置開關值變更時的回調
+                cell.switchChanged = { isOn in
+                    self.switchFallState = isOn
+                }
             default:
                 break
             }

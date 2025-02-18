@@ -47,9 +47,9 @@ class WarningSettingViewController: UIViewController {
     
     
     func setupNavigationBar() {
-        self.navigationItem.title = "警示設定"
+        self.navigationItem.title = NSLocalizedString("Alert Settings", comment: "")
         let backButton = UIBarButtonItem()
-        backButton.title = "返回"
+        backButton.title = NSLocalizedString("Return", comment: "")
         navigationItem.backBarButtonItem = backButton
     }
     

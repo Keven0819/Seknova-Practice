@@ -66,7 +66,7 @@ class SettingViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "設定"
+        self.navigationItem.title = NSLocalizedString("SetPlan", comment: "")
     }
     
     func saveTextFieldText() {
@@ -114,33 +114,33 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         if developmentMode == "0000" {
             switch indexPath.row {
             case 0:
-                cell.lbTitle.text = "警示設定"
+                cell.lbTitle.text = NSLocalizedString("Alert Settings", comment: "")
                 cell.imgvArrowRight.isHidden = false
             case 1:
-                cell.lbTitle.text = "單位切換(mmol/L)"
+                cell.lbTitle.text = "\(NSLocalizedString("Unit Change", comment: ""))(mmol/L)"
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swUnitChangeState
             case 2:
-                cell.lbTitle.text = "超出高低血糖警示"
+                cell.lbTitle.text = NSLocalizedString("Exceeding high and low blood sugar warning", comment: "")
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swOverHighLowAlertState
             case 3:
-                cell.lbTitle.text = "資料同步"
+                cell.lbTitle.text = NSLocalizedString("Data Sync", comment: "")
                 cell.imgvReload.isHidden = false
             case 4:
-                cell.lbTitle.text = "暖機狀態"
+                cell.lbTitle.text = NSLocalizedString("Warm-up state", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "Off"
             case 5:
-                cell.lbTitle.text = "上傳事件日誌"
+                cell.lbTitle.text = NSLocalizedString("Upload Event Log", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "09/05 02:16:35"
             case 6:
-                cell.lbTitle.text = "韌體版本"
+                cell.lbTitle.text = NSLocalizedString("Firmware Version", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "1.24.9"
             case 7:
-                cell.lbTitle.text = "App 版本"
+                cell.lbTitle.text = NSLocalizedString("App Version", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "00.00.61"
             default:
@@ -150,13 +150,13 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         } else if developmentMode == "8888" {
             switch indexPath.row {
             case 0:
-                cell.lbTitle.text = "警示設定"
+                cell.lbTitle.text = NSLocalizedString("Alert Settings", comment: "")
                 cell.imgvArrowRight.isHidden = false
             case 1:
-                cell.lbTitle.text = "校正模式"
+                cell.lbTitle.text = NSLocalizedString("Calibration Mode", comment: "")
                 cell.imgvArrowRight.isHidden = false
             case 2:
-                cell.lbTitle.text = "設定ADC初始值"
+                cell.lbTitle.text = NSLocalizedString("Set Data initial value", comment: "")
                 cell.txfInput.isHidden = false
                 if UserPreferences.shared.adcInitialValue == "" {
                     cell.txfInput.text = "0"
@@ -165,7 +165,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 cell.txfInput.keyboardType = .numberPad
             case 3:
-                cell.lbTitle.text = "設定X軸時間間距 (per/s)"
+                cell.lbTitle.text = NSLocalizedString("Set X axis time interval (per/s)", comment: "")
                 cell.txfInput.isHidden = false
                 if UserPreferences.shared.timeIntervalValue == "" {
                     cell.txfInput.text = "3600.0 per/s"
@@ -177,7 +177,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 cell.txfInput.keyboardType = .numberPad
             case 4:
-                cell.lbTitle.text = "設定y軸上下限"
+                cell.lbTitle.text = NSLocalizedString("Set y-axis upper and lower limits", comment: "")
                 cell.txfInput.isHidden = false
                 if UserPreferences.shared.yAxisLimitsValue == "" {
                     cell.txfInput.text = "400,0"
@@ -186,42 +186,42 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 cell.txfInput.keyboardType = .numberPad
             case 5:
-                cell.lbTitle.text = "單位切換(mmol/L)"
+                cell.lbTitle.text = "\(NSLocalizedString("Unit Change", comment: ""))(mmol/L)"
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swUnitChangeState
             case 6:
-                cell.lbTitle.text = "顯示數值資訊"
+                cell.lbTitle.text = NSLocalizedString("Display Value Information", comment: "")
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swDisplayValueInfo
             case 7:
-                cell.lbTitle.text = "顯示 RSSI"
+                cell.lbTitle.text = NSLocalizedString("Display RSSI", comment: "")
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swDisplayRSSI
             case 8:
-                cell.lbTitle.text = "上傳雲端"
+                cell.lbTitle.text = NSLocalizedString("Upload to the cloud", comment: "")
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swUploadCloud
             case 9:
-                cell.lbTitle.text = "超出高低血糖警示"
+                cell.lbTitle.text = NSLocalizedString("Exceeding high and low blood sugar warning", comment: "")
                 cell.swOnOff.isHidden = false
                 cell.swOnOff.isOn = Switch.shared.swOverHighLowAlertState
             case 10:
-                cell.lbTitle.text = "資料同步"
+                cell.lbTitle.text = NSLocalizedString("Data Sync", comment: "")
                 cell.imgvReload.isHidden = false
             case 11:
-                cell.lbTitle.text = "暖機狀態"
+                cell.lbTitle.text = NSLocalizedString("Warm-up state", comment: "")
                 cell.lbContent.isHidden = false
-                cell.lbContent.text = "Off"
+                cell.lbContent.text = "On"
             case 12:
-                cell.lbTitle.text = "上傳事件日誌"
+                cell.lbTitle.text = NSLocalizedString("Upload Event Log", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "09/05 02:16:35"
             case 13:
-                cell.lbTitle.text = "韌體版本"
+                cell.lbTitle.text = NSLocalizedString("Firmware Version", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "1.24.9"
             case 14:
-                cell.lbTitle.text = "App 版本"
+                cell.lbTitle.text = NSLocalizedString("App Version", comment: "")
                 cell.lbContent.isHidden = false
                 cell.lbContent.text = "00.00.61"
             default:
