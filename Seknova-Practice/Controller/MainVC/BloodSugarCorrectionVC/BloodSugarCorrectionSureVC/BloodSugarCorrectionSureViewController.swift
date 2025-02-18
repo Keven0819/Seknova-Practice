@@ -59,7 +59,7 @@ class BloodSugarCorrectionSureViewController: UIViewController {
         if NSLocale.current.language.languageCode?.identifier == "zh" {
             formatter.locale = Locale(identifier: "zh_TW")
         } else {
-            formatter.locale = Locale(identifier: "en摁")
+            formatter.locale = Locale(identifier: "en")
         }
         formatter.dateFormat = "h:mm a"
         let time = formatter.string(from: date)
