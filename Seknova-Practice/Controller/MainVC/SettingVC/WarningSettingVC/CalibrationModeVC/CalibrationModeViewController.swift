@@ -33,8 +33,8 @@ class CalibrationModeViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "設定校正模式"
-        self.navigationItem.setRightBarButton(UIBarButtonItem(title: "儲存", style: .plain, target: self, action: #selector(saveTapped)), animated: true)
+        self.navigationItem.title = ""
+        self.navigationItem.setRightBarButton(UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .plain, target: self, action: #selector(saveTapped)), animated: true)
     }
     
     func setupTableView() {
@@ -115,11 +115,11 @@ class CalibrationModeViewController: UIViewController {
                 }
                 realm.add(calibrationData)
             }
-            showAlert(message: "校正模式儲存成功") { [weak self] in
+            showAlert(message: NSLocalizedString("Write successfully", comment: "")) { [weak self] in
                 self?.navigationController?.popViewController(animated: true)
             }
         } catch {
-            showAlert(message: "儲存失敗：\(error.localizedDescription)")
+            showAlert(message: "\(NSLocalizedString("Write failed", comment: ""))：\(error.localizedDescription)")
         }
     }
     
@@ -128,8 +128,8 @@ class CalibrationModeViewController: UIViewController {
     // MARK: - Function
     // 輔助方法：顯示警告訊息
     private func showAlert(message: String, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "確定", style: .default) { _ in
+        let alert = UIAlertController(title: NSLocalizedString("Prompt", comment: ""), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default) { _ in
             completion?()
         })
         present(alert, animated: true)
@@ -192,7 +192,7 @@ extension CalibrationModeViewController: UITableViewDelegate, UITableViewDataSou
     
     // 設定 Header 標題
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "校正模式"
+        return NSLocalizedString("Calibration Mode", comment: "")
     }
     
     // 設定 Header 標題字體大小

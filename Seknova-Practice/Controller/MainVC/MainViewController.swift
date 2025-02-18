@@ -207,6 +207,7 @@ class MainViewController: UIViewController, SensorPopoverViewControllerDelegate,
     
     @IBAction func btnSetting(_ sender: Any) {
         let settingVC = SettingViewController()
+        self.navigationItem.backButtonTitle = NSLocalizedString("Return", comment: "返回")
         self.navigationController?.pushViewController(settingVC, animated: true)
     }
     

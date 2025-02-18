@@ -40,7 +40,7 @@ class ReportViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        self.navigationItem.title = "報表"
+        self.navigationItem.title = NSLocalizedString("Report", comment: "")
     }
     
     // MARK: - IBAction
@@ -85,7 +85,7 @@ class ReportViewController: UIViewController {
         }
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy年MM月dd日"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         let startDateString = dateFormatter.string(from: startDate)
         let endDateString = dateFormatter.string(from: endDate)
         
@@ -250,7 +250,7 @@ class ReportViewController: UIViewController {
         let calendar = Calendar.current
         let startDate = calendar.date(byAdding: .day, value: -7, to: currentDate)!
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy年MM月dd日"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         
         // 格式化日期
         let formattedStartDate = dateFormatter.string(from: startDate)
