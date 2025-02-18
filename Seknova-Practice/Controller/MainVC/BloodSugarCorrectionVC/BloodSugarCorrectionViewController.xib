@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BloodSugarCorrectionViewController" customModule="Seknova_Practice" customModuleProvider="target">
             <connections>
                 <outlet property="btnKnowMore" destination="t2m-Jd-upD" id="s8E-rK-fHV"/>
+                <outlet property="btnSave" destination="rmg-Sc-fBy" id="mCV-lm-Svw"/>
                 <outlet property="btnSetdown" destination="XBe-vT-kqx" id="sau-Ko-bE5"/>
                 <outlet property="btnSetup" destination="2Rk-dz-vDd" id="hvl-rq-Bvl"/>
                 <outlet property="lbBloodSugarValue" destination="DkG-hq-R48" id="frU-Zi-IcM"/>

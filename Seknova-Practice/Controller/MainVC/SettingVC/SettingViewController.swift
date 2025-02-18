@@ -255,7 +255,19 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
                 let okAction = UIAlertAction(title: "確認", style: .default) { (action) in
-                    self.developmentMode = alertController.textFields?[0].text ?? ""
+                    let inputText = alertController.textFields?[0].text ?? ""
+                    if inputText == "0000" || inputText == "8888" {
+                        self.developmentMode = inputText
+                    } else {
+                        self.developmentMode = "0000" // 恢復為預設值，或根據需求處理
+                        // 跳警告，必須輸入0000或8888
+                        let alert = UIAlertController(title: "請輸入正確字串", message: "請輸入 0000 或 8888", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "確認", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    UserPreferences.shared.developmentModeKey = self.developmentMode
+                    self.tableView.reloadData()
                     print("輸入的字串：\(self.developmentMode)")
                     UserPreferences.shared.developmentModeKey = self.developmentMode
                     self.tableView.reloadData()
@@ -285,7 +297,19 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
                 let okAction = UIAlertAction(title: "確認", style: .default) { (action) in
-                    self.developmentMode = alertController.textFields?[0].text ?? ""
+                    let inputText = alertController.textFields?[0].text ?? ""
+                    if inputText == "0000" || inputText == "8888" {
+                        self.developmentMode = inputText
+                    } else {
+                        self.developmentMode = "8888" // 恢復為預設值，或根據需求處理
+                        // 跳警告，必須輸入0000或8888
+                        let alert = UIAlertController(title: "請輸入正確字串", message: "請輸入 0000 或 8888", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "確認", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    UserPreferences.shared.developmentModeKey = self.developmentMode
+                    self.tableView.reloadData()
                     print("輸入的字串：\(self.developmentMode)")
                     UserPreferences.shared.developmentModeKey = self.developmentMode
                     self.tableView.reloadData()

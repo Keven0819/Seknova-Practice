@@ -188,8 +188,10 @@ class LifeViewController: UIViewController {
         
         if NSLocale.current.language.languageCode?.identifier == "en" {
             dpkDate.locale = Locale(identifier: "en")
+            lbRecordTime.font = UIFont.systemFont(ofSize: 14)
         } else {
             dpkDate.locale = Locale(identifier: "zh_TW")
+            lbRecordTime.font = UIFont.systemFont(ofSize: 17)
         }
     }
     // MARK: - UI Setting

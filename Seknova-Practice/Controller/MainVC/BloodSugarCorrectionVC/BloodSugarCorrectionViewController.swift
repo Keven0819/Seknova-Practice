@@ -14,6 +14,7 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
     @IBOutlet weak var lbBloodSugarValue: UILabel!
     @IBOutlet weak var btnSetup: UIButton!
     @IBOutlet weak var btnSetdown: UIButton!
+    @IBOutlet weak var btnSave: UIButton!
     
     // MARK: - Property
     
@@ -34,6 +35,8 @@ class BloodSugarCorrectionViewController: UIViewController , BloodSugarCorrectio
         setupNavigationBar()
         let bloodSuagrValue = UserPreferences.shared.bloodsugarCorrectionValue
         lbBloodSugarValue.text = bloodSuagrValue
+        btnKnowMore.setTitle(NSLocalizedString("Understand More", comment: ""), for: .normal)
+        btnSave.setTitle(NSLocalizedString("Save", comment: ""), for: .normal)
     }
     
     func setupNavigationBar() {
