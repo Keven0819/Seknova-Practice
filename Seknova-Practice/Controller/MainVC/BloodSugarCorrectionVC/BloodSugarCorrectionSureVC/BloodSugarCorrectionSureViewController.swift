@@ -28,6 +28,8 @@ class BloodSugarCorrectionSureViewController: UIViewController {
     func setUI() {
         loadingBloodSugarValue()
         catchTime()
+        btnConfirm.setTitle(NSLocalizedString("Confirm", comment: ""), for: .normal)
+        btnCorrect.setTitle("Correct", for: .normal)
     }
     // MARK: - IBAction
     @IBAction func btnConfirmTapped(_ sender: Any) {
@@ -54,7 +56,11 @@ class BloodSugarCorrectionSureViewController: UIViewController {
         let formatter = DateFormatter()
         
         // am pm 要中文顯示
-        formatter.locale = Locale(identifier: "zh_TW")
+        if NSLocale.current.language.languageCode?.identifier == "zh" {
+            formatter.locale = Locale(identifier: "zh_TW")
+        } else {
+            formatter.locale = Locale(identifier: "en摁")
+        }
         formatter.dateFormat = "h:mm a"
         let time = formatter.string(from: date)
         lbTime.text = time
