@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import IQKeyboardManager
 
 class BodyInformationViewController: UIViewController {
     
@@ -32,6 +33,9 @@ class BodyInformationViewController: UIViewController {
         setNavigationBar()
         setTableView()
         dpkBirthday.locale = Locale(identifier: "zh_TW")
+        
+        // 在這個頁面停用 IQKeyboardManager
+        IQKeyboardManager.shared().isEnabled = false
     }
     
     func setNavigationBar() {

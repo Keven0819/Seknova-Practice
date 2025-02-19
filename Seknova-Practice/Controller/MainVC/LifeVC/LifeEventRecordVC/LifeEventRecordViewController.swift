@@ -102,7 +102,7 @@ class LifeEventRecordViewController: UIViewController {
     // 返回上一頁
     @objc func backButtonTapped() {
         // pop到最剛開始的頁面
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // 把今天和昨天的資料分組
